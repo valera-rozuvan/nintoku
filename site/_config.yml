@@ -9,7 +9,7 @@ logo:             site-logo.png
 disqus_shortname: Nintoku
 search:           false
 #Comment out url when working locally to resolve base urls correctly
-url:              http://valera-rozuvan.github.io/nintoku/
+url:              http://valera-rozuvan.github.io/nintoku
 
 # Owner/author information
 owner:
