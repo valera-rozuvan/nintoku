@@ -1,4 +1,52 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-pygments: true
+name: Nintoku
+# markdown: redcarpet
+# pygments: true
 baseurl: /nintoku
+
+title:            Nintoku
+description:      The 16th emperor of Japan. A place to procrastinate while at work.
+logo:             site-logo.png
+disqus_shortname: Nintoku
+search:           false
+#Comment out url when working locally to resolve base urls correctly
+url:              http://valera-rozuvan.github.io/nintoku/
+
+# Owner/author information
+owner:
+  name:           Valera Rozuvan
+  avatar:         your-photo.jpg
+  email:          valera.rozuvan@gmail.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        https://twitter.com/ValeraRozuvan
+  facebook:       https://www.facebook.com/valera.rozuvan
+  github:         https://github.com/valera-rozuvan
+  linkedin:       http://ua.linkedin.com/pub/%D0%B2%D0%B0%D0%BB%D0%B5%D1%80%D0%B0-%D1%80%D0%BE%D0%B7%D1%83%D0%B2%D0%B0%D0%BD/53/a5b/ba8
+  instagram:
+  tumblr:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    "https://plus.google.com/107180394340520523800"
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: About
+    url: /about
+  - title: Articles
+    url: /articles
+  - title: Google
+    url: http://google.com
+    external: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Europe/Kiev
+pygments:    true
+markdown:    kramdown
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
