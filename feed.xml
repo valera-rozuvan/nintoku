@@ -4,13 +4,32 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2013-12-11T17:54:43+02:00</updated>
+<updated>2013-12-12T17:11:48+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Sakai PHP unit test for LTI]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/php/sakai/lti/testing/sakai-php-unit-test-for-lti</link>
+  <id>http://valera-rozuvan.github.io/nintoku/php/sakai/lti/testing/sakai-php-unit-test-for-lti</id>
+  <published>2013-12-12T17:11:39Z</published>
+  <updated>2013-12-12T17:11:39Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.dr-chuck.com/&quot;&gt;Dr. Chuck&lt;/a&gt; has made available &lt;a href=&quot;https://github.com/csev/sakai-lti-test&quot;&gt;on Github&lt;/a&gt;
+a clone of the Sakai PHP Unit Test code for LTI. Should be interesting to study
+it and compare to the code we have recently written for the &lt;a href=&quot;https://github.com/edx/edx-platform&quot;&gt;edX platform&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/php/sakai/lti/testing/sakai-php-unit-test-for-lti&quot;&gt;Sakai PHP unit test for LTI&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 12, 2013.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
