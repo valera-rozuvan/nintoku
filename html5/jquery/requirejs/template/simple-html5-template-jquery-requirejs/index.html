@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Articles &#8211; Nintoku</title>
-<meta name="description" content="An archive of posts sorted by date.">
-
+<title>Simple HTML5 template with jQuery, and Require JS &#8211; Nintoku</title>
+<meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
+<meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Articles">
-<meta name="twitter:description" content="An archive of posts sorted by date.">
+<meta name="twitter:title" content="Simple HTML5 template with jQuery, and Require JS">
+<meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Articles">
-<meta property="og:description" content="An archive of posts sorted by date.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/articles/index.html">
+<meta property="og:title" content="Simple HTML5 template with jQuery, and Require JS">
+<meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/html5/jquery/requirejs/template/simple-html5-template-jquery-requirejs">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/articles/">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/html5/jquery/requirejs/template/simple-html5-template-jquery-requirejs">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/107180394340520523800?rel=author">
 
@@ -63,7 +63,7 @@
 
 </head>
 
-<body id="page" itemscope itemtype="http://schema.org/WebPage">
+<body id="post" itemscope itemtype="http://schema.org/WebPage">
 
 <div class="navigation-wrapper">
 	<nav role="navigation" id="site-nav" class="animated drop" itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -106,26 +106,42 @@
 </header><!-- /.masthead -->
 
 
-<div id="main" role="main" itemprop="mainContentOfPage">
-  <article class="entry" itemscope>
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <h1 class="entry-title" itemprop="name">Articles</h1>
+        <span class="entry-tags"></span>
+        
+          <h1 class="entry-title" itemprop="headline">Simple HTML5 template with jQuery, and Require JS</h1>
+        
       </header>
+      <footer class="entry-meta">
+        <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
+        <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
+        <span class="entry-date date published"><time datetime="2013-12-13T15:45:12Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> December 13, 2013</time></span>
+        
+        
+        <span><a href="http://valera-rozuvan.github.io/nintoku/html5/jquery/requirejs/template/simple-html5-template-jquery-requirejs" rel="bookmark" title="Simple HTML5 template with jQuery, and Require JS" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+      </footer>
       <div class="entry-content" itemprop="description">
-        <ul class="post-list">
- 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/html5/jquery/requirejs/template/simple-html5-template-jquery-requirejs">Simple HTML5 template with jQuery, and Require JS <span class="entry-date"><time datetime="2013-12-13T15:45:12Z">December 13, 2013</time></span></a></article></li>
- 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/php/sakai/lti/testing/sakai-php-unit-test-for-lti">Sakai PHP unit test for LTI <span class="entry-date"><time datetime="2013-12-12T17:11:39Z">December 12, 2013</time></span></a></article></li>
- 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/nintoku/update/welcome-to-nintoku">Welcome to Nintoku! <span class="entry-date"><time datetime="2013-12-11T17:53:02Z">December 11, 2013</time></span></a></article></li>
+        <p>I have often had the need to quickly write some tool/app for demonstration
+purposes. It generally consists of an index.html file, some JavaScript files,
+and a few CSS files. The bare bones skeleton (template) I wrote from scratch
+each and every time, and then added to it the actual content. I always thought
+that it would be a good idea to save such a skeleton for future reuse. Finally,
+I got around to
+<a href="https://github.com/valera-rozuvan/simple-html5-template">doing just so</a>.</p>
 
-</ul>
-
+        
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://valera-rozuvan.github.io/nintoku/php/sakai/lti/testing/sakai-php-unit-test-for-lti" class="btn" title="Sakai PHP unit test for LTI">Previous article</a>
+      
+      
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
@@ -152,7 +168,7 @@
 <script src="http://valera-rozuvan.github.io/nintoku/assets/js/scripts.min.js"></script>
 
 
-          
+	        
 
 </body>
 </html>

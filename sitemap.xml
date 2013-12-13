@@ -6,6 +6,10 @@
     
     
     <url>
+        <loc>http://valera-rozuvan.github.io/nintoku/html5/jquery/requirejs/template/simple-html5-template-jquery-requirejs</loc>
+    </url>
+    
+    <url>
         <loc>http://valera-rozuvan.github.io/nintoku/php/sakai/lti/testing/sakai-php-unit-test-for-lti</loc>
     </url>
     
