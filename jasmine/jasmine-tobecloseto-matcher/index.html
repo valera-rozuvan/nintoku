@@ -131,25 +131,26 @@ to another number, but not necessarily equal to it.
 matcher <a href="https://github.com/pivotal/jasmine/blob/master/src/core/matchers/toBeCloseTo.js">toBeCloseTo()</a>
 just for this case. See the code below.</p>
 
-<pre><code>getJasmineRequireObj().toBeCloseTo = function() {
+<div class="highlight"><pre><code class="js"><span class="nx">getJasmineRequireObj</span><span class="p">().</span><span class="nx">toBeCloseTo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
-    function toBeCloseTo() {
-        return {
-            compare: function(actual, expected, precision) {
-                if (precision !== 0) {
-                    precision = precision || 2;
-                }
+    <span class="kd">function</span> <span class="nx">toBeCloseTo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="nx">compare</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">actual</span><span class="p">,</span> <span class="nx">expected</span><span class="p">,</span> <span class="nx">precision</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">precision</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">precision</span> <span class="o">=</span> <span class="nx">precision</span> <span class="o">||</span> <span class="mi">2</span><span class="p">;</span>
+                <span class="p">}</span>
 
-                return {
-                    pass: Math.abs(expected - actual) &lt; (Math.pow(10, -precision) / 2)
-                };
-            }
-        };
-    }
+                <span class="k">return</span> <span class="p">{</span>
+                    <span class="nx">pass</span><span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">expected</span> <span class="o">-</span> <span class="nx">actual</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="nx">precision</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+                <span class="p">};</span>
+            <span class="p">}</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
 
-    return toBeCloseTo;
-};
-</code></pre>
+    <span class="k">return</span> <span class="nx">toBeCloseTo</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+
 
         
       </div><!-- /.entry-content -->
