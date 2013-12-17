@@ -22,3 +22,7 @@ To use it, you surround your code block like so
 {% endhighlight %}
 
 **lexer_name** is a short name for a programming language.
+
+NOTE: To enable syntax highlighting, please set the *pygments* variable to
+*true* in the `_config.yml` configuration file (see
+[reference](http://jekyllrb.com/docs/templates/)).
