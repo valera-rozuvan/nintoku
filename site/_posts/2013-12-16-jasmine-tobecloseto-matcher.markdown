@@ -11,21 +11,23 @@ to another number, but not necessarily equal to it.
 matcher [toBeCloseTo()](https://github.com/pivotal/jasmine/blob/master/src/core/matchers/toBeCloseTo.js)
 just for this case. See the code below.
 
-    getJasmineRequireObj().toBeCloseTo = function() {
+{% highlight js %}
+getJasmineRequireObj().toBeCloseTo = function() {
 
-        function toBeCloseTo() {
-            return {
-                compare: function(actual, expected, precision) {
-                    if (precision !== 0) {
-                        precision = precision || 2;
-                    }
-
-                    return {
-                        pass: Math.abs(expected - actual) < (Math.pow(10, -precision) / 2)
-                    };
+    function toBeCloseTo() {
+        return {
+            compare: function(actual, expected, precision) {
+                if (precision !== 0) {
+                    precision = precision || 2;
                 }
-            };
-        }
 
-        return toBeCloseTo;
-    };
+                return {
+                    pass: Math.abs(expected - actual) < (Math.pow(10, -precision) / 2)
+                };
+            }
+        };
+    }
+
+    return toBeCloseTo;
+};
+{% endhighlight %}
