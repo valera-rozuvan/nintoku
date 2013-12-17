@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2013-12-17T18:09:33+02:00</updated>
+<updated>2013-12-17T18:12:43+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -28,15 +28,16 @@
 &lt;a href=&quot;http://pygments.org/&quot;&gt;pygments&lt;/a&gt;. There is a huge number of &lt;a href=&quot;http://pygments.org/docs/lexers/&quot;&gt;lexers&lt;/a&gt;
 that define the rules for highlighting for many, many languages.&lt;/p&gt;
 
-&lt;p&gt;To use it, you surround your code block like so:&lt;/p&gt;
+&lt;p&gt;To use it, you surround your code block like so&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;c&quot;&gt;    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;highlight&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;c&quot;&gt;    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;highlight&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lexer_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
         &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;goes&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;here&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
 
     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endhighlight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;lexer_name&lt;/strong&gt; is a short name for a programming language.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/jekyll/code/highlighting/blog/code-highlighting-jekyll-based-blog&quot;&gt;Code highlighting in a Jekyll-based blog&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 17, 2013.&lt;/p&gt;</content>
 </entry>
