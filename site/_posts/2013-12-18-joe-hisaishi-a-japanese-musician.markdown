@@ -15,6 +15,6 @@ composer, and performer. Listen for example to
 [Mononoke Hime](http://www.youtube.com/watch?v=wvgKtOH8l2M).
 
 <figure>
-    <a href="images/2013_12_18/Joe_Hisaishi_2011.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg"></a>
+    <a href="images/2013_12_18/Joe_Hisaishi_2011.jpg"><img src="images/2013_12_18/Joe_Hisaishi_2011.jpg"></a>
     <figcaption><a href="http://en.wikipedia.org/wiki/File:Joe_Hisaishi_2011.jpg" title="Joe Hisaishi in Paris, 2011">Joe Hisaishi in Paris, 2011</a>.</figcaption>
 </figure>
