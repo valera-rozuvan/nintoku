@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jasmine toBeCloseTo() matcher"
-date:   2013-12-16 17:50:57
+date:   2013-12-16 17:50:56
 categories: jasmine
 ---
 

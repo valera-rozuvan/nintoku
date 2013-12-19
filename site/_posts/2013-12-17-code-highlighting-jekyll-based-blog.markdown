@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Code highlighting in a Jekyll-based blog"
-date:   2013-12-17 18:08:26
+date:   2013-12-17 18:08:25
 categories: jekyll code highlighting blog
 ---
 

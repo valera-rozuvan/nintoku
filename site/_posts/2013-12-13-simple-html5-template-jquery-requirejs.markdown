@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Simple HTML5 template with jQuery, and Require JS"
-date:   2013-12-13 15:45:13
+date:   2013-12-13 15:45:12
 categories: html5 jquery requirejs template
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Joe Hisaishi - a Japanese musician"
-date:   2013-12-18 13:43:02
+date:   2013-12-18 13:43:01
 categories: Hisaishi Japanese music Ghibli
 ---
 
