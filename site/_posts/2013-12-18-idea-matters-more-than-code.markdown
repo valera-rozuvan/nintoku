@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Idea matters more than code"
-date:   2013-12-18 15:37:50
+date:   2013-12-18 15:37:51
 categories: ideas code programming ghibli comments quality honor
 ---
 
