@@ -15,5 +15,5 @@ What is Gjs? Quoting from the home page
 JavaScript engine and the GObject introspection framework.
 
 I have already set up a
-[GitHub repositoryy](https://github.com/valera-rozuvan/gjs-test-examples) to
+[GitHub repository](https://github.com/valera-rozuvan/gjs-test-examples) to
 mess around with it.
