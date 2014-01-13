@@ -8,7 +8,7 @@ categories: gutenberg top books
 Project Gutenberg is
 
 > a volunteer effort to digitize and archive cultural works, to "encourage the
-creation and distribution of eBooks".[2] It was founded in 1971 by Michael S.
+creation and distribution of eBooks". It was founded in 1971 by Michael S.
 Hart and is the oldest digital library.
 
 It has a handy list of most downloaded books from today, yesterday, last week,
