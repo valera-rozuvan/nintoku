@@ -4,13 +4,42 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-01-15T17:07:25+02:00</updated>
+<updated>2014-01-16T17:52:02+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Making a multi-player Xonix]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/multiplayer/xonix/making-a-multi-player-xonix</link>
+  <id>http://valera-rozuvan.github.io/nintoku/multiplayer/xonix/making-a-multi-player-xonix</id>
+  <published>2014-01-16T17:51:20Z</published>
+  <updated>2014-01-16T17:51:20Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Xonix&quot;&gt;Xonix&lt;/a&gt; is a classical game. There are
+several examples (&lt;a href=&quot;http://www.vemix.com/Games/xonix/xonix.php&quot;&gt;one&lt;/a&gt;,
+&lt;a href=&quot;http://html5xonix.appspot.com/&quot;&gt;two&lt;/a&gt;) of it in JavaScript. Almost half a year
+ago I have started to make a game that borrows from the ideas of Xonix, and
+adds a few twists. You can take a
+&lt;a href=&quot;https://github.com/valera-rozuvan/vonix&quot;&gt;look&lt;/a&gt;, but the sources are in a very
+raw state.&lt;/p&gt;
+
+&lt;p&gt;The twists will include:
+* Online multi-player
+* The world will have a point based geometry, rather than a square based geometry
+* Player movement paths will be smooth, not angular
+* Gravity&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/multiplayer/xonix/making-a-multi-player-xonix&quot;&gt;Making a multi-player Xonix&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 16, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
