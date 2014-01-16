@@ -14,6 +14,7 @@ adds a few twists. You can take a
 raw state.
 
 The twists will include:
+
 * Online multi-player
 * The world will have a point based geometry, rather than a square based geometry
 * Player movement paths will be smooth, not angular
