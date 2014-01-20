@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-01-20T13:52:46+02:00</updated>
+<updated>2014-01-20T13:57:30+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -58,8 +58,9 @@ Otelbayev’s proof, I want to take a closer look at the problem of the
 &lt;a href=&quot;http://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations&quot;&gt;Navier–Stokes Equations&lt;/a&gt;.
 To be able to do that, I need to cover a lot of ground in the not-so trivial
 land of mathematics. The starting point has been chosen:
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Stochastic_differential_equation&quot;&gt;“Stochastic differential equation”&lt;/a&gt;.
-Working through the
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Stochastic_differential_equation&quot;&gt;“Stochastic differential equation”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Working through the
 &lt;a href=&quot;http://www.math.uh.edu/~torok/math_6397_SDE/Evans_SDE.course_v1.2_2011.08.pdf&quot;&gt;An Introduction to Stochastic Differential Equations&lt;/a&gt; by &lt;a href=&quot;http://en.wikipedia.org/wiki/Lawrence_C._Evans&quot;&gt;Lawrence C. Evans&lt;/a&gt;.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/astounding/beauty/mathematics/the-astounding-beauty-of-mathematics&quot;&gt;The astounding beauty of mathematics&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 20, 2014.&lt;/p&gt;</content>
