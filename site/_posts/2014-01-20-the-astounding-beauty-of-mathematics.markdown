@@ -33,5 +33,6 @@ Otelbayev's proof, I want to take a closer look at the problem of the
 To be able to do that, I need to cover a lot of ground in the not-so trivial
 land of mathematics. The starting point has been chosen:
 ["Stochastic differential equation"](http://en.wikipedia.org/wiki/Stochastic_differential_equation).
+
 Working through the
 [An Introduction to Stochastic Differential Equations](http://www.math.uh.edu/~torok/math_6397_SDE/Evans_SDE.course_v1.2_2011.08.pdf) by [Lawrence C. Evans](http://en.wikipedia.org/wiki/Lawrence_C._Evans).
