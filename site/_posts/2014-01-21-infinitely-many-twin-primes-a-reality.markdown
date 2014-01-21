@@ -65,7 +65,7 @@ Other interesting resources:
 - [Prime number theorem, Wikipedia, the free encyclopedia](http://en.wikipedia.org/wiki/Prime_number_theorem)
 - [Several Proofs of the Twin Primes Conjecture](http://www.coolissues.com/mathematics/Tprimes/tprimes.htm)
 - [Bounded gaps between primes, Polymath1Wiki](http://michaelnielsen.org/polymath1/index.php?title=Bounded_gaps_between_primes)
-- [The Work of Pierre Deligne, N.M. Katz pdf][http://www.mathunion.org/ICM/ICM1978.1/Main/icm1978.1.0047.0052.ocr.pdf]
+- [The Work of Pierre Deligne, N.M. Katz pdf](http://www.mathunion.org/ICM/ICM1978.1/Main/icm1978.1.0047.0052.ocr.pdf)
 - [Progress on the Twin Primes Conjecture, EvolutionBlog](http://scienceblogs.com/evolutionblog/2013/05/24/progress-on-the-twin-primes-conjecture/)
 - [Further Progress on the Twin Primes Conjecture, EvolutionBlog](http://scienceblogs.com/evolutionblog/2013/09/03/further-progress-on-the-twin-primes-conjecture/)
 - [Twin Prime Conjecture, from Wolfram MathWorld](http://mathworld.wolfram.com/TwinPrimeConjecture.html)
@@ -95,5 +95,6 @@ Other interesting resources:
 - [The prime tuples conjecture, sieve theory, and the work of Goldston-Pintz-Yildirim, Motohashi-Pintz, and Zhang, What's new](http://terrytao.wordpress.com/2013/06/03/the-prime-tuples-conjecture-sieve-theory-and-the-work-of-goldston-pintz-yildirim-motohashi-pintz-and-zhang/)
 - [Polymath proposal: bounded gaps between primes, The polymath blog](http://polymathprojects.org/2013/06/04/polymath-proposal-bounded-gaps-between-primes/)
 - [sieving admissible tuples](https://math.mit.edu/~primegaps/sieve.html?ktuple=632)
+- [The Paradox of the Proof, Project Wordsworth](http://projectwordsworth.com/the-paradox-of-the-proof/)
 
 Must get to understanding Yitang Zhang solution...
