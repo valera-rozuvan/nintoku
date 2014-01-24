@@ -4,13 +4,33 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-01-23T14:03:36+02:00</updated>
+<updated>2014-01-24T15:35:00+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Extraordinary worlds in mathematics]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/extraordinary/worlds/mathematics/extraordinary-worlds-in-mathematics</link>
+  <id>http://valera-rozuvan.github.io/nintoku/extraordinary/worlds/mathematics/extraordinary-worlds-in-mathematics</id>
+  <published>2014-01-24T15:34:25Z</published>
+  <updated>2014-01-24T15:34:25Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;More and more these days I stumble upon something very intriguing in
+mathematics. Whole unknown worlds created by exceptional mathematicians. Not
+some ancient theories which are centuries old. Novel concepts, reasoning, and
+imagination. Take a look at the &lt;a href=&quot;http://en.wikipedia.org/wiki/Inter-universal_Teichm%C3%BCller_theory&quot;&gt;Inter-universal Teichmüller theory&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/extraordinary/worlds/mathematics/extraordinary-worlds-in-mathematics&quot;&gt;Extraordinary worlds in mathematics&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 24, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -727,26 +747,6 @@ a clone of the Sakai PHP Unit Test code for LTI. Should be interesting to study
 it and compare to the code we have recently written for the &lt;a href=&quot;https://github.com/edx/edx-platform&quot;&gt;edX platform&lt;/a&gt;.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/php/sakai/lti/testing/sakai-php-unit-test-for-lti&quot;&gt;Sakai PHP unit test for LTI&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 12, 2013.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Welcome to Nintoku!]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/nintoku/update/welcome-to-nintoku</link>
-  <id>http://valera-rozuvan.github.io/nintoku/nintoku/update/welcome-to-nintoku</id>
-  <published>2013-12-11T17:53:02Z</published>
-  <updated>2013-12-11T17:53:02Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;I don’t know if this will stick. &lt;a href=&quot;https://github.com/valera-rozuvan/nintoku/blob/master/README.md&quot;&gt;Original idea&lt;/a&gt;
-seems OK-ish to me. I want to introduce some creative variety to my general day-to-day work process.&lt;/p&gt;
-
-&lt;p&gt;More to come ^_^v!&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/nintoku/update/welcome-to-nintoku&quot;&gt;Welcome to Nintoku!&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 11, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
