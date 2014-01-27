@@ -4,13 +4,39 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-01-24T15:35:00+02:00</updated>
+<updated>2014-01-27T15:20:04+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Cantor and infinity]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/cantor/infinity/cantor-and-infinity</link>
+  <id>http://valera-rozuvan.github.io/nintoku/cantor/infinity/cantor-and-infinity</id>
+  <published>2014-01-27T15:19:07Z</published>
+  <updated>2014-01-27T15:19:07Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Must study these concepts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel&quot;&gt;Hilbert’s paradox of the Grand Hotel&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Cantor%27s_first_uncountability_proof&quot;&gt;Cantor’s first uncountability proof&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument&quot;&gt;Cantor’s diagonal argument&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I came upon them while reading the article
+&lt;a href=&quot;http://opinionator.blogs.nytimes.com/2010/05/09/the-hilbert-hotel/?_php=true&amp;amp;_type=blogs&amp;amp;_r=0&quot;&gt;The Hilbert Hotel&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/cantor/infinity/cantor-and-infinity&quot;&gt;Cantor and infinity&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 27, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -728,25 +754,6 @@ I got around to
 &lt;a href=&quot;https://github.com/valera-rozuvan/simple-html5-template&quot;&gt;doing just so&lt;/a&gt;.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/html5/jquery/requirejs/template/simple-html5-template-jquery-requirejs&quot;&gt;Simple HTML5 template with jQuery, and Require JS&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 13, 2013.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Sakai PHP unit test for LTI]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/php/sakai/lti/testing/sakai-php-unit-test-for-lti</link>
-  <id>http://valera-rozuvan.github.io/nintoku/php/sakai/lti/testing/sakai-php-unit-test-for-lti</id>
-  <published>2013-12-12T17:11:39Z</published>
-  <updated>2013-12-12T17:11:39Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.dr-chuck.com/&quot;&gt;Dr. Chuck&lt;/a&gt; has made available &lt;a href=&quot;https://github.com/csev/sakai-lti-test&quot;&gt;on Github&lt;/a&gt;
-a clone of the Sakai PHP Unit Test code for LTI. Should be interesting to study
-it and compare to the code we have recently written for the &lt;a href=&quot;https://github.com/edx/edx-platform&quot;&gt;edX platform&lt;/a&gt;.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/php/sakai/lti/testing/sakai-php-unit-test-for-lti&quot;&gt;Sakai PHP unit test for LTI&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 12, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
