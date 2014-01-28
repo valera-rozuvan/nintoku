@@ -14,4 +14,4 @@ as I previously thought (probably because I was making a connection between the
 English meaning of the word group and the mathematical term group). Also, a
 group can lose it's status if it's operation changes but the collection of
 objects remains the same (if some of the axioms stop being true for the new
-operator).
+operation).
