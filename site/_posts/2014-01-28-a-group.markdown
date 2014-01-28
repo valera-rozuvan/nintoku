@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "A Group"
+date:   2014-01-28 14:11:22
+categories: group theory
+---
+
+A group **G** is a collection of objects with an operation [satisfying the
+following rules (axioms)](http://nrich.maths.org/1422).
+
+Today I realized that the **operation** is actually what defines a group, NOT
+the collection of objects. A collection of object is not a group (of objects)
+as I previously thought (probably because I was making a connection between the
+English meaning of the word group and the mathematical term group). Also, a
+group can lose it's status if it's operation changes but the collection of
+objects remains the same (if some of the axioms stop being true for the new
+operator).
