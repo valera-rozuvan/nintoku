@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-01-30T13:36:13+02:00</updated>
+<updated>2014-01-30T13:46:00+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -26,7 +26,10 @@
   </author>
   <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt; is an open source JavaScript display engine
 for mathematics that works in all browsers. Some examples of what it can do are
-provided below.&lt;/p&gt;
+provided below. Oh, and I wanto to point out how very awesome is it that the
+markdown processor &lt;a href=&quot;http://kramdown.gettalong.org&quot;&gt;kramdown&lt;/a&gt; used on
+&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/&quot;&gt;Nintoku&lt;/a&gt; supports
+&lt;a href=&quot;http://kramdown.gettalong.org/syntax.html#math-blocks&quot;&gt;math natively&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;inside-p-tag&quot;&gt;Inside &lt;strong&gt;p&lt;/strong&gt; tag&lt;/h2&gt;
 
