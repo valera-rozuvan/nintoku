@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-01-30T13:20:41+02:00</updated>
+<updated>2014-01-30T13:32:37+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -52,6 +52,34 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 &lt;h2 id=&quot;not-in-a-tag&quot;&gt;Not in a tag&lt;/h2&gt;
 
 &lt;p&gt;When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are
+&lt;script type=&quot;math/tex&quot;&gt;x = {-b \pm \sqrt{b^2-4ac} \over 2a}.&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, we will use double dollar signs to surround math stuff.&lt;/p&gt;
+
+&lt;h2 id=&quot;inside-p-tag-1&quot;&gt;Inside &lt;strong&gt;p&lt;/strong&gt; tag&lt;/h2&gt;
+
+&lt;p&gt;
+When $$ $a \ne 0$ $$, there are two solutions to $$ \(ax^2 + bx + c = 0\) $$ and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+&lt;/p&gt;
+
+&lt;h2 id=&quot;inside-span-tag-1&quot;&gt;Inside &lt;strong&gt;span&lt;/strong&gt; tag&lt;/h2&gt;
+
+&lt;p&gt;&lt;span&gt;
+When &lt;script type=&quot;math/tex&quot;&gt; $a \ne 0$ &lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt; \(ax^2 + bx + c = 0\) &lt;/script&gt; and they are
+&lt;script type=&quot;math/tex&quot;&gt;x = {-b \pm \sqrt{b^2-4ac} \over 2a}.&lt;/script&gt;
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;inside-div-tag-1&quot;&gt;Inside &lt;strong&gt;div&lt;/strong&gt; tag&lt;/h2&gt;
+
+&lt;div&gt;
+When $$ $a \ne 0$ $$, there are two solutions to $$ \(ax^2 + bx + c = 0\) $$ and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+&lt;/div&gt;
+
+&lt;h2 id=&quot;not-in-a-tag-1&quot;&gt;Not in a tag&lt;/h2&gt;
+
+&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt; $a \ne 0$ &lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt; \(ax^2 + bx + c = 0\) &lt;/script&gt; and they are
 &lt;script type=&quot;math/tex&quot;&gt;x = {-b \pm \sqrt{b^2-4ac} \over 2a}.&lt;/script&gt;&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests&quot;&gt;MathJax tests&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 30, 2014.&lt;/p&gt;</content>
