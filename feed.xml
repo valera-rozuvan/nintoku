@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-01-30T13:15:28+02:00</updated>
+<updated>2014-01-30T13:20:41+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -14,34 +14,11 @@
 
 
 <entry>
-  <title type="html"><![CDATA[Lagrange's Theorem]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/lagrange/theorem/lagranges-theorem</link>
-  <id>http://valera-rozuvan.github.io/nintoku/lagrange/theorem/lagranges-theorem</id>
-  <published>2014-01-29T23:24:10Z</published>
-  <updated>2014-01-29T23:24:10Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;In his 1771 paper
-&lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k229222d/f206.image&quot;&gt;&lt;strong&gt;Réflexions sur la résolution algébrique des équations&lt;/strong&gt;&lt;/a&gt;,
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Joseph_Louis_Lagrange&quot;&gt;Lagrange&lt;/a&gt; was studying
-polynomials. In particular he was interested in polynomials of degree 5 and
-higher. This was the ground work that was used later on by
-&lt;a href=&quot;http://en.wikipedia.org/wiki/%C3%89variste_Galois&quot;&gt;Galois&lt;/a&gt; to put forth the
-beginning of &lt;a href=&quot;http://en.wikipedia.org/wiki/Galois_theory&quot;&gt;Galois theory&lt;/a&gt;.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/lagrange/theorem/lagranges-theorem&quot;&gt;Lagrange's Theorem&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 29, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
   <title type="html"><![CDATA[MathJax tests]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests</link>
   <id>http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests</id>
-  <published>2014-01-29T13:12:43Z</published>
-  <updated>2014-01-29T13:12:43Z</updated>
+  <published>2014-01-30T13:12:43Z</published>
+  <updated>2014-01-30T13:12:43Z</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -77,7 +54,30 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 &lt;p&gt;When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are
 &lt;script type=&quot;math/tex&quot;&gt;x = {-b \pm \sqrt{b^2-4ac} \over 2a}.&lt;/script&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests&quot;&gt;MathJax tests&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 29, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests&quot;&gt;MathJax tests&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 30, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Lagrange's Theorem]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/lagrange/theorem/lagranges-theorem</link>
+  <id>http://valera-rozuvan.github.io/nintoku/lagrange/theorem/lagranges-theorem</id>
+  <published>2014-01-29T23:24:10Z</published>
+  <updated>2014-01-29T23:24:10Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In his 1771 paper
+&lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k229222d/f206.image&quot;&gt;&lt;strong&gt;Réflexions sur la résolution algébrique des équations&lt;/strong&gt;&lt;/a&gt;,
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Joseph_Louis_Lagrange&quot;&gt;Lagrange&lt;/a&gt; was studying
+polynomials. In particular he was interested in polynomials of degree 5 and
+higher. This was the ground work that was used later on by
+&lt;a href=&quot;http://en.wikipedia.org/wiki/%C3%89variste_Galois&quot;&gt;Galois&lt;/a&gt; to put forth the
+beginning of &lt;a href=&quot;http://en.wikipedia.org/wiki/Galois_theory&quot;&gt;Galois theory&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/lagrange/theorem/lagranges-theorem&quot;&gt;Lagrange's Theorem&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 29, 2014.&lt;/p&gt;</content>
 </entry>
 
 
