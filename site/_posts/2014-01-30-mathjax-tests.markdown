@@ -7,7 +7,10 @@ categories: mathjax tests
 
 [MathJax](http://www.mathjax.org/) is an open source JavaScript display engine
 for mathematics that works in all browsers. Some examples of what it can do are
-provided below.
+provided below. Oh, and I wanto to point out how very awesome is it that the
+markdown processor [kramdown](http://kramdown.gettalong.org) used on
+[Nintoku](http://valera-rozuvan.github.io/nintoku/) supports
+[math natively](http://kramdown.gettalong.org/syntax.html#math-blocks).
 
 Inside **p** tag
 ----------------
