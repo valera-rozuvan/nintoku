@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MathJax tests"
-date:   2014-01-29 13:12:43
+date:   2014-01-30 13:12:43
 categories: mathjax tests
 ---
 
