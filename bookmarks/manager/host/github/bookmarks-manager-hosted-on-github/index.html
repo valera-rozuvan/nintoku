@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>MathJax tests &#8211; Nintoku</title>
+<title>Bookmarks manager hosted on GitHub &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="MathJax tests">
+<meta name="twitter:title" content="Bookmarks manager hosted on GitHub">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MathJax tests">
+<meta property="og:title" content="Bookmarks manager hosted on GitHub">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/bookmarks/manager/host/github/bookmarks-manager-hosted-on-github">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/bookmarks/manager/host/github/bookmarks-manager-hosted-on-github">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/107180394340520523800?rel=author">
 
@@ -124,95 +124,46 @@
       <header class="entry-header">
         <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">MathJax tests</h1>
+          <h1 class="entry-title" itemprop="headline">Bookmarks manager hosted on GitHub</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-01-30T13:12:43Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> January 30, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-01-31T14:41:58Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> January 31, 2014</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests" rel="bookmark" title="MathJax tests" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/bookmarks/manager/host/github/bookmarks-manager-hosted-on-github" rel="bookmark" title="Bookmarks manager hosted on GitHub" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
       </footer>
       <div class="entry-content" itemprop="description">
-        <p><a href="http://www.mathjax.org/">MathJax</a> is an open source JavaScript display engine
-for mathematics that works in all browsers. Some examples of what it can do are
-provided below. Oh, and I wanto to point out how very awesome is it that the
-markdown processor <a href="http://kramdown.gettalong.org">kramdown</a> used on
-<a href="http://valera-rozuvan.github.io/nintoku/">Nintoku</a> supports
-<a href="http://kramdown.gettalong.org/syntax.html#math-blocks">math natively</a>.</p>
+        <p><a href="https://github.com/valera-rozuvan/bookmarks">bookmarks</a> seems like a nice
+starting point. Things to do:</p>
 
-<h2 id="inside-p-tag">Inside <strong>p</strong> tag</h2>
+<ul>
+  <li>add tags, search by tags</li>
+  <li>allow hierarchy of tags (sort of like directories)</li>
+  <li>don’t display all bookmarks on one page</li>
+  <li>allow easy edit with text editor of file with bookmarks</li>
+  <li>import and append from Firefox, Chrome, Safari, Opera, IE</li>
+  <li>locally, web GUI for CRUD operations on bookmarks</li>
+  <li>allow for using custom themes to display bookmarks</li>
+  <li>preview for a link (an image overlay)</li>
+</ul>
 
-<p>
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-</p>
+<p>Back-end could be <a href="http://nodejs.org/">Node.js</a> based. Front-end could be
+<a href="http://angularjs.org/">AngularJS</a> based. Preview could be done with
+<a href="http://phantomjs.org/">PhantomJS</a>
+(<a href="http://stackoverflow.com/questions/17189745/phantomjs-take-screenshot-of-a-web-page">Phantomjs - take screenshot of a web page</a>).</p>
 
-<h2 id="inside-span-tag">Inside <strong>span</strong> tag</h2>
-
-<p><span>
-When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are
-<script type="math/tex">x = {-b \pm \sqrt{b^2-4ac} \over 2a}.</script>
-</span></p>
-
-<h2 id="inside-div-tag">Inside <strong>div</strong> tag</h2>
-
-<div>
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-</div>
-
-<h2 id="not-in-a-tag">Not in a tag</h2>
-
-<p>When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are
-<script type="math/tex">x = {-b \pm \sqrt{b^2-4ac} \over 2a}.</script></p>
-
-<p>Now, we will use double dollar signs to surround math stuff.</p>
-
-<h2 id="inside-p-tag-1">Inside <strong>p</strong> tag</h2>
-
-<p>
-When $$ $a \ne 0$ $$, there are two solutions to $$ \(ax^2 + bx + c = 0\) $$ and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-</p>
-
-<h2 id="inside-span-tag-1">Inside <strong>span</strong> tag</h2>
-
-<p><span>
-When <script type="math/tex"> $a \ne 0$ </script>, there are two solutions to <script type="math/tex"> \(ax^2 + bx + c = 0\) </script> and they are
-<script type="math/tex">x = {-b \pm \sqrt{b^2-4ac} \over 2a}.</script>
-</span></p>
-
-<h2 id="inside-div-tag-1">Inside <strong>div</strong> tag</h2>
-
-<div>
-When $$ $a \ne 0$ $$, there are two solutions to $$ \(ax^2 + bx + c = 0\) $$ and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-</div>
-
-<h2 id="not-in-a-tag-1">Not in a tag</h2>
-
-<p>When <script type="math/tex"> $a \ne 0$ </script>, there are two solutions to <script type="math/tex"> \(ax^2 + bx + c = 0\) </script> and they are
-<script type="math/tex">x = {-b \pm \sqrt{b^2-4ac} \over 2a}.</script></p>
-
-<p>And the proper way is:</p>
-
-<p>
-When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and
-they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$ This is really cool!
-</p>
+<p>Sounds like fun ^_^v!</p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/lagrange/theorem/lagranges-theorem" class="btn" title="Lagrange's Theorem">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests" class="btn" title="MathJax tests">Previous article</a>
       
-      
-        <a href="http://valera-rozuvan.github.io/nintoku/bookmarks/manager/host/github/bookmarks-manager-hosted-on-github" class="btn" title="Bookmarks manager hosted on GitHub">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>
