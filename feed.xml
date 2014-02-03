@@ -4,13 +4,35 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-01-31T14:41:33+02:00</updated>
+<updated>2014-02-03T13:53:24+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Working on side projects]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/working/side/projects/working-on-side-projects</link>
+  <id>http://valera-rozuvan.github.io/nintoku/working/side/projects/working-on-side-projects</id>
+  <published>2014-02-03T13:50:11Z</published>
+  <updated>2014-02-03T13:50:11Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Spent some time on coding:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/valera-rozuvan/node-projects&quot;&gt;Node projects&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/innovecs-opensource/bustime&quot;&gt;Bustime&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/working/side/projects/working-on-side-projects&quot;&gt;Working on side projects&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 03, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -741,59 +763,6 @@ concerts. No one knew him.&lt;/p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/NI6LyqO9i8Y&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/murakami/murakami&quot;&gt;Murakami&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 19, 2013.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Idea matters more than code]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/ideas/code/programming/ghibli/comments/quality/honor/idea-matters-more-than-code</link>
-  <id>http://valera-rozuvan.github.io/nintoku/ideas/code/programming/ghibli/comments/quality/honor/idea-matters-more-than-code</id>
-  <published>2013-12-18T15:37:50Z</published>
-  <updated>2013-12-18T15:37:50Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;I must find enjoyment in my work. I must be very meticulous, punctual. Deliver
-results.&lt;/p&gt;
-
-&lt;p&gt;Take Studio Ghibli for example. Their work, even after 20+ years, remains very
-popular. They created &lt;strong&gt;Quality&lt;/strong&gt;. Something that can be passed from generation to
-generation.&lt;/p&gt;
-
-&lt;p&gt;I must take pride in my work. Write with honor in mind - someone will read my
-code later, and I want to leave them a very good impression.&lt;/p&gt;
-
-&lt;p&gt;Write clean and beautiful comments. Main point to comments is “why something
-is being done”, and not “how”. Describing how code works can be done for very,
-very complex cases.&lt;/p&gt;
-
-&lt;p&gt;The question is - how to program something that will truly last in time?&lt;/p&gt;
-
-&lt;p&gt;Programming done 30 years ago almost in its entirety differs from the one done
-today. Different platforms. Different compilers/languages. Different operating
-systems.&lt;/p&gt;
-
-&lt;p&gt;I will be amazed if there is any substantial code base still running today just
-for the sake of its purity, quality, and uniqueness. If there is something
-running that is that old, it is probably do to the fact that a replacement
-can’t be written or shouldn’t be written, and it is simply living the last of
-its days.&lt;/p&gt;
-
-&lt;p&gt;So, in such a field, how do you do something outstanding, remarkable that will
-last? Today, anyone can be a generic programmer and write web-sites for some
-artist showcasing their art works.&lt;/p&gt;
-
-&lt;p&gt;Code in itself is worthless. What is important is how it is used. Does it make
-a difference? If a programmer wants to be truly different, he must create
-experiences that will have an impact on other people’s lives.&lt;/p&gt;
-
-&lt;p&gt;It all comes back to &lt;strong&gt;The Idea&lt;/strong&gt;. An idea can be expressed in countless ways
-by countless programmers, but it is &lt;strong&gt;The Idea&lt;/strong&gt; that changes the world. Not
-the implementation.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/ideas/code/programming/ghibli/comments/quality/honor/idea-matters-more-than-code&quot;&gt;Idea matters more than code&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 18, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
