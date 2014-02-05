@@ -4,13 +4,35 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-02-03T13:53:24+02:00</updated>
+<updated>2014-02-05T14:31:33+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Retrieving title of a site]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/retrieving/title/site/retrieving-title-of-site</link>
+  <id>http://valera-rozuvan.github.io/nintoku/retrieving/title/site/retrieving-title-of-site</id>
+  <published>2014-02-05T14:28:19Z</published>
+  <updated>2014-02-05T14:28:19Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Given a URL, use &lt;a href=&quot;http://nodejs.org/&quot;&gt;Node.js&lt;/a&gt; to retrieve the site’s title. On
+a Linux system we have a powerful utility
+&lt;a href=&quot;https://www.gnu.org/software/wget/&quot;&gt;wget&lt;/a&gt;. Combining that with a JavaScript
+regex expression, we can
+&lt;a href=&quot;https://github.com/valera-rozuvan/node-projects/blob/master/06/main.js&quot;&gt;easily retrieve a title&lt;/a&gt;
+from a given URL.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/retrieving/title/site/retrieving-title-of-site&quot;&gt;Retrieving title of a site&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -716,53 +738,6 @@ JavaScript engine and the GObject introspection framework.&lt;/p&gt;
 mess around with it.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/javascript/gnome/gjs/javascript-for-gnome&quot;&gt;JavaScript for Gnome&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 23, 2013.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Murakami]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/murakami/murakami</link>
-  <id>http://valera-rozuvan.github.io/nintoku/murakami/murakami</id>
-  <published>2013-12-19T18:04:59Z</published>
-  <updated>2013-12-19T18:04:59Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;Even at a time like this, the street is filled with people.&lt;/p&gt;
-
-&lt;p&gt;You know what I think, she says, the people’s memories might be the fuel they
-burn to stay alive.&lt;/p&gt;
-
-&lt;p&gt;That often slipped into the surreal.&lt;/p&gt;
-
-&lt;p&gt;Do you speak English. Where are you staying? Follow me, and I am going to take
-you somewhere where you can get a cab.&lt;/p&gt;
-
-&lt;p&gt;Sometimes it comes, and sometimes it stops coming. You need every help you can
-get. In dark places there are small things waiting to help you.&lt;/p&gt;
-
-&lt;p&gt;….&lt;/p&gt;
-
-&lt;p&gt;It makes you feel differently. Tall and tan and young and lovely, the girl from
-Ipanema comes walking. But each day as she walks to the sea she looks straight
-ahead, not at me. The tune always brings back memories of the corridor of my
-high school. The damp concrete floor of my hight school.&lt;/p&gt;
-
-&lt;p&gt;It was almost always silent. The girl from Ipanema reminds me of my high school
-floor.&lt;/p&gt;
-
-&lt;p&gt;The real world.&lt;/p&gt;
-
-&lt;p&gt;There was a pianist. A pianist who was so good, that kings came to his
-concerts. No one knew him.&lt;/p&gt;
-
-&lt;p&gt;Life is what you make it. There is nothing exterior. It is all inside.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/NI6LyqO9i8Y&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/murakami/murakami&quot;&gt;Murakami&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 19, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
