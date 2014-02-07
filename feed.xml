@@ -4,13 +4,51 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-02-06T16:22:25+02:00</updated>
+<updated>2014-02-07T17:26:16+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Group theory related question]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/group/theory/question/group-theory-related-question</link>
+  <id>http://valera-rozuvan.github.io/nintoku/group/theory/question/group-theory-related-question</id>
+  <published>2014-02-07T17:26:01Z</published>
+  <updated>2014-02-07T17:26:01Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;On &lt;a href=&quot;http://math.stackexchange.com/&quot;&gt;Mathematics Stack Exchange&lt;/a&gt; I have posed
+the following question:&lt;/p&gt;
+
+&lt;p&gt;I am currently studying the manuscript &lt;strong&gt;Group Theory: A First Journey&lt;/strong&gt; by
+Vipul Naik. It is available from the web page
+http://www.cmi.ac.in/~vipul/mathjourneys/ . In this manuscript the author
+proposes the following question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Suppose the ordering of the elements in the rows and columns is the same.
+Then what kind of multiplication table would a magma have if it were to be a
+group? More generally, what are the constraints on the multiplication table
+corresponding to each of the properties that we can talk of for a binary
+operation?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;After reading
+&lt;a href=&quot;http://math.stackexchange.com/questions/666142/an-interesting-question-from-group-theory-a-first-journey&quot;&gt;the comments and the answers&lt;/a&gt;
+made by other users, I began to understand what the author is asking. He wants
+the reader to think how would a multiplication matrix look like for a magma
+that follows the 3 requirements of a group. Maybe not look like, but what
+properties, patterns, etc. it would exhibit.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/group/theory/question/group-theory-related-question&quot;&gt;Group theory related question&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 07, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -696,39 +734,6 @@ something that will make us feel better, like surfing the web.&lt;/p&gt;
 &lt;p&gt;An interesting perspective.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/procrastination/why-do-we-procrastinate&quot;&gt;Why do we procrastinate...&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 09, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[What is up with world economy?]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/world/economy/what-is-up-with-world-economy</link>
-  <id>http://valera-rozuvan.github.io/nintoku/world/economy/what-is-up-with-world-economy</id>
-  <published>2013-12-24T16:59:29Z</published>
-  <updated>2013-12-24T16:59:29Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;2013 is nearing to an end. I have taken the time this morning to reflect on
-some global things that have happened this year. It surprised me that all I
-could think up was the
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Edward_Snowden&quot;&gt;Snowden’s case&lt;/a&gt;, and the
-&lt;a href=&quot;http://en.wikipedia.org/wiki/United_States_federal_government_shutdown_of_2013&quot;&gt;USA government shutdown&lt;/a&gt;.
-I must have been either really busy, or simply didn’t pay attention outside of
-the world of programming.&lt;/p&gt;
-
-&lt;p&gt;Just a side note. Notice that so far I only use
-&lt;a href=&quot;http://www.wikipedia.org/&quot;&gt;Wikipedia&lt;/a&gt; for information? Anyways…&lt;/p&gt;
-
-&lt;p&gt;Then I decided to research the state of the global economy. I discovered that
-the information on the net is plentiful (isn’t it always?). To summarize, I
-have created a repository on
-&lt;a href=&quot;https://github.com/valera-rozuvan/world-economy&quot;&gt;world economy&lt;/a&gt; with
-interesting links. I hope to find some time later to delve into this topic
-deeper.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/world/economy/what-is-up-with-world-economy&quot;&gt;What is up with world economy?&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on December 24, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
