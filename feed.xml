@@ -4,13 +4,32 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-02-07T17:26:16+02:00</updated>
+<updated>2014-02-10T17:00:09+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Updated home page with Google analytics]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/update/homepage/google/analytics/updated-home-page-with-google-analytics</link>
+  <id>http://valera-rozuvan.github.io/nintoku/update/homepage/google/analytics/updated-home-page-with-google-analytics</id>
+  <published>2014-02-10T16:56:27Z</published>
+  <updated>2014-02-10T16:56:27Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;After a recent revamp of &lt;a href=&quot;http://valera.rozuvan.net/&quot;&gt;valera.rozuvan.net&lt;/a&gt;, I
+have also decided to include the &lt;a href=&quot;www.google.com/analytics/‎&quot;&gt;Google Analytics&lt;/a&gt;
+tracking code. Will count my visitors = )&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/update/homepage/google/analytics/updated-home-page-with-google-analytics&quot;&gt;Updated home page with Google analytics&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -707,33 +726,6 @@ and last month. There is also such a list for authors.
 &lt;/ul&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/japanese/authors/literature/writing/must-read-japanese-authors&quot;&gt;Must read Japanese authors&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 10, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Why do we procrastinate...]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/procrastination/why-do-we-procrastinate</link>
-  <id>http://valera-rozuvan.github.io/nintoku/procrastination/why-do-we-procrastinate</id>
-  <published>2014-01-09T15:11:21Z</published>
-  <updated>2014-01-09T15:11:21Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;Welcome to the year 2014!&lt;/p&gt;
-
-&lt;p&gt;Today’s topic is procrastination ^_^ Just came upon a
-&lt;a href=&quot;http://online.wsj.com/news/articles/SB10001424052702303933104579306664120892036&quot;&gt;nice article&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;We feel worry, anxiety, fear of failure. And we resort to just doing
-something that will make us feel better, like surfing the web.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;An interesting perspective.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/procrastination/why-do-we-procrastinate&quot;&gt;Why do we procrastinate...&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 09, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
