@@ -4,13 +4,32 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-02-10T17:00:09+02:00</updated>
+<updated>2014-02-12T19:25:34+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Back to Emacs]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/back/emacs/back-to-emacs</link>
+  <id>http://valera-rozuvan.github.io/nintoku/back/emacs/back-to-emacs</id>
+  <published>2014-02-12T19:23:19Z</published>
+  <updated>2014-02-12T19:23:19Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;For those who don’t know, there exists
+&lt;a href=&quot;http://www.gnu.org/software/emacs/&quot;&gt;Emacs&lt;/a&gt;. It will be a
+&lt;a href=&quot;https://github.com/valera-rozuvan/emacs_config&quot;&gt;new beginning&lt;/a&gt; for me.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/back/emacs/back-to-emacs&quot;&gt;Back to Emacs&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 12, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -25,8 +44,8 @@
     <email>valera.rozuvan@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;After a recent revamp of &lt;a href=&quot;http://valera.rozuvan.net/&quot;&gt;valera.rozuvan.net&lt;/a&gt;, I
-have also decided to include the &lt;a href=&quot;www.google.com/analytics/‎&quot;&gt;Google Analytics&lt;/a&gt;
-tracking code. Will count my visitors = )&lt;/p&gt;
+have also decided to include the &lt;a href=&quot;http://www.google.com/analytics/‎&quot;&gt;Google Analytics&lt;/a&gt;
+tracking code. Will count my visitors. =)&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/update/homepage/google/analytics/updated-home-page-with-google-analytics&quot;&gt;Updated home page with Google analytics&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 </entry>
@@ -681,51 +700,6 @@ and last month. There is also such a list for authors.
 &lt;a href=&quot;http://www.gutenberg.org/browse/scores/top&quot;&gt;Please have a look&lt;/a&gt;.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/gutenberg/top/books/project-gutenberg-top-100&quot;&gt;Project Gutenberg top 100&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 13, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Must read Japanese authors]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/japanese/authors/literature/writing/must-read-japanese-authors</link>
-  <id>http://valera-rozuvan.github.io/nintoku/japanese/authors/literature/writing/must-read-japanese-authors</id>
-  <published>2014-01-10T15:42:02Z</published>
-  <updated>2014-01-10T15:42:02Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;What’s up with my fascination about Japanese authors? Anyways …&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Banana Yoshimoto&lt;/li&gt;
-  &lt;li&gt;Yukio Mishima&lt;/li&gt;
-  &lt;li&gt;Natsuo Kirino&lt;/li&gt;
-  &lt;li&gt;Haruki Murakami&lt;/li&gt;
-  &lt;li&gt;Ryu Murakami&lt;/li&gt;
-  &lt;li&gt;Natsume Soseki&lt;/li&gt;
-  &lt;li&gt;Ryunosuke Akutagawa&lt;/li&gt;
-  &lt;li&gt;Shusaku Endo&lt;/li&gt;
-  &lt;li&gt;Kobo Abe&lt;/li&gt;
-  &lt;li&gt;Kenzaburo Oe&lt;/li&gt;
-  &lt;li&gt;Jun’ichirō Tanizaki&lt;/li&gt;
-  &lt;li&gt;Sei Shonagon&lt;/li&gt;
-  &lt;li&gt;Yasunari Kawabata&lt;/li&gt;
-  &lt;li&gt;Jun Ishikawa&lt;/li&gt;
-  &lt;li&gt;Joy Kogawa&lt;/li&gt;
-  &lt;li&gt;Hisashi Inoue&lt;/li&gt;
-  &lt;li&gt;Hitomi Kanehara&lt;/li&gt;
-  &lt;li&gt;Hiromi Kawakami&lt;/li&gt;
-  &lt;li&gt;Miyuki Miyabe&lt;/li&gt;
-  &lt;li&gt;Risa Wataya&lt;/li&gt;
-  &lt;li&gt;Shintaro Ishihara&lt;/li&gt;
-  &lt;li&gt;Mitsuyo Kakuta&lt;/li&gt;
-  &lt;li&gt;Teru Miyamoto&lt;/li&gt;
-  &lt;li&gt;Amy Yamada&lt;/li&gt;
-  &lt;li&gt;Kenzo Kitakata&lt;/li&gt;
-&lt;/ul&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/japanese/authors/literature/writing/must-read-japanese-authors&quot;&gt;Must read Japanese authors&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
