@@ -7,4 +7,4 @@ categories: update homepage google analytics
 
 After a recent revamp of [valera.rozuvan.net](http://valera.rozuvan.net/), I
 have also decided to include the [Google Analytics](http://www.google.com/analytics/‎)
-tracking code. Will count my visitors = )
+tracking code. Will count my visitors. =)
