@@ -4,13 +4,55 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-02-12T19:25:34+02:00</updated>
+<updated>2014-02-14T16:34:21+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[SCSS and CoffeeScript for Emacs]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/scss/coffeescript/emacs/scss-and-coffeescript-for-emacs</link>
+  <id>http://valera-rozuvan.github.io/nintoku/scss/coffeescript/emacs/scss-and-coffeescript-for-emacs</id>
+  <published>2014-02-14T16:27:01Z</published>
+  <updated>2014-02-14T16:27:01Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;&lt;a href=&quot;http://sass-lang.com&quot;&gt;SCSS&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sass is the most mature, stable, and powerful professional grade CSS
+extension language in the world.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://coffeescript.org&quot;&gt;CoffeeScript&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;CoffeeScript is a little language that compiles into JavaScript. Underneath
+that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
+CoffeeScript is an attempt to expose the good parts of JavaScript in a simple
+way.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Thanks to the following resources:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/nex3/sass-mode&quot;&gt;sass-mode&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/defunkt/coffee-mode&quot;&gt;coffee-mode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I now &lt;a href=&quot;https://github.com/valera-rozuvan/emacs_config&quot;&gt;have an Emacs&lt;/a&gt; that highlights for me &lt;code&gt;.scss&lt;/code&gt; and &lt;code&gt;.coffee&lt;/code&gt; files.&lt;/p&gt;
+
+&lt;p&gt;= )&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scss/coffeescript/emacs/scss-and-coffeescript-for-emacs&quot;&gt;SCSS and CoffeeScript for Emacs&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -44,7 +86,7 @@
     <email>valera.rozuvan@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;After a recent revamp of &lt;a href=&quot;http://valera.rozuvan.net/&quot;&gt;valera.rozuvan.net&lt;/a&gt;, I
-have also decided to include the &lt;a href=&quot;http://www.google.com/analytics/‎&quot;&gt;Google Analytics&lt;/a&gt;
+have also decided to include the &lt;a href=&quot;http://www.google.com/analytics‎&quot;&gt;Google Analytics&lt;/a&gt;
 tracking code. Will count my visitors. =)&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/update/homepage/google/analytics/updated-home-page-with-google-analytics&quot;&gt;Updated home page with Google analytics&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
@@ -673,33 +715,6 @@ Japanese language meant to refer the spiritual and cultural values and
 characteristics of the Japanese people.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/winter/japan/the-winter-in-japan&quot;&gt;The winter in Japan&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 15, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Project Gutenberg top 100]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/gutenberg/top/books/project-gutenberg-top-100</link>
-  <id>http://valera-rozuvan.github.io/nintoku/gutenberg/top/books/project-gutenberg-top-100</id>
-  <published>2014-01-13T15:33:50Z</published>
-  <updated>2014-01-13T15:33:50Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;Project Gutenberg is&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;a volunteer effort to digitize and archive cultural works, to “encourage the
-creation and distribution of eBooks”. It was founded in 1971 by Michael S.
-Hart and is the oldest digital library.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It has a handy list of most downloaded books from today, yesterday, last week,
-and last month. There is also such a list for authors.
-&lt;a href=&quot;http://www.gutenberg.org/browse/scores/top&quot;&gt;Please have a look&lt;/a&gt;.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/gutenberg/top/books/project-gutenberg-top-100&quot;&gt;Project Gutenberg top 100&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 13, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
