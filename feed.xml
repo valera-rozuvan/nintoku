@@ -4,13 +4,55 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-02-14T16:34:21+02:00</updated>
+<updated>2014-02-17T15:58:55+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Work in progress]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/work/progress/work-in-progress</link>
+  <id>http://valera-rozuvan.github.io/nintoku/work/progress/work-in-progress</id>
+  <published>2014-02-14T16:27:01Z</published>
+  <updated>2014-02-14T16:27:01Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Monday is progressing in a fine manner.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Opened a &lt;a href=&quot;https://github.com/edx/edx-platform/pull/2618&quot;&gt;pull request&lt;/a&gt; to fix a bug where multiple choice
+were broken if a video was also present on the page.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Updated my &lt;a href=&quot;http://en.wikipedia.org/wiki/Emacs&quot;&gt;Emacs&lt;/a&gt; configuration file. Now &lt;a href=&quot;http://en.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt;
+files are highlighted properly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Listening to &lt;a href=&quot;http://en.wikipedia.org/wiki/Mikhail_Glinka&quot;&gt;Glinka&lt;/a&gt;:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=ZPwlMFL_koE&quot;&gt;14 pieces by Michail Ivanovič Glinka (Mazurkas, Valses, Variations etc.) - YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=mItEMQKz2dA&quot;&gt;Mikhail Glinka: Selected Orchestral Works (Evgeny Svetlanov - 1969 vinyl LP) - YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=vaAFlSPrH0c&amp;amp;list=PL4E1B98CF34CF691E&quot;&gt;Glinka&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_02_17/Michael_Glinka.jpg&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_02_17/Michael_Glinka.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/File:Michael_Glinka.jpg&quot; title=&quot;Michail Iwanowitsch Glinka, Litho&quot;&gt;Michail Iwanowitsch Glinka, Litho&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/work/progress/work-in-progress&quot;&gt;Work in progress&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -681,40 +723,6 @@ raw state.&lt;/p&gt;
 &lt;/ul&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/multiplayer/xonix/making-a-multi-player-xonix&quot;&gt;Making a multi-player Xonix&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 16, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[The winter in Japan]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/winter/japan/the-winter-in-japan</link>
-  <id>http://valera-rozuvan.github.io/nintoku/winter/japan/the-winter-in-japan</id>
-  <published>2014-01-15T17:06:36Z</published>
-  <updated>2014-01-15T17:06:36Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;From &lt;a href=&quot;http://www.gutenberg.org/ebooks/34341&quot;&gt;The Japanese Spirit&lt;/a&gt; by
-Yoshisaburo Okakura.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The winter, though it begins its dreary course with a short period of
-warm days known as the Little Spring, is of course not without its bleak
-mornings with cutting winds and icy wreaths. But the fact that even as
-far north as Tôkyô no elaborate system of warming rooms is at all
-developed, and that the occasional falling of snow is hailed even by
-aged men of letters, and still more by the numerous poetasters, as a fit
-occasion for a pedestrian excursion to some neighboring localities for a
-better appreciation of the silvery world, serves to show how mild the
-cold is in south Japan.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Yamato-damashii&quot;&gt;Yamato-damashii&lt;/a&gt; is term in the
-Japanese language meant to refer the spiritual and cultural values and
-characteristics of the Japanese people.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/winter/japan/the-winter-in-japan&quot;&gt;The winter in Japan&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
