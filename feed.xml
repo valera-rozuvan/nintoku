@@ -4,13 +4,42 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-02-17T16:35:29+02:00</updated>
+<updated>2014-02-18T16:51:21+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Reading Japanese]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/reading/japanese/reading-japanese</link>
+  <id>http://valera-rozuvan.github.io/nintoku/reading/japanese/reading-japanese</id>
+  <published>2014-02-18T16:43:55Z</published>
+  <updated>2014-02-18T16:43:55Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Not literally. Just got my English books by the Japanese author
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Banana_Yoshimoto&quot;&gt;Banana Yoshimoto&lt;/a&gt;. I ordered
+them a while ago on Amazon.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0802142621/&quot;&gt;Hardboiled and Hard Luck&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1612190898/&quot;&gt;The Lake&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Yay!&lt;/p&gt;
+
+&lt;p&gt;Listening to &lt;a href=&quot;http://www.youtube.com/watch?v=nKgM1SkMiqY&quot;&gt;Arthur Rubinstein - Chopin Mazurkas, Op. 6 - Op. 68&lt;/a&gt;.
+Specifically &lt;a href=&quot;http://goo.gl/rQxQjr&quot;&gt;Mazurka Op. 17, No. 4&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/reading/japanese/reading-japanese&quot;&gt;Reading Japanese&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 18, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -700,38 +729,6 @@ my breath. I know that if I do this, all moments will seem sweeter.&lt;/p&gt;
 &lt;/blockquote&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/sweet/moments/sweet-moments&quot;&gt;Sweet moments&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 17, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Making a multi-player Xonix]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/multiplayer/xonix/making-a-multi-player-xonix</link>
-  <id>http://valera-rozuvan.github.io/nintoku/multiplayer/xonix/making-a-multi-player-xonix</id>
-  <published>2014-01-16T17:51:20Z</published>
-  <updated>2014-01-16T17:51:20Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Xonix&quot;&gt;Xonix&lt;/a&gt; is a classical game. There are
-several examples (&lt;a href=&quot;http://www.vemix.com/Games/xonix/xonix.php&quot;&gt;one&lt;/a&gt;,
-&lt;a href=&quot;http://html5xonix.appspot.com/&quot;&gt;two&lt;/a&gt;) of it in JavaScript. Almost half a year
-ago I have started to make a game that borrows from the ideas of Xonix, and
-adds a few twists. You can take a
-&lt;a href=&quot;https://github.com/valera-rozuvan/vonix&quot;&gt;look&lt;/a&gt;, but the sources are in a very
-raw state.&lt;/p&gt;
-
-&lt;p&gt;The twists will include:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Online multi-player&lt;/li&gt;
-  &lt;li&gt;The world will have a point based geometry, rather than a square based geometry&lt;/li&gt;
-  &lt;li&gt;Player movement paths will be smooth, not angular&lt;/li&gt;
-  &lt;li&gt;Gravity&lt;/li&gt;
-&lt;/ul&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/multiplayer/xonix/making-a-multi-player-xonix&quot;&gt;Making a multi-player Xonix&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
