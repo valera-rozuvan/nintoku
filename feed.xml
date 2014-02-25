@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-02-25T18:05:51+02:00</updated>
+<updated>2014-02-25T18:08:06+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -27,18 +27,18 @@
   <content type="html">&lt;p&gt;In the order of most important, from the point of view of work. I
 want to know these languages at an advanced level.&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.python.org&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Python is a programming language that lets you work quickly
 and integrate systems more effectively.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.ruby-lang.org&quot;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Ruby is … A dynamic, open source programming language with
@@ -46,18 +46,18 @@ a focus on simplicity and productivity. It has an elegant syntax
 that is natural to read and easy to write.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://golang.org&quot;&gt;Go&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Go is an open source programming language that makes it easy
 to build simple, reliable, and efficient software.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Emacs_Lisp&quot;&gt;Emacs Lisp&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Emacs Lisp is a dialect of the Lisp programming language used
