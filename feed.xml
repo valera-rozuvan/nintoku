@@ -4,13 +4,68 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-02-21T11:02:57+02:00</updated>
+<updated>2014-02-25T18:05:51+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Languages I want to learn]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/languages/i/learn/languages-i-want-to-learn</link>
+  <id>http://valera-rozuvan.github.io/nintoku/languages/i/learn/languages-i-want-to-learn</id>
+  <published>2014-02-25T17:59:52Z</published>
+  <updated>2014-02-25T17:59:52Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In the order of most important, from the point of view of work. I
+want to know these languages at an advanced level.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.python.org&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Python is a programming language that lets you work quickly
+and integrate systems more effectively.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ruby-lang.org&quot;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ruby is … A dynamic, open source programming language with
+a focus on simplicity and productivity. It has an elegant syntax
+that is natural to read and easy to write.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://golang.org&quot;&gt;Go&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Go is an open source programming language that makes it easy
+to build simple, reliable, and efficient software.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Emacs_Lisp&quot;&gt;Emacs Lisp&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Emacs Lisp is a dialect of the Lisp programming language used
+by the GNU Emacs and XEmacs text editors.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/languages/i/learn/languages-i-want-to-learn&quot;&gt;Languages I want to learn&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 25, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -677,60 +732,6 @@ used to get down to 4680.&lt;/p&gt;
 &lt;p&gt;Must get to understanding Yitang Zhang solution…&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/infinity/twin/primes/reality/infinitely-many-twin-primes-a-reality&quot;&gt;Infinitely many twin primes: a reality&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 21, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[The astounding beauty of mathematics]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/astounding/beauty/mathematics/the-astounding-beauty-of-mathematics</link>
-  <id>http://valera-rozuvan.github.io/nintoku/astounding/beauty/mathematics/the-astounding-beauty-of-mathematics</id>
-  <published>2014-01-20T13:52:01Z</published>
-  <updated>2014-01-20T13:52:01Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;blockquote&gt;
-  &lt;p&gt;Oh, if only mathematics loved me as much as I love her!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Since the time the &lt;a href=&quot;http://www.claymath.org/&quot;&gt;Clay Mathematics Institute&lt;/a&gt;
-announced
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Millennium_Prize_Problems&quot;&gt;The Millennium Prize Problems&lt;/a&gt;
-in 2000,
-one of them have been solved
-(&lt;a href=&quot;http://www.claymath.org/millenium-problems/poincar%C3%A9-conjecture&quot;&gt;Poincaré Conjecture&lt;/a&gt;),
-and another one
-(&lt;a href=&quot;http://www.claymath.org/millenium-problems/navier%E2%80%93stokes-equation&quot;&gt;Navier–Stokes Equation&lt;/a&gt;)
-has a promising solution that is undergoing a verification.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.inform.kz/eng/article/2619922&quot;&gt;A news article&lt;/a&gt; announcing that
-KAZINFORM Mukhtarbai Otelbayev, a professor from Astana, has solved one of the
-seven most difficult mathematical tasks included in the number of “millennium
-problems”.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.math.kz/index.php/ru/513&quot;&gt;Mukhtarbai Otelbayev’s paper&lt;/a&gt;
-(&lt;a href=&quot;http://www.math.kz/images/journal/2013-4/Otelbaev_N-S_21_12_2013.pdf&quot;&gt;PDF&lt;/a&gt;)
-in a Russian journal published by the Institute of Mathematics and Mathematical
-Modelling, organized by Government of the Republic of Kazakhstan.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;While time passes, and other mathematicians eventually confirm or reject
-Otelbayev’s proof, I want to take a closer look at the problem of the
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations&quot;&gt;Navier–Stokes Equations&lt;/a&gt;.
-To be able to do that, I need to cover a lot of ground in the not-so trivial
-land of mathematics. The starting point has been chosen:
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Stochastic_differential_equation&quot;&gt;“Stochastic differential equation”&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Working through the
-&lt;a href=&quot;http://www.math.uh.edu/~torok/math_6397_SDE/Evans_SDE.course_v1.2_2011.08.pdf&quot;&gt;An Introduction to Stochastic Differential Equations&lt;/a&gt; by &lt;a href=&quot;http://en.wikipedia.org/wiki/Lawrence_C._Evans&quot;&gt;Lawrence C. Evans&lt;/a&gt;.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/astounding/beauty/mathematics/the-astounding-beauty-of-mathematics&quot;&gt;The astounding beauty of mathematics&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 20, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
