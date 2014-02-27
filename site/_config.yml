@@ -50,3 +50,5 @@ markdown:    kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
+
+gems: []

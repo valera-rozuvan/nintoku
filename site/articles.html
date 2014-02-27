@@ -5,19 +5,14 @@ title: Articles
 description: "An archive of posts sorted by date."
 ---
 
-<div>
-    <h3>Archive</h3>
-    <div>
-        {% for month in page.months %}
-        <h4>{{ month | date:"%B" }} <small>{{ month | date:"%Y" }}</small></h4>
-        <ul>
-            {% for post in page.posts_by_month[month] %}
-            <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-                <small>{{ post.date | date:"%d/%m/%y" }}</small>
-            </li>
-            {% endfor %}
-        </ul>
+<h1>{{ page.title }}</h1>
+<div class="archives">
+    {% for month in page.months %}
+    <h2>{{ month | date:"%B" }} <small>{{ month | date:"%Y" }}</small></h2>
+    <ul>
+        {% for post in page.posts_by_month[month] %}
+        <li><a href="{{ post.url }}">{{ post.title | truncate:65 }}</a></li>
         {% endfor %}
-    </div>
+    </ul>
+    {% endfor %}
 </div>
