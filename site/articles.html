@@ -5,7 +5,6 @@ title: Articles
 description: "An archive of posts sorted by date."
 ---
 
-<h1>{{ page.title }}</h1>
 <div class="archives">
     {% for month in page.months %}
     <h2>{{ month | date:"%B" }} <small>{{ month | date:"%Y" }}</small></h2>
