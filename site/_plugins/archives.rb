@@ -1,6 +1,8 @@
 #
 # Generates a single archives.html page in site root that lists all posts by month.
 #
+# Source: https://gist.github.com/azsromej/1994881
+#
 # Learned from:
 # https://github.com/mojombo/jekyll/wiki/Plugins
 # https://gist.github.com/707909
