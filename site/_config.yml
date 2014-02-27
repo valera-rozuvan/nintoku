@@ -40,7 +40,7 @@ links:
   - title: About
     url: /about
   - title: Archives
-    url: /articles
+    url: /archives
   - title: Google
     url: http://google.com
     external: true
