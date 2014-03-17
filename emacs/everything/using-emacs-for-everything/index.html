@@ -168,14 +168,17 @@ following contents to it:</p>
 
 <div class="highlight"><pre><code class="bash"><span class="c">#!/bin/bash</span>
 
-<span class="nv">num_emacs_servers</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -i <span class="o">[</span>e<span class="o">]</span>macs <span class="p">|</span> wc -l<span class="sb">`</span>
+<span class="nv">num_emacs_servers</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -i <span class="s2">&quot;[e]macs24-x&quot;</span> <span class="p">|</span> wc -l<span class="sb">`</span>
 
-<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$num_emacs_servers&quot;</span> -eq <span class="s2">&quot;3&quot;</span> <span class="o">]]</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$num_emacs_servers&quot;</span> -eq <span class="s2">&quot;1&quot;</span> <span class="o">]]</span>
 <span class="k">then</span>
     <span class="c"># Starting emacsclient</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Starting emacsclient&quot;</span>
     <span class="nb">exec</span> /usr/bin/emacsclient <span class="nv">$@</span>
 <span class="k">else</span>
     <span class="c"># Starting emacs server</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Starting emacs24-x&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;num_emacs_servers = ${num_emacs_servers}&quot;</span>
     <span class="nb">exec</span> /usr/bin/emacs24-x <span class="nv">$@</span>
 <span class="k">fi</span>
 
