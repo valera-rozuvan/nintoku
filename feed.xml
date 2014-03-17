@@ -4,13 +4,84 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-03-01T00:08:41+02:00</updated>
+<updated>2014-03-17T18:55:59+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Using Emacs for everything]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything</link>
+  <id>http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything</id>
+  <published>2014-03-17T18:54:59Z</published>
+  <updated>2014-03-17T18:54:59Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;When you are working with some console application such as &lt;a href=&quot;http://git-scm.com&quot;&gt;git&lt;/a&gt;, it is often
+the case that a text editor is launched by the console application for you to edit some text. By
+default in Debian you get &lt;a href=&quot;http://www.nano-editor.org&quot;&gt;nano&lt;/a&gt;, which is an OK editor. However,
+what if you wanted to use Emacs for all text editing?&lt;/p&gt;
+
+&lt;p&gt;Luckily, the Debian provides a really easy way to specify alternatives to just about any application.
+Try running&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo update-alternatives --config editor
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will get a list of all available choices, and a prompt to set the default editor. We will create
+our own little &lt;a href=&quot;http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29&quot;&gt;Bash script&lt;/a&gt; that will launch
+Emacs for us whenever the text editor is invoked. We will update the alternatives to set the default
+editor to point to our script.&lt;/p&gt;
+
+&lt;p&gt;For easy manipulation of the Debian alternatives I suggest the use of
+&lt;a href=&quot;https://packages.debian.org/wheezy/galternatives&quot;&gt;galternatives&lt;/a&gt;. Running this tool, you can select
+the &lt;code&gt;editor&lt;/code&gt; from the alternatives panel. Then you can add a new alternative pointing to
+&lt;code&gt;/home/user_name/bin/editor&lt;/code&gt;, and make sure it is selected.&lt;/p&gt;
+
+&lt;p&gt;Next create a new file &lt;code&gt;/home/user_name/bin/editor&lt;/code&gt;, make sure that it is executable, and add the
+following contents to it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;    &lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;num_emacs_servers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ps aux &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -i &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;e&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;macs &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; wc -l&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$num_emacs_servers&amp;quot;&lt;/span&gt; -eq &lt;span class=&quot;s2&quot;&gt;&amp;quot;3&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# Starting emacsclient&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /usr/bin/emacsclient &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# Starting emacs server&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /usr/bin/emacs24-x &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Also, update the alternatives for &lt;code&gt;emacs&lt;/code&gt;, setting it to &lt;code&gt;/home/user_name/bin/editor&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, whenever you run emacs, or some other command runs the text editor, you will:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Get a new Emacs started, if no Emacs is running.&lt;/li&gt;
+  &lt;li&gt;Get a new frame withing an already running Emacs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You must make sure that upon start, Emacs runs the following LISP command:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lisp&quot;&gt;    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;server-start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will start an Emacs server daemon that will process any client requests.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything&quot;&gt;Using Emacs for everything&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 17, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -651,26 +722,6 @@ operation).&lt;/p&gt;
 &lt;a href=&quot;http://opinionator.blogs.nytimes.com/2010/05/09/the-hilbert-hotel/?_php=true&amp;amp;_type=blogs&amp;amp;_r=0&quot;&gt;The Hilbert Hotel&lt;/a&gt;.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/cantor/infinity/cantor-and-infinity&quot;&gt;Cantor and infinity&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 27, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Extraordinary worlds in mathematics]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/extraordinary/worlds/mathematics/extraordinary-worlds-in-mathematics</link>
-  <id>http://valera-rozuvan.github.io/nintoku/extraordinary/worlds/mathematics/extraordinary-worlds-in-mathematics</id>
-  <published>2014-01-24T15:34:25Z</published>
-  <updated>2014-01-24T15:34:25Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;More and more these days I stumble upon something very intriguing in
-mathematics. Whole unknown worlds created by exceptional mathematicians. Not
-some ancient theories which are centuries old. Novel concepts, reasoning, and
-imagination. Take a look at the &lt;a href=&quot;http://en.wikipedia.org/wiki/Inter-universal_Teichm%C3%BCller_theory&quot;&gt;Inter-universal Teichmüller theory&lt;/a&gt;.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/extraordinary/worlds/mathematics/extraordinary-worlds-in-mathematics&quot;&gt;Extraordinary worlds in mathematics&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 24, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Theming Emacs &#8211; Nintoku</title>
+<title>Using Emacs for everything &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Theming Emacs">
+<meta name="twitter:title" content="Using Emacs for everything">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Theming Emacs">
+<meta property="og:title" content="Using Emacs for everything">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/107180394340520523800?rel=author">
 
@@ -130,41 +130,81 @@
       <header class="entry-header">
         <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">Theming Emacs</h1>
+          <h1 class="entry-title" itemprop="headline">Using Emacs for everything</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-03-01T00:02:32Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> March 01, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-03-17T18:54:59Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> March 17, 2014</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs" rel="bookmark" title="Theming Emacs" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything" rel="bookmark" title="Using Emacs for everything" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
       </footer>
       <div class="entry-content" itemprop="description">
-        <p>Just updated my <a href="https://github.com/valera-rozuvan/emacs_config">.emacs</a>
-file to include a theme preference, and a few styling changes to the
-<a href="http://www.emacswiki.org/emacs/TabBarMode">tabbar</a>. Another change is
-that the <code>RET</code> key will always just do a new-line for my modes.</p>
+        <p>When you are working with some console application such as <a href="http://git-scm.com">git</a>, it is often
+the case that a text editor is launched by the console application for you to edit some text. By
+default in Debian you get <a href="http://www.nano-editor.org">nano</a>, which is an OK editor. However,
+what if you wanted to use Emacs for all text editing?</p>
 
-<figure>
-    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_03_01/emacs_window.png">
-        <img src="http://valera-rozuvan.github.io/nintoku/images/2014_03_01/emacs_window.png" />
-    </a>
-    <figcaption>
-        <a href="http://valera-rozuvan.github.io/nintoku/images/2014_03_01/emacs_window.png" title="Emacs window">Emacs window</a>.
-    </figcaption>
-</figure>
+<p>Luckily, the Debian provides a really easy way to specify alternatives to just about any application.
+Try running</p>
+
+<pre><code>sudo update-alternatives --config editor
+</code></pre>
+
+<p>You will get a list of all available choices, and a prompt to set the default editor. We will create
+our own little <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash script</a> that will launch
+Emacs for us whenever the text editor is invoked. We will update the alternatives to set the default
+editor to point to our script.</p>
+
+<p>For easy manipulation of the Debian alternatives I suggest the use of
+<a href="https://packages.debian.org/wheezy/galternatives">galternatives</a>. Running this tool, you can select
+the <code>editor</code> from the alternatives panel. Then you can add a new alternative pointing to
+<code>/home/user_name/bin/editor</code>, and make sure it is selected.</p>
+
+<p>Next create a new file <code>/home/user_name/bin/editor</code>, make sure that it is executable, and add the
+following contents to it:</p>
+
+<div class="highlight"><pre><code class="bash">    <span class="c">#!/bin/bash</span>
+
+    <span class="nv">num_emacs_servers</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -i <span class="o">[</span>e<span class="o">]</span>macs <span class="p">|</span> wc -l<span class="sb">`</span>
+
+    <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$num_emacs_servers&quot;</span> -eq <span class="s2">&quot;3&quot;</span> <span class="o">]]</span>
+    <span class="k">then</span>
+        <span class="c"># Starting emacsclient</span>
+        <span class="nb">exec</span> /usr/bin/emacsclient <span class="nv">$@</span>
+    <span class="k">else</span>
+        <span class="c"># Starting emacs server</span>
+        <span class="nb">exec</span> /usr/bin/emacs24-x <span class="nv">$@</span>
+    <span class="k">fi</span>
+
+<span class="k">    </span><span class="nb">exit </span>0
+</code></pre></div>
+
+<p>Also, update the alternatives for <code>emacs</code>, setting it to <code>/home/user_name/bin/editor</code>.</p>
+
+<p>Now, whenever you run emacs, or some other command runs the text editor, you will:</p>
+
+<ul>
+  <li>Get a new Emacs started, if no Emacs is running.</li>
+  <li>Get a new frame withing an already running Emacs.</li>
+</ul>
+
+<p>You must make sure that upon start, Emacs runs the following LISP command:</p>
+
+<div class="highlight"><pre><code class="lisp">    <span class="p">(</span><span class="nv">server-start</span><span class="p">)</span>
+</code></pre></div>
+
+<p>This will start an Emacs server daemon that will process any client requests.</p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/fall/ukraine/hryvnia/fall-of-ukrainian-hryvnia" class="btn" title="The fall of the Ukrainian hryvnia">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs" class="btn" title="Theming Emacs">Previous article</a>
       
-      
-        <a href="http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything" class="btn" title="Using Emacs for everything">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>
