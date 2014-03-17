@@ -33,14 +33,17 @@ following contents to it:
 {% highlight bash %}
 #!/bin/bash
 
-num_emacs_servers=`ps aux | grep -i [e]macs | wc -l`
+num_emacs_servers=`ps aux | grep -i "[e]macs24-x" | wc -l`
 
-if [[ "$num_emacs_servers" -eq "3" ]]
+if [[ "$num_emacs_servers" -eq "1" ]]
 then
     # Starting emacsclient
+    echo "Starting emacsclient"
     exec /usr/bin/emacsclient $@
 else
     # Starting emacs server
+    echo "Starting emacs24-x"
+    echo "num_emacs_servers = ${num_emacs_servers}"
     exec /usr/bin/emacs24-x $@
 fi
 
