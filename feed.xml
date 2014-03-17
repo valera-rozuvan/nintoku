@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-03-17T18:55:59+02:00</updated>
+<updated>2014-03-17T18:58:56+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -32,8 +32,8 @@ what if you wanted to use Emacs for all text editing?&lt;/p&gt;
 &lt;p&gt;Luckily, the Debian provides a really easy way to specify alternatives to just about any application.
 Try running&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo update-alternatives --config editor
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo update-alternatives --config editor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;You will get a list of all available choices, and a prompt to set the default editor. We will create
 our own little &lt;a href=&quot;http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29&quot;&gt;Bash script&lt;/a&gt; that will launch
@@ -48,20 +48,20 @@ the &lt;code&gt;editor&lt;/code&gt; from the alternatives panel. Then you can ad
 &lt;p&gt;Next create a new file &lt;code&gt;/home/user_name/bin/editor&lt;/code&gt;, make sure that it is executable, and add the
 following contents to it:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;    &lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
 
-    &lt;span class=&quot;nv&quot;&gt;num_emacs_servers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ps aux &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -i &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;e&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;macs &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; wc -l&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;num_emacs_servers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ps aux &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -i &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;e&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;macs &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; wc -l&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
 
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$num_emacs_servers&amp;quot;&lt;/span&gt; -eq &lt;span class=&quot;s2&quot;&gt;&amp;quot;3&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
-        &lt;span class=&quot;c&quot;&gt;# Starting emacsclient&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /usr/bin/emacsclient &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-        &lt;span class=&quot;c&quot;&gt;# Starting emacs server&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /usr/bin/emacs24-x &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$num_emacs_servers&amp;quot;&lt;/span&gt; -eq &lt;span class=&quot;s2&quot;&gt;&amp;quot;3&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Starting emacsclient&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /usr/bin/emacsclient &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Starting emacs server&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /usr/bin/emacs24-x &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;0
+&lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Also, update the alternatives for &lt;code&gt;emacs&lt;/code&gt;, setting it to &lt;code&gt;/home/user_name/bin/editor&lt;/code&gt;.&lt;/p&gt;
@@ -75,7 +75,7 @@ following contents to it:&lt;/p&gt;
 
 &lt;p&gt;You must make sure that upon start, Emacs runs the following LISP command:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lisp&quot;&gt;    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;server-start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;server-start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This will start an Emacs server daemon that will process any client requests.&lt;/p&gt;
