@@ -13,7 +13,9 @@ what if you wanted to use Emacs for all text editing?
 Luckily, the Debian provides a really easy way to specify alternatives to just about any application.
 Try running
 
-    sudo update-alternatives --config editor
+{% highlight bash %}
+sudo update-alternatives --config editor
+{% endhighlight %}
 
 You will get a list of all available choices, and a prompt to set the default editor. We will create
 our own little [Bash script](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) that will launch
@@ -29,20 +31,20 @@ Next create a new file `/home/user_name/bin/editor`, make sure that it is execut
 following contents to it:
 
 {% highlight bash %}
-    #!/bin/bash
+#!/bin/bash
 
-    num_emacs_servers=`ps aux | grep -i [e]macs | wc -l`
+num_emacs_servers=`ps aux | grep -i [e]macs | wc -l`
 
-    if [[ "$num_emacs_servers" -eq "3" ]]
-    then
-        # Starting emacsclient
-        exec /usr/bin/emacsclient $@
-    else
-        # Starting emacs server
-        exec /usr/bin/emacs24-x $@
-    fi
+if [[ "$num_emacs_servers" -eq "3" ]]
+then
+    # Starting emacsclient
+    exec /usr/bin/emacsclient $@
+else
+    # Starting emacs server
+    exec /usr/bin/emacs24-x $@
+fi
 
-    exit 0
+exit 0
 {% endhighlight %}
 
 Also, update the alternatives for `emacs`, setting it to `/home/user_name/bin/editor`.
@@ -55,7 +57,7 @@ Now, whenever you run emacs, or some other command runs the text editor, you wil
 You must make sure that upon start, Emacs runs the following LISP command:
 
 {% highlight lisp %}
-    (server-start)
+(server-start)
 {% endhighlight %}
 
 This will start an Emacs server daemon that will process any client requests.
