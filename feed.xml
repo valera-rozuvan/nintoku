@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-03-18T23:46:46+02:00</updated>
+<updated>2014-03-18T23:55:39+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -26,8 +26,10 @@
   </author>
   <content type="html">&lt;p&gt;Debian 7 code named &lt;a href=&quot;https://www.debian.org/releases/wheezy&quot;&gt;wheezy&lt;/a&gt; comes bundled
 with &lt;a href=&quot;https://packages.debian.org/wheezy/emacs&quot;&gt;Emacs version 23&lt;/a&gt;. I want to use
-the latest and greatest Emacs 24 = ) So, without any other words, I present to you
-the complete guide of how to install Emacs 24.3.1 on Debian 7 wheezy.&lt;/p&gt;
+the latest and greatest
+&lt;a href=&quot;http://lists.gnu.org/archive/html/info-gnu-emacs/2013-03/msg00001.html&quot;&gt;Emacs 24.3&lt;/a&gt;
+= ) So, without any other words, I present to you the complete guide of how to install
+Emacs 24.3.1 on Debian 7 wheezy.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
 sudo apt-get build-dep emacs
@@ -47,16 +49,16 @@ sudo make install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;It is important to add the directory, where Emacs binary is found, to the system &lt;code&gt;PATH&lt;/code&gt;
-variable. The directory contains several other important Emacs related binaries&lt;/p&gt;
+variable. The directory contains several other important Emacs related binaries:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;ctags&lt;/li&gt;
-  &lt;li&gt;ebrowse&lt;/li&gt;
-  &lt;li&gt;emacs -&amp;gt; emacs-24.3&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.emacswiki.org/emacs/BuildTags&quot;&gt;ctags&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/emacs/manual/ebrowse.html&quot;&gt;ebrowse&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/emacs&quot;&gt;emacs&lt;/a&gt; -&amp;gt; emacs-24.3&lt;/li&gt;
   &lt;li&gt;emacs-24.3&lt;/li&gt;
-  &lt;li&gt;emacsclient&lt;/li&gt;
-  &lt;li&gt;etags&lt;/li&gt;
-  &lt;li&gt;grep-changelog&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.emacswiki.org/emacs/EmacsClient&quot;&gt;emacsclient&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/emacs/manual/html_node/eintr/etags.html&quot;&gt;etags&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://manned.org/grep-changelog/196b04a3&quot;&gt;grep-changelog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Place the following line at the bottom of your &lt;code&gt;~/.bashrc&lt;/code&gt; file:&lt;/p&gt;
@@ -64,7 +66,7 @@ variable. The directory contains several other important Emacs related binaries&
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/opt/emacs24/bin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Now you can run Emacs with a simple command&lt;/p&gt;
+&lt;p&gt;Now you can run Emacs with a simple command:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;emacs
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
