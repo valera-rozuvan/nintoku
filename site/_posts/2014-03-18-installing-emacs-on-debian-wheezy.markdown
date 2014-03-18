@@ -7,8 +7,10 @@ categories: installing emacs debian wheezy
 
 Debian 7 code named [wheezy](https://www.debian.org/releases/wheezy) comes bundled
 with [Emacs version 23](https://packages.debian.org/wheezy/emacs). I want to use
-the latest and greatest Emacs 24 = ) So, without any other words, I present to you
-the complete guide of how to install Emacs 24.3.1 on Debian 7 wheezy.
+the latest and greatest
+[Emacs 24.3](http://lists.gnu.org/archive/html/info-gnu-emacs/2013-03/msg00001.html)
+= ) So, without any other words, I present to you the complete guide of how to install
+Emacs 24.3.1 on Debian 7 wheezy.
 
 {% highlight bash %}
 sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
@@ -30,15 +32,15 @@ The above steps will install Emacs to `/opt/emacs24`. To run Emacs, you can laun
 {% endhighlight %}
 
 It is important to add the directory, where Emacs binary is found, to the system `PATH`
-variable. The directory contains several other important Emacs related binaries
+variable. The directory contains several other important Emacs related binaries:
 
-- ctags
-- ebrowse
-- emacs -> emacs-24.3
+- [ctags](http://www.emacswiki.org/emacs/BuildTags)
+- [ebrowse](https://www.gnu.org/software/emacs/manual/ebrowse.html)
+- [emacs](https://www.gnu.org/software/emacs) -> emacs-24.3
 - emacs-24.3
-- emacsclient
-- etags
-- grep-changelog
+- [emacsclient](http://www.emacswiki.org/emacs/EmacsClient)
+- [etags](http://www.gnu.org/software/emacs/manual/html_node/eintr/etags.html)
+- [grep-changelog](http://manned.org/grep-changelog/196b04a3)
 
 Place the following line at the bottom of your `~/.bashrc` file:
 
@@ -46,7 +48,7 @@ Place the following line at the bottom of your `~/.bashrc` file:
 export PATH=$PATH:/opt/emacs24/bin
 {% endhighlight %}
 
-Now you can run Emacs with a simple command
+Now you can run Emacs with a simple command:
 
 {% highlight bash %}
 emacs
