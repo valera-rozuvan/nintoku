@@ -4,13 +4,74 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-03-17T19:28:20+02:00</updated>
+<updated>2014-03-18T23:46:46+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Installing Emacs on Debian wheezy]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy</link>
+  <id>http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy</id>
+  <published>2014-03-18T23:32:24Z</published>
+  <updated>2014-03-18T23:32:24Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Debian 7 code named &lt;a href=&quot;https://www.debian.org/releases/wheezy&quot;&gt;wheezy&lt;/a&gt; comes bundled
+with &lt;a href=&quot;https://packages.debian.org/wheezy/emacs&quot;&gt;Emacs version 23&lt;/a&gt;. I want to use
+the latest and greatest Emacs 24 = ) So, without any other words, I present to you
+the complete guide of how to install Emacs 24.3.1 on Debian 7 wheezy.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
+sudo apt-get build-dep emacs
+git clone git://git.savannah.gnu.org/emacs.git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;emacs/
+git checkout emacs-24.3
+git checkout -b custom_branch
+./autogen.sh
+./configure --prefix&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/opt/emacs24
+make --jobs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above steps will install Emacs to &lt;code&gt;/opt/emacs24&lt;/code&gt;. To run Emacs, you can launch it by:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;/opt/emacs24/bin/emacs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It is important to add the directory, where Emacs binary is found, to the system &lt;code&gt;PATH&lt;/code&gt;
+variable. The directory contains several other important Emacs related binaries&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ctags&lt;/li&gt;
+  &lt;li&gt;ebrowse&lt;/li&gt;
+  &lt;li&gt;emacs -&amp;gt; emacs-24.3&lt;/li&gt;
+  &lt;li&gt;emacs-24.3&lt;/li&gt;
+  &lt;li&gt;emacsclient&lt;/li&gt;
+  &lt;li&gt;etags&lt;/li&gt;
+  &lt;li&gt;grep-changelog&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Place the following line at the bottom of your &lt;code&gt;~/.bashrc&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/opt/emacs24/bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now you can run Emacs with a simple command&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;emacs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy&quot;&gt;Installing Emacs on Debian wheezy&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 18, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -699,32 +760,6 @@ objects remains the same (if some of the axioms stop being true for the new
 operation).&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/group/theory/a-group&quot;&gt;A Group&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 28, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Cantor and infinity]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/cantor/infinity/cantor-and-infinity</link>
-  <id>http://valera-rozuvan.github.io/nintoku/cantor/infinity/cantor-and-infinity</id>
-  <published>2014-01-27T15:19:07Z</published>
-  <updated>2014-01-27T15:19:07Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;Must study these concepts:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel&quot;&gt;Hilbert’s paradox of the Grand Hotel&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Cantor%27s_first_uncountability_proof&quot;&gt;Cantor’s first uncountability proof&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument&quot;&gt;Cantor’s diagonal argument&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I came upon them while reading the article
-&lt;a href=&quot;http://opinionator.blogs.nytimes.com/2010/05/09/the-hilbert-hotel/?_php=true&amp;amp;_type=blogs&amp;amp;_r=0&quot;&gt;The Hilbert Hotel&lt;/a&gt;.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/cantor/infinity/cantor-and-infinity&quot;&gt;Cantor and infinity&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 27, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
