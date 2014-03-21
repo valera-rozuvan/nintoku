@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Kitchens and moons by Banana"
+title:  "Seeking inspiration"
 date:   2014-03-21 19:16:09
 categories: seeking inspiration
 ---
