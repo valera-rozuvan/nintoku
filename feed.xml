@@ -4,13 +4,46 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-03-19T23:20:33+02:00</updated>
+<updated>2014-03-21T19:44:25+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Kitchens and moons by Banana]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration</link>
+  <id>http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration</id>
+  <published>2014-03-21T19:16:09Z</published>
+  <updated>2014-03-21T19:16:09Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Sometimes you come to a realization that what you do does not move you anymore.
+This should in no way make you drop what you are doing and fall into a despair.
+Simply step back, take a deep breath. Now look at what you are doing. Consider
+what impact it has on the outside world. Step into the shoes of another person,
+whom you are impacting. Your work must have real world value. Not just “one man
+show in your backyard woodshed”. With that knowledge, return back into your
+shoes.&lt;/p&gt;
+
+&lt;p&gt;Another point is that it pays to have a hobby, even a minor. It is very rewarding
+to switch to something you love doing after long hours of work. It should be
+totally different from your 8 hours that you spend daily working. The human
+mind works in strange ways. It likes a change of thought direction, visual
+input, and stimuli.&lt;/p&gt;
+
+&lt;p&gt;Finally, everything you do must have inspiration backing it. Not just a reward!
+Reward is something you get. Inspiration is that godly feeling that makes you
+do stuff without any reward = )&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration&quot;&gt;Kitchens and moons by Banana&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 21, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -777,29 +810,6 @@ they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$ This is really cool!
 &lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests&quot;&gt;MathJax tests&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 30, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Lagrange's Theorem]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/lagrange/theorem/lagranges-theorem</link>
-  <id>http://valera-rozuvan.github.io/nintoku/lagrange/theorem/lagranges-theorem</id>
-  <published>2014-01-29T23:24:10Z</published>
-  <updated>2014-01-29T23:24:10Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;In his 1771 paper
-&lt;a href=&quot;http://gallica.bnf.fr/ark:/12148/bpt6k229222d/f206.image&quot;&gt;&lt;strong&gt;Réflexions sur la résolution algébrique des équations&lt;/strong&gt;&lt;/a&gt;,
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Joseph_Louis_Lagrange&quot;&gt;Lagrange&lt;/a&gt; was studying
-polynomials. In particular he was interested in polynomials of degree 5 and
-higher. This was the ground work that was used later on by
-&lt;a href=&quot;http://en.wikipedia.org/wiki/%C3%89variste_Galois&quot;&gt;Galois&lt;/a&gt; to put forth the
-beginning of &lt;a href=&quot;http://en.wikipedia.org/wiki/Galois_theory&quot;&gt;Galois theory&lt;/a&gt;.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/lagrange/theorem/lagranges-theorem&quot;&gt;Lagrange's Theorem&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 29, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
