@@ -4,13 +4,73 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-03-21T19:48:01+02:00</updated>
+<updated>2014-03-24T19:33:51+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Namespacing all YouTube URLs on edX backend]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend</link>
+  <id>http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend</id>
+  <published>2014-03-24T19:20:27Z</published>
+  <updated>2014-03-24T19:20:27Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Up to now, the backend defined 2 variables which stored YouTube related URLs:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;YOUTUBE_TEST_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;https://gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# for example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;YOUTUBE_API&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://video.google.com/timedtext&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;params&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;lang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This was done in &lt;code&gt;[cms/envs/common.py](https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py)&lt;/code&gt; file (lines 428, 532).&lt;/p&gt;
+
+&lt;p&gt;I wanted to introduce a new URL which is responsible for YouTube API on
+the front-end. To do this, I have created a &lt;code&gt;YOUTUBE&lt;/code&gt; namespace, and
+added a third URL to the back-end:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;YOUTUBE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# YouTube JavaScript API&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;API&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;www.youtube.com/iframe_api&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;TEST_URL&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# For example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;TEXT_API&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;video.google.com/timedtext&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;#39;params&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&amp;#39;lang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9&quot;&gt;pull request&lt;/a&gt; has just been merged in to &lt;a href=&quot;https://github.com/edx/edx-platform&quot;&gt;edx-platform master&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This PR opens up a possibility to mock the YouTube API in acceptance tests.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend&quot;&gt;Namespacing all YouTube URLs on edX backend&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 24, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -727,89 +787,6 @@ starting point. Things to do:&lt;/p&gt;
 &lt;p&gt;Sounds like fun ^_^v!&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/bookmarks/manager/host/github/bookmarks-manager-hosted-on-github&quot;&gt;Bookmarks manager hosted on GitHub&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 31, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[MathJax tests]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests</link>
-  <id>http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests</id>
-  <published>2014-01-30T13:12:43Z</published>
-  <updated>2014-01-30T13:12:43Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt; is an open source JavaScript display engine
-for mathematics that works in all browsers. Some examples of what it can do are
-provided below. Oh, and I wanto to point out how very awesome is it that the
-markdown processor &lt;a href=&quot;http://kramdown.gettalong.org&quot;&gt;kramdown&lt;/a&gt; used on
-&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/&quot;&gt;Nintoku&lt;/a&gt; supports
-&lt;a href=&quot;http://kramdown.gettalong.org/syntax.html#math-blocks&quot;&gt;math natively&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;inside-p-tag&quot;&gt;Inside &lt;strong&gt;p&lt;/strong&gt; tag&lt;/h2&gt;
-
-&lt;p&gt;
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-&lt;/p&gt;
-
-&lt;h2 id=&quot;inside-span-tag&quot;&gt;Inside &lt;strong&gt;span&lt;/strong&gt; tag&lt;/h2&gt;
-
-&lt;p&gt;&lt;span&gt;
-When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are
-&lt;script type=&quot;math/tex&quot;&gt;x = {-b \pm \sqrt{b^2-4ac} \over 2a}.&lt;/script&gt;
-&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;inside-div-tag&quot;&gt;Inside &lt;strong&gt;div&lt;/strong&gt; tag&lt;/h2&gt;
-
-&lt;div&gt;
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-&lt;/div&gt;
-
-&lt;h2 id=&quot;not-in-a-tag&quot;&gt;Not in a tag&lt;/h2&gt;
-
-&lt;p&gt;When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are
-&lt;script type=&quot;math/tex&quot;&gt;x = {-b \pm \sqrt{b^2-4ac} \over 2a}.&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, we will use double dollar signs to surround math stuff.&lt;/p&gt;
-
-&lt;h2 id=&quot;inside-p-tag-1&quot;&gt;Inside &lt;strong&gt;p&lt;/strong&gt; tag&lt;/h2&gt;
-
-&lt;p&gt;
-When $$ $a \ne 0$ $$, there are two solutions to $$ \(ax^2 + bx + c = 0\) $$ and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-&lt;/p&gt;
-
-&lt;h2 id=&quot;inside-span-tag-1&quot;&gt;Inside &lt;strong&gt;span&lt;/strong&gt; tag&lt;/h2&gt;
-
-&lt;p&gt;&lt;span&gt;
-When &lt;script type=&quot;math/tex&quot;&gt; $a \ne 0$ &lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt; \(ax^2 + bx + c = 0\) &lt;/script&gt; and they are
-&lt;script type=&quot;math/tex&quot;&gt;x = {-b \pm \sqrt{b^2-4ac} \over 2a}.&lt;/script&gt;
-&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;inside-div-tag-1&quot;&gt;Inside &lt;strong&gt;div&lt;/strong&gt; tag&lt;/h2&gt;
-
-&lt;div&gt;
-When $$ $a \ne 0$ $$, there are two solutions to $$ \(ax^2 + bx + c = 0\) $$ and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-&lt;/div&gt;
-
-&lt;h2 id=&quot;not-in-a-tag-1&quot;&gt;Not in a tag&lt;/h2&gt;
-
-&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt; $a \ne 0$ &lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt; \(ax^2 + bx + c = 0\) &lt;/script&gt; and they are
-&lt;script type=&quot;math/tex&quot;&gt;x = {-b \pm \sqrt{b^2-4ac} \over 2a}.&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;And the proper way is:&lt;/p&gt;
-
-&lt;p&gt;
-When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and
-they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$ This is really cool!
-&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/mathjax/tests/mathjax-tests&quot;&gt;MathJax tests&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 30, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
