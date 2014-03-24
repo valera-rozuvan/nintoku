@@ -23,7 +23,7 @@ YOUTUBE_API = {
 }
 {% endhighlight %}
 
-This was done in `[cms/envs/common.py](https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py)` file (lines 428, 532).
+This was done in [`cms/envs/common.py`](https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py) file (lines 428, 532).
 
 I wanted to introduce a new URL which is responsible for YouTube API on
 the front-end. To do this, I have created a `YOUTUBE` namespace, and
