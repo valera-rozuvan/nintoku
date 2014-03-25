@@ -1,44 +1,52 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="{{ site.url }}/assets/js/scripts.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script type="text/javascript" src="{{ site.url }}/assets/js/scripts.min.js"></script>
+
 {% if site.search %}
-<!-- Jekyll Simple Search option -->
+<!-- Jekyll Simple Search option. -->
 <script>
-  $(document).ready(function() {
-      $('.search-field').simpleJekyllSearch({
-          jsonFile : '{{ site.url }}/search.json',
-          searchResults : '.search-results',
-          template : '<li><article><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></article></li>',
-          noResults: '<p>Nothing found.</p>'
+    $(document).ready(function () {
+        $('.search-field').simpleJekyllSearch({
+            jsonFile: '{{ site.url }}/search.json',
+            searchResults: '.search-results',
+            template: '' +
+                '<li><article><a href="{url}">' +
+                    '{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span>' +
+                '</a></article></li>',
+            noResults: '<p>Nothing found.</p>'
         });
-  });
-
-  (function( $, window, undefined ) {
-
-     var bs = {
-          close: $(".icon-remove-sign"),
-          searchform: $(".search-form"),
-          canvas: $("body"),
-          dothis: $('.dosearch')
-      };
-
-    bs.dothis.on('click', function() {
-      $('.search-wrapper').css({ display: "block" });
-      bs.searchform.toggleClass('active');
-      bs.searchform.find('input').focus();
-      bs.canvas.toggleClass('search-overlay');
     });
 
-      bs.close.on('click', function() {
-        $('.search-wrapper').removeAttr( 'style' );
-        bs.searchform.toggleClass('active');
-        bs.canvas.removeClass('search-overlay');
-    });
-  })( jQuery, window );
+    (function ($, window, undefined) {
+        var bs = {
+            close: $('.icon-remove-sign'),
+            searchform: $('.search-form'),
+            canvas: $('body'),
+            dothis: $('.dosearch')
+        };
+
+        bs.dothis.on('click', function () {
+            $('.search-wrapper').css({ display: 'block' });
+
+            bs.searchform.toggleClass('active');
+            bs.searchform.find('input').focus();
+            bs.canvas.toggleClass('search-overlay');
+        });
+
+        bs.close.on('click', function () {
+            $('.search-wrapper').removeAttr( 'style' );
+
+            bs.searchform.toggleClass('active');
+            bs.canvas.removeClass('search-overlay');
+        });
+    }(jQuery, window));
 </script>
 {% endif %}
+
 {% if site.google_analytics %}
-<!-- Google Analytics snippet -->
+<!-- Google Analytics snippet. -->
 <script type="text/javascript">
     var _gaq = _gaq || [];
 
@@ -55,7 +63,8 @@
 
         s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(ga, s);
-  }());
+    }());
 </script>
 {% endif %}
+
 {% if site.disqus_shortname and page.comments %}{% include disqus_comments.html %}{% endif %}
