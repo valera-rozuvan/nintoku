@@ -81,8 +81,9 @@ parallelism, etc. I have started to believe that in the second example
 above the two functions would still execute one after the other.
 
 Then, today, I decided to write such a test, and see for myself what
-would actually happen. I have created a JSFiddle to test this out. The
-results were quite surprising for me.
+would actually happen. I have created a JSFiddle to
+[test this out](http://jsfiddle.net/k2h7Z/33).
+The results were quite surprising for me.
 
 I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
 In all browsers except Firefox the two function ran one after the other.
