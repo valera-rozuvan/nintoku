@@ -82,7 +82,7 @@ above the two functions would still execute one after the other.
 
 Then, today, I decided to write such a test, and see for myself what
 would actually happen. I have created a JSFiddle to
-[test this out](http://jsfiddle.net/k2h7Z/33).
+[test this out](http://jsfiddle.net/k2h7Z/34).
 The results were quite surprising for me.
 
 I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
