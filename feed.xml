@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-04-02T04:37:13+03:00</updated>
+<updated>2014-04-02T04:39:26+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -98,7 +98,7 @@ above the two functions would still execute one after the other.&lt;/p&gt;
 
 &lt;p&gt;Then, today, I decided to write such a test, and see for myself what
 would actually happen. I have created a JSFiddle to
-&lt;a href=&quot;http://jsfiddle.net/k2h7Z/33&quot;&gt;test this out&lt;/a&gt;.
+&lt;a href=&quot;http://jsfiddle.net/k2h7Z/34&quot;&gt;test this out&lt;/a&gt;.
 The results were quite surprising for me.&lt;/p&gt;
 
 &lt;p&gt;I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
