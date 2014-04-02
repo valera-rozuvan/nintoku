@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Namespacing all YouTube URLs on edX backend &#8211; Nintoku</title>
+<title>The New Age of JavaScript: Concurrency &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Namespacing all YouTube URLs on edX backend">
+<meta name="twitter:title" content="The New Age of JavaScript: Concurrency">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Namespacing all YouTube URLs on edX backend">
+<meta property="og:title" content="The New Age of JavaScript: Concurrency">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/107180394340520523800?rel=author">
 
@@ -130,72 +130,143 @@
       <header class="entry-header">
         <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">Namespacing all YouTube URLs on edX backend</h1>
+          <h1 class="entry-title" itemprop="headline">The New Age of JavaScript: Concurrency</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-03-24T19:20:27Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> March 24, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-04-02T03:43:14Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 02, 2014</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend" rel="bookmark" title="Namespacing all YouTube URLs on edX backend" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency" rel="bookmark" title="The New Age of JavaScript: Concurrency" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
       </footer>
       <div class="entry-content" itemprop="description">
-        <p>Up to now, the backend defined 2 variables which stored YouTube related URLs:</p>
+        <p>It has long been known to me that the
+<a href="http://en.wikipedia.org/wiki/JavaScript">JavaScript language</a>
+(the browser variety) is single-threaded. I.e. at any one time there is
+a single thread running JavaScript code. This means that at one time
+only one function can be running. A more detailed explanation of this
+fact is discussed by <a href="http://ejohn.org/about">John Resig</a> in his
+<a href="http://ejohn.org/blog/how-javascript-timers-work">How JavaScript Timers Work</a>
+post.</p>
 
-<div class="highlight"><pre><code class="python"><span class="c"># URL to test YouTube availability</span>
-<span class="n">YOUTUBE_TEST_URL</span> <span class="o">=</span> <span class="s">&#39;https://gdata.youtube.com/feeds/api/videos/&#39;</span>
-</code></pre></div>
+<p>A natural question arises. If you use the
+<a href="https://developer.mozilla.org/en/docs/Web/API/window.setInterval">window.setInterval</a>
+method to get two functions to execute periodically at the same interval,
+will they always (and for all time, while the browser is open) execute
+one after the other, in the order of <code>window.setInterval</code> invocation?</p>
 
-<p>and</p>
+<p>So, to be more precise, if we have the following code:</p>
 
-<div class="highlight"><pre><code class="python"><span class="c"># Current youtube api for requesting transcripts.</span>
-<span class="c"># for example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.</span>
-<span class="n">YOUTUBE_API</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="s">&quot;http://video.google.com/timedtext&quot;</span><span class="p">,</span>
-    <span class="s">&#39;params&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;lang&#39;</span><span class="p">:</span> <span class="s">&#39;en&#39;</span><span class="p">,</span> <span class="s">&#39;v&#39;</span><span class="p">:</span> <span class="s">&#39;set_youtube_id_of_11_symbols_here&#39;</span><span class="p">}</span>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">timeout1</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc1</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+    <span class="nx">timeout2</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc2</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">timeoutFunc1</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// It is given that window.output() is defined, and writes</span>
+    <span class="c1">// it&#39;s parameter to the page for the user to see.</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">timeoutFunc2</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>This was done in <a href="https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py"><code>cms/envs/common.py</code></a> file (lines 428, 532).</p>
+<p>will we see on the page:</p>
 
-<p>I wanted to introduce a new URL which is responsible for YouTube API on
-the front-end. To do this, I have created a <code>YOUTUBE</code> namespace, and
-added a third URL to the back-end:</p>
-
-<div class="highlight"><pre><code class="python"><span class="n">YOUTUBE</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="c"># YouTube JavaScript API</span>
-    <span class="s">&#39;API&#39;</span><span class="p">:</span> <span class="s">&#39;www.youtube.com/iframe_api&#39;</span><span class="p">,</span>
-
-    <span class="c"># URL to test YouTube availability</span>
-    <span class="s">&#39;TEST_URL&#39;</span><span class="p">:</span> <span class="s">&#39;gdata.youtube.com/feeds/api/videos/&#39;</span><span class="p">,</span>
-
-    <span class="c"># Current youtube api for requesting transcripts.</span>
-    <span class="c"># For example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.</span>
-    <span class="s">&#39;TEXT_API&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="s">&#39;video.google.com/timedtext&#39;</span><span class="p">,</span>
-        <span class="s">&#39;params&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s">&#39;lang&#39;</span><span class="p">:</span> <span class="s">&#39;en&#39;</span><span class="p">,</span>
-            <span class="s">&#39;v&#39;</span><span class="p">:</span> <span class="s">&#39;set_youtube_id_of_11_symbols_here&#39;</span><span class="p">,</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-<span class="p">}</span>
+<div class="highlight"><pre><code class="text">1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+1
+2
+...
 </code></pre></div>
 
-<p>The <a href="https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9">pull request</a> has just been merged in to <a href="https://github.com/edx/edx-platform">edx-platform master</a>.</p>
+<p>An interesting question. To further complicate things, what if one of
+the periodically invoked functions did something else besides outputting
+a number to the page. What if it took a long time to run, i.e. it would
+execute 5 to 10 times longer? Would we then see something like this:</p>
 
-<p>This PR opens up a possibility to mock the YouTube API in acceptance tests.</p>
+<div class="highlight"><pre><code class="text">2
+2
+2
+2
+1
+2
+2
+2
+1
+2
+2
+2
+...
+</code></pre></div>
+
+<p>I have done a lot of reading on the subject of JavaScript concurrency,
+parallelism, etc. I have started to believe that in the second example
+above the two functions would still execute one after the other.</p>
+
+<p>Then, today, I decided to write such a test, and see for myself what
+would actually happen. I have created a JSFiddle to test this out. The
+results were quite surprising for me.</p>
+
+<p>I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
+In all browsers except Firefox the two function ran one after the other.
+In Firefox, though, the more CPU expensive function was running in parallel
+with the fast function. I drew this conclusion for the fact that the slow
+function managed to output once in the same time that the fast function
+outputted several times.</p>
+
+<blockquote>
+  <p>In Firefox, though, the more CPU expensive function was running in parallel
+with the fast function.</p>
+</blockquote>
+
+<p>I have used the following versions of the browsers:</p>
+
+<ul>
+  <li>Internet Explorer 10.0.9200.16576</li>
+  <li>Opera 20.0.1387.82</li>
+  <li>Google Chrome 33.0.1750.154</li>
+  <li>Firefox 28.0</li>
+</ul>
+
+<p>Tested on an Intel x86 quad core machine running Windows 7.</p>
+
+<p>Here are the screenshots of the results.</p>
+
+<figure>
+    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png" /></a>
+    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png" title="Internet Explorer">Internet Explorer</a>.</figcaption>
+</figure>
+<figure>
+    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png" /></a>
+    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png" title="Opera">Opera</a>.</figcaption>
+</figure>
+<figure>
+    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png" /></a>
+    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png" title="Google Chrome">Google Chrome</a>.</figcaption>
+</figure>
+<figure>
+    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png" /></a>
+    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png" title="Firefox">Firefox</a>.</figcaption>
+</figure>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration" class="btn" title="Seeking inspiration">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend" class="btn" title="Namespacing all YouTube URLs on edX backend">Previous article</a>
       
-      
-        <a href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency" class="btn" title="The New Age of JavaScript: Concurrency">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>
