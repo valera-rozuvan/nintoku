@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-04-04T16:20:13+03:00</updated>
+<updated>2014-04-04T16:24:15+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -52,8 +52,9 @@ For example, not all windows from the start are positioned correctly within
 an already present tiling setup (Emacs). But most of the quirks can be corrected
 by simply issuing a rearrange command.&lt;/p&gt;
 
-&lt;p&gt;I have been looking for other tiling window managers, that work well with Gnome
-out of the box. Here is the (non-exhaustive) list:&lt;/p&gt;
+&lt;p&gt;I have been looking for other tiling window managers, that work well with
+&lt;a href=&quot;http://en.wikipedia.org/wiki/GNOME&quot;&gt;Gnome&lt;/a&gt; out of the box. Here is the
+(non-exhaustive) list (randomly ordered):&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://awesome.naquadah.org&quot;&gt;awesome&lt;/a&gt;&lt;/li&gt;
@@ -67,9 +68,12 @@ out of the box. Here is the (non-exhaustive) list:&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://wiki.debian.org/Wmii&quot;&gt;wmii&lt;/a&gt; (&lt;a href=&quot;https://code.google.com/p/wmii&quot;&gt;official site&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;A discussion on this topic, and a list of EWMH compatible window managers:
-- &lt;a href=&quot;http://askubuntu.com/questions/1844/is-there-a-keyboard-centric-desktop-wm-available&quot;&gt;Is there a keyboard-centric desktop/WM available?&lt;/a&gt;
-- &lt;a href=&quot;http://en.wikipedia.org/wiki/Extended_Window_Manager_Hints#Tiling_and_dynamic_window_managers&quot;&gt;Extended Window Manager Hints: Tiling and dynamic window managers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A discussion on this topic, and a list of EWMH compatible window managers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://askubuntu.com/questions/1844/is-there-a-keyboard-centric-desktop-wm-available&quot;&gt;Is there a keyboard-centric desktop/WM available?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Extended_Window_Manager_Hints#Tiling_and_dynamic_window_managers&quot;&gt;Extended Window Manager Hints: Tiling and dynamic window managers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Over the next little while I hope to try some of these out!&lt;/p&gt;
 
