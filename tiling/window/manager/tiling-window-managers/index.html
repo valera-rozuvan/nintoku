@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>The New Age of JavaScript: Concurrency &#8211; Nintoku</title>
+<title>Tiling window managers &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="The New Age of JavaScript: Concurrency">
+<meta name="twitter:title" content="Tiling window managers">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The New Age of JavaScript: Concurrency">
+<meta property="og:title" content="Tiling window managers">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/107180394340520523800?rel=author">
 
@@ -130,146 +130,74 @@
       <header class="entry-header">
         <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">The New Age of JavaScript: Concurrency</h1>
+          <h1 class="entry-title" itemprop="headline">Tiling window managers</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-04-02T03:43:14Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 02, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-04-04T15:51:33Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 04, 2014</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency" rel="bookmark" title="The New Age of JavaScript: Concurrency" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers" rel="bookmark" title="Tiling window managers" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
       </footer>
       <div class="entry-content" itemprop="description">
-        <p>It has long been known to me that the
-<a href="http://en.wikipedia.org/wiki/JavaScript">JavaScript language</a>
-(the browser variety) is single-threaded. I.e. at any one time there is
-a single thread running JavaScript code. This means that at one time
-only one function can be running. A more detailed explanation of this
-fact is discussed by <a href="http://ejohn.org/about">John Resig</a> in his
-<a href="http://ejohn.org/blog/how-javascript-timers-work">How JavaScript Timers Work</a>
-post.</p>
-
-<p>A natural question arises. If you use the
-<a href="https://developer.mozilla.org/en/docs/Web/API/window.setInterval">window.setInterval</a>
-method to get two functions to execute periodically at the same interval,
-will they always (and for all time, while the browser is open) execute
-one after the other, in the order of <code>window.setInterval</code> invocation?</p>
-
-<p>So, to be more precise, if we have the following code:</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">timeout1</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc1</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
-    <span class="nx">timeout2</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc2</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
-
-<span class="kd">function</span> <span class="nx">timeoutFunc1</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// It is given that window.output() is defined, and writes</span>
-    <span class="c1">// it&#39;s parameter to the page for the user to see.</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">timeoutFunc2</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p>will we see on the page:</p>
-
-<div class="highlight"><pre><code class="text">1
-2
-1
-2
-1
-2
-1
-2
-1
-2
-1
-2
-...
-</code></pre></div>
-
-<p>An interesting question. To further complicate things, what if one of
-the periodically invoked functions did something else besides outputting
-a number to the page. What if it took a long time to run, i.e. it would
-execute 5 to 10 times longer? Would we then see something like this:</p>
-
-<div class="highlight"><pre><code class="text">2
-2
-2
-2
-1
-2
-2
-2
-1
-2
-2
-2
-...
-</code></pre></div>
-
-<p>I have done a lot of reading on the subject of JavaScript concurrency,
-parallelism, etc. I have started to believe that in the second example
-above the two functions would still execute one after the other.</p>
-
-<p>Then, today, I decided to write such a test, and see for myself what
-would actually happen. I have created a JSFiddle to
-<a href="http://jsfiddle.net/k2h7Z/34">test this out</a>.
-The results were quite surprising for me.</p>
-
-<p>I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
-In all browsers except Firefox the two function ran one after the other.
-In Firefox, though, the more CPU expensive function was running in parallel
-with the fast function. I drew this conclusion for the fact that the slow
-function managed to output once in the same time that the fast function
-outputted several times.</p>
+        <p>Currently, I am using the <a href="https://github.com/mixu/nwm">nwm</a> window
+manager. A <a href="http://en.wikipedia.org/wiki/Window_manager">window manager</a> is
+a:</p>
 
 <blockquote>
-  <p>In Firefox, though, the more CPU expensive function was running in parallel
-with the fast function.</p>
+  <p>system software that controls the placement and appearance of windows within
+a windowing system in a graphical user interface.</p>
 </blockquote>
 
-<p>I have used the following versions of the browsers:</p>
+<p>The nwm was written by <a href="http://mixu.net">Mikito Takada</a> (mixu). The author
+describes it as:</p>
+
+<blockquote>
+  <p>a dynamic window manager for X11 written with Node.js.</p>
+</blockquote>
+
+<p>This window manager caught my eye because parts of it are written in the
+<a href="http://en.wikipedia.org/wiki/JavaScript">JavaScript language</a>. I myself
+mostly code JavaScript these days, so the project jumped out at me. After
+using this window manager for about a month, I have decided that it is
+solid, and it’s philosophy of tiling windows is awesome. I have never before
+used a <a href="http://en.wikipedia.org/wiki/Tiling_window_manager">tiling window manager</a>!</p>
+
+<p>However, the nwm window manager has some quirks in it. They are not critical.
+For example, not all windows from the start are positioned correctly within
+an already present tiling setup (Emacs). But most of the quirks can be corrected
+by simply issuing a rearrange command.</p>
+
+<p>I have been looking for other tiling window managers, that work well with Gnome
+out of the box. Here is the (non-exhaustive) list:</p>
 
 <ul>
-  <li>Internet Explorer 10.0.9200.16576</li>
-  <li>Opera 20.0.1387.82</li>
-  <li>Google Chrome 33.0.1750.154</li>
-  <li>Firefox 28.0</li>
+  <li><a href="http://awesome.naquadah.org">awesome</a></li>
+  <li><a href="http://xmonad.org">xmonad</a></li>
+  <li><a href="http://www.giuspen.com/x-tile">X-tile</a></li>
+  <li><a href="https://opensource.conformal.com/wiki/spectrwm">spectrwm</a></li>
+  <li><a href="http://gfxmonk.net/shellshape">shellshape</a></li>
+  <li><a href="http://www.bluetile.org">Bluetile</a></li>
+  <li><a href="http://www.red-bean.com/decklin/aewm">aewm</a></li>
+  <li><a href="https://github.com/baskerville/bspwm">bspwm</a></li>
+  <li><a href="https://wiki.debian.org/Wmii">wmii</a> (<a href="https://code.google.com/p/wmii">official site</a>)</li>
 </ul>
 
-<p>Tested on an Intel x86 quad core machine running Windows 7.</p>
+<p>A discussion on this topic, and a list of EWMH compatible window managers:
+- <a href="http://askubuntu.com/questions/1844/is-there-a-keyboard-centric-desktop-wm-available">Is there a keyboard-centric desktop/WM available?</a>
+- <a href="http://en.wikipedia.org/wiki/Extended_Window_Manager_Hints#Tiling_and_dynamic_window_managers">Extended Window Manager Hints: Tiling and dynamic window managers</a></p>
 
-<p>Here are the screenshots of the results.</p>
-
-<figure>
-    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png" /></a>
-    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png" title="Internet Explorer">Internet Explorer</a>.</figcaption>
-</figure>
-<figure>
-    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png" /></a>
-    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png" title="Opera">Opera</a>.</figcaption>
-</figure>
-<figure>
-    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png" /></a>
-    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png" title="Google Chrome">Google Chrome</a>.</figcaption>
-</figure>
-<figure>
-    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png" /></a>
-    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png" title="Firefox">Firefox</a>.</figcaption>
-</figure>
+<p>Over the next little while I hope to try some of these out!</p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend" class="btn" title="Namespacing all YouTube URLs on edX backend">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency" class="btn" title="The New Age of JavaScript: Concurrency">Previous article</a>
       
-      
-        <a href="http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers" class="btn" title="Tiling window managers">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

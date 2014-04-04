@@ -4,13 +4,77 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-04-02T04:39:26+03:00</updated>
+<updated>2014-04-04T16:20:13+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Tiling window managers]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers</link>
+  <id>http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers</id>
+  <published>2014-04-04T15:51:33Z</published>
+  <updated>2014-04-04T15:51:33Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Currently, I am using the &lt;a href=&quot;https://github.com/mixu/nwm&quot;&gt;nwm&lt;/a&gt; window
+manager. A &lt;a href=&quot;http://en.wikipedia.org/wiki/Window_manager&quot;&gt;window manager&lt;/a&gt; is
+a:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;system software that controls the placement and appearance of windows within
+a windowing system in a graphical user interface.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The nwm was written by &lt;a href=&quot;http://mixu.net&quot;&gt;Mikito Takada&lt;/a&gt; (mixu). The author
+describes it as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;a dynamic window manager for X11 written with Node.js.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This window manager caught my eye because parts of it are written in the
+&lt;a href=&quot;http://en.wikipedia.org/wiki/JavaScript&quot;&gt;JavaScript language&lt;/a&gt;. I myself
+mostly code JavaScript these days, so the project jumped out at me. After
+using this window manager for about a month, I have decided that it is
+solid, and it’s philosophy of tiling windows is awesome. I have never before
+used a &lt;a href=&quot;http://en.wikipedia.org/wiki/Tiling_window_manager&quot;&gt;tiling window manager&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;However, the nwm window manager has some quirks in it. They are not critical.
+For example, not all windows from the start are positioned correctly within
+an already present tiling setup (Emacs). But most of the quirks can be corrected
+by simply issuing a rearrange command.&lt;/p&gt;
+
+&lt;p&gt;I have been looking for other tiling window managers, that work well with Gnome
+out of the box. Here is the (non-exhaustive) list:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://awesome.naquadah.org&quot;&gt;awesome&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://xmonad.org&quot;&gt;xmonad&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.giuspen.com/x-tile&quot;&gt;X-tile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opensource.conformal.com/wiki/spectrwm&quot;&gt;spectrwm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gfxmonk.net/shellshape&quot;&gt;shellshape&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.bluetile.org&quot;&gt;Bluetile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.red-bean.com/decklin/aewm&quot;&gt;aewm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/baskerville/bspwm&quot;&gt;bspwm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.debian.org/Wmii&quot;&gt;wmii&lt;/a&gt; (&lt;a href=&quot;https://code.google.com/p/wmii&quot;&gt;official site&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A discussion on this topic, and a list of EWMH compatible window managers:
+- &lt;a href=&quot;http://askubuntu.com/questions/1844/is-there-a-keyboard-centric-desktop-wm-available&quot;&gt;Is there a keyboard-centric desktop/WM available?&lt;/a&gt;
+- &lt;a href=&quot;http://en.wikipedia.org/wiki/Extended_Window_Manager_Hints#Tiling_and_dynamic_window_managers&quot;&gt;Extended Window Manager Hints: Tiling and dynamic window managers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Over the next little while I hope to try some of these out!&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers&quot;&gt;Tiling window managers&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 04, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -863,28 +927,6 @@ regex expression, we can
 from a given URL.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/retrieving/title/site/retrieving-title-of-site&quot;&gt;Retrieving title of a site&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Working on side projects]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/working/side/projects/working-on-side-projects</link>
-  <id>http://valera-rozuvan.github.io/nintoku/working/side/projects/working-on-side-projects</id>
-  <published>2014-02-03T13:50:11Z</published>
-  <updated>2014-02-03T13:50:11Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;Spent some time on coding:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/valera-rozuvan/node-projects&quot;&gt;Node projects&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/innovecs-opensource/bustime&quot;&gt;Bustime&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/working/side/projects/working-on-side-projects&quot;&gt;Working on side projects&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 03, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
