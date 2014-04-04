@@ -29,8 +29,9 @@ For example, not all windows from the start are positioned correctly within
 an already present tiling setup (Emacs). But most of the quirks can be corrected
 by simply issuing a rearrange command.
 
-I have been looking for other tiling window managers, that work well with Gnome
-out of the box. Here is the (non-exhaustive) list:
+I have been looking for other tiling window managers, that work well with
+[Gnome](http://en.wikipedia.org/wiki/GNOME) out of the box. Here is the
+(non-exhaustive) list (randomly ordered):
 
 - [awesome](http://awesome.naquadah.org)
 - [xmonad](http://xmonad.org)
@@ -43,6 +44,7 @@ out of the box. Here is the (non-exhaustive) list:
 - [wmii](https://wiki.debian.org/Wmii) ([official site](https://code.google.com/p/wmii))
 
 A discussion on this topic, and a list of EWMH compatible window managers:
+
 - [Is there a keyboard-centric desktop/WM available?](http://askubuntu.com/questions/1844/is-there-a-keyboard-centric-desktop-wm-available)
 - [Extended Window Manager Hints: Tiling and dynamic window managers](http://en.wikipedia.org/wiki/Extended_Window_Manager_Hints#Tiling_and_dynamic_window_managers)
 
