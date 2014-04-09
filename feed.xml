@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-04-09T11:14:23+03:00</updated>
+<updated>2014-04-09T11:19:19+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -40,17 +40,17 @@ discussion happening on the Internet about what is &lt;code&gt;right&lt;/code&gt
 what is &lt;code&gt;wrong&lt;/code&gt; JavaScript. Frankly though, I believe that when it comes down
 to introducing changes to a JavaScript file, you should only care for:&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;Adding/updating code so that it does not raise errors in the browser.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;For example, a stray &lt;code&gt;{&lt;/code&gt; bracket left in the code by an unfortunate typo,
 a forgotten global variable that really should be contained within the scope
 of a function, etc.&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;Writing code that will not be misinterpreted by less experienced developers.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;JavaScript is a very flexible language. Before the introduction of the
 &lt;code&gt;'use strict';&lt;/code&gt; feature in
@@ -58,9 +58,9 @@ of a function, etc.&lt;/p&gt;
 strict mode, the web was a wild jungle. Developers could write crazy code
 that worked, but was very hard to maintain and to read.&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;Writing optimal code.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;If a change in a JavaScript file does not introduce a new feature or
 some kind of performance improvement, then it is strictly a stylistic change.
