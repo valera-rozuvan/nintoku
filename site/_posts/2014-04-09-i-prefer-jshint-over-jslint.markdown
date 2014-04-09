@@ -19,13 +19,13 @@ discussion happening on the Internet about what is `right` JavaScript and
 what is `wrong` JavaScript. Frankly though, I believe that when it comes down
 to introducing changes to a JavaScript file, you should only care for:
 
-1. Adding/updating code so that it does not raise errors in the browser.
+- Adding/updating code so that it does not raise errors in the browser.
 
 For example, a stray `{` bracket left in the code by an unfortunate typo,
 a forgotten global variable that really should be contained within the scope
 of a function, etc.
 
-2. Writing code that will not be misinterpreted by less experienced developers.
+- Writing code that will not be misinterpreted by less experienced developers.
 
 JavaScript is a very flexible language. Before the introduction of the
 `'use strict';` feature in
@@ -33,7 +33,7 @@ JavaScript is a very flexible language. Before the introduction of the
 strict mode, the web was a wild jungle. Developers could write crazy code
 that worked, but was very hard to maintain and to read.
 
-3. Writing optimal code.
+- Writing optimal code.
 
 If a change in a JavaScript file does not introduce a new feature or
 some kind of performance improvement, then it is strictly a stylistic change.
