@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Musings &#8211; Nintoku</title>
+<title>Little Linux command discoveries &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Musings">
+<meta name="twitter:title" content="Little Linux command discoveries">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Musings">
+<meta property="og:title" content="Little Linux command discoveries">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/musings/musings">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/musings/musings">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/107180394340520523800?rel=author">
 
@@ -130,81 +130,42 @@
       <header class="entry-header">
         <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">Musings</h1>
+          <h1 class="entry-title" itemprop="headline">Little Linux command discoveries</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-04-18T08:54:44Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 18, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-04-18T09:10:21Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 18, 2014</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/musings/musings" rel="bookmark" title="Musings" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries" rel="bookmark" title="Little Linux command discoveries" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
       </footer>
       <div class="entry-content" itemprop="description">
-        <p>It seems that I have lost my ability to work. It is as though there is no more
-motivation that drives me forward.</p>
-
-<p>Right now I am listening to
-<a href="http://en.wikipedia.org/wiki/Mikhail_Glinka">Glinka</a> piano music. The musical
-pieces are simple and very Russian. Rachmaninoff once quoted
-<a href="http://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky">Tchaikovsky</a>
-saying,</p>
-
-<blockquote>
-  <p>Glinka is like an acorn from which all of Russian music has sprung up.</p>
-</blockquote>
-
-<p>I need to get back to taking pleasure from simple things. Simple things like
-the short polka for children composed by Glinka. Listening to full blown
-<a href="http://en.wikipedia.org/wiki/Sergei_Rachmaninoff">Rachmaninoff</a> piano
-concertos has spoiled me to some extent. After I have heard them for more than
-a dozen of times, I started to feel like I have reached and glimpsed the top
-most level of perfection. As if I have reached the end. There is nothing more.</p>
-
-<p>But this is wrong on so many levels. Life is infinitely more complex than the
-Rachmaninoff’s Second Piano concerto. I must return back to the basics. Simple,
-elegant, music pieces.</p>
-
-<p>This philosophy of simplicity can then be transferred to the rest of my life.</p>
-
-<p>The complex can be left for special occasions. I should rarely listen to the
-very advanced. Just to wet my appetite. Maybe separate each advance piece by 20
-or 30 simple, easy to listen to, pieces.</p>
-
-<p>OK! So it has been decided. I will create a music library that will consist of:</p>
+        <p>There are several commands that I have come across yesterday that were helpful.</p>
 
 <ol>
-  <li>400 - 500 short, simple piano pieces.</li>
-  <li>40 - 50 long, hard piano pieces.</li>
-  <li>4 - 5 full piano concertos.</li>
+  <li><code>git config --global core.editor emacsclient</code> - make git use <code>emacsclient</code>
+for editing commit messages.</li>
+  <li><code>git config --global core.pager ''</code> - make git output everything to standard
+output, rather than use a pager application.</li>
+  <li><code>git log HEAD~10..HEAD</code> - make <code>git log</code> show only last 10 commits.</li>
+  <li><code>git log --pretty=oneline | head -n 10</code> - make <code>git log</code> show last 10
+commits, displaying one line per commit.</li>
+  <li><code>xrandr --output LVDS --brightness 1.0</code> - make screen brightness 100%.</li>
 </ol>
 
-<p>It’s funny how I have begun this article with thoughts about my inability to
-work, and concluded with a plan to create a musical collection consisting of
-piano pieces. Lately piano has been on my mind.</p>
-
-<p>PS: I am so very excited that I have finally fixed my laptop keyboard. Typing
-has become so smooth and care-free! I did this on Wednesday by simply trying to
-“rip” out the keyboard. I did not even bother to shutdown Linux. I was looking
-at a <a href="https://www.youtube.com/watch?v=Ys-7NjvciMM">YouTube video</a> that showed
-how someone was replacing a keyboard on a laptop. In the end I did not manage
-to take out the keyboard because it is actually fixated to the laptop by screws
-which have to be unscrewed on the back. However, I did succeed in bending the
-top of the keyboard ever so slightly, so that when I pushed it back in, all
-the keys that were getting stuck before, now started to function properly. So
-now I am just enjoying the typing. As I type now, I have the feeling as if my
-fingers are little knifes that are passing through warm butter.</p>
+<p>It is interesting to observe how well the
+<a href="http://en.wikipedia.org/wiki/Unix_philosophy">UNIX philosophy</a> works. A UNIX
+program does only one job, but it does it well.</p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/preference/jshint/jslint/i-prefer-jshint-over-jslint" class="btn" title="I prefer JSHint over JSLint">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/musings/musings" class="btn" title="Musings">Previous article</a>
       
-      
-        <a href="http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries" class="btn" title="Little Linux command discoveries">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

@@ -4,13 +4,45 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-04-18T09:03:42+03:00</updated>
+<updated>2014-04-18T09:14:32+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Little Linux command discoveries]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries</link>
+  <id>http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries</id>
+  <published>2014-04-18T09:10:21Z</published>
+  <updated>2014-04-18T09:10:21Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;There are several commands that I have come across yesterday that were helpful.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code&gt;git config --global core.editor emacsclient&lt;/code&gt; - make git use &lt;code&gt;emacsclient&lt;/code&gt;
+for editing commit messages.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git config --global core.pager ''&lt;/code&gt; - make git output everything to standard
+output, rather than use a pager application.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git log HEAD~10..HEAD&lt;/code&gt; - make &lt;code&gt;git log&lt;/code&gt; show only last 10 commits.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git log --pretty=oneline | head -n 10&lt;/code&gt; - make &lt;code&gt;git log&lt;/code&gt; show last 10
+commits, displaying one line per commit.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;xrandr --output LVDS --brightness 1.0&lt;/code&gt; - make screen brightness 100%.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It is interesting to observe how well the
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Unix_philosophy&quot;&gt;UNIX philosophy&lt;/a&gt; works. A UNIX
+program does only one job, but it does it well.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries&quot;&gt;Little Linux command discoveries&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -993,25 +1025,6 @@ way.&lt;/p&gt;
 &lt;a href=&quot;https://github.com/valera-rozuvan/emacs_config&quot;&gt;new beginning&lt;/a&gt; for me.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/back/emacs/back-to-emacs&quot;&gt;Back to Emacs&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 12, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Updated home page with Google analytics]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/update/homepage/google/analytics/updated-home-page-with-google-analytics</link>
-  <id>http://valera-rozuvan.github.io/nintoku/update/homepage/google/analytics/updated-home-page-with-google-analytics</id>
-  <published>2014-02-10T16:56:27Z</published>
-  <updated>2014-02-10T16:56:27Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;After a recent revamp of &lt;a href=&quot;http://valera.rozuvan.net/&quot;&gt;valera.rozuvan.net&lt;/a&gt;, I
-have also decided to include the &lt;a href=&quot;http://www.google.com/analytics‎&quot;&gt;Google Analytics&lt;/a&gt;
-tracking code. Will count my visitors. =)&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/update/homepage/google/analytics/updated-home-page-with-google-analytics&quot;&gt;Updated home page with Google analytics&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
