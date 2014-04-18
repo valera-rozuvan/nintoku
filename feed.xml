@@ -4,13 +4,62 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-04-18T09:14:32+03:00</updated>
+<updated>2014-04-18T09:40:32+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[UPDATE: The New Age of JavaScript: Concurrency]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency</link>
+  <id>http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency</id>
+  <published>2014-04-18T09:27:27Z</published>
+  <updated>2014-04-18T09:27:27Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In a previous article entitled
+&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency&quot;&gt;The New Age of JavaScript: Concurrency&lt;/a&gt;
+I went on to describe how I have discovered concurrency in JavaScript
+that executed in Firefox.&lt;/p&gt;
+
+&lt;p&gt;The discovery turned out to be a fluke.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/k2h7Z/34&quot;&gt;The JSFiddle&lt;/a&gt; that demonstrated the so
+called concurrency contains an error. When you enabled the
+second heavy function by setting &lt;code&gt;enableHeavyFunction&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt;, then,
+because of the heavy function’s random nature, in some cases half way
+through execution an error is raised&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Error: invalid arguments
+
+this.spectrum   = new Float32Array(bufferSize/2);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;bufferSize&lt;/code&gt; is to big, and Firefox JavaScript engine throws an error.
+Because of this, the fact that the heavy function run is not registered
+in the output. So it appears that for three or four mall functions only
+one heavy function i run. This is not so. Both functions run one after
+the other. It is just that the heavy function sometimes errors, and no
+output for it is written.&lt;/p&gt;
+
+&lt;p&gt;In Chrome this behavior did not happen because either it allows arbitrary
+first argument to &lt;code&gt;Float32Array&lt;/code&gt; function, or it sets the first argument
+to some predefined maximum value.&lt;/p&gt;
+
+&lt;p&gt;In any case, I have updated &lt;a href=&quot;http://jsfiddle.net/k2h7Z/37&quot;&gt;the JSFiddle&lt;/a&gt;
+to use a blocking function instead of the really large function. As can
+be seen, it clearly shows that JavaScript is single-threaded across all
+browsers.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency&quot;&gt;UPDATE: The New Age of JavaScript: Concurrency&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1006,25 +1055,6 @@ way.&lt;/p&gt;
 &lt;p&gt;= )&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scss/coffeescript/emacs/scss-and-coffeescript-for-emacs&quot;&gt;SCSS and CoffeeScript for Emacs&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Back to Emacs]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/back/emacs/back-to-emacs</link>
-  <id>http://valera-rozuvan.github.io/nintoku/back/emacs/back-to-emacs</id>
-  <published>2014-02-12T19:23:19Z</published>
-  <updated>2014-02-12T19:23:19Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;For those who don’t know, there exists
-&lt;a href=&quot;http://www.gnu.org/software/emacs/&quot;&gt;Emacs&lt;/a&gt;. It will be a
-&lt;a href=&quot;https://github.com/valera-rozuvan/emacs_config&quot;&gt;new beginning&lt;/a&gt; for me.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/back/emacs/back-to-emacs&quot;&gt;Back to Emacs&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 12, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
