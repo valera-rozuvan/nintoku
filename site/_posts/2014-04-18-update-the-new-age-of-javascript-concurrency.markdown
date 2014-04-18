@@ -23,9 +23,9 @@ through execution an error is raised
     this.spectrum   = new Float32Array(bufferSize/2);
 
 `bufferSize` is to big, and Firefox JavaScript engine throws an error.
-Because of this, the fact that the heavy function run is not registered
-in the output. So it appears that for three or four mall functions only
-one heavy function i run. This is not so. Both functions run one after
+Because of this, the fact that the heavy function ran is not registered
+in the output. So it appears that for three or four small functions only
+one heavy function is run. This is not so. Both functions run one after
 the other. It is just that the heavy function sometimes errors, and no
 output for it is written.
 
