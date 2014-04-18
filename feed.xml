@@ -4,13 +4,82 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-04-09T11:19:19+03:00</updated>
+<updated>2014-04-18T09:03:42+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Musings]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/musings/musings</link>
+  <id>http://valera-rozuvan.github.io/nintoku/musings/musings</id>
+  <published>2014-04-18T08:54:44Z</published>
+  <updated>2014-04-18T08:54:44Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;It seems that I have lost my ability to work. It is as though there is no more
+motivation that drives me forward.&lt;/p&gt;
+
+&lt;p&gt;Right now I am listening to
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Mikhail_Glinka&quot;&gt;Glinka&lt;/a&gt; piano music. The musical
+pieces are simple and very Russian. Rachmaninoff once quoted
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky&quot;&gt;Tchaikovsky&lt;/a&gt;
+saying,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Glinka is like an acorn from which all of Russian music has sprung up.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I need to get back to taking pleasure from simple things. Simple things like
+the short polka for children composed by Glinka. Listening to full blown
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Sergei_Rachmaninoff&quot;&gt;Rachmaninoff&lt;/a&gt; piano
+concertos has spoiled me to some extent. After I have heard them for more than
+a dozen of times, I started to feel like I have reached and glimpsed the top
+most level of perfection. As if I have reached the end. There is nothing more.&lt;/p&gt;
+
+&lt;p&gt;But this is wrong on so many levels. Life is infinitely more complex than the
+Rachmaninoff’s Second Piano concerto. I must return back to the basics. Simple,
+elegant, music pieces.&lt;/p&gt;
+
+&lt;p&gt;This philosophy of simplicity can then be transferred to the rest of my life.&lt;/p&gt;
+
+&lt;p&gt;The complex can be left for special occasions. I should rarely listen to the
+very advanced. Just to wet my appetite. Maybe separate each advance piece by 20
+or 30 simple, easy to listen to, pieces.&lt;/p&gt;
+
+&lt;p&gt;OK! So it has been decided. I will create a music library that will consist of:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;400 - 500 short, simple piano pieces.&lt;/li&gt;
+  &lt;li&gt;40 - 50 long, hard piano pieces.&lt;/li&gt;
+  &lt;li&gt;4 - 5 full piano concertos.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It’s funny how I have begun this article with thoughts about my inability to
+work, and concluded with a plan to create a musical collection consisting of
+piano pieces. Lately piano has been on my mind.&lt;/p&gt;
+
+&lt;p&gt;PS: I am so very excited that I have finally fixed my laptop keyboard. Typing
+has become so smooth and care-free! I did this on Wednesday by simply trying to
+“rip” out the keyboard. I did not even bother to shutdown Linux. I was looking
+at a &lt;a href=&quot;https://www.youtube.com/watch?v=Ys-7NjvciMM&quot;&gt;YouTube video&lt;/a&gt; that showed
+how someone was replacing a keyboard on a laptop. In the end I did not manage
+to take out the keyboard because it is actually fixated to the laptop by screws
+which have to be unscrewed on the back. However, I did succeed in bending the
+top of the keyboard ever so slightly, so that when I pushed it back in, all
+the keys that were getting stuck before, now started to function properly. So
+now I am just enjoying the typing. As I type now, I have the feeling as if my
+fingers are little knifes that are passing through warm butter.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/musings/musings&quot;&gt;Musings&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -943,44 +1012,6 @@ have also decided to include the &lt;a href=&quot;http://www.google.com/analytic
 tracking code. Will count my visitors. =)&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/update/homepage/google/analytics/updated-home-page-with-google-analytics&quot;&gt;Updated home page with Google analytics&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Group theory related question]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/group/theory/question/group-theory-related-question</link>
-  <id>http://valera-rozuvan.github.io/nintoku/group/theory/question/group-theory-related-question</id>
-  <published>2014-02-07T17:26:01Z</published>
-  <updated>2014-02-07T17:26:01Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;On &lt;a href=&quot;http://math.stackexchange.com/&quot;&gt;Mathematics Stack Exchange&lt;/a&gt; I have posed
-the following question:&lt;/p&gt;
-
-&lt;p&gt;I am currently studying the manuscript &lt;strong&gt;Group Theory: A First Journey&lt;/strong&gt; by
-Vipul Naik. It is available from the web page
-http://www.cmi.ac.in/~vipul/mathjourneys/ . In this manuscript the author
-proposes the following question:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Suppose the ordering of the elements in the rows and columns is the same.
-Then what kind of multiplication table would a magma have if it were to be a
-group? More generally, what are the constraints on the multiplication table
-corresponding to each of the properties that we can talk of for a binary
-operation?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;After reading
-&lt;a href=&quot;http://math.stackexchange.com/questions/666142/an-interesting-question-from-group-theory-a-first-journey&quot;&gt;the comments and the answers&lt;/a&gt;
-made by other users, I began to understand what the author is asking. He wants
-the reader to think how would a multiplication matrix look like for a magma
-that follows the 3 requirements of a group. Maybe not look like, but what
-properties, patterns, etc. it would exhibit.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/group/theory/question/group-theory-related-question&quot;&gt;Group theory related question&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 07, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
