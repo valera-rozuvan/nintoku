@@ -4,13 +4,47 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-04-18T09:51:35+03:00</updated>
+<updated>2014-04-24T07:29:00+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Release of a photoblog]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog</link>
+  <id>http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog</id>
+  <published>2014-04-24T07:18:40Z</published>
+  <updated>2014-04-24T07:18:40Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;When you capture a photograph, you imprint a small memory
+onto a piece of paper. You can look at it in a month, in a
+year, in 10 years - and it will remain the same, containing
+all of the details.&lt;/p&gt;
+
+&lt;p&gt;It is important to note, that some photographs stand-out
+among others. There is something special about them. You
+just want to keep coming back to such a photograph to look
+at it. To take in all of the details, colors, the mood.&lt;/p&gt;
+
+&lt;p&gt;How do you become an awesome photographer? There is no easy
+path. You can improve your photography skills only by practice.
+Luckily, there is no hard work involved! I mean taking a photo
+is a breeze, and tremendously enjoyable.&lt;/p&gt;
+
+&lt;p&gt;Someone once said that to become a photographer you must take
+10,000 photos. So I begin on my quest. You can
+&lt;a href=&quot;http://valera-rozuvan.github.io/zeme-fotografia&quot;&gt;follow along&lt;/a&gt;!&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog&quot;&gt;Release of a photoblog&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 24, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1015,48 +1049,6 @@ LP) - YouTube&lt;/a&gt;&lt;/li&gt;
 &lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/work/progress/work-in-progress&quot;&gt;Work in progress&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 17, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[SCSS and CoffeeScript for Emacs]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/scss/coffeescript/emacs/scss-and-coffeescript-for-emacs</link>
-  <id>http://valera-rozuvan.github.io/nintoku/scss/coffeescript/emacs/scss-and-coffeescript-for-emacs</id>
-  <published>2014-02-14T16:27:01Z</published>
-  <updated>2014-02-14T16:27:01Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;&lt;a href=&quot;http://sass-lang.com&quot;&gt;SCSS&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Sass is the most mature, stable, and powerful professional grade CSS
-extension language in the world.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://coffeescript.org&quot;&gt;CoffeeScript&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;CoffeeScript is a little language that compiles into JavaScript. Underneath
-that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
-CoffeeScript is an attempt to expose the good parts of JavaScript in a simple
-way.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Thanks to the following resources:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/nex3/sass-mode&quot;&gt;sass-mode&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/defunkt/coffee-mode&quot;&gt;coffee-mode&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I now &lt;a href=&quot;https://github.com/valera-rozuvan/emacs_config&quot;&gt;have an Emacs&lt;/a&gt; that highlights for me &lt;code&gt;.scss&lt;/code&gt; and &lt;code&gt;.coffee&lt;/code&gt; files.&lt;/p&gt;
-
-&lt;p&gt;= )&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scss/coffeescript/emacs/scss-and-coffeescript-for-emacs&quot;&gt;SCSS and CoffeeScript for Emacs&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
