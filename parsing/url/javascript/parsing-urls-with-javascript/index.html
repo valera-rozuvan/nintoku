@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Release of a photoblog &#8211; Nintoku</title>
+<title>Parsing URLs with JavaScript &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Release of a photoblog">
+<meta name="twitter:title" content="Parsing URLs with JavaScript">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Release of a photoblog">
+<meta property="og:title" content="Parsing URLs with JavaScript">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/107180394340520523800?rel=author">
 
@@ -130,46 +130,103 @@
       <header class="entry-header">
         <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">Release of a photoblog</h1>
+          <h1 class="entry-title" itemprop="headline">Parsing URLs with JavaScript</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-04-24T07:18:40Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 24, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-04-28T23:41:50Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 28, 2014</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog" rel="bookmark" title="Release of a photoblog" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript" rel="bookmark" title="Parsing URLs with JavaScript" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
       </footer>
       <div class="entry-content" itemprop="description">
-        <p>When you capture a photograph, you imprint a small memory
-onto a piece of paper. You can look at it in a month, in a
-year, in 10 years - and it will remain the same, containing
-all of the details.</p>
+        <h1 id="introduction">Introduction</h1>
 
-<p>It is important to note, that some photographs stand-out
-among others. There is something special about them. You
-just want to keep coming back to such a photograph to look
-at it. To take in all of the details, colors, the mood.</p>
+<p>When one needs to parse a
+<a href="http://en.wikipedia.org/wiki/Uniform_resource_locator">Uniform Resource Locator (URL)</a>
+on the front-end with JavaScript, there are really two choices.</p>
 
-<p>How do you become an awesome photographer? There is no easy
-path. You can improve your photography skills only by practice.
-Luckily, there is no hard work involved! I mean taking a photo
-is a breeze, and tremendously enjoyable.</p>
+<ol>
+  <li>Do it using a regExp.</li>
+  <li>Use a HTML <a href=""></a> element.</li>
+</ol>
 
-<p>Someone once said that to become a photographer you must take
-10,000 photos. So I begin on my quest. You can
-<a href="http://valera-rozuvan.github.io/zeme-fotografia">follow along</a>!</p>
+<p>Below is a list of sites dedicated to this topic</p>
+
+<h2 id="libraries">Libraries</h2>
+
+<ul>
+  <li><a href="http://medialize.github.io/URI.js">URI.js</a></li>
+  <li><a href="https://www.npmjs.org/package/URIjs">URI.js (for Node.js)</a></li>
+  <li><a href="http://nodejs.org/api/url.html">Node.js URL module</a></li>
+  <li><a href="http://blog.stevenlevithan.com/archives/parseuri">parseUri</a></li>
+  <li><a href="https://github.com/MoOx/Url.js">Url.js</a></li>
+  <li><a href="https://gist.github.com/jed/964849">parseURL</a></li>
+</ul>
+
+<h2 id="gists">Gists</h2>
+
+<ul>
+  <li><a href="https://gist.github.com/sairion/7065921">Slice URL and get param values via JavaScript</a></li>
+  <li><a href="https://gist.github.com/jlong/2428561">URI Parsing with Javascript</a></li>
+</ul>
+
+<h2 id="jsperf-suites">jsperf suites</h2>
+
+<ul>
+  <li><a href="http://jsperf.com/get-hostname-from-url">Hostname from url</a></li>
+  <li><a href="http://jsperf.com/url-parsing">URL Parsing</a></li>
+  <li><a href="http://jsperf.com/url-parsing/2">URL Parsing (Revision 2)</a></li>
+  <li><a href="http://jsperf.com/url-parsing/5">URL Parsing (Revision 5)</a></li>
+</ul>
+
+<h2 id="stackoverflow-questions">StackOverflow questions</h2>
+
+<ul>
+  <li><a href="http://stackoverflow.com/questions/6644654/parse-url-with-jquery-javascript">Parse URL with jquery/ javascript?</a></li>
+  <li><a href="http://stackoverflow.com/questions/4140324/parse-url-with-javascript">Parse URL with Javascript (duplicate)</a></li>
+</ul>
+
+<h2 id="js-bin-examples">JS Bin examples</h2>
+
+<ul>
+  <li><a href="http://jsbin.com/eqoruj/2/edit">Example 1</a></li>
+</ul>
+
+<h2 id="blog-entries">Blog entries</h2>
+
+<ul>
+  <li><a href="http://tantek.com/2011/238/b1/many-ways-slice-url-name-pieces">How many ways can you slice a URL and name the pieces?</a></li>
+  <li><a href="http://james.padolsey.com/javascript/parsing-urls-with-the-dom">Parsing URLs with the DOM!</a></li>
+  <li><a href="http://grack.com/blog/2009/11/17/absolutizing-url-in-javascript">Absolutizing URLs in Javascript</a></li>
+  <li><a href="http://tutorialzine.com/2013/07/quick-tip-parse-urls">Quick Tip: The Easiest Way to Parse URLs with JavaScript</a></li>
+  <li><a href="http://www.joezimjs.com/javascript/the-lazy-mans-url-parsing">The Lazy Man’s URL Parsing in JavaScript</a></li>
+  <li><a href="http://iclanzan.com/parsing-urls-with-javascript">Parsing URLs with JavaScript</a></li>
+  <li><a href="http://www.abeautifulsite.net/blog/2013/10/parsing-urls-in-javascript">Parsing URLs in JavaScript</a></li>
+</ul>
+
+<h2 id="rfc-specifications">RFC specifications</h2>
+
+<ul>
+  <li><a href="http://www.w3.org/Addressing/URL/url-spec.txt">Uniform Resource Locators (URL)</a></li>
+  <li><a href="http://www.ietf.org/rfc/rfc3986.txt">Uniform Resource Identifier (URI): Generic Syntax</a></li>
+</ul>
+
+<h2 id="online-live-examples">Online live examples</h2>
+
+<ul>
+  <li><a href="http://www.freeformatter.com/url-parser-query-string-splitter.html">URL Parser / Query String Splitter</a></li>
+</ul>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency" class="btn" title="UPDATE: The New Age of JavaScript: Concurrency">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog" class="btn" title="Release of a photoblog">Previous article</a>
       
-      
-        <a href="http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript" class="btn" title="Parsing URLs with JavaScript">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>
