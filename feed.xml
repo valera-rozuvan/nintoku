@@ -4,13 +4,98 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-04-28T23:58:44+03:00</updated>
+<updated>2014-05-23T11:21:07+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Managing the Development of Large Software Systems]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems</link>
+  <id>http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems</id>
+  <published>2014-05-23T11:07:32Z</published>
+  <updated>2014-05-23T11:07:32Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29&lt;/p&gt;
+
+&lt;p&gt;During the past couple of days I had some free time to read up material on
+the process of software development. Such things as
+&lt;a href=&quot;http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29&quot;&gt;SOLID&lt;/a&gt;
+design, and the &lt;a href=&quot;http://en.wikipedia.org/wiki/Agile_software_development&quot;&gt;Agile&lt;/a&gt;
+methodology are very much discussed and used in the current programming world.
+It is interesting to look back on the history of the computer programming field
+and software development in general. I found an early work that influenced the
+current trends. The work is entitled
+&lt;strong&gt;Managing the Development of Large Software Systems&lt;/strong&gt; by
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Winston_W._Royce&quot;&gt;Dr. Winston W. Royce&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-process&quot;&gt;The process&lt;/h2&gt;
+
+&lt;p&gt;Royce begins his thesis by arguing that for a simple program that is written with the
+purpose of being used by the sole developer (or the few developers that write this program)
+only two steps are necessary:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;analysis&lt;/li&gt;
+  &lt;li&gt;coding&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Royce then goes on to point out that if a very large software system is to be built that is
+mission-critical and will face a large user audience, then the two step process must be greatly
+expanded:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;system requirements&lt;/li&gt;
+  &lt;li&gt;software requirements&lt;/li&gt;
+  &lt;li&gt;analysis&lt;/li&gt;
+  &lt;li&gt;program design&lt;/li&gt;
+  &lt;li&gt;coding&lt;/li&gt;
+  &lt;li&gt;testing&lt;/li&gt;
+  &lt;li&gt;operations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From a first glance, it is understandable that this multi step process will drive up
+the development costs. Customers typically would rather not pay for the additional
+steps, and developers would rather not implement them. Royce makes a remark that&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The prime function of management is to sell these concepts (steps) to both groups
+and then enforce compliance on the part of developers.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;documentation&quot;&gt;Documentation&lt;/h2&gt;
+
+&lt;p&gt;Besides going in depth for each step, Royce makes a point on documentation. The following
+little excerpt shows just how much documentation is important in the view of Royce.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Occasionally I am called upon to review the progress of other software design efforts.
+My first step is to investigate the state of the documentation. If the documentation is in
+serious default my first recommendation is simple. Replace project management. Stop all
+activities not related to documentation. Bring the documentation up to acceptable
+standards. Management of software is simply impossible without a very high degree of
+documentation. As an example, let me offer the following estimates for comparison. In
+order to produce a 5 million dollar hardware device, I would expect that a 30 page
+specification would provide adequate detail to control the procurement. In order to
+produce 5 million dollars of software I would estimate a 1500 page specification is about
+right in order to achieve comparable control.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The work &lt;strong&gt;Managing the Development of Large Software Systems&lt;/strong&gt; was written in 1970. Obviously,
+much has changed in the software world since then. However, I found that Royce has some sound
+advice that can be applied to today’s projects. Then again, you can just read it for the sake
+of having an understating of how management of software projects evolved.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems&quot;&gt;Managing the Development of Large Software Systems&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on May 23, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1062,35 +1147,6 @@ literature, and should also read some Russian.&lt;/p&gt;
 &lt;p&gt;To write, one must read, read, read!&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/current/state/things/current-state-of-things&quot;&gt;The current state of things&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 21, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Reading Japanese]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/reading/japanese/reading-japanese</link>
-  <id>http://valera-rozuvan.github.io/nintoku/reading/japanese/reading-japanese</id>
-  <published>2014-02-18T16:43:55Z</published>
-  <updated>2014-02-18T16:43:55Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;Not literally. Just got my English books by the Japanese author
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Banana_Yoshimoto&quot;&gt;Banana Yoshimoto&lt;/a&gt;. I ordered
-them a while ago on Amazon.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/0802142621/&quot;&gt;Hardboiled and Hard Luck&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/1612190898/&quot;&gt;The Lake&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Yay!&lt;/p&gt;
-
-&lt;p&gt;Listening to &lt;a href=&quot;http://www.youtube.com/watch?v=nKgM1SkMiqY&quot;&gt;Arthur Rubinstein - Chopin Mazurkas, Op. 6 - Op. 68&lt;/a&gt;.
-Specifically &lt;a href=&quot;http://goo.gl/rQxQjr&quot;&gt;Mazurka Op. 17, No. 4&lt;/a&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/reading/japanese/reading-japanese&quot;&gt;Reading Japanese&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 18, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

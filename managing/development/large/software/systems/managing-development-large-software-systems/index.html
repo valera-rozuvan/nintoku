@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Parsing URLs with JavaScript &#8211; Nintoku</title>
+<title>Managing the Development of Large Software Systems &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Parsing URLs with JavaScript">
+<meta name="twitter:title" content="Managing the Development of Large Software Systems">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Parsing URLs with JavaScript">
+<meta property="og:title" content="Managing the Development of Large Software Systems">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/107180394340520523800?rel=author">
 
@@ -130,105 +130,95 @@
       <header class="entry-header">
         <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">Parsing URLs with JavaScript</h1>
+          <h1 class="entry-title" itemprop="headline">Managing the Development of Large Software Systems</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-04-28T23:41:50Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 28, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-05-23T11:07:32Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> May 23, 2014</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript" rel="bookmark" title="Parsing URLs with JavaScript" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems" rel="bookmark" title="Managing the Development of Large Software Systems" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
       </footer>
       <div class="entry-content" itemprop="description">
-        <h1 id="introduction">Introduction</h1>
+        <p>http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29</p>
 
-<p>When one needs to parse a
-<a href="http://en.wikipedia.org/wiki/Uniform_resource_locator">Uniform Resource Locator (URL)</a>
-on the front-end with JavaScript, there are really two choices.</p>
+<p>During the past couple of days I had some free time to read up material on
+the process of software development. Such things as
+<a href="http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29">SOLID</a>
+design, and the <a href="http://en.wikipedia.org/wiki/Agile_software_development">Agile</a>
+methodology are very much discussed and used in the current programming world.
+It is interesting to look back on the history of the computer programming field
+and software development in general. I found an early work that influenced the
+current trends. The work is entitled
+<strong>Managing the Development of Large Software Systems</strong> by
+<a href="http://en.wikipedia.org/wiki/Winston_W._Royce">Dr. Winston W. Royce</a>.</p>
 
-<ol>
-  <li>Do it using a regExp.</li>
-  <li>Use a HTML <a href=""></a> element.</li>
-</ol>
+<h2 id="the-process">The process</h2>
 
-<p>Below is a list of sites dedicated to this topic</p>
-
-<h2 id="libraries">Libraries</h2>
-
-<ul>
-  <li><a href="http://medialize.github.io/URI.js">URI.js</a></li>
-  <li><a href="https://www.npmjs.org/package/URIjs">URI.js (for Node.js)</a></li>
-  <li><a href="http://nodejs.org/api/url.html">Node.js URL module</a></li>
-  <li><a href="http://blog.stevenlevithan.com/archives/parseuri">parseUri</a></li>
-  <li><a href="https://github.com/MoOx/Url.js">Url.js</a></li>
-  <li><a href="https://gist.github.com/jed/964849">parseURL</a></li>
-</ul>
-
-<h2 id="gists">Gists</h2>
+<p>Royce begins his thesis by arguing that for a simple program that is written with the
+purpose of being used by the sole developer (or the few developers that write this program)
+only two steps are necessary:</p>
 
 <ul>
-  <li><a href="https://gist.github.com/sairion/7065921">Slice URL and get param values via JavaScript</a></li>
-  <li><a href="https://gist.github.com/jlong/2428561">URI Parsing with Javascript</a></li>
+  <li>analysis</li>
+  <li>coding</li>
 </ul>
 
-<h2 id="jsperf-suites">jsperf suites</h2>
+<p>Royce then goes on to point out that if a very large software system is to be built that is
+mission-critical and will face a large user audience, then the two step process must be greatly
+expanded:</p>
 
 <ul>
-  <li><a href="http://jsperf.com/get-hostname-from-url">Hostname from url</a></li>
-  <li><a href="http://jsperf.com/url-parsing">URL Parsing</a></li>
-  <li><a href="http://jsperf.com/url-parsing/2">URL Parsing (Revision 2)</a></li>
-  <li><a href="http://jsperf.com/url-parsing/5">URL Parsing (Revision 5)</a></li>
+  <li>system requirements</li>
+  <li>software requirements</li>
+  <li>analysis</li>
+  <li>program design</li>
+  <li>coding</li>
+  <li>testing</li>
+  <li>operations</li>
 </ul>
 
-<h2 id="stackoverflow-questions">StackOverflow questions</h2>
+<p>From a first glance, it is understandable that this multi step process will drive up
+the development costs. Customers typically would rather not pay for the additional
+steps, and developers would rather not implement them. Royce makes a remark that</p>
 
-<ul>
-  <li><a href="http://stackoverflow.com/questions/6644654/parse-url-with-jquery-javascript">Parse URL with jquery/ javascript?</a></li>
-  <li><a href="http://stackoverflow.com/questions/4140324/parse-url-with-javascript">Parse URL with Javascript (duplicate)</a></li>
-</ul>
+<blockquote>
+  <p>The prime function of management is to sell these concepts (steps) to both groups
+and then enforce compliance on the part of developers.</p>
+</blockquote>
 
-<h2 id="js-bin-examples">JS Bin examples</h2>
+<h2 id="documentation">Documentation</h2>
 
-<ul>
-  <li><a href="http://jsbin.com/eqoruj/2/edit">Example 1</a></li>
-</ul>
+<p>Besides going in depth for each step, Royce makes a point on documentation. The following
+little excerpt shows just how much documentation is important in the view of Royce.</p>
 
-<h2 id="blog-entries">Blog entries</h2>
+<blockquote>
+  <p>Occasionally I am called upon to review the progress of other software design efforts.
+My first step is to investigate the state of the documentation. If the documentation is in
+serious default my first recommendation is simple. Replace project management. Stop all
+activities not related to documentation. Bring the documentation up to acceptable
+standards. Management of software is simply impossible without a very high degree of
+documentation. As an example, let me offer the following estimates for comparison. In
+order to produce a 5 million dollar hardware device, I would expect that a 30 page
+specification would provide adequate detail to control the procurement. In order to
+produce 5 million dollars of software I would estimate a 1500 page specification is about
+right in order to achieve comparable control.</p>
+</blockquote>
 
-<ul>
-  <li><a href="http://tantek.com/2011/238/b1/many-ways-slice-url-name-pieces">How many ways can you slice a URL and name the pieces?</a></li>
-  <li><a href="http://james.padolsey.com/javascript/parsing-urls-with-the-dom">Parsing URLs with the DOM!</a></li>
-  <li><a href="http://grack.com/blog/2009/11/17/absolutizing-url-in-javascript">Absolutizing URLs in Javascript</a></li>
-  <li><a href="http://tutorialzine.com/2013/07/quick-tip-parse-urls">Quick Tip: The Easiest Way to Parse URLs with JavaScript</a></li>
-  <li><a href="http://www.joezimjs.com/javascript/the-lazy-mans-url-parsing">The Lazy Man’s URL Parsing in JavaScript</a></li>
-  <li><a href="http://iclanzan.com/parsing-urls-with-javascript">Parsing URLs with JavaScript</a></li>
-  <li><a href="http://www.abeautifulsite.net/blog/2013/10/parsing-urls-in-javascript">Parsing URLs in JavaScript</a></li>
-</ul>
-
-<h2 id="rfc-specifications">RFC specifications</h2>
-
-<ul>
-  <li><a href="http://www.w3.org/Addressing/URL/url-spec.txt">Uniform Resource Locators (URL)</a></li>
-  <li><a href="http://www.ietf.org/rfc/rfc3986.txt">Uniform Resource Identifier (URI): Generic Syntax</a></li>
-</ul>
-
-<h2 id="online-live-examples">Online live examples</h2>
-
-<ul>
-  <li><a href="http://www.freeformatter.com/url-parser-query-string-splitter.html">URL Parser / Query String Splitter</a></li>
-</ul>
+<p>The work <strong>Managing the Development of Large Software Systems</strong> was written in 1970. Obviously,
+much has changed in the software world since then. However, I found that Royce has some sound
+advice that can be applied to today’s projects. Then again, you can just read it for the sake
+of having an understating of how management of software projects evolved.</p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog" class="btn" title="Release of a photoblog">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript" class="btn" title="Parsing URLs with JavaScript">Previous article</a>
       
-      
-        <a href="http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems" class="btn" title="Managing the Development of Large Software Systems">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>
