@@ -5,8 +5,6 @@ date:   2014-05-23 11:07:32
 categories: managing development large software systems
 ---
 
-http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29
-
 During the past couple of days I had some free time to read up material on
 the process of software development. Such things as
 [SOLID](http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29)
