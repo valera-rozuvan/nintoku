@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Managing the Development of Large Software Systems &#8211; Nintoku</title>
+<title>Smart Pomodoro Workflow &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Managing the Development of Large Software Systems">
+<meta name="twitter:title" content="Smart Pomodoro Workflow">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Managing the Development of Large Software Systems">
+<meta property="og:title" content="Smart Pomodoro Workflow">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/107180394340520523800?rel=author">
 
@@ -130,95 +130,75 @@
       <header class="entry-header">
         <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">Managing the Development of Large Software Systems</h1>
+          <h1 class="entry-title" itemprop="headline">Smart Pomodoro Workflow</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-05-23T11:07:32Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> May 23, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-05-23T13:31:18Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> May 23, 2014</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems" rel="bookmark" title="Managing the Development of Large Software Systems" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow" rel="bookmark" title="Smart Pomodoro Workflow" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
       </footer>
       <div class="entry-content" itemprop="description">
-        <p>During the past couple of days I had some free time to read up material on
-the process of software development. Such things as
-<a href="http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29">SOLID</a>
-design, and the <a href="http://en.wikipedia.org/wiki/Agile_software_development">Agile</a>
-methodology are very much discussed and used in the current programming world.
-It is interesting to look back on the history of the computer programming field
-and software development in general. I found an early work that influenced the
-current trends. The work is entitled
-<strong>Managing the Development of Large Software Systems</strong> by
-<a href="http://en.wikipedia.org/wiki/Winston_W._Royce">Dr. Winston W. Royce</a>.</p>
+        <p><a href="http://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro</a> is a technique to
+allow for greater control on working. The main idea is that</p>
 
-<h2 id="the-process">The process</h2>
+<ol>
+  <li>You pick a task, write it down.</li>
+  <li>Start your Pomodoro timer.</li>
+  <li>Work only on the task while the Pomodoro timer is ticking. No multitasking!
+No switching to something else - even for a minute!</li>
+  <li>When the Pomodoro timer stops, you stop working at the task and mark it
+on paper.</li>
+  <li>Take a break.</li>
+  <li>Repeat the whole process from step 1.</li>
+</ol>
 
-<p>Royce begins his thesis by arguing that for a simple program that is written with the
-purpose of being used by the sole developer (or the few developers that write this program)
-only two steps are necessary:</p>
+<p>Two issues come up with the basic Pomodoro technique.</p>
 
-<ul>
-  <li>analysis</li>
-  <li>coding</li>
-</ul>
+<ol>
+  <li>What if you are interrupted during a Pomodoro session?</li>
+  <li>What if you complete the task before the Pomodoro timer goes off?</li>
+</ol>
 
-<p>Royce then goes on to point out that if a very large software system is to be built that is
-mission-critical and will face a large user audience, then the two step process must be greatly
-expanded:</p>
-
-<ul>
-  <li>system requirements</li>
-  <li>software requirements</li>
-  <li>analysis</li>
-  <li>program design</li>
-  <li>coding</li>
-  <li>testing</li>
-  <li>operations</li>
-</ul>
-
-<p>From a first glance, it is understandable that this multi step process will drive up
-the development costs. Customers typically would rather not pay for the additional
-steps, and developers would rather not implement them. Royce makes a remark that</p>
+<p>I believe that both cases can be handled by modifying step 4 of the above list,
+so that it includes:</p>
 
 <blockquote>
-  <p>The prime function of management is to sell these concepts (steps) to both groups
-and then enforce compliance on the part of developers.</p>
+  <p>If you are interrupted, or you complete the task before the Pomodoro timer
+stops, then stop the Pomodoro timer manually, and continue to the next step.</p>
 </blockquote>
 
-<h2 id="documentation">Documentation</h2>
+<p>This little change makes a big difference to the original Pomodoro technique.
+It ensures that you work on a task uninterrupted, that you stay in the zone.
+You are required to start-over the whole process if you are interrupted, or
+you complete a task early.</p>
 
-<p>Besides going in depth for each step, Royce makes a point on documentation. The following
-little excerpt shows just how much documentation is important in the view of Royce.</p>
+<p>The <strong>smart</strong> thing is that a Pomodoro session is for one and one task only.
+The <strong>smart</strong> thing is that a Pomodoro session can’t be interrupted - it can
+only be stopped.</p>
 
-<blockquote>
-  <p>Occasionally I am called upon to review the progress of other software design efforts.
-My first step is to investigate the state of the documentation. If the documentation is in
-serious default my first recommendation is simple. Replace project management. Stop all
-activities not related to documentation. Bring the documentation up to acceptable
-standards. Management of software is simply impossible without a very high degree of
-documentation. As an example, let me offer the following estimates for comparison. In
-order to produce a 5 million dollar hardware device, I would expect that a 30 page
-specification would provide adequate detail to control the procurement. In order to
-produce 5 million dollars of software I would estimate a 1500 page specification is about
-right in order to achieve comparable control.</p>
-</blockquote>
+<p>So, the <strong>Smart</strong> Pomodoro process is as follows:</p>
 
-<p>The work <strong>Managing the Development of Large Software Systems</strong> was written in 1970. Obviously,
-much has changed in the software world since then. However, I found that Royce has some sound
-advice that can be applied to today’s projects. Then again, you can just read it for the sake
-of having an understating of how management of software projects evolved.</p>
+<figure>
+    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_05_23/smart_pomodoro_workflow.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_05_23/smart_pomodoro_workflow.png" /></a>
+    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_05_23/smart_pomodoro_workflow.png" title="Smart Pomodoro Workflow">Smart Pomodoro Workflow</a>.</figcaption>
+</figure>
+
+<p>The key thing to note is that this approach enforces you to work on a task
+for a set period of time without interruptions and task switching. The Pomodoro
+timer can be set to anything you like. Ideally, with the <strong>Smart</strong> Pomodoro
+workflow, you will achieve an in-the-zone working experience!</p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript" class="btn" title="Parsing URLs with JavaScript">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems" class="btn" title="Managing the Development of Large Software Systems">Previous article</a>
       
-      
-        <a href="http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow" class="btn" title="Smart Pomodoro Workflow">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

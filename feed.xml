@@ -4,13 +4,78 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-05-23T11:23:43+03:00</updated>
+<updated>2014-05-23T16:48:39+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Smart Pomodoro Workflow]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow</link>
+  <id>http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow</id>
+  <published>2014-05-23T13:31:18Z</published>
+  <updated>2014-05-23T13:31:18Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Pomodoro_Technique&quot;&gt;Pomodoro&lt;/a&gt; is a technique to
+allow for greater control on working. The main idea is that&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You pick a task, write it down.&lt;/li&gt;
+  &lt;li&gt;Start your Pomodoro timer.&lt;/li&gt;
+  &lt;li&gt;Work only on the task while the Pomodoro timer is ticking. No multitasking!
+No switching to something else - even for a minute!&lt;/li&gt;
+  &lt;li&gt;When the Pomodoro timer stops, you stop working at the task and mark it
+on paper.&lt;/li&gt;
+  &lt;li&gt;Take a break.&lt;/li&gt;
+  &lt;li&gt;Repeat the whole process from step 1.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Two issues come up with the basic Pomodoro technique.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What if you are interrupted during a Pomodoro session?&lt;/li&gt;
+  &lt;li&gt;What if you complete the task before the Pomodoro timer goes off?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I believe that both cases can be handled by modifying step 4 of the above list,
+so that it includes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you are interrupted, or you complete the task before the Pomodoro timer
+stops, then stop the Pomodoro timer manually, and continue to the next step.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This little change makes a big difference to the original Pomodoro technique.
+It ensures that you work on a task uninterrupted, that you stay in the zone.
+You are required to start-over the whole process if you are interrupted, or
+you complete a task early.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smart&lt;/strong&gt; thing is that a Pomodoro session is for one and one task only.
+The &lt;strong&gt;smart&lt;/strong&gt; thing is that a Pomodoro session can’t be interrupted - it can
+only be stopped.&lt;/p&gt;
+
+&lt;p&gt;So, the &lt;strong&gt;Smart&lt;/strong&gt; Pomodoro process is as follows:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_05_23/smart_pomodoro_workflow.png&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_05_23/smart_pomodoro_workflow.png&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_05_23/smart_pomodoro_workflow.png&quot; title=&quot;Smart Pomodoro Workflow&quot;&gt;Smart Pomodoro Workflow&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The key thing to note is that this approach enforces you to work on a task
+for a set period of time without interruptions and task switching. The Pomodoro
+timer can be set to anything you like. Ideally, with the &lt;strong&gt;Smart&lt;/strong&gt; Pomodoro
+workflow, you will achieve an in-the-zone working experience!&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow&quot;&gt;Smart Pomodoro Workflow&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on May 23, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1118,33 +1183,6 @@ by the GNU Emacs and XEmacs text editors.&lt;/p&gt;
 &lt;/blockquote&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/languages/i/learn/languages-i-want-to-learn&quot;&gt;Languages I want to learn&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 25, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[The current state of things]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/current/state/things/current-state-of-things</link>
-  <id>http://valera-rozuvan.github.io/nintoku/current/state/things/current-state-of-things</id>
-  <published>2014-02-21T10:59:12Z</published>
-  <updated>2014-02-21T10:59:12Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;I am at work. It seems that everything is calm; got to work in
-a normal fashion. Today is a reading day.&lt;/p&gt;
-
-&lt;p&gt;Starting to work!&lt;/p&gt;
-
-&lt;p&gt;I have slept today to heart’s content! I should do so more
-often. There is an absolute clearness in my head, I am not
-yawning, the eyes are wide open. Today I will read English
-literature, and should also read some Russian.&lt;/p&gt;
-
-&lt;p&gt;To write, one must read, read, read!&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/current/state/things/current-state-of-things&quot;&gt;The current state of things&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 21, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
