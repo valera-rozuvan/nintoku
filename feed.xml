@@ -4,13 +4,114 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-05-23T16:48:39+03:00</updated>
+<updated>2014-06-15T23:21:32+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Scrobbling to Last.fm from Linux]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux</link>
+  <id>http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux</id>
+  <published>2014-06-15T22:57:24Z</published>
+  <updated>2014-06-15T22:57:24Z</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;A brief note on Last.fm and scrobbling:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;music website, founded in the United Kingdom in 2002. Using a music
+recommender system called “Audioscrobbler”, Last.fm builds a detailed
+profile of each user’s musical taste by recording details of the tracks
+the user listens to, either from Internet radio stations, or the user’s
+computer or many portable music devices. This information is transferred
+(“scrobbled”) to Last.fm’s database either via the music player itself
+(Rdio, Spotify, Clementine, Amarok) or via a plugin installed into the
+user’s music player. The data are then displayed on the user’s profile
+page and compiled to create reference pages for individual artists.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(from &lt;a href=&quot;http://en.wikipedia.org/wiki/Last.fm&quot;&gt;Wikipedia’s article&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;So basically as I listen to music, Last.fm allows for other to see
+what I am listening to, and also view the history of what I have listened
+in the past. Take a look at my
+&lt;a href=&quot;http://www.last.fm/user/valerarozuvan&quot;&gt;statistics page&lt;/a&gt;, and at
+&lt;a href=&quot;http://www.last.fm/user/valerarozuvan/now&quot;&gt;what I am listening to now&lt;/a&gt;. The
+second page automatically refreshes the information as music tracks change!&lt;/p&gt;
+
+&lt;p&gt;So since I am a Linux guy, I have configured myself the following setup to
+have my played music be scrobbled to Last.fm.&lt;/p&gt;
+
+&lt;p&gt;Introducing&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://mpd.wikia.com/wiki/Music_Player_Daemon_Wiki&quot;&gt;Music Player Daemon (MPD)&lt;/a&gt;&lt;/strong&gt;
+is a flexible, powerful, server-side application for playing music.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/multani/sonata&quot;&gt;Sonata&lt;/a&gt;&lt;/strong&gt; - an elegant music client for MPD.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://www.ohloh.net/p/mpdscribble&quot;&gt;mpdscribble&lt;/a&gt;&lt;/strong&gt; is a music player daemon
+client which submits information about tracks being played to audioscrobbler.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Below are the configuration files for &lt;strong&gt;MPD&lt;/strong&gt; and &lt;strong&gt;mpdscribble&lt;/strong&gt;. I am placing
+them here for the curious soul, and for my own reference.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;$ cat ~/.mpd.d/mpd.conf
+follow_outside_symlinks &amp;quot;no&amp;quot;
+follow_inside_symlinks &amp;quot;no&amp;quot;
+db_file &amp;quot;/home/valera/.mpd.d/db&amp;quot;
+sticker_file &amp;quot;/home/valera/.mpd.d/sticker&amp;quot;
+log_file &amp;quot;/home/valera/.mpd.d/log&amp;quot;
+music_directory &amp;quot;/home/valera/Music&amp;quot;
+playlist_directory &amp;quot;/home/valera/.mpd.d/playlists&amp;quot;
+pid_file &amp;quot;/home/valera/.mpd.d/pid&amp;quot;
+audio_output_format &amp;quot;44100:16:2&amp;quot;
+samplerate_converter &amp;quot;0&amp;quot;
+volume_normalization &amp;quot;yes&amp;quot;
+audio_buffer_size &amp;quot;4096&amp;quot;
+auto_update &amp;quot;yes&amp;quot;
+audio_output {
+    type &amp;quot;alsa&amp;quot;
+    name &amp;quot;AlsaOut1&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;$ cat ~/.mpdscribble/mpdscribble.conf
+url = http://post.audioscrobbler.com
+username = valerarozuvan
+password = your_password
+
+pidfile = /home/valera/.mpdscribble/pid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Update your &lt;code&gt;init.d&lt;/code&gt; script for &lt;strong&gt;MPD&lt;/strong&gt; to point to your configuration file.
+In my case I have a line in the file &lt;code&gt;/etc/init.d/mpd&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MPDCONF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/valera/.mpd.d/mpd.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Also, update the configuration file &lt;code&gt;/etc/default/mpdscribble&lt;/code&gt; for
+&lt;strong&gt;mpdscribble&lt;/strong&gt; so it has the following lines:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MPD_SYSTEMWIDE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;span class=&quot;nv&quot;&gt;DAEMON_OPTS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;valera
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;PLEASE NOTE: In all of the above files, make sure to update the paths
+of files so that they contain your Linux user name!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux&quot;&gt;Scrobbling to Last.fm from Linux&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on June 15, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1128,61 +1229,6 @@ the point when something acted on him, use the new path to draw the
 trail.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/path/curve/trajectory/paths-curves-trajectories&quot;&gt;Paths, curves, and trajectories&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 26, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Languages I want to learn]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/languages/i/learn/languages-i-want-to-learn</link>
-  <id>http://valera-rozuvan.github.io/nintoku/languages/i/learn/languages-i-want-to-learn</id>
-  <published>2014-02-25T17:59:52Z</published>
-  <updated>2014-02-25T17:59:52Z</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;In the order of most important, from the point of view of work. I
-want to know these languages at an advanced level.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.python.org&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Python is a programming language that lets you work quickly
-and integrate systems more effectively.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.ruby-lang.org&quot;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Ruby is … A dynamic, open source programming language with
-a focus on simplicity and productivity. It has an elegant syntax
-that is natural to read and easy to write.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://golang.org&quot;&gt;Go&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Go is an open source programming language that makes it easy
-to build simple, reliable, and efficient software.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Emacs_Lisp&quot;&gt;Emacs Lisp&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Emacs Lisp is a dialect of the Lisp programming language used
-by the GNU Emacs and XEmacs text editors.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/languages/i/learn/languages-i-want-to-learn&quot;&gt;Languages I want to learn&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 25, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
