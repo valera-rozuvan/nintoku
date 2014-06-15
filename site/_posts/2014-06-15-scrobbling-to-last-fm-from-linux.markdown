@@ -21,7 +21,7 @@ page and compiled to create reference pages for individual artists.
 
 So basically as I listen to music, Last.fm allows for other to see
 what I am listening to, and also view the history of what I have listened
-in the past. Take a look at my
+to in the past. Take a look at my
 [statistics page](http://www.last.fm/user/valerarozuvan), and at
 [what I am listening to now](http://www.last.fm/user/valerarozuvan/now). The
 second page automatically refreshes the information as music tracks change!
