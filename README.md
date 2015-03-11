@@ -35,22 +35,22 @@ Most likely these instructions will work on any Debian based Linux
 distribution. You must have Ruby available on your system along with Ruby
 development dependencies. If you don't, then:
 
-    # sudo aptitude install ruby1.9.1 ruby1.9.1-dev ruby1.9.1-examples ruby1.9.1-full
+    $ sudo aptitude install ruby1.9.1 ruby1.9.1-dev ruby1.9.1-examples ruby1.9.1-full
 
 You also must have Node JS available on your system. If you don't, then:
 
-    # sudo aptitude install curl
-    # sudo curl -sL https://deb.nodesource.com/setup | sudo bash -
-    # sudo aptitude install nodejs
+    $ sudo aptitude install curl
+    $ sudo curl -sL https://deb.nodesource.com/setup | sudo bash -
+    $ sudo aptitude install nodejs
 
 One final bit before installing Jekyll, make sure you have the `build-essential`
 Debian package installed:
 
-    # sudo aptitude install build-essential
+    $ sudo aptitude install build-essential
 
 Now we can proceed with installation of the Jekyll Ruby gem:
 
-    # sudo gem install jekyll
+    $ sudo gem install jekyll
 
 Check that the installation went smotthly:
 
