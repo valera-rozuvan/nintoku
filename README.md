@@ -69,7 +69,7 @@ I find that the best workflow for working on your blog is as follows.
 4. Edit with your editor of choice the "master" folder.
 5. Build your updated blog with the command
 
-    $ jekyll build --source PATH_TO_MASTER_FOLDER --destination PATH_TO_GH_PAGES_FOLDER
+        $ jekyll build --source PATH_TO_MASTER_FOLDER --destination PATH_TO_GH_PAGES_FOLDER
 
 6. Then push both folders to GitHub to preserve your source changes and
 also to publish live your new changes.
