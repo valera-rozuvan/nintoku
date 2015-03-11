@@ -136,7 +136,7 @@
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-03-18T23:32:24Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> March 18, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-03-19T01:32:24+02:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> March 19, 2014</time></span>
         
         
         <span><a href="http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy" rel="bookmark" title="Installing Emacs on Debian wheezy" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
@@ -149,22 +149,20 @@ the latest and greatest
 = ) So, without any other words, I present to you the complete guide of how to install
 Emacs 24.3.1 on Debian 7 wheezy.</p>
 
-<div class="highlight"><pre><code class="bash">sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
 sudo apt-get build-dep emacs
 git clone git://git.savannah.gnu.org/emacs.git
-<span class="nb">cd </span>emacs/
+cd emacs/
 git checkout emacs-24.3
 git checkout -b custom_branch
 ./autogen.sh
-./configure --prefix<span class="o">=</span>/opt/emacs24
-make --jobs<span class="o">=</span>2
-sudo make install
-</code></pre></div>
+./configure --prefix=/opt/emacs24
+make --jobs=2
+sudo make install</code></pre></div>
 
 <p>The above steps will install Emacs to <code>/opt/emacs24</code>. To run Emacs, you can launch it by:</p>
 
-<div class="highlight"><pre><code class="bash">/opt/emacs24/bin/emacs
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">/opt/emacs24/bin/emacs</code></pre></div>
 
 <p>It is important to add the directory, where Emacs binary is found, to the system <code>PATH</code>
 variable. The directory contains several other important Emacs related binaries:</p>
@@ -181,13 +179,11 @@ variable. The directory contains several other important Emacs related binaries:
 
 <p>Place the following line at the bottom of your <code>~/.bashrc</code> file:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/emacs24/bin
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">export PATH=$PATH:/opt/emacs24/bin</code></pre></div>
 
 <p>Now you can run Emacs with a simple command:</p>
 
-<div class="highlight"><pre><code class="bash">emacs
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">emacs</code></pre></div>
 
 
         
@@ -206,7 +202,7 @@ variable. The directory contains several other important Emacs related binaries:
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
-    <span>&copy; 2014 <a href="http://valera.rozuvan.net/">Valera Rozuvan</a>. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">So Simple Theme</a>.</span>
+    <span>&copy; 2015 <a href="http://valera.rozuvan.net/">Valera Rozuvan</a>. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">So Simple Theme</a>.</span>
 <div class="social-icons">
 	<a href="http://twitter.com/ValeraRozuvan" title="Valera Rozuvan on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
 	<a href="http://facebook.com/valera.rozuvan" title="Valera Rozuvan on Facebook" target="_blank"><i class="icon-facebook icon-2x"></i></a>

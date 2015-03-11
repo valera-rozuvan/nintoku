@@ -136,7 +136,7 @@
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-06-15T22:57:24Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> June 15, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-06-16T01:57:24+03:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> June 16, 2014</time></span>
         
         
         <span><a href="http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux" rel="bookmark" title="Scrobbling to Last.fm from Linux" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
@@ -181,7 +181,7 @@ client which submits information about tracks being played to audioscrobbler.</l
 <p>Below are the configuration files for <strong>MPD</strong> and <strong>mpdscribble</strong>. I am placing
 them here for the curious soul, and for my own reference.</p>
 
-<div class="highlight"><pre><code class="text">$ cat ~/.mpd.d/mpd.conf
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cat ~/.mpd.d/mpd.conf
 follow_outside_symlinks &quot;no&quot;
 follow_inside_symlinks &quot;no&quot;
 db_file &quot;/home/valera/.mpd.d/db&quot;
@@ -198,30 +198,26 @@ auto_update &quot;yes&quot;
 audio_output {
     type &quot;alsa&quot;
     name &quot;AlsaOut1&quot;
-}
-</code></pre></div>
+}</code></pre></div>
 
-<div class="highlight"><pre><code class="text">$ cat ~/.mpdscribble/mpdscribble.conf
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cat ~/.mpdscribble/mpdscribble.conf
 url = http://post.audioscrobbler.com
 username = valerarozuvan
 password = your_password
 
-pidfile = /home/valera/.mpdscribble/pid
-</code></pre></div>
+pidfile = /home/valera/.mpdscribble/pid</code></pre></div>
 
 <p>Update your <code>init.d</code> script for <strong>MPD</strong> to point to your configuration file.
 In my case I have a line in the file <code>/etc/init.d/mpd</code>:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">MPDCONF</span><span class="o">=</span>/home/valera/.mpd.d/mpd.conf
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">MPDCONF=/home/valera/.mpd.d/mpd.conf</code></pre></div>
 
 <p>Also, update the configuration file <code>/etc/default/mpdscribble</code> for
 <strong>mpdscribble</strong> so it has the following lines:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">MPD_SYSTEMWIDE</span><span class="o">=</span>1
-<span class="nv">DAEMON_OPTS</span><span class="o">=</span><span class="s2">&quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&quot;</span>
-<span class="nv">USER</span><span class="o">=</span>valera
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">MPD_SYSTEMWIDE=1
+DAEMON_OPTS=&quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&quot;
+USER=valera</code></pre></div>
 
 <p><strong>PLEASE NOTE: In all of the above files, make sure to update the paths
 of files so that they contain your Linux user name!</strong></p>
@@ -242,7 +238,7 @@ of files so that they contain your Linux user name!</strong></p>
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
-    <span>&copy; 2014 <a href="http://valera.rozuvan.net/">Valera Rozuvan</a>. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">So Simple Theme</a>.</span>
+    <span>&copy; 2015 <a href="http://valera.rozuvan.net/">Valera Rozuvan</a>. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">So Simple Theme</a>.</span>
 <div class="social-icons">
 	<a href="http://twitter.com/ValeraRozuvan" title="Valera Rozuvan on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
 	<a href="http://facebook.com/valera.rozuvan" title="Valera Rozuvan on Facebook" target="_blank"><i class="icon-facebook icon-2x"></i></a>

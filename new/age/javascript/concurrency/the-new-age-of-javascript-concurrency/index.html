@@ -136,7 +136,7 @@
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-04-02T03:43:14Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 02, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-04-02T06:43:14+03:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 02, 2014</time></span>
         
         
         <span><a href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency" rel="bookmark" title="The New Age of JavaScript: Concurrency" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
@@ -161,23 +161,22 @@ one after the other, in the order of <code>window.setInterval</code> invocation?
 
 <p>So, to be more precise, if we have the following code:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">timeout1</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc1</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
-    <span class="nx">timeout2</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc2</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">var timeout1 = window.setInterval(timeoutFunc1, 50),
+    timeout2 = window.setInterval(timeoutFunc2, 50);
 
-<span class="kd">function</span> <span class="nx">timeoutFunc1</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// It is given that window.output() is defined, and writes</span>
-    <span class="c1">// it&#39;s parameter to the page for the user to see.</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+function timeoutFunc1() {
+    // It is given that window.output() is defined, and writes
+    // it's parameter to the page for the user to see.
+    window.output('1');
+}
 
-<span class="kd">function</span> <span class="nx">timeoutFunc2</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+function timeoutFunc2() {
+    window.output('2');
+}</code></pre></div>
 
 <p>will we see on the page:</p>
 
-<div class="highlight"><pre><code class="text">1
+<div class="highlight"><pre><code class="language-text" data-lang="text">1
 2
 1
 2
@@ -189,15 +188,14 @@ one after the other, in the order of <code>window.setInterval</code> invocation?
 2
 1
 2
-...
-</code></pre></div>
+...</code></pre></div>
 
 <p>An interesting question. To further complicate things, what if one of
 the periodically invoked functions did something else besides outputting
 a number to the page. What if it took a long time to run, i.e. it would
 execute 5 to 10 times longer? Would we then see something like this:</p>
 
-<div class="highlight"><pre><code class="text">2
+<div class="highlight"><pre><code class="language-text" data-lang="text">2
 2
 2
 2
@@ -209,8 +207,7 @@ execute 5 to 10 times longer? Would we then see something like this:</p>
 2
 2
 2
-...
-</code></pre></div>
+...</code></pre></div>
 
 <p>I have done a lot of reading on the subject of JavaScript concurrency,
 parallelism, etc. I have started to believe that in the second example
@@ -279,7 +276,7 @@ with the fast function.</p>
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
-    <span>&copy; 2014 <a href="http://valera.rozuvan.net/">Valera Rozuvan</a>. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">So Simple Theme</a>.</span>
+    <span>&copy; 2015 <a href="http://valera.rozuvan.net/">Valera Rozuvan</a>. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">So Simple Theme</a>.</span>
 <div class="social-icons">
 	<a href="http://twitter.com/ValeraRozuvan" title="Valera Rozuvan on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
 	<a href="http://facebook.com/valera.rozuvan" title="Valera Rozuvan on Facebook" target="_blank"><i class="icon-facebook icon-2x"></i></a>

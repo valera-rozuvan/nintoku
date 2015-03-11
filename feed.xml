@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2014-06-15T23:26:43+03:00</updated>
+<updated>2015-03-11T19:27:20+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -17,8 +17,8 @@
   <title type="html"><![CDATA[Scrobbling to Last.fm from Linux]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux</link>
   <id>http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux</id>
-  <published>2014-06-15T22:57:24Z</published>
-  <updated>2014-06-15T22:57:24Z</updated>
+  <published>2014-06-16T01:57:24+03:00</published>
+  <updated>2014-06-16T01:57:24+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -63,7 +63,7 @@ client which submits information about tracks being played to audioscrobbler.&lt
 &lt;p&gt;Below are the configuration files for &lt;strong&gt;MPD&lt;/strong&gt; and &lt;strong&gt;mpdscribble&lt;/strong&gt;. I am placing
 them here for the curious soul, and for my own reference.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;$ cat ~/.mpd.d/mpd.conf
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ cat ~/.mpd.d/mpd.conf
 follow_outside_symlinks &amp;quot;no&amp;quot;
 follow_inside_symlinks &amp;quot;no&amp;quot;
 db_file &amp;quot;/home/valera/.mpd.d/db&amp;quot;
@@ -80,37 +80,33 @@ auto_update &amp;quot;yes&amp;quot;
 audio_output {
     type &amp;quot;alsa&amp;quot;
     name &amp;quot;AlsaOut1&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;$ cat ~/.mpdscribble/mpdscribble.conf
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ cat ~/.mpdscribble/mpdscribble.conf
 url = http://post.audioscrobbler.com
 username = valerarozuvan
 password = your_password
 
-pidfile = /home/valera/.mpdscribble/pid
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+pidfile = /home/valera/.mpdscribble/pid&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Update your &lt;code&gt;init.d&lt;/code&gt; script for &lt;strong&gt;MPD&lt;/strong&gt; to point to your configuration file.
 In my case I have a line in the file &lt;code&gt;/etc/init.d/mpd&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MPDCONF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/valera/.mpd.d/mpd.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;MPDCONF=/home/valera/.mpd.d/mpd.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Also, update the configuration file &lt;code&gt;/etc/default/mpdscribble&lt;/code&gt; for
 &lt;strong&gt;mpdscribble&lt;/strong&gt; so it has the following lines:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MPD_SYSTEMWIDE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
-&lt;span class=&quot;nv&quot;&gt;DAEMON_OPTS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;valera
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;MPD_SYSTEMWIDE=1
+DAEMON_OPTS=&amp;quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&amp;quot;
+USER=valera&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;PLEASE NOTE: In all of the above files, make sure to update the paths
 of files so that they contain your Linux user name!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Enjoy!&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux&quot;&gt;Scrobbling to Last.fm from Linux&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on June 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux&quot;&gt;Scrobbling to Last.fm from Linux&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on June 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -118,8 +114,8 @@ of files so that they contain your Linux user name!&lt;/strong&gt;&lt;/p&gt;
   <title type="html"><![CDATA[Smart Pomodoro Workflow]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow</link>
   <id>http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow</id>
-  <published>2014-05-23T13:31:18Z</published>
-  <updated>2014-05-23T13:31:18Z</updated>
+  <published>2014-05-23T16:31:18+03:00</published>
+  <updated>2014-05-23T16:31:18+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -183,8 +179,8 @@ workflow, you will achieve an in-the-zone working experience!&lt;/p&gt;
   <title type="html"><![CDATA[Managing the Development of Large Software Systems]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems</link>
   <id>http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems</id>
-  <published>2014-05-23T11:07:32Z</published>
-  <updated>2014-05-23T11:07:32Z</updated>
+  <published>2014-05-23T14:07:32+03:00</published>
+  <updated>2014-05-23T14:07:32+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -266,8 +262,8 @@ of having an understating of how management of software projects evolved.&lt;/p&
   <title type="html"><![CDATA[Parsing URLs with JavaScript]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript</link>
   <id>http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript</id>
-  <published>2014-04-28T23:41:50Z</published>
-  <updated>2014-04-28T23:41:50Z</updated>
+  <published>2014-04-29T02:41:50+03:00</published>
+  <updated>2014-04-29T02:41:50+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -351,7 +347,7 @@ on the front-end with JavaScript, there are really two choices.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.freeformatter.com/url-parser-query-string-splitter.html&quot;&gt;URL Parser / Query String Splitter&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript&quot;&gt;Parsing URLs with JavaScript&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 28, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript&quot;&gt;Parsing URLs with JavaScript&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 29, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -359,8 +355,8 @@ on the front-end with JavaScript, there are really two choices.&lt;/p&gt;
   <title type="html"><![CDATA[Release of a photoblog]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog</link>
   <id>http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog</id>
-  <published>2014-04-24T07:18:40Z</published>
-  <updated>2014-04-24T07:18:40Z</updated>
+  <published>2014-04-24T10:18:40+03:00</published>
+  <updated>2014-04-24T10:18:40+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -393,8 +389,8 @@ is a breeze, and tremendously enjoyable.&lt;/p&gt;
   <title type="html"><![CDATA[UPDATE: The New Age of JavaScript: Concurrency]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency</link>
   <id>http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency</id>
-  <published>2014-04-18T09:27:27Z</published>
-  <updated>2014-04-18T09:27:27Z</updated>
+  <published>2014-04-18T12:27:27+03:00</published>
+  <updated>2014-04-18T12:27:27+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -442,8 +438,8 @@ browsers.&lt;/p&gt;
   <title type="html"><![CDATA[Little Linux command discoveries]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries</link>
   <id>http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries</id>
-  <published>2014-04-18T09:10:21Z</published>
-  <updated>2014-04-18T09:10:21Z</updated>
+  <published>2014-04-18T12:10:21+03:00</published>
+  <updated>2014-04-18T12:10:21+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -474,8 +470,8 @@ program does only one job, but it does it well.&lt;/p&gt;
   <title type="html"><![CDATA[Musings]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/musings/musings</link>
   <id>http://valera-rozuvan.github.io/nintoku/musings/musings</id>
-  <published>2014-04-18T08:54:44Z</published>
-  <updated>2014-04-18T08:54:44Z</updated>
+  <published>2014-04-18T11:54:44+03:00</published>
+  <updated>2014-04-18T11:54:44+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -543,8 +539,8 @@ fingers are little knifes that are passing through warm butter.&lt;/p&gt;
   <title type="html"><![CDATA[I prefer JSHint over JSLint]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/preference/jshint/jslint/i-prefer-jshint-over-jslint</link>
   <id>http://valera-rozuvan.github.io/nintoku/preference/jshint/jslint/i-prefer-jshint-over-jslint</id>
-  <published>2014-04-09T10:41:41Z</published>
-  <updated>2014-04-09T10:41:41Z</updated>
+  <published>2014-04-09T13:41:41+03:00</published>
+  <updated>2014-04-09T13:41:41+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -616,8 +612,8 @@ for reference, if in doubt of how to install &lt;code&gt;jshint-mode&lt;/code&gt
   <title type="html"><![CDATA[HARD: Project by mr. Iks]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/hard/hardstyle/project/mr/iks/hard-project-by-mr-iks</link>
   <id>http://valera-rozuvan.github.io/nintoku/hard/hardstyle/project/mr/iks/hard-project-by-mr-iks</id>
-  <published>2014-04-06T01:23:11Z</published>
-  <updated>2014-04-06T01:23:11Z</updated>
+  <published>2014-04-06T04:23:11+03:00</published>
+  <updated>2014-04-06T04:23:11+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -636,8 +632,8 @@ and &lt;a href=&quot;http://en.wikipedia.org/wiki/Hardstyle&quot;&gt;hardstyle&l
   <title type="html"><![CDATA[Tiling window managers]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers</link>
   <id>http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers</id>
-  <published>2014-04-04T15:51:33Z</published>
-  <updated>2014-04-04T15:51:33Z</updated>
+  <published>2014-04-04T18:51:33+03:00</published>
+  <updated>2014-04-04T18:51:33+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -704,8 +700,8 @@ by simply issuing a rearrange command.&lt;/p&gt;
   <title type="html"><![CDATA[The New Age of JavaScript: Concurrency]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency</link>
   <id>http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency</id>
-  <published>2014-04-02T03:43:14Z</published>
-  <updated>2014-04-02T03:43:14Z</updated>
+  <published>2014-04-02T06:43:14+03:00</published>
+  <updated>2014-04-02T06:43:14+03:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -730,23 +726,22 @@ one after the other, in the order of &lt;code&gt;window.setInterval&lt;/code&gt;
 
 &lt;p&gt;So, to be more precise, if we have the following code:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeout1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;timeout2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;var timeout1 = window.setInterval(timeoutFunc1, 50),
+    timeout2 = window.setInterval(timeoutFunc2, 50);
 
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// It is given that window.output() is defined, and writes&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// it&amp;#39;s parameter to the page for the user to see.&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+function timeoutFunc1() {
+    // It is given that window.output() is defined, and writes
+    // it's parameter to the page for the user to see.
+    window.output('1');
+}
 
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeoutFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+function timeoutFunc2() {
+    window.output('2');
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;will we see on the page:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;1
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1
 2
 1
 2
@@ -758,15 +753,14 @@ one after the other, in the order of &lt;code&gt;window.setInterval&lt;/code&gt;
 2
 1
 2
-...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;An interesting question. To further complicate things, what if one of
 the periodically invoked functions did something else besides outputting
 a number to the page. What if it took a long time to run, i.e. it would
 execute 5 to 10 times longer? Would we then see something like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;2
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;2
 2
 2
 2
@@ -778,8 +772,7 @@ execute 5 to 10 times longer? Would we then see something like this:&lt;/p&gt;
 2
 2
 2
-...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;I have done a lot of reading on the subject of JavaScript concurrency,
 parallelism, etc. I have started to believe that in the second example
@@ -840,8 +833,8 @@ with the fast function.&lt;/p&gt;
   <title type="html"><![CDATA[Namespacing all YouTube URLs on edX backend]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend</link>
   <id>http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend</id>
-  <published>2014-03-24T19:20:27Z</published>
-  <updated>2014-03-24T19:20:27Z</updated>
+  <published>2014-03-24T21:20:27+02:00</published>
+  <updated>2014-03-24T21:20:27+02:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -849,19 +842,17 @@ with the fast function.&lt;/p&gt;
   </author>
   <content type="html">&lt;p&gt;Up to now, the backend defined 2 variables which stored YouTube related URLs:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;YOUTUBE_TEST_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;https://gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# URL to test YouTube availability
+YOUTUBE_TEST_URL = 'https://gdata.youtube.com/feeds/api/videos/'&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;and&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# for example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;YOUTUBE_API&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://video.google.com/timedtext&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;#39;params&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;lang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# Current youtube api for requesting transcripts.
+# for example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.
+YOUTUBE_API = {
+    'url': &amp;quot;http://video.google.com/timedtext&amp;quot;,
+    'params': {'lang': 'en', 'v': 'set_youtube_id_of_11_symbols_here'}
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This was done in &lt;a href=&quot;https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py&quot;&gt;&lt;code&gt;cms/envs/common.py&lt;/code&gt;&lt;/a&gt; file (lines 428, 532).&lt;/p&gt;
 
@@ -869,24 +860,23 @@ with the fast function.&lt;/p&gt;
 the front-end. To do this, I have created a &lt;code&gt;YOUTUBE&lt;/code&gt; namespace, and
 added a third URL to the back-end:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;YOUTUBE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# YouTube JavaScript API&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;#39;API&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;www.youtube.com/iframe_api&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;YOUTUBE = {
+    # YouTube JavaScript API
+    'API': 'www.youtube.com/iframe_api',
 
-    &lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;#39;TEST_URL&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    # URL to test YouTube availability
+    'TEST_URL': 'gdata.youtube.com/feeds/api/videos/',
 
-    &lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# For example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;#39;TEXT_API&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;video.google.com/timedtext&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;#39;params&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&amp;#39;lang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    # Current youtube api for requesting transcripts.
+    # For example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.
+    'TEXT_API': {
+        'url': 'video.google.com/timedtext',
+        'params': {
+            'lang': 'en',
+            'v': 'set_youtube_id_of_11_symbols_here',
+        },
+    },
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The &lt;a href=&quot;https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9&quot;&gt;pull request&lt;/a&gt; has just been merged in to &lt;a href=&quot;https://github.com/edx/edx-platform&quot;&gt;edx-platform master&lt;/a&gt;.&lt;/p&gt;
 
@@ -900,8 +890,8 @@ added a third URL to the back-end:&lt;/p&gt;
   <title type="html"><![CDATA[Seeking inspiration]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration</link>
   <id>http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration</id>
-  <published>2014-03-21T19:16:09Z</published>
-  <updated>2014-03-21T19:16:09Z</updated>
+  <published>2014-03-21T21:16:09+02:00</published>
+  <updated>2014-03-21T21:16:09+02:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -933,8 +923,8 @@ do stuff without any reward = )&lt;/p&gt;
   <title type="html"><![CDATA[Kitchens and moons by Banana]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/kitchens/moons/banana/kitchens-and-moons-by-banana</link>
   <id>http://valera-rozuvan.github.io/nintoku/kitchens/moons/banana/kitchens-and-moons-by-banana</id>
-  <published>2014-03-19T23:19:18Z</published>
-  <updated>2014-03-19T23:19:18Z</updated>
+  <published>2014-03-20T01:19:18+02:00</published>
+  <updated>2014-03-20T01:19:18+02:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -989,7 +979,7 @@ the two of us watching the sparkling glints off the cold, flowing river - it
 would feel good.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/kitchens/moons/banana/kitchens-and-moons-by-banana&quot;&gt;Kitchens and moons by Banana&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 19, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/kitchens/moons/banana/kitchens-and-moons-by-banana&quot;&gt;Kitchens and moons by Banana&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 20, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -997,8 +987,8 @@ would feel good.&lt;/p&gt;
   <title type="html"><![CDATA[Installing Emacs on Debian wheezy]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy</link>
   <id>http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy</id>
-  <published>2014-03-18T23:32:24Z</published>
-  <updated>2014-03-18T23:32:24Z</updated>
+  <published>2014-03-19T01:32:24+02:00</published>
+  <updated>2014-03-19T01:32:24+02:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -1011,22 +1001,20 @@ the latest and greatest
 = ) So, without any other words, I present to you the complete guide of how to install
 Emacs 24.3.1 on Debian 7 wheezy.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
 sudo apt-get build-dep emacs
 git clone git://git.savannah.gnu.org/emacs.git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;emacs/
+cd emacs/
 git checkout emacs-24.3
 git checkout -b custom_branch
 ./autogen.sh
-./configure --prefix&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/opt/emacs24
-make --jobs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2
-sudo make install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+./configure --prefix=/opt/emacs24
+make --jobs=2
+sudo make install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The above steps will install Emacs to &lt;code&gt;/opt/emacs24&lt;/code&gt;. To run Emacs, you can launch it by:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;/opt/emacs24/bin/emacs
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/opt/emacs24/bin/emacs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;It is important to add the directory, where Emacs binary is found, to the system &lt;code&gt;PATH&lt;/code&gt;
 variable. The directory contains several other important Emacs related binaries:&lt;/p&gt;
@@ -1043,16 +1031,14 @@ variable. The directory contains several other important Emacs related binaries:
 
 &lt;p&gt;Place the following line at the bottom of your &lt;code&gt;~/.bashrc&lt;/code&gt; file:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/opt/emacs24/bin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;export PATH=$PATH:/opt/emacs24/bin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now you can run Emacs with a simple command:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;emacs
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;emacs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy&quot;&gt;Installing Emacs on Debian wheezy&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 18, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy&quot;&gt;Installing Emacs on Debian wheezy&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 19, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1060,8 +1046,8 @@ variable. The directory contains several other important Emacs related binaries:
   <title type="html"><![CDATA[Using Emacs for everything]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything</link>
   <id>http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything</id>
-  <published>2014-03-17T18:54:59Z</published>
-  <updated>2014-03-17T18:54:59Z</updated>
+  <published>2014-03-17T20:54:59+02:00</published>
+  <updated>2014-03-17T20:54:59+02:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -1075,8 +1061,7 @@ what if you wanted to use Emacs for all text editing?&lt;/p&gt;
 &lt;p&gt;Luckily, the Debian provides a really easy way to specify alternatives to just about any application.
 Try running&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo update-alternatives --config editor
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo update-alternatives --config editor&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;You will get a list of all available choices, and a prompt to set the default editor. We will create
 our own little &lt;a href=&quot;http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29&quot;&gt;Bash script&lt;/a&gt; that will launch
@@ -1091,24 +1076,23 @@ the &lt;code&gt;editor&lt;/code&gt; from the alternatives panel. Then you can ad
 &lt;p&gt;Next create a new file &lt;code&gt;/home/user_name/bin/editor&lt;/code&gt;, make sure that it is executable, and add the
 following contents to it:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;#!/bin/bash
 
-&lt;span class=&quot;nv&quot;&gt;num_emacs_servers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ps aux &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -i &lt;span class=&quot;s2&quot;&gt;&amp;quot;[e]macs24-x&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; wc -l&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+num_emacs_servers=`ps aux | grep -i &amp;quot;[e]macs24-x&amp;quot; | wc -l`
 
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$num_emacs_servers&amp;quot;&lt;/span&gt; -eq &lt;span class=&quot;s2&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Starting emacsclient&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Starting emacsclient&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /usr/bin/emacsclient &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Starting emacs server&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Starting emacs24-x&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;num_emacs_servers = ${num_emacs_servers}&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /usr/bin/emacs24-x &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+if [[ &amp;quot;$num_emacs_servers&amp;quot; -eq &amp;quot;1&amp;quot; ]]
+then
+    # Starting emacsclient
+    echo &amp;quot;Starting emacsclient&amp;quot;
+    exec /usr/bin/emacsclient $@
+else
+    # Starting emacs server
+    echo &amp;quot;Starting emacs24-x&amp;quot;
+    echo &amp;quot;num_emacs_servers = ${num_emacs_servers}&amp;quot;
+    exec /usr/bin/emacs24-x $@
+fi
 
-&lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+exit 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Also, update the alternatives for &lt;code&gt;emacs&lt;/code&gt;, setting it to &lt;code&gt;/home/user_name/bin/editor&lt;/code&gt;.&lt;/p&gt;
 
@@ -1121,8 +1105,7 @@ following contents to it:&lt;/p&gt;
 
 &lt;p&gt;You must make sure that upon start, Emacs runs the following LISP command:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;server-start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;(server-start)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This will start an Emacs server daemon that will process any client requests.&lt;/p&gt;
 
@@ -1134,8 +1117,8 @@ following contents to it:&lt;/p&gt;
   <title type="html"><![CDATA[Theming Emacs]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs</link>
   <id>http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs</id>
-  <published>2014-03-01T00:02:32Z</published>
-  <updated>2014-03-01T00:02:32Z</updated>
+  <published>2014-03-01T02:02:32+02:00</published>
+  <updated>2014-03-01T02:02:32+02:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -1163,8 +1146,8 @@ that the &lt;code&gt;RET&lt;/code&gt; key will always just do a new-line for my 
   <title type="html"><![CDATA[The fall of the Ukrainian hryvnia]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/fall/ukraine/hryvnia/fall-of-ukrainian-hryvnia</link>
   <id>http://valera-rozuvan.github.io/nintoku/fall/ukraine/hryvnia/fall-of-ukrainian-hryvnia</id>
-  <published>2014-02-27T16:18:19Z</published>
-  <updated>2014-02-27T16:18:19Z</updated>
+  <published>2014-02-27T18:18:19+02:00</published>
+  <updated>2014-02-27T18:18:19+02:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -1199,8 +1182,8 @@ has been steadily falling. The trend can be seen clearly on &lt;a href=&quot;htt
   <title type="html"><![CDATA[Paths, curves, and trajectories]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/path/curve/trajectory/paths-curves-trajectories</link>
   <id>http://valera-rozuvan.github.io/nintoku/path/curve/trajectory/paths-curves-trajectories</id>
-  <published>2014-02-26T18:06:58Z</published>
-  <updated>2014-02-26T18:06:58Z</updated>
+  <published>2014-02-26T20:06:58+02:00</published>
+  <updated>2014-02-26T20:06:58+02:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>

@@ -136,7 +136,7 @@
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2013-12-17T18:08:25Z" itemprop="datePublished"><i class="icon-calendar-empty"></i> December 17, 2013</time></span>
+        <span class="entry-date date published"><time datetime="2013-12-17T20:08:25+02:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> December 17, 2013</time></span>
         
         
         <span><a href="http://valera-rozuvan.github.io/nintoku/jekyll/code/highlighting/blog/code-highlighting-jekyll-based-blog" rel="bookmark" title="Code highlighting in a Jekyll-based blog" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
@@ -148,12 +148,11 @@ that define the rules for highlighting for many, many languages.</p>
 
 <p>To use it, you surround your code block like so</p>
 
-<div class="highlight"><pre><code class="c">    <span class="p">{</span><span class="o">%</span> <span class="n">highlight</span> <span class="n">lexer_name</span> <span class="o">%</span><span class="p">}</span>
+<div class="highlight"><pre><code class="language-c" data-lang="c">{% highlight lexer_name %}
 
-        <span class="p">...</span> <span class="n">code</span> <span class="n">goes</span> <span class="n">here</span> <span class="p">...</span>
+        ... code goes here ...
 
-    <span class="p">{</span><span class="o">%</span> <span class="n">endhighlight</span> <span class="o">%</span><span class="p">}</span>
-</code></pre></div>
+    {% endhighlight %}</code></pre></div>
 
 <p><strong>lexer_name</strong> is a short name for a programming language.</p>
 
@@ -177,7 +176,7 @@ that define the rules for highlighting for many, many languages.</p>
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
-    <span>&copy; 2014 <a href="http://valera.rozuvan.net/">Valera Rozuvan</a>. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">So Simple Theme</a>.</span>
+    <span>&copy; 2015 <a href="http://valera.rozuvan.net/">Valera Rozuvan</a>. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">So Simple Theme</a>.</span>
 <div class="social-icons">
 	<a href="http://twitter.com/ValeraRozuvan" title="Valera Rozuvan on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
 	<a href="http://facebook.com/valera.rozuvan" title="Valera Rozuvan on Facebook" target="_blank"><i class="icon-facebook icon-2x"></i></a>
