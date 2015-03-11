@@ -1,6 +1,4 @@
 name: Nintoku
-# markdown: redcarpet
-# pygments: true
 baseurl: /nintoku
 
 title:            Nintoku
@@ -48,7 +46,7 @@ links:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Kiev
-pygments:    true
+highlighter: true
 markdown:    kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
