@@ -19,8 +19,14 @@ A blog.
 So, without further ado, please redirect your browser to
 http://valera-rozuvan.github.io/nintoku/
 
-Copyright & License
--------------------
+Copyright
+---------
 
 nintoku is an open source project by
 [Valera Rozuvan](http://valera.rozuvan.net/).
+
+License
+-------
+
+See [LICENSE](https://github.com/valera-rozuvan/nintoku/blob/master/LICENSE).
+GNU GENERAL PUBLIC LICENSE Version 2, June 1991
