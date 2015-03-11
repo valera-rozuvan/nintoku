@@ -25,11 +25,11 @@ Installing Jekyll and updating the blog
 I am using Debian GNU/Linux 7 (wheezy). 
 
 We want the latest stable Jekyll available from the Ruby gem system. We
-can't use a simple
+can't use a simple:
 
     $ sudo aptitude install jekyll
 
-because it gives us a really old Jekyll distribution. So, without further ado...
+because it gives us a really old Jekyll distribution.
 
 Most likely these instructions will work on any Debian based Linux
 distribution. You must have Ruby available on your system along with Ruby
@@ -52,7 +52,7 @@ Now we can proceed with installation of the Jekyll Ruby gem:
 
     $ sudo gem install jekyll
 
-Check that the installation went smotthly:
+Check that the installation went smoothly:
 
     $ jekyll --version
 
@@ -76,7 +76,7 @@ I find that the best workflow for working on your blog is as follows.
 2. In one folder checkout the `master` branch.
 3. In the other folder checkout the `gh-pages` branch.
 4. Edit with your editor of choice the "master" folder.
-5. Build your updated blog with the command
+5. Build your updated blog with the command:
 
         $ jekyll build --source PATH_TO_MASTER_FOLDER --destination PATH_TO_GH_PAGES_FOLDER
 
