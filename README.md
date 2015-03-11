@@ -22,9 +22,18 @@ http://valera-rozuvan.github.io/nintoku/
 Installing Jekyll and updating the blog
 ---------------------------------------
 
-I am using Debian GNU/Linux 7 (wheezy). Most likely these instructions will
-work on any Debian based Linux distribution. You must have Ruby available
-on your system along with Ruby development dependencies. If you don't, then:
+I am using Debian GNU/Linux 7 (wheezy). 
+
+We want the latest stable Jekyll available from the Ruby gem system. We
+can't use a simple
+
+    $ sudo aptitude install jekyll
+
+because it gives us a really old Jekyll distribution. So, without further ado...
+
+Most likely these instructions will work on any Debian based Linux
+distribution. You must have Ruby available on your system along with Ruby
+development dependencies. If you don't, then:
 
     # sudo aptitude install ruby1.9.1 ruby1.9.1-dev ruby1.9.1-examples ruby1.9.1-full
 
