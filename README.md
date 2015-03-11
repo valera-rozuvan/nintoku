@@ -29,4 +29,5 @@ License
 -------
 
 See [LICENSE](https://github.com/valera-rozuvan/nintoku/blob/master/LICENSE).
+
 GNU GENERAL PUBLIC LICENSE Version 2, June 1991
