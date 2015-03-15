@@ -4,13 +4,55 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2015-03-11T19:27:20+02:00</updated>
+<updated>2015-03-15T23:10:29+02:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Adding Sublime Text to Debian menu]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu</link>
+  <id>http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu</id>
+  <published>2015-03-15T00:00:00+02:00</published>
+  <updated>2015-03-15T00:00:00+02:00</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;I am currently using Debian 7 Wheezy. When installing the system, I didn’t
+go with Gnome, and opted for a much simpler Blackbox window manager. Blackbox
+out of the bocks integrates the Debian menu into it’s context menu (right
+click anywhere on the desktop to get the context drop-down). Most of the
+applications you install using the dpkg system come pre-configured to add
+friendly launch entries into the Debian menu. However, sometimes after you
+install an application you find that you can only launch it from the terminal.
+So is the case with Sublime Text 3 editor.&lt;/p&gt;
+
+&lt;p&gt;To add a menu launcher for Sublime, create a file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~/.menu/subl
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;with the following contents:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;?package(sublime-text):needs=&quot;X11&quot; section=&quot;Applications/Editors&quot; hints=&quot;Text editor&quot;\
+longtitle=&quot;Sublime Text 3&quot;\
+title=&quot;Sublime&quot; command=&quot;/usr/bin/subl&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then update the Debian menu with the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo update-menus -v --menufilesdir=~/.menu
+&lt;/code&gt;&lt;/pre&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu&quot;&gt;Adding Sublime Text to Debian menu&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 15, 2015.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1175,43 +1217,6 @@ has been steadily falling. The trend can be seen clearly on &lt;a href=&quot;htt
 &lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/fall/ukraine/hryvnia/fall-of-ukrainian-hryvnia&quot;&gt;The fall of the Ukrainian hryvnia&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 27, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Paths, curves, and trajectories]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/path/curve/trajectory/paths-curves-trajectories</link>
-  <id>http://valera-rozuvan.github.io/nintoku/path/curve/trajectory/paths-curves-trajectories</id>
-  <published>2014-02-26T20:06:58+02:00</published>
-  <updated>2014-02-26T20:06:58+02:00</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;A list of sources to study while thinking about implementing a
-smooth trail for a player in the gravity-based XOnix remake
-&lt;a href=&quot;https://github.com/valera-rozuvan/vonix&quot;&gt;vonix&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://users.soe.ucsc.edu/~elkaim/Documents/ChoiBezierChapter.pdf&quot;&gt;Piecewise Bezier Curves Path Planning with Continuous Curvature Constraint for Autonomous Driving&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://gamma.cs.unc.edu/SPATH/paper/ijrr.pdf&quot;&gt;Collision-free and Smooth Trajectory Computation in Cluttered Environments&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wwwx.cs.unc.edu/~panj/index_files/files/ICRA11.pdf&quot;&gt;Fast Smoothing of Motion Planning Trajectories using B-Splines&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cs.indiana.edu/~hauserk/papers/icra10-smoothing.pdf&quot;&gt;Fast Smoothing of Manipulator Trajectories using Optimal Bounded-Acceleration Shortcuts&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.html5canvastutorials.com/tutorials/html5-canvas-bezier-curves&quot;&gt;HTML5 Canvas Bezier Curve Tutorial&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.html5canvastutorials.com/tutorials/html5-canvas-paths&quot;&gt;HTML5 Canvas Path Tutorial&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.inkling.com/read/html5-canvas-fulton-fulton-1st/chapter-5/curve-and-circular-movement&quot;&gt;Curve and Circular Movement&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://osuushi.github.io/2012/03/19/smoothjsdemo.html&quot;&gt;Fluid curves with Smooth.js and HTML5 canvas&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Basically the idea is that at any given time we can compute the path
-a player is going to take if nothing acts upon him. Knowing that path,
-we can draw the trail behind him as times goes on and he advances.
-If something acts on the player, then we re-compute the path, and from
-the point when something acted on him, use the new path to draw the
-trail.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/path/curve/trajectory/paths-curves-trajectories&quot;&gt;Paths, curves, and trajectories&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on February 26, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
