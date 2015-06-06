@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2015-03-15T23:10:29+02:00</updated>
+<updated>2015-06-06T22:16:27+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -492,7 +492,7 @@ browsers.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;code&gt;git config --global core.editor emacsclient&lt;/code&gt; - make git use &lt;code&gt;emacsclient&lt;/code&gt;
 for editing commit messages.&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;git config --global core.pager ''&lt;/code&gt; - make git output everything to standard
+  &lt;li&gt;&lt;code&gt;git config --global core.pager &#39;&#39;&lt;/code&gt; - make git output everything to standard
 output, rather than use a pager application.&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;git log HEAD~10..HEAD&lt;/code&gt; - make &lt;code&gt;git log&lt;/code&gt; show only last 10 commits.&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;git log --pretty=oneline | head -n 10&lt;/code&gt; - make &lt;code&gt;git log&lt;/code&gt; show last 10
@@ -617,7 +617,7 @@ of a function, etc.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;JavaScript is a very flexible language. Before the introduction of the
-&lt;code&gt;'use strict';&lt;/code&gt; feature in
+&lt;code&gt;&#39;use strict&#39;;&lt;/code&gt; feature in
 &lt;a href=&quot;http://www.ecma-international.org/publications/standards/Ecma-262.htm&quot;&gt;ECMAScript 5’s&lt;/a&gt;
 strict mode, the web was a wild jungle. Developers could write crazy code
 that worked, but was very hard to maintain and to read.&lt;/p&gt;
@@ -773,12 +773,12 @@ one after the other, in the order of &lt;code&gt;window.setInterval&lt;/code&gt;
 
 function timeoutFunc1() {
     // It is given that window.output() is defined, and writes
-    // it's parameter to the page for the user to see.
-    window.output('1');
+    // it&amp;#39;s parameter to the page for the user to see.
+    window.output(&amp;#39;1&amp;#39;);
 }
 
 function timeoutFunc2() {
-    window.output('2');
+    window.output(&amp;#39;2&amp;#39;);
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;will we see on the page:&lt;/p&gt;
@@ -885,15 +885,15 @@ with the fast function.&lt;/p&gt;
   <content type="html">&lt;p&gt;Up to now, the backend defined 2 variables which stored YouTube related URLs:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# URL to test YouTube availability
-YOUTUBE_TEST_URL = 'https://gdata.youtube.com/feeds/api/videos/'&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+YOUTUBE_TEST_URL = &amp;#39;https://gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;and&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# Current youtube api for requesting transcripts.
 # for example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.
 YOUTUBE_API = {
-    'url': &amp;quot;http://video.google.com/timedtext&amp;quot;,
-    'params': {'lang': 'en', 'v': 'set_youtube_id_of_11_symbols_here'}
+    &amp;#39;url&amp;#39;: &amp;quot;http://video.google.com/timedtext&amp;quot;,
+    &amp;#39;params&amp;#39;: {&amp;#39;lang&amp;#39;: &amp;#39;en&amp;#39;, &amp;#39;v&amp;#39;: &amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;}
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This was done in &lt;a href=&quot;https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py&quot;&gt;&lt;code&gt;cms/envs/common.py&lt;/code&gt;&lt;/a&gt; file (lines 428, 532).&lt;/p&gt;
@@ -904,18 +904,18 @@ added a third URL to the back-end:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;YOUTUBE = {
     # YouTube JavaScript API
-    'API': 'www.youtube.com/iframe_api',
+    &amp;#39;API&amp;#39;: &amp;#39;www.youtube.com/iframe_api&amp;#39;,
 
     # URL to test YouTube availability
-    'TEST_URL': 'gdata.youtube.com/feeds/api/videos/',
+    &amp;#39;TEST_URL&amp;#39;: &amp;#39;gdata.youtube.com/feeds/api/videos/&amp;#39;,
 
     # Current youtube api for requesting transcripts.
     # For example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.
-    'TEXT_API': {
-        'url': 'video.google.com/timedtext',
-        'params': {
-            'lang': 'en',
-            'v': 'set_youtube_id_of_11_symbols_here',
+    &amp;#39;TEXT_API&amp;#39;: {
+        &amp;#39;url&amp;#39;: &amp;#39;video.google.com/timedtext&amp;#39;,
+        &amp;#39;params&amp;#39;: {
+            &amp;#39;lang&amp;#39;: &amp;#39;en&amp;#39;,
+            &amp;#39;v&amp;#39;: &amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;,
         },
     },
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;

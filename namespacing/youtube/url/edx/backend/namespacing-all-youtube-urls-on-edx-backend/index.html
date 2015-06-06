@@ -145,15 +145,15 @@
         <p>Up to now, the backend defined 2 variables which stored YouTube related URLs:</p>
 
 <div class="highlight"><pre><code class="language-python" data-lang="python"># URL to test YouTube availability
-YOUTUBE_TEST_URL = 'https://gdata.youtube.com/feeds/api/videos/'</code></pre></div>
+YOUTUBE_TEST_URL = &#39;https://gdata.youtube.com/feeds/api/videos/&#39;</code></pre></div>
 
 <p>and</p>
 
 <div class="highlight"><pre><code class="language-python" data-lang="python"># Current youtube api for requesting transcripts.
 # for example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.
 YOUTUBE_API = {
-    'url': &quot;http://video.google.com/timedtext&quot;,
-    'params': {'lang': 'en', 'v': 'set_youtube_id_of_11_symbols_here'}
+    &#39;url&#39;: &quot;http://video.google.com/timedtext&quot;,
+    &#39;params&#39;: {&#39;lang&#39;: &#39;en&#39;, &#39;v&#39;: &#39;set_youtube_id_of_11_symbols_here&#39;}
 }</code></pre></div>
 
 <p>This was done in <a href="https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py"><code>cms/envs/common.py</code></a> file (lines 428, 532).</p>
@@ -164,18 +164,18 @@ added a third URL to the back-end:</p>
 
 <div class="highlight"><pre><code class="language-python" data-lang="python">YOUTUBE = {
     # YouTube JavaScript API
-    'API': 'www.youtube.com/iframe_api',
+    &#39;API&#39;: &#39;www.youtube.com/iframe_api&#39;,
 
     # URL to test YouTube availability
-    'TEST_URL': 'gdata.youtube.com/feeds/api/videos/',
+    &#39;TEST_URL&#39;: &#39;gdata.youtube.com/feeds/api/videos/&#39;,
 
     # Current youtube api for requesting transcripts.
     # For example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.
-    'TEXT_API': {
-        'url': 'video.google.com/timedtext',
-        'params': {
-            'lang': 'en',
-            'v': 'set_youtube_id_of_11_symbols_here',
+    &#39;TEXT_API&#39;: {
+        &#39;url&#39;: &#39;video.google.com/timedtext&#39;,
+        &#39;params&#39;: {
+            &#39;lang&#39;: &#39;en&#39;,
+            &#39;v&#39;: &#39;set_youtube_id_of_11_symbols_here&#39;,
         },
     },
 }</code></pre></div>
