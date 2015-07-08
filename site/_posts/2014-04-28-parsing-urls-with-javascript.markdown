@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Parsing URLs with JavaScript"
-date:   2014-04-28 23:41:50
+date:   2014-04-28 20:41:50
 categories: parsing url javascript
 ---
 
