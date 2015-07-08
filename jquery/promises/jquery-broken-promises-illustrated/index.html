@@ -1,0 +1,450 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>jQuery broken promises illustrated &#8211; Nintoku</title>
+<meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
+<meta name="keywords" content="">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
+<meta name="twitter:title" content="jQuery broken promises illustrated">
+<meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
+<meta name="twitter:creator" content="@ValeraRozuvan">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery broken promises illustrated">
+<meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/jquery/promises/jquery-broken-promises-illustrated">
+<meta property="og:site_name" content="Nintoku">
+
+
+
+
+
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/jquery/promises/jquery-broken-promises-illustrated">
+<link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
+<link rel="author" href="https://plus.google.com/107180394340520523800?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://valera-rozuvan.github.io/nintoku/assets/css/main.min.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="http://valera-rozuvan.github.io/nintoku/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Load MathJax -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://valera-rozuvan.github.io/nintoku/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://valera-rozuvan.github.io/nintoku/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://valera-rozuvan.github.io/nintoku/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://valera-rozuvan.github.io/nintoku/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://valera-rozuvan.github.io/nintoku/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://valera-rozuvan.github.io/nintoku/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post" itemscope itemtype="http://schema.org/WebPage">
+
+<a href="https://github.com/valera-rozuvan/nintoku">
+	<img
+		class="fork-me"
+		src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+		alt="Fork me on GitHub"
+	/>
+</a>
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	    <ul>
+	        
+			<li>
+				
+					<a href="http://valera-rozuvan.github.io/nintoku/">Latest</a>
+				
+			</li>
+	        
+			<li>
+				
+					<a href="http://valera-rozuvan.github.io/nintoku/about">About</a>
+				
+			</li>
+	        
+			<li>
+				
+					<a href="http://valera-rozuvan.github.io/nintoku/archives">Archives</a>
+				
+			</li>
+	        
+			<li>
+				
+					<a href="http://google.com">Google</a>
+				
+			</li>
+	        
+	        <li><a href="http://valera-rozuvan.github.io/nintoku/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+	        
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+
+
+<header class="masthead" itemscope itemtype="http://schema.org/Organization">
+	<div class="wrap">
+		<a href="http://valera-rozuvan.github.io/nintoku" class="site-logo" rel="home" title="Nintoku" itemprop="url"><img src="http://valera-rozuvan.github.io/nintoku/images/site-logo.png" width="200" height="200" alt="Nintoku logo" class="animated fadeInUp" itemprop="logo"></a>
+		<h1 class="site-title animated fadeIn"><a href="http://valera-rozuvan.github.io/nintoku">Nintoku</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">The 16th emperor of Japan. A place to procrastinate while at work.</h2>
+	</div>
+</header><!-- /.masthead -->
+
+
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <span class="entry-tags"></span>
+        
+          <h1 class="entry-title" itemprop="headline">jQuery broken promises illustrated</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
+        <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera-rozuvan.github.io/nintoku/about" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
+        <span class="entry-date date published"><time datetime="2015-07-08T20:36:01+00:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> July 08, 2015</time></span>
+        
+        
+        <span><a href="http://valera-rozuvan.github.io/nintoku/jquery/promises/jquery-broken-promises-illustrated" rel="bookmark" title="jQuery broken promises illustrated" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="https://github.com/valera-rozuvan/nintoku/blob/master/site/_posts/2015-07-08-jquery-broken-promises-illustrated.markdown">source of post</a></span>
+      </footer>
+      <div class="entry-content" itemprop="description">
+        <h2 id="jquery">jQuery</h2>
+
+<p><a href="https://jquery.com/">jQuery</a> is a famous JavaScript library that just about every web programmer has heard of, and almost all have used it at least once in their web programming career.</p>
+
+<p>jQuery has support for promises. It has nice documentation on them: see <a href="https://api.jquery.com/promise/">.promise()</a>, <a href="https://api.jquery.com/deferred.promise/">deferred.promise()</a>, and <a href="https://api.jquery.com/category/deferred-object/">Deferred Object</a>.</p>
+
+<h2 id="promises">Promises</h2>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Futures_and_promises">promise</a> is a way to reduce this</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nx">asyncCall</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data1</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="nx">anotherAsyncCall</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err2</span><span class="p">,</span> <span class="nx">data2</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">err2</span><span class="p">)</span> <span class="k">return</span> <span class="nx">calllback</span><span class="p">(</span><span class="nx">err2</span><span class="p">);</span>
+        <span class="nx">oneMoreAsyncCall</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err3</span><span class="p">,</span> <span class="nx">data3</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">err3</span><span class="p">)</span> <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">err3</span><span class="p">);</span>
+            <span class="c1">// are we done yet?</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table>
+
+<p>to this</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nx">asyncCall</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data1</span><span class="p">){</span>
+    <span class="c1">// do something...</span>
+    <span class="k">return</span> <span class="nx">anotherAsyncCall</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data2</span><span class="p">){</span>
+    <span class="c1">// do something...</span>
+    <span class="k">return</span> <span class="nx">oneMoreAsyncCall</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data3</span><span class="p">){</span>
+   <span class="c1">// the third and final async response</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+   <span class="c1">// handle any error resulting from any of the above calls</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">done</span><span class="p">();</span>
+</pre></div>
+</td></tr></table>
+
+<p>The above two JavaScript excerpts have been taken from <a href="http://12devs.co.uk/articles/promises-an-alternative-way-to-approach-asynchronous-javascript/">Promises – an alternative way to approach asynchronous JavaScript</a>.</p>
+
+<p>Several promise specification for JavaScript exist, <em>Promises/A+</em> being the most widely used.</p>
+
+<ol>
+  <li>Promises/A <a href="http://wiki.commonjs.org/wiki/Promises/A">http://wiki.commonjs.org/wiki/Promises/A</a></li>
+  <li>Promises/A+ <a href="https://promisesaplus.com/">https://promisesaplus.com/</a></li>
+  <li>ES6 Promise Objects <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects">http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects</a></li>
+</ol>
+
+<h2 id="the-problem-with-jquerys-promises">The problem with jQuery’s promises</h2>
+
+<p>jQuery’s promise implementation is pretty broken. It does not adheer to the Promises/A+ specification used by the vast majority of other promise implementations. See the <a href="https://promisesaplus.com/implementations">list of Promises/A+ implementations</a>.</p>
+
+<h2 id="an-illustration">An illustration</h2>
+
+<p>Using the latest of either jQuery 1.x or 2.x, let’s write the following JavaScript test program:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">$</span><span class="p">,</span> <span class="nx">output</span><span class="p">,</span> <span class="nx">def</span><span class="p">,</span> <span class="nx">promise</span><span class="p">,</span> <span class="nx">myObject</span><span class="p">,</span> <span class="nx">syncWorkFunc</span><span class="p">,</span> <span class="nx">asyncWorkFunc</span><span class="p">;</span>
+
+<span class="nx">setup</span><span class="p">();</span>
+<span class="nx">promiseTests</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">;</span>
+    <span class="nx">output</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;output&#39;</span><span class="p">);</span>
+
+    <span class="nx">def</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">Deferred</span><span class="p">();</span>
+    <span class="nx">promise</span> <span class="o">=</span> <span class="nx">def</span><span class="p">.</span><span class="nx">promise</span><span class="p">();</span>
+
+    <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">state</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">};</span>
+
+    <span class="nx">syncWorkFunc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">def</span><span class="p">.</span><span class="nx">resolve</span><span class="p">();</span>
+    <span class="p">};</span>
+    <span class="nx">asyncWorkFunc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">def</span><span class="p">.</span><span class="nx">resolve</span><span class="p">();</span>
+        <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">promiseTests</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;0.) myObject.state = &#39;</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">);</span>
+
+    <span class="nx">syncWorkFunc</span><span class="p">();</span>
+    <span class="c1">// asyncWorkFunc();</span>
+
+    <span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;[THEN #1] Setting myObject.state to &quot;X&quot;.&lt;br /&gt;&#39;</span><span class="p">);</span>
+        <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span><span class="p">;</span>
+    <span class="p">});</span>
+    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;1.) Setting myObject.state to &quot;A&quot;.&lt;br /&gt;&#39;</span><span class="p">);</span>
+    <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span><span class="p">;</span>
+
+    <span class="c1">// syncWorkFunc();</span>
+    <span class="c1">// asyncWorkFunc();</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;2.) myObject.state = &#39;</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">);</span>
+    <span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;[THEN #2] myObject.state = &#39;</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+    <span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;[THEN #3] myObject.state = &#39;</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+    <span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;[THEN #4] myObject.state = &#39;</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;3.)&lt;br /&gt;&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The output of the above JavaScript program will be:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">0.) myObject.state = null
+[THEN #1] Setting myObject.state to &quot;X&quot;.
+1.) Setting myObject.state to &quot;A&quot;.
+2.) myObject.state = A
+[THEN #2] myObject.state = A
+[THEN #3] myObject.state = A
+[THEN #4] myObject.state = A
+3.)</code></pre></div>
+
+<p>Two things went wrong here. All of <code>THEN {#}</code> logs should be at the end of the output. Also, and this is most important of all, in the end <code>myObject.state</code> did not change to <code>"X"</code>!</p>
+
+<p>If we use a real Promise/A+ implementation, we will get:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">0.) myObject.state = null
+1.) Setting myObject.state to &quot;A&quot;.
+2.) myObject.state = A
+3.)
+[THEN #1] Setting myObject.state to &quot;X&quot;.
+[THEN #2] myObject.state = X
+[THEN #3] myObject.state = X
+[THEN #4] myObject.state = X</code></pre></div>
+
+<p>You can see these results for yourself. A JS Fiddle has been setup with jQuery 2.1.4 <a href="https://jsfiddle.net/4988rggu/4/">here</a>. For valid Promise/A+ implementation I chose Angular JS. It’s promise system <a href="https://docs.angularjs.org/api/ng/service/$q">$q</a> is based on <a href="https://github.com/kriskowal/q">Kris Kowal’s Q</a>. A JS Fiddle has been setup with Angular JS 1.4.2 <a href="https://jsfiddle.net/xfmetfoL/4/">here</a>.</p>
+
+<h2 id="when-will-promises-be-fixed-in-jquery">When will promises be fixed in jQuery?</h2>
+
+<p>When jQuery 3.0 comes out. Refer to the blog post <a href="http://blog.jquery.com/2014/10/29/jquery-3-0-the-next-generations/">jQuery 3.0: The Next Generations</a>, and also <a href="https://github.com/jquery/jquery/pull/1996">jQuery’s work on getting their promises to pass the Promises/A+ test suite</a>.</p>
+
+<h2 id="useful-links">Useful links</h2>
+
+<p>The problem discussed in this post is a well known one. It has been discussed previously by other people on the Internet. Be sure to go over all of the following resources:</p>
+
+<ol>
+  <li><a href="https://gist.github.com/domenic/3889970">You’re Missing the Point of Promises</a></li>
+  <li><a href="http://stackoverflow.com/questions/17617545/working-with-jquery-promises">working with jQuery promises</a></li>
+  <li><a href="https://thewayofcode.wordpress.com/2013/01/22/javascript-promises-and-why-jquery-implementation-is-broken/">JAVASCRIPT PROMISES AND WHY JQUERY IMPLEMENTATION IS BROKEN</a></li>
+  <li><a href="http://abdulapopoola.com/2014/12/12/the-differences-between-jquery-deferreds-and-the-promisesa-spec/">The Differences between jQuery Deferreds and the Promises/A+ spec</a></li>
+  <li><a href="http://stackoverflow.com/questions/23744612/problems-inherent-to-jquery-deferred">Problems inherent to jQuery $.Deferred</a></li>
+  <li><a href="https://github.com/kriskowal/q/wiki/Coming-from-jQuery">Coming from jQuery</a></li>
+  <li><a href="https://github.com/jquery/jquery/pull/1996">Deferred: Backwards-compatible standards interoperability</a></li>
+</ol>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu" class="btn" title="Adding Sublime Text to Debian menu">Previous article</a>
+      
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2013 - 2015 <a href="http://valera.rozuvan.net/">Valera Rozuvan</a>. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="http://twitter.com/ValeraRozuvan" title="Valera Rozuvan on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
+	<a href="http://facebook.com/valera.rozuvan" title="Valera Rozuvan on Facebook" target="_blank"><i class="icon-facebook icon-2x"></i></a>
+	<a href="https://plus.google.com/107180394340520523800" title="Valera Rozuvan on Google+" target="_blank"><i class="icon-google-plus icon-2x"></i></a>
+	<a href="http://linkedin.com/pub/валера-розуван/53/a5b/ba8" title="Valera Rozuvan on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>
+	
+	
+	
+	<a href="http://github.com/valera-rozuvan" title="Valera Rozuvan on Github" target="_blank"><i class="icon-github icon-2x"></i></a>
+	
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    window.jQuery || document.write('<script src="http://valera-rozuvan.github.io/nintoku/assets/js/vendor/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script type="text/javascript" src="http://valera-rozuvan.github.io/nintoku/assets/js/scripts.min.js"></script>
+
+
+
+
+<!-- Google Analytics snippet. -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+
+    _gaq.push(['_setAccount', 'UA-49332155-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga, s;
+
+        ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+        s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    }());
+</script>
+
+
+
+
+
+</body>
+</html>
