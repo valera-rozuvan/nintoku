@@ -165,23 +165,23 @@ the <code>editor</code> from the alternatives panel. Then you can add a new alte
 <p>Next create a new file <code>/home/user_name/bin/editor</code>, make sure that it is executable, and add the
 following contents to it:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">#!/bin/bash
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 
-num_emacs_servers=`ps aux | grep -i &quot;[e]macs24-x&quot; | wc -l`
+<span class="nv">num_emacs_servers</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -i <span class="s2">&quot;[e]macs24-x&quot;</span> <span class="p">|</span> wc -l<span class="sb">`</span>
 
-if [[ &quot;$num_emacs_servers&quot; -eq &quot;1&quot; ]]
-then
-    # Starting emacsclient
-    echo &quot;Starting emacsclient&quot;
-    exec /usr/bin/emacsclient $@
-else
-    # Starting emacs server
-    echo &quot;Starting emacs24-x&quot;
-    echo &quot;num_emacs_servers = ${num_emacs_servers}&quot;
-    exec /usr/bin/emacs24-x $@
-fi
+<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$num_emacs_servers&quot;</span> -eq <span class="s2">&quot;1&quot;</span> <span class="o">]]</span>
+<span class="k">then</span>
+    <span class="c"># Starting emacsclient</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Starting emacsclient&quot;</span>
+    <span class="nb">exec</span> /usr/bin/emacsclient <span class="nv">$@</span>
+<span class="k">else</span>
+    <span class="c"># Starting emacs server</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Starting emacs24-x&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;num_emacs_servers = ${num_emacs_servers}&quot;</span>
+    <span class="nb">exec</span> /usr/bin/emacs24-x <span class="nv">$@</span>
+<span class="k">fi</span>
 
-exit 0</code></pre></div>
+<span class="nb">exit </span>0</code></pre></div>
 
 <p>Also, update the alternatives for <code>emacs</code>, setting it to <code>/home/user_name/bin/editor</code>.</p>
 
@@ -194,7 +194,7 @@ exit 0</code></pre></div>
 
 <p>You must make sure that upon start, Emacs runs the following LISP command:</p>
 
-<div class="highlight"><pre><code class="language-lisp" data-lang="lisp">(server-start)</code></pre></div>
+<div class="highlight"><pre><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span></code></pre></div>
 
 <p>This will start an Emacs server daemon that will process any client requests.</p>
 

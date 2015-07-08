@@ -210,14 +210,14 @@ pidfile = /home/valera/.mpdscribble/pid</code></pre></div>
 <p>Update your <code>init.d</code> script for <strong>MPD</strong> to point to your configuration file.
 In my case I have a line in the file <code>/etc/init.d/mpd</code>:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">MPDCONF=/home/valera/.mpd.d/mpd.conf</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">MPDCONF</span><span class="o">=</span>/home/valera/.mpd.d/mpd.conf</code></pre></div>
 
 <p>Also, update the configuration file <code>/etc/default/mpdscribble</code> for
 <strong>mpdscribble</strong> so it has the following lines:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">MPD_SYSTEMWIDE=1
-DAEMON_OPTS=&quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&quot;
-USER=valera</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">MPD_SYSTEMWIDE</span><span class="o">=</span>1
+<span class="nv">DAEMON_OPTS</span><span class="o">=</span><span class="s2">&quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&quot;</span>
+<span class="nv">USER</span><span class="o">=</span>valera</code></pre></div>
 
 <p><strong>PLEASE NOTE: In all of the above files, make sure to update the paths
 of files so that they contain your Linux user name!</strong></p>

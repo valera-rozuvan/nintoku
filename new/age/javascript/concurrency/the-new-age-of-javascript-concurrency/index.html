@@ -161,18 +161,18 @@ one after the other, in the order of <code>window.setInterval</code> invocation?
 
 <p>So, to be more precise, if we have the following code:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">var timeout1 = window.setInterval(timeoutFunc1, 50),
-    timeout2 = window.setInterval(timeoutFunc2, 50);
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">timeout1</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc1</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+    <span class="nx">timeout2</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc2</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
 
-function timeoutFunc1() {
-    // It is given that window.output() is defined, and writes
-    // it&#39;s parameter to the page for the user to see.
-    window.output(&#39;1&#39;);
-}
+<span class="kd">function</span> <span class="nx">timeoutFunc1</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// It is given that window.output() is defined, and writes</span>
+    <span class="c1">// it&#39;s parameter to the page for the user to see.</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">);</span>
+<span class="p">}</span>
 
-function timeoutFunc2() {
-    window.output(&#39;2&#39;);
-}</code></pre></div>
+<span class="kd">function</span> <span class="nx">timeoutFunc2</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
 
 <p>will we see on the page:</p>
 

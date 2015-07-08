@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2015-07-08T16:14:46+03:00</updated>
+<updated>2015-07-08T16:20:44+03:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -134,14 +134,14 @@ pidfile = /home/valera/.mpdscribble/pid&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Update your &lt;code&gt;init.d&lt;/code&gt; script for &lt;strong&gt;MPD&lt;/strong&gt; to point to your configuration file.
 In my case I have a line in the file &lt;code&gt;/etc/init.d/mpd&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;MPDCONF=/home/valera/.mpd.d/mpd.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MPDCONF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/valera/.mpd.d/mpd.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Also, update the configuration file &lt;code&gt;/etc/default/mpdscribble&lt;/code&gt; for
 &lt;strong&gt;mpdscribble&lt;/strong&gt; so it has the following lines:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;MPD_SYSTEMWIDE=1
-DAEMON_OPTS=&amp;quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&amp;quot;
-USER=valera&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MPD_SYSTEMWIDE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;span class=&quot;nv&quot;&gt;DAEMON_OPTS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;valera&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;PLEASE NOTE: In all of the above files, make sure to update the paths
 of files so that they contain your Linux user name!&lt;/strong&gt;&lt;/p&gt;
@@ -768,18 +768,18 @@ one after the other, in the order of &lt;code&gt;window.setInterval&lt;/code&gt;
 
 &lt;p&gt;So, to be more precise, if we have the following code:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;var timeout1 = window.setInterval(timeoutFunc1, 50),
-    timeout2 = window.setInterval(timeoutFunc2, 50);
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeout1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;timeout2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-function timeoutFunc1() {
-    // It is given that window.output() is defined, and writes
-    // it&amp;#39;s parameter to the page for the user to see.
-    window.output(&amp;#39;1&amp;#39;);
-}
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// It is given that window.output() is defined, and writes&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// it&amp;#39;s parameter to the page for the user to see.&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-function timeoutFunc2() {
-    window.output(&amp;#39;2&amp;#39;);
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeoutFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;will we see on the page:&lt;/p&gt;
 
@@ -884,17 +884,17 @@ with the fast function.&lt;/p&gt;
   </author>
   <content type="html">&lt;p&gt;Up to now, the backend defined 2 variables which stored YouTube related URLs:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# URL to test YouTube availability
-YOUTUBE_TEST_URL = &amp;#39;https://gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;YOUTUBE_TEST_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;https://gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;and&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;# Current youtube api for requesting transcripts.
-# for example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.
-YOUTUBE_API = {
-    &amp;#39;url&amp;#39;: &amp;quot;http://video.google.com/timedtext&amp;quot;,
-    &amp;#39;params&amp;#39;: {&amp;#39;lang&amp;#39;: &amp;#39;en&amp;#39;, &amp;#39;v&amp;#39;: &amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;}
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# for example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;YOUTUBE_API&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://video.google.com/timedtext&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;params&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;lang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This was done in &lt;a href=&quot;https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py&quot;&gt;&lt;code&gt;cms/envs/common.py&lt;/code&gt;&lt;/a&gt; file (lines 428, 532).&lt;/p&gt;
 
@@ -902,23 +902,23 @@ YOUTUBE_API = {
 the front-end. To do this, I have created a &lt;code&gt;YOUTUBE&lt;/code&gt; namespace, and
 added a third URL to the back-end:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;YOUTUBE = {
-    # YouTube JavaScript API
-    &amp;#39;API&amp;#39;: &amp;#39;www.youtube.com/iframe_api&amp;#39;,
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;YOUTUBE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# YouTube JavaScript API&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;API&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;www.youtube.com/iframe_api&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 
-    # URL to test YouTube availability
-    &amp;#39;TEST_URL&amp;#39;: &amp;#39;gdata.youtube.com/feeds/api/videos/&amp;#39;,
+    &lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;TEST_URL&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 
-    # Current youtube api for requesting transcripts.
-    # For example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.
-    &amp;#39;TEXT_API&amp;#39;: {
-        &amp;#39;url&amp;#39;: &amp;#39;video.google.com/timedtext&amp;#39;,
-        &amp;#39;params&amp;#39;: {
-            &amp;#39;lang&amp;#39;: &amp;#39;en&amp;#39;,
-            &amp;#39;v&amp;#39;: &amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;,
-        },
-    },
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# For example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;#39;TEXT_API&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;video.google.com/timedtext&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;#39;params&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&amp;#39;lang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The &lt;a href=&quot;https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9&quot;&gt;pull request&lt;/a&gt; has just been merged in to &lt;a href=&quot;https://github.com/edx/edx-platform&quot;&gt;edx-platform master&lt;/a&gt;.&lt;/p&gt;
 
@@ -1046,12 +1046,12 @@ Emacs 24.3.1 on Debian 7 wheezy.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
 sudo apt-get build-dep emacs
 git clone git://git.savannah.gnu.org/emacs.git
-cd emacs/
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;emacs/
 git checkout emacs-24.3
 git checkout -b custom_branch
 ./autogen.sh
-./configure --prefix=/opt/emacs24
-make --jobs=2
+./configure --prefix&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/opt/emacs24
+make --jobs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2
 sudo make install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The above steps will install Emacs to &lt;code&gt;/opt/emacs24&lt;/code&gt;. To run Emacs, you can launch it by:&lt;/p&gt;
@@ -1073,7 +1073,7 @@ variable. The directory contains several other important Emacs related binaries:
 
 &lt;p&gt;Place the following line at the bottom of your &lt;code&gt;~/.bashrc&lt;/code&gt; file:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;export PATH=$PATH:/opt/emacs24/bin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/opt/emacs24/bin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now you can run Emacs with a simple command:&lt;/p&gt;
 
@@ -1118,23 +1118,23 @@ the &lt;code&gt;editor&lt;/code&gt; from the alternatives panel. Then you can ad
 &lt;p&gt;Next create a new file &lt;code&gt;/home/user_name/bin/editor&lt;/code&gt;, make sure that it is executable, and add the
 following contents to it:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;#!/bin/bash
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
 
-num_emacs_servers=`ps aux | grep -i &amp;quot;[e]macs24-x&amp;quot; | wc -l`
+&lt;span class=&quot;nv&quot;&gt;num_emacs_servers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ps aux &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -i &lt;span class=&quot;s2&quot;&gt;&amp;quot;[e]macs24-x&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; wc -l&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
 
-if [[ &amp;quot;$num_emacs_servers&amp;quot; -eq &amp;quot;1&amp;quot; ]]
-then
-    # Starting emacsclient
-    echo &amp;quot;Starting emacsclient&amp;quot;
-    exec /usr/bin/emacsclient $@
-else
-    # Starting emacs server
-    echo &amp;quot;Starting emacs24-x&amp;quot;
-    echo &amp;quot;num_emacs_servers = ${num_emacs_servers}&amp;quot;
-    exec /usr/bin/emacs24-x $@
-fi
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$num_emacs_servers&amp;quot;&lt;/span&gt; -eq &lt;span class=&quot;s2&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Starting emacsclient&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Starting emacsclient&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /usr/bin/emacsclient &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Starting emacs server&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Starting emacs24-x&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;num_emacs_servers = ${num_emacs_servers}&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /usr/bin/emacs24-x &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
 
-exit 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Also, update the alternatives for &lt;code&gt;emacs&lt;/code&gt;, setting it to &lt;code&gt;/home/user_name/bin/editor&lt;/code&gt;.&lt;/p&gt;
 
@@ -1147,7 +1147,7 @@ exit 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;You must make sure that upon start, Emacs runs the following LISP command:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;(server-start)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;server-start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This will start an Emacs server daemon that will process any client requests.&lt;/p&gt;
 
