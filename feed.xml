@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2015-07-08T17:08:08+03:00</updated>
+<updated>2015-07-08T14:12:07+00:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -17,8 +17,8 @@
   <title type="html"><![CDATA[Adding Sublime Text to Debian menu]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu</link>
   <id>http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu</id>
-  <published>2015-03-15T00:00:00+02:00</published>
-  <updated>2015-03-15T00:00:00+02:00</updated>
+  <published>2015-03-15T00:00:00+00:00</published>
+  <updated>2015-03-15T00:00:00+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -59,8 +59,8 @@ title=&quot;Sublime&quot; command=&quot;/usr/bin/subl&quot;
   <title type="html"><![CDATA[Scrobbling to Last.fm from Linux]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux</link>
   <id>http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux</id>
-  <published>2014-06-16T01:57:24+03:00</published>
-  <updated>2014-06-16T01:57:24+03:00</updated>
+  <published>2014-06-15T22:57:24+00:00</published>
+  <updated>2014-06-15T22:57:24+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -148,7 +148,7 @@ of files so that they contain your Linux user name!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Enjoy!&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux&quot;&gt;Scrobbling to Last.fm from Linux&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on June 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-last-fm-from-linux&quot;&gt;Scrobbling to Last.fm from Linux&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on June 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -156,8 +156,8 @@ of files so that they contain your Linux user name!&lt;/strong&gt;&lt;/p&gt;
   <title type="html"><![CDATA[Smart Pomodoro Workflow]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow</link>
   <id>http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow</id>
-  <published>2014-05-23T16:31:18+03:00</published>
-  <updated>2014-05-23T16:31:18+03:00</updated>
+  <published>2014-05-23T13:31:18+00:00</published>
+  <updated>2014-05-23T13:31:18+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -221,8 +221,8 @@ workflow, you will achieve an in-the-zone working experience!&lt;/p&gt;
   <title type="html"><![CDATA[Managing the Development of Large Software Systems]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems</link>
   <id>http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-development-large-software-systems</id>
-  <published>2014-05-23T14:07:32+03:00</published>
-  <updated>2014-05-23T14:07:32+03:00</updated>
+  <published>2014-05-23T11:07:32+00:00</published>
+  <updated>2014-05-23T11:07:32+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -304,8 +304,8 @@ of having an understating of how management of software projects evolved.&lt;/p&
   <title type="html"><![CDATA[Parsing URLs with JavaScript]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript</link>
   <id>http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript</id>
-  <published>2014-04-28T23:41:50+03:00</published>
-  <updated>2014-04-28T23:41:50+03:00</updated>
+  <published>2014-04-28T20:41:50+00:00</published>
+  <updated>2014-04-28T20:41:50+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -397,8 +397,8 @@ on the front-end with JavaScript, there are really two choices.&lt;/p&gt;
   <title type="html"><![CDATA[Release of a photoblog]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog</link>
   <id>http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog</id>
-  <published>2014-04-24T10:18:40+03:00</published>
-  <updated>2014-04-24T10:18:40+03:00</updated>
+  <published>2014-04-24T07:18:40+00:00</published>
+  <updated>2014-04-24T07:18:40+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -431,8 +431,8 @@ is a breeze, and tremendously enjoyable.&lt;/p&gt;
   <title type="html"><![CDATA[UPDATE: The New Age of JavaScript: Concurrency]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency</link>
   <id>http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency</id>
-  <published>2014-04-18T12:27:27+03:00</published>
-  <updated>2014-04-18T12:27:27+03:00</updated>
+  <published>2014-04-18T09:27:27+00:00</published>
+  <updated>2014-04-18T09:27:27+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -480,8 +480,8 @@ browsers.&lt;/p&gt;
   <title type="html"><![CDATA[Little Linux command discoveries]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries</link>
   <id>http://valera-rozuvan.github.io/nintoku/linux/command/discover/little-linux-command-discoveries</id>
-  <published>2014-04-18T12:10:21+03:00</published>
-  <updated>2014-04-18T12:10:21+03:00</updated>
+  <published>2014-04-18T09:10:21+00:00</published>
+  <updated>2014-04-18T09:10:21+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -512,8 +512,8 @@ program does only one job, but it does it well.&lt;/p&gt;
   <title type="html"><![CDATA[Musings]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/musings/musings</link>
   <id>http://valera-rozuvan.github.io/nintoku/musings/musings</id>
-  <published>2014-04-18T11:54:44+03:00</published>
-  <updated>2014-04-18T11:54:44+03:00</updated>
+  <published>2014-04-18T08:54:44+00:00</published>
+  <updated>2014-04-18T08:54:44+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -581,8 +581,8 @@ fingers are little knifes that are passing through warm butter.&lt;/p&gt;
   <title type="html"><![CDATA[I prefer JSHint over JSLint]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/preference/jshint/jslint/i-prefer-jshint-over-jslint</link>
   <id>http://valera-rozuvan.github.io/nintoku/preference/jshint/jslint/i-prefer-jshint-over-jslint</id>
-  <published>2014-04-09T13:41:41+03:00</published>
-  <updated>2014-04-09T13:41:41+03:00</updated>
+  <published>2014-04-09T10:41:41+00:00</published>
+  <updated>2014-04-09T10:41:41+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -654,8 +654,8 @@ for reference, if in doubt of how to install &lt;code&gt;jshint-mode&lt;/code&gt
   <title type="html"><![CDATA[HARD: Project by mr. Iks]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/hard/hardstyle/project/mr/iks/hard-project-by-mr-iks</link>
   <id>http://valera-rozuvan.github.io/nintoku/hard/hardstyle/project/mr/iks/hard-project-by-mr-iks</id>
-  <published>2014-04-06T04:23:11+03:00</published>
-  <updated>2014-04-06T04:23:11+03:00</updated>
+  <published>2014-04-06T01:23:11+00:00</published>
+  <updated>2014-04-06T01:23:11+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -674,8 +674,8 @@ and &lt;a href=&quot;http://en.wikipedia.org/wiki/Hardstyle&quot;&gt;hardstyle&l
   <title type="html"><![CDATA[Tiling window managers]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers</link>
   <id>http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers</id>
-  <published>2014-04-04T18:51:33+03:00</published>
-  <updated>2014-04-04T18:51:33+03:00</updated>
+  <published>2014-04-04T15:51:33+00:00</published>
+  <updated>2014-04-04T15:51:33+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -742,8 +742,8 @@ by simply issuing a rearrange command.&lt;/p&gt;
   <title type="html"><![CDATA[The New Age of JavaScript: Concurrency]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency</link>
   <id>http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency</id>
-  <published>2014-04-02T06:43:14+03:00</published>
-  <updated>2014-04-02T06:43:14+03:00</updated>
+  <published>2014-04-02T03:43:14+00:00</published>
+  <updated>2014-04-02T03:43:14+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -875,8 +875,8 @@ with the fast function.&lt;/p&gt;
   <title type="html"><![CDATA[Namespacing all YouTube URLs on edX backend]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend</link>
   <id>http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend</id>
-  <published>2014-03-24T21:20:27+02:00</published>
-  <updated>2014-03-24T21:20:27+02:00</updated>
+  <published>2014-03-24T19:20:27+00:00</published>
+  <updated>2014-03-24T19:20:27+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -932,8 +932,8 @@ added a third URL to the back-end:&lt;/p&gt;
   <title type="html"><![CDATA[Seeking inspiration]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration</link>
   <id>http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration</id>
-  <published>2014-03-21T21:16:09+02:00</published>
-  <updated>2014-03-21T21:16:09+02:00</updated>
+  <published>2014-03-21T19:16:09+00:00</published>
+  <updated>2014-03-21T19:16:09+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -965,8 +965,8 @@ do stuff without any reward = )&lt;/p&gt;
   <title type="html"><![CDATA[Kitchens and moons by Banana]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/kitchens/moons/banana/kitchens-and-moons-by-banana</link>
   <id>http://valera-rozuvan.github.io/nintoku/kitchens/moons/banana/kitchens-and-moons-by-banana</id>
-  <published>2014-03-20T01:19:18+02:00</published>
-  <updated>2014-03-20T01:19:18+02:00</updated>
+  <published>2014-03-19T23:19:18+00:00</published>
+  <updated>2014-03-19T23:19:18+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -1021,7 +1021,7 @@ the two of us watching the sparkling glints off the cold, flowing river - it
 would feel good.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/kitchens/moons/banana/kitchens-and-moons-by-banana&quot;&gt;Kitchens and moons by Banana&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 20, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/kitchens/moons/banana/kitchens-and-moons-by-banana&quot;&gt;Kitchens and moons by Banana&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 19, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1029,8 +1029,8 @@ would feel good.&lt;/p&gt;
   <title type="html"><![CDATA[Installing Emacs on Debian wheezy]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy</link>
   <id>http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy</id>
-  <published>2014-03-19T01:32:24+02:00</published>
-  <updated>2014-03-19T01:32:24+02:00</updated>
+  <published>2014-03-18T23:32:24+00:00</published>
+  <updated>2014-03-18T23:32:24+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -1080,7 +1080,7 @@ variable. The directory contains several other important Emacs related binaries:
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;emacs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy&quot;&gt;Installing Emacs on Debian wheezy&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 19, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy&quot;&gt;Installing Emacs on Debian wheezy&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 18, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -1088,8 +1088,8 @@ variable. The directory contains several other important Emacs related binaries:
   <title type="html"><![CDATA[Using Emacs for everything]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything</link>
   <id>http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything</id>
-  <published>2014-03-17T20:54:59+02:00</published>
-  <updated>2014-03-17T20:54:59+02:00</updated>
+  <published>2014-03-17T18:54:59+00:00</published>
+  <updated>2014-03-17T18:54:59+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -1159,8 +1159,8 @@ following contents to it:&lt;/p&gt;
   <title type="html"><![CDATA[Theming Emacs]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs</link>
   <id>http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs</id>
-  <published>2014-03-01T02:02:32+02:00</published>
-  <updated>2014-03-01T02:02:32+02:00</updated>
+  <published>2014-03-01T00:02:32+00:00</published>
+  <updated>2014-03-01T00:02:32+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
@@ -1188,8 +1188,8 @@ that the &lt;code&gt;RET&lt;/code&gt; key will always just do a new-line for my 
   <title type="html"><![CDATA[The fall of the Ukrainian hryvnia]]></title>
   <link>http://valera-rozuvan.github.io/nintoku/fall/ukraine/hryvnia/fall-of-ukrainian-hryvnia</link>
   <id>http://valera-rozuvan.github.io/nintoku/fall/ukraine/hryvnia/fall-of-ukrainian-hryvnia</id>
-  <published>2014-02-27T18:18:19+02:00</published>
-  <updated>2014-02-27T18:18:19+02:00</updated>
+  <published>2014-02-27T16:18:19+00:00</published>
+  <updated>2014-02-27T16:18:19+00:00</updated>
   <author>
     <name>Valera Rozuvan</name>
     <uri>http://valera-rozuvan.github.io/nintoku</uri>
