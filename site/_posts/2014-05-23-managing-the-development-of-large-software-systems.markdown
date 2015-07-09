@@ -2,7 +2,12 @@
 layout: post
 title:  "Managing the Development of Large Software Systems"
 date:   2014-05-23 11:07:32
-categories: managing development large software systems
+categories: management development software systems
+tags:
+- management
+- development
+- software
+- systems
 ---
 
 During the past couple of days I had some free time to read up material on

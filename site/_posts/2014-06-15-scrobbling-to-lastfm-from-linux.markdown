@@ -2,7 +2,11 @@
 layout: post
 title:  "Scrobbling to Last.fm from Linux"
 date:   2014-06-15 22:57:24
-categories: scrobbling last fm linux
+categories: scrobbling last-fm linux
+tags:
+- scrobbling
+- last.fm
+- linux
 ---
 
 A brief note on Last.fm and scrobbling:

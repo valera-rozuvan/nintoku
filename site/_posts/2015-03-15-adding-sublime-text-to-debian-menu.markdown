@@ -2,6 +2,11 @@
 layout: post
 title:  "Adding Sublime Text to Debian menu"
 categories: sublime text debian menu
+tags:
+- sublime
+- text
+- debian
+- menu
 ---
 
 I am currently using Debian 7 Wheezy. When installing the system, I didn't
@@ -26,4 +31,3 @@ with the following contents:
 Then update the Debian menu with the following command:
 
     sudo update-menus -v --menufilesdir=~/.menu
-

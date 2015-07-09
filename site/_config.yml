@@ -40,6 +40,8 @@ links:
     url: /about
   - title: Archives
     url: /archives
+  - title: Tags
+    url: /tags.html
   - title: Google
     url: http://google.com
     external: true

@@ -3,6 +3,10 @@ layout: post
 title:  "Smart Pomodoro Workflow"
 date:   2014-05-23 13:31:18
 categories: smart pomodoro workflow
+tags:
+- smart
+- pomodoro
+- workflow
 ---
 
 [Pomodoro](http://en.wikipedia.org/wiki/Pomodoro_Technique) is a technique to

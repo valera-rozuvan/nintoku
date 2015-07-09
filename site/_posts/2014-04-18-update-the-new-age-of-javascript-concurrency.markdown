@@ -2,7 +2,12 @@
 layout: post
 title:  "UPDATE: The New Age of JavaScript: Concurrency"
 date:   2014-04-18 09:27:27
-categories: update
+categories: updates JavaScript concurrency new-age
+tags:
+- updates
+- javascript
+- concurrency
+- new-age
 ---
 
 In a previous article entitled

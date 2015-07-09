@@ -3,6 +3,9 @@ layout: post
 title:  "Release of a photoblog"
 date:   2014-04-24 07:18:40
 categories: release photoblog
+tags:
+- release
+- photoblog
 ---
 
 When you capture a photograph, you imprint a small memory

@@ -3,6 +3,9 @@ layout: post
 title:  "jQuery broken promises illustrated"
 date:   2015-07-08 20:36:01
 categories: jQuery promises
+tags:
+- jquery
+- promises
 ---
 
 jQuery

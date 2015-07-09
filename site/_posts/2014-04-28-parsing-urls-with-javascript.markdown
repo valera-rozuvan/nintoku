@@ -3,6 +3,10 @@ layout: post
 title:  "Parsing URLs with JavaScript"
 date:   2014-04-28 20:41:50
 categories: parsing url javascript
+tags:
+- parsing
+- url
+- javascript
 ---
 
 Introduction
