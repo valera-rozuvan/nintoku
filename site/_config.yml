@@ -41,7 +41,7 @@ links:
   - title: Archives
     url: /archives
   - title: Tags
-    url: /tags.html
+    url: /tags
   - title: Google
     url: http://google.com
     external: true
