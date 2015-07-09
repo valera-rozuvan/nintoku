@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2015-07-08T19:05:54+00:00</updated>
+<updated>2015-07-09T13:46:01+00:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -305,15 +305,14 @@ title=&quot;Sublime&quot; command=&quot;/usr/bin/subl&quot;
 &lt;pre&gt;&lt;code&gt;sudo update-menus -v --menufilesdir=~/.menu
 &lt;/code&gt;&lt;/pre&gt;
 
-
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu&quot;&gt;Adding Sublime Text to Debian menu&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 15, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Scrobbling to Last.fm from Linux]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-lastfm-from-linux</link>
-  <id>http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-lastfm-from-linux</id>
+  <link>http://valera-rozuvan.github.io/nintoku/scrobbling/last-fm/linux/scrobbling-to-lastfm-from-linux</link>
+  <id>http://valera-rozuvan.github.io/nintoku/scrobbling/last-fm/linux/scrobbling-to-lastfm-from-linux</id>
   <published>2014-06-15T22:57:24+00:00</published>
   <updated>2014-06-15T22:57:24+00:00</updated>
   <author>
@@ -403,7 +402,7 @@ of files so that they contain your Linux user name!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Enjoy!&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scrobbling/last/fm/linux/scrobbling-to-lastfm-from-linux&quot;&gt;Scrobbling to Last.fm from Linux&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on June 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scrobbling/last-fm/linux/scrobbling-to-lastfm-from-linux&quot;&gt;Scrobbling to Last.fm from Linux&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on June 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -474,8 +473,8 @@ workflow, you will achieve an in-the-zone working experience!&lt;/p&gt;
 
 <entry>
   <title type="html"><![CDATA[Managing the Development of Large Software Systems]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-the-development-of-large-software-systems</link>
-  <id>http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-the-development-of-large-software-systems</id>
+  <link>http://valera-rozuvan.github.io/nintoku/management/development/software/systems/managing-the-development-of-large-software-systems</link>
+  <id>http://valera-rozuvan.github.io/nintoku/management/development/software/systems/managing-the-development-of-large-software-systems</id>
   <published>2014-05-23T11:07:32+00:00</published>
   <updated>2014-05-23T11:07:32+00:00</updated>
   <author>
@@ -551,7 +550,7 @@ much has changed in the software world since then. However, I found that Royce h
 advice that can be applied to today’s projects. Then again, you can just read it for the sake
 of having an understating of how management of software projects evolved.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/managing/development/large/software/systems/managing-the-development-of-large-software-systems&quot;&gt;Managing the Development of Large Software Systems&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on May 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/management/development/software/systems/managing-the-development-of-large-software-systems&quot;&gt;Managing the Development of Large Software Systems&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on May 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -684,8 +683,8 @@ is a breeze, and tremendously enjoyable.&lt;/p&gt;
 
 <entry>
   <title type="html"><![CDATA[UPDATE: The New Age of JavaScript: Concurrency]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency</link>
-  <id>http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency</id>
+  <link>http://valera-rozuvan.github.io/nintoku/updates/javascript/concurrency/new-age/update-the-new-age-of-javascript-concurrency</link>
+  <id>http://valera-rozuvan.github.io/nintoku/updates/javascript/concurrency/new-age/update-the-new-age-of-javascript-concurrency</id>
   <published>2014-04-18T09:27:27+00:00</published>
   <updated>2014-04-18T09:27:27+00:00</updated>
   <author>
@@ -727,7 +726,7 @@ to use a blocking function instead of the really large function. As can
 be seen, it clearly shows that JavaScript is single-threaded across all
 browsers.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency&quot;&gt;UPDATE: The New Age of JavaScript: Concurrency&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/updates/javascript/concurrency/new-age/update-the-new-age-of-javascript-concurrency&quot;&gt;UPDATE: The New Age of JavaScript: Concurrency&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
 </entry>
 
 
