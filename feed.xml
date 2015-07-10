@@ -4,13 +4,35 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2015-07-09T13:51:30+00:00</updated>
+<updated>2015-07-10T09:36:04+00:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Ideas: A WebGL visual Tile-o-Drom]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/ideas/webgl/visuals/tile-o-drom/ideas-a-webgl-visual-tile-o-drom</link>
+  <id>http://valera-rozuvan.github.io/nintoku/ideas/webgl/visuals/tile-o-drom/ideas-a-webgl-visual-tile-o-drom</id>
+  <published>2015-07-10T12:31:02+00:00</published>
+  <updated>2015-07-10T12:31:02+00:00</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;I decided that I am going to put up on Nintoku all of my sketches and doodles. Mostly, they will concern things I want to code. However, not only that. Sometimes I create conceptual works using pen and paper. It is very possible that in the future some of these designs will be realized = )&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2015_07_10/tile-o-dream.jpg&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2015_07_10/tile-o-dream.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;Tile-o-drom&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/ideas/webgl/visuals/tile-o-drom/ideas-a-webgl-visual-tile-o-drom&quot;&gt;Ideas: A WebGL visual Tile-o-Drom&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on July 10, 2015.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1406,35 +1428,6 @@ following contents to it:&lt;/p&gt;
 &lt;p&gt;This will start an Emacs server daemon that will process any client requests.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything&quot;&gt;Using Emacs for everything&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 17, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Theming Emacs]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs</link>
-  <id>http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs</id>
-  <published>2014-03-01T00:02:32+00:00</published>
-  <updated>2014-03-01T00:02:32+00:00</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;Just updated my &lt;a href=&quot;https://github.com/valera-rozuvan/emacs_config&quot;&gt;.emacs&lt;/a&gt;
-file to include a theme preference, and a few styling changes to the
-&lt;a href=&quot;http://www.emacswiki.org/emacs/TabBarMode&quot;&gt;tabbar&lt;/a&gt;. Another change is
-that the &lt;code&gt;RET&lt;/code&gt; key will always just do a new-line for my modes.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_03_01/emacs_window.png&quot;&gt;
-        &lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_03_01/emacs_window.png&quot; /&gt;
-    &lt;/a&gt;
-    &lt;figcaption&gt;
-        &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_03_01/emacs_window.png&quot; title=&quot;Emacs window&quot;&gt;Emacs window&lt;/a&gt;.
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs&quot;&gt;Theming Emacs&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 01, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
