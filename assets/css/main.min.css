@@ -3857,3 +3857,7 @@ span + .entry-title {
   background-color: #ffffff;
   color: #000000;
 }
+a.fork-me {
+  position: absolute;
+  right: 0px;
+}
