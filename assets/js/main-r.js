@@ -45,7 +45,7 @@ require(['Modernizr', 'jQuery', 'scripts'], function (Modernizr, $) {
       console.log('[DEBUG]: Found an "exec-me" element.');
       console.log('---> data["js-source"] = "' + jsSource + '".');
 
-      require(['exec-me/' + jsSource], function (module) {
+      require(['/exec-me/' + jsSource], function (module) {
         module.init();
       });
     });
