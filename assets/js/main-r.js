@@ -18,5 +18,8 @@ require(['Modernizr'], function (Modernizr) {
   if (Modernizr.canvas) {
     // Do something here.
     console.log('[DEBUG]: Modernizr.boxshadow is truthy.');
+  } else {
+    console.log('[DEBUG]: Modernizr.boxshadow is falsy.');
+    console.log('---> Modernizr = ', Modernizr);
   }
 });
