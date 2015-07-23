@@ -378,15 +378,17 @@ pre {
   line-height: 2;
   overflow-x: auto;
 }
-.highlighttable {
-  width: 100%;
-}
 .highlight {
+  /*
   margin-bottom: 1.5em;
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 2;
-  border: 1px solid #dedede;
+  .font(12);
+  border: 1px solid darken(@body-color, 5);
+  pre {
+    position: relative;
+    margin: 0;
+    padding: 1em;
+  }
+  */
   /* Comment */
   /* Error */
   /* Keyword */
@@ -447,11 +449,6 @@ pre {
   /* Name.Variable.Global */
   /* Name.Variable.Instance */
   /* Literal.Number.Integer.Long */
-}
-.highlight pre {
-  position: relative;
-  margin: 0;
-  padding: 1em;
 }
 .highlight .hll {
   background-color: #ffffcc;
