@@ -36,5 +36,12 @@ require(['Modernizr', 'jQuery', 'scripts'], function (Modernizr, $) {
       console.log('[DEBUG]: Modernizr.canvas is falsy.');
       console.log('---> Modernizr = ', Modernizr);
     }
+
+    console.log('');
+
+    $('.exec-me').each(function (index, el) {
+      console.log('[DEBUG]: Found an "exec-me" element.');
+      console.log('---> data["js-source"] = "' + el.data('js-source') + '".');
+    });
   });
 });
