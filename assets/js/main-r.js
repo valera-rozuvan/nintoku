@@ -15,7 +15,7 @@ require(['Modernizr'], function (Modernizr) {
   console.log('[DEBUG]: We are in first require() callback function.');
 
   // For Example.
-  if (Modernizr.boxshadow) {
+  if (Modernizr.canvas) {
     // Do something here.
     console.log('[DEBUG]: Modernizr.boxshadow is truthy.');
   }
