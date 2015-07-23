@@ -23,9 +23,11 @@ second heavy function by setting `enableHeavyFunction` to `true`, then,
 because of the heavy function's random nature, in some cases half way
 through execution an error is raised
 
-    Error: invalid arguments
+{% highlight text linenos=table %}
+Error: invalid arguments
 
-    this.spectrum   = new Float32Array(bufferSize/2);
+this.spectrum   = new Float32Array(bufferSize/2);
+{% endhighlight %}
 
 `bufferSize` is to big, and Firefox JavaScript engine throws an error.
 Because of this, the fact that the heavy function ran is not registered
