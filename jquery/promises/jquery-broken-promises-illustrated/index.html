@@ -347,27 +347,45 @@
 
 <p>The output of the above JavaScript program will be:</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">0.) myObject.state = null
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text">1
+2
+3
+4
+5
+6
+7
+8</code></pre></div></td><td class="code"><div class="highlight"><pre>0.) myObject.state = null
 [THEN #1] Setting myObject.state to &quot;X&quot;.
 1.) Setting myObject.state to &quot;A&quot;.
 2.) myObject.state = A
 [THEN #2] myObject.state = A
 [THEN #3] myObject.state = A
 [THEN #4] myObject.state = A
-3.)</code></pre></div>
+3.)
+</pre></div>
+</td></tr></table>
 
 <p>Two things went wrong here. All of <code>THEN {#}</code> logs should be at the end of the output. Also, and this is most important of all, in the end <code>myObject.state</code> did not change to <code>"X"</code>!</p>
 
 <p>If we use a real Promise/A+ implementation, we will get:</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">0.) myObject.state = null
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text">1
+2
+3
+4
+5
+6
+7
+8</code></pre></div></td><td class="code"><div class="highlight"><pre>0.) myObject.state = null
 1.) Setting myObject.state to &quot;A&quot;.
 2.) myObject.state = A
 3.)
 [THEN #1] Setting myObject.state to &quot;X&quot;.
 [THEN #2] myObject.state = X
 [THEN #3] myObject.state = X
-[THEN #4] myObject.state = X</code></pre></div>
+[THEN #4] myObject.state = X
+</pre></div>
+</td></tr></table>
 
 <p>You can see these results for yourself. A JS Fiddle has been setup with jQuery 2.1.4 <a href="https://jsfiddle.net/4988rggu/4/">here</a>. For valid Promise/A+ implementation I chose Angular JS. It’s promise system <a href="https://docs.angularjs.org/api/ng/service/$q">$q</a> is based on <a href="https://github.com/kriskowal/q">Kris Kowal’s Q</a>. A JS Fiddle has been setup with Angular JS 1.4.2 <a href="https://jsfiddle.net/xfmetfoL/4/">here</a>.</p>
 

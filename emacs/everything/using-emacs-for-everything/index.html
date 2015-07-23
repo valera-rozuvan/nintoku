@@ -157,7 +157,9 @@ what if you wanted to use Emacs for all text editing?</p>
 <p>Luckily, the Debian provides a really easy way to specify alternatives to just about any application.
 Try running</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo update-alternatives --config editor</code></pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-bash" data-lang="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre>sudo update-alternatives --config editor
+</pre></div>
+</td></tr></table>
 
 <p>You will get a list of all available choices, and a prompt to set the default editor. We will create
 our own little <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash script</a> that will launch
@@ -172,7 +174,23 @@ the <code>editor</code> from the alternatives panel. Then you can add a new alte
 <p>Next create a new file <code>/home/user_name/bin/editor</code>, make sure that it is executable, and add the
 following contents to it:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-bash" data-lang="bash"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
 
 <span class="nv">num_emacs_servers</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -i <span class="s2">&quot;[e]macs24-x&quot;</span> <span class="p">|</span> wc -l<span class="sb">`</span>
 
@@ -188,7 +206,9 @@ following contents to it:</p>
     <span class="nb">exec</span> /usr/bin/emacs24-x <span class="nv">$@</span>
 <span class="k">fi</span>
 
-<span class="nb">exit </span>0</code></pre></div>
+<span class="nb">exit </span>0
+</pre></div>
+</td></tr></table>
 
 <p>Also, update the alternatives for <code>emacs</code>, setting it to <code>/home/user_name/bin/editor</code>.</p>
 
@@ -201,7 +221,9 @@ following contents to it:</p>
 
 <p>You must make sure that upon start, Emacs runs the following LISP command:</p>
 
-<div class="highlight"><pre><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span></code></pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-lisp" data-lang="lisp">1</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p>This will start an Emacs server daemon that will process any client requests.</p>
 

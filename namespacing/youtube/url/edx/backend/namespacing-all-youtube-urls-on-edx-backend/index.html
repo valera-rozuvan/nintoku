@@ -151,17 +151,27 @@
       <div class="entry-content" itemprop="description">
         <p>Up to now, the backend defined 2 variables which stored YouTube related URLs:</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># URL to test YouTube availability</span>
-<span class="n">YOUTUBE_TEST_URL</span> <span class="o">=</span> <span class="s">&#39;https://gdata.youtube.com/feeds/api/videos/&#39;</span></code></pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-python" data-lang="python">1
+2</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># URL to test YouTube availability</span>
+<span class="n">YOUTUBE_TEST_URL</span> <span class="o">=</span> <span class="s">&#39;https://gdata.youtube.com/feeds/api/videos/&#39;</span>
+</pre></div>
+</td></tr></table>
 
 <p>and</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Current youtube api for requesting transcripts.</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-python" data-lang="python">1
+2
+3
+4
+5
+6</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># Current youtube api for requesting transcripts.</span>
 <span class="c"># for example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.</span>
 <span class="n">YOUTUBE_API</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="s">&quot;http://video.google.com/timedtext&quot;</span><span class="p">,</span>
     <span class="s">&#39;params&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;lang&#39;</span><span class="p">:</span> <span class="s">&#39;en&#39;</span><span class="p">,</span> <span class="s">&#39;v&#39;</span><span class="p">:</span> <span class="s">&#39;set_youtube_id_of_11_symbols_here&#39;</span><span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
 
 <p>This was done in <a href="https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py"><code>cms/envs/common.py</code></a> file (lines 428, 532).</p>
 
@@ -169,7 +179,23 @@
 the front-end. To do this, I have created a <code>YOUTUBE</code> namespace, and
 added a third URL to the back-end:</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">YOUTUBE</span> <span class="o">=</span> <span class="p">{</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-python" data-lang="python"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">YOUTUBE</span> <span class="o">=</span> <span class="p">{</span>
     <span class="c"># YouTube JavaScript API</span>
     <span class="s">&#39;API&#39;</span><span class="p">:</span> <span class="s">&#39;www.youtube.com/iframe_api&#39;</span><span class="p">,</span>
 
@@ -185,7 +211,9 @@ added a third URL to the back-end:</p>
             <span class="s">&#39;v&#39;</span><span class="p">:</span> <span class="s">&#39;set_youtube_id_of_11_symbols_here&#39;</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
 
 <p>The <a href="https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9">pull request</a> has just been merged in to <a href="https://github.com/edx/edx-platform">edx-platform master</a>.</p>
 

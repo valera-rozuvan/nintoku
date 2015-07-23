@@ -188,7 +188,24 @@ client which submits information about tracks being played to audioscrobbler.</l
 <p>Below are the configuration files for <strong>MPD</strong> and <strong>mpdscribble</strong>. I am placing
 them here for the curious soul, and for my own reference.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ cat ~/.mpd.d/mpd.conf
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</code></pre></div></td><td class="code"><div class="highlight"><pre>$ cat ~/.mpd.d/mpd.conf
 follow_outside_symlinks &quot;no&quot;
 follow_inside_symlinks &quot;no&quot;
 db_file &quot;/home/valera/.mpd.d/db&quot;
@@ -205,26 +222,41 @@ auto_update &quot;yes&quot;
 audio_output {
     type &quot;alsa&quot;
     name &quot;AlsaOut1&quot;
-}</code></pre></div>
+}
+</pre></div>
+</td></tr></table>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ cat ~/.mpdscribble/mpdscribble.conf
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text">1
+2
+3
+4
+5
+6</code></pre></div></td><td class="code"><div class="highlight"><pre>$ cat ~/.mpdscribble/mpdscribble.conf
 url = http://post.audioscrobbler.com
 username = valerarozuvan
 password = your_password
 
-pidfile = /home/valera/.mpdscribble/pid</code></pre></div>
+pidfile = /home/valera/.mpdscribble/pid
+</pre></div>
+</td></tr></table>
 
 <p>Update your <code>init.d</code> script for <strong>MPD</strong> to point to your configuration file.
 In my case I have a line in the file <code>/etc/init.d/mpd</code>:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">MPDCONF</span><span class="o">=</span>/home/valera/.mpd.d/mpd.conf</code></pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-bash" data-lang="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nv">MPDCONF</span><span class="o">=</span>/home/valera/.mpd.d/mpd.conf
+</pre></div>
+</td></tr></table>
 
 <p>Also, update the configuration file <code>/etc/default/mpdscribble</code> for
 <strong>mpdscribble</strong> so it has the following lines:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">MPD_SYSTEMWIDE</span><span class="o">=</span>1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-bash" data-lang="bash">1
+2
+3</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nv">MPD_SYSTEMWIDE</span><span class="o">=</span>1
 <span class="nv">DAEMON_OPTS</span><span class="o">=</span><span class="s2">&quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&quot;</span>
-<span class="nv">USER</span><span class="o">=</span>valera</code></pre></div>
+<span class="nv">USER</span><span class="o">=</span>valera
+</pre></div>
+</td></tr></table>
 
 <p><strong>PLEASE NOTE: In all of the above files, make sure to update the paths
 of files so that they contain your Linux user name!</strong></p>
