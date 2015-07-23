@@ -8,7 +8,10 @@ define('module1-test1', ['jQuery'], function ($) {
 
     el = _el;
 
-    $(el).find('a.btn-run-js').click(function () {
+    $(el).find('a.btn-run-js').click(function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
       run();
     });
   }
