@@ -47,7 +47,7 @@ require(['Modernizr', 'jQuery', 'scripts'], function (Modernizr, $) {
       console.log('---> data["js-source"] = "' + jsSource + '".');
 
       require([jsSource], function (module) {
-        module.init();
+        module.init(el);
       });
     });
   });
