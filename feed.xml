@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2015-07-23T18:09:38+00:00</updated>
+<updated>2015-07-23T18:10:51+00:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -1464,7 +1464,11 @@ Emacs 24.3.1 on Debian 7 wheezy.&lt;/p&gt;
  7
  8
  9
-10&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
+10
+11
+12&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  autoconf automake texinfo
 sudo apt-get build-dep emacs
 git clone git://git.savannah.gnu.org/emacs.git
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;emacs/
