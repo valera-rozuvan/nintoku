@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2015-07-23T18:01:33+00:00</updated>
+<updated>2015-07-23T18:06:19+00:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -791,10 +791,13 @@ second heavy function by setting &lt;code&gt;enableHeavyFunction&lt;/code&gt; to
 because of the heavy function’s random nature, in some cases half way
 through execution an error is raised&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Error: invalid arguments
+&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1
+2
+3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;Error: invalid arguments
 
 this.spectrum   = new Float32Array(bufferSize/2);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;&lt;code&gt;bufferSize&lt;/code&gt; is to big, and Firefox JavaScript engine throws an error.
 Because of this, the fact that the heavy function ran is not registered

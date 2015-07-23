@@ -162,10 +162,13 @@ second heavy function by setting <code>enableHeavyFunction</code> to <code>true<
 because of the heavy function’s random nature, in some cases half way
 through execution an error is raised</p>
 
-<pre><code>Error: invalid arguments
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text">1
+2
+3</code></pre></div></td><td class="code"><div class="highlight"><pre>Error: invalid arguments
 
 this.spectrum   = new Float32Array(bufferSize/2);
-</code></pre>
+</pre></div>
+</td></tr></table>
 
 <p><code>bufferSize</code> is to big, and Firefox JavaScript engine throws an error.
 Because of this, the fact that the heavy function ran is not registered
