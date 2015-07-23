@@ -20,14 +20,23 @@ So is the case with Sublime Text 3 editor.
 
 To add a menu launcher for Sublime, create a file:
 
-    ~/.menu/subl
+{% highlight text linenos=table %}
+ ~/.menu/subl
+{% endhighlight %}
 
 with the following contents:
 
-    ?package(sublime-text):needs="X11" section="Applications/Editors" hints="Text editor"\
-    longtitle="Sublime Text 3"\
-    title="Sublime" command="/usr/bin/subl"
+{% highlight text linenos=table %}
+?package(sublime-text):needs="X11"\
+  section="Applications/Editors"\
+  hints="Text editor"\
+  longtitle="Sublime Text 3"\
+  title="Sublime"\
+  command="/usr/bin/subl"
+{% endhighlight %}
 
 Then update the Debian menu with the following command:
 
-    sudo update-menus -v --menufilesdir=~/.menu
+{% highlight bash linenos=table %}
+sudo update-menus -v --menufilesdir=~/.menu
+{% endhighlight %}
