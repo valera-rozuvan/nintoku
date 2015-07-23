@@ -5,7 +5,7 @@ require.config({
     Modernizr: 'vendor/modernizr-2.8.3.custom.min',
     jQuery: 'vendor/jquery-1.9.1.min',
     scripts: 'scripts.min',
-    'exec-me/module1/test1': 'exec-me/module1/test1'
+    'module1-test1': 'exec-me/module1/test1'
   },
   shim: {
     Modernizr: {
@@ -46,7 +46,7 @@ require(['Modernizr', 'jQuery', 'scripts'], function (Modernizr, $) {
       console.log('[DEBUG]: Found an "exec-me" element.');
       console.log('---> data["js-source"] = "' + jsSource + '".');
 
-      require(['exec-me/' + jsSource], function (module) {
+      require([jsSource], function (module) {
         module.init();
       });
     });
