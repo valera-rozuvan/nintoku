@@ -18,7 +18,7 @@
         }, options);
 
         var properties = settings.jsonFormat.split(',');
-        
+
         var jsonData = [],
             origThis = this,
             searchResults = $(settings.searchResults);

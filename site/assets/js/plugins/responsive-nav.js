@@ -206,7 +206,7 @@ var responsiveNav = (function (window, document) {
         addClass(nav, "closed");
         setAttributes(nav, {"aria-hidden": "true"});
 
-  
+
 
         navOpen = false;
         opts.close();

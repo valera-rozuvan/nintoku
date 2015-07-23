@@ -56,3 +56,12 @@ markdown:    kramdown
 permalink:   /:categories/:title
 
 gems: []
+
+exclude: [
+  "assets/less",
+  "assets/css/main.css",
+  "assets/js/plugins",
+  "assets/gulpfile.js",
+  "assets/node_modules",
+  "assets/package.json"
+]

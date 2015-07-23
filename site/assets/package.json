@@ -1,0 +1,30 @@
+{
+  "name": "nintoku-vr-assets",
+  "version": "0.0.1",
+  "description": "Help build CSS and JS assets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valera-rozuvan/nintoku/tree/gh-pages"
+  },
+  "keywords": [
+    "nintoku",
+    "valera",
+    "rozuvan",
+    "assets",
+    "blog",
+    "javascript",
+    "js",
+    "css"
+  ],
+  "author": "Valera Rozuvan",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.2.0"
+  }
+}
