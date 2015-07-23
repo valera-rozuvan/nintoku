@@ -12,7 +12,7 @@ the latest and greatest
 = ) So, without any other words, I present to you the complete guide of how to install
 Emacs 24.3.1 on Debian 7 wheezy.
 
-{% highlight bash %}
+{% highlight bash linenos=table %}
 sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
 sudo apt-get build-dep emacs
 git clone git://git.savannah.gnu.org/emacs.git
@@ -27,7 +27,7 @@ sudo make install
 
 The above steps will install Emacs to `/opt/emacs24`. To run Emacs, you can launch it by:
 
-{% highlight bash %}
+{% highlight bash linenos=table %}
 /opt/emacs24/bin/emacs
 {% endhighlight %}
 
@@ -44,12 +44,12 @@ variable. The directory contains several other important Emacs related binaries:
 
 Place the following line at the bottom of your `~/.bashrc` file:
 
-{% highlight bash %}
+{% highlight bash linenos=table %}
 export PATH=$PATH:/opt/emacs24/bin
 {% endhighlight %}
 
 Now you can run Emacs with a simple command:
 
-{% highlight bash %}
+{% highlight bash linenos=table %}
 emacs
 {% endhighlight %}
