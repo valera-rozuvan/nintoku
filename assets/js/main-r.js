@@ -2,7 +2,7 @@ console.log('[DEBUG]: We are in "main-r.js" file.');
 
 require.config({
   paths: {
-    Modernizr: 'vendor/modernizr-2.6.2.custom.min',
+    Modernizr: 'vendor/modernizr-2.8.3.custom.min',
     jQuery: 'vendor/jquery-1.9.1.min',
     scripts: 'scripts.min'
   },
