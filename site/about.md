@@ -2,8 +2,8 @@
 layout: page
 permalink: /about/index.html
 title: About Nintoku
-tags: [nintoku, simple, minimal, minimalism, responsive]
-modified: 2013-09-13
+tags: [nintoku, valera, rozuvan, valera rozuvan, blog, about]
+modified: 2013-12-11
 image:
   feature: so-simple-sample-image-4.jpg
   credit: anon
