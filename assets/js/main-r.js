@@ -40,8 +40,14 @@ require(['Modernizr', 'jQuery', 'scripts'], function (Modernizr, $) {
     console.log('');
 
     $('.exec-me').each(function (index, el) {
+      var jsSource = $(el).data('js-source');
+
       console.log('[DEBUG]: Found an "exec-me" element.');
-      console.log('---> data["js-source"] = "' + $(el).data('js-source') + '".');
+      console.log('---> data["js-source"] = "' + jsSource + '".');
+
+      require(['exec-me/' + jsSource], function (module) {
+        module.init();
+      });
     });
   });
 });
