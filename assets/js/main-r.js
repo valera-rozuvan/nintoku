@@ -2,24 +2,36 @@ console.log('[DEBUG]: We are in "main-r.js" file.');
 
 require.config({
   paths: {
-    Modernizr: 'vendor/modernizr-2.6.2.custom.min'
+    Modernizr: 'vendor/modernizr-2.6.2.custom.min',
+    jQuery: 'vendor/jquery-1.9.1.min',
+    'scripts': 'scripts.min'
   },
   shim: {
     Modernizr: {
       exports: 'Modernizr'
+    },
+    'scripts': {
+      exports: '_main_loaded_',
+      deps: [
+        'jQuery', 'Modernizr'
+      ]
     }
   }
 });
 
-require(['Modernizr'], function (Modernizr) {
+require(['Modernizr', 'jQuery', 'scripts'], function (Modernizr, $) {
   console.log('[DEBUG]: We are in first require() callback function.');
 
-  // For Example.
-  if (Modernizr.canvas) {
-    // Do something here.
-    console.log('[DEBUG]: Modernizr.boxshadow is truthy.');
-  } else {
-    console.log('[DEBUG]: Modernizr.boxshadow is falsy.');
-    console.log('---> Modernizr = ', Modernizr);
-  }
+  $(document).ready(function () {
+    console.log('[DEBUG]: We are in $(document).ready() callback function.');
+
+    // For Example.
+    if (Modernizr.canvas) {
+      // Do something here.
+      console.log('[DEBUG]: Modernizr.boxshadow is truthy.');
+    } else {
+      console.log('[DEBUG]: Modernizr.boxshadow is falsy.');
+      console.log('---> Modernizr = ', Modernizr);
+    }
+  });
 });
