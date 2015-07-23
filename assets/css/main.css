@@ -1501,7 +1501,7 @@ svg:not(:root) {
   -o-animation-name: drop;
   animation-name: drop;
 }
-/*!
+/*
  *  Font Awesome 3.2.0
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
