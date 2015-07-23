@@ -4,17 +4,20 @@ require.config({
   paths: {
     Modernizr: 'vendor/modernizr-2.6.2.custom.min',
     jQuery: 'vendor/jquery-1.9.1.min',
-    'scripts': 'scripts.min'
+    scripts: 'scripts.min'
   },
   shim: {
     Modernizr: {
       exports: 'Modernizr'
     },
-    'scripts': {
+    scripts: {
       exports: '_main_loaded_',
       deps: [
         'jQuery', 'Modernizr'
       ]
+    },
+    jQuery: {
+      exports: 'jQuery'
     }
   }
 });
