@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Latest Posts &#8211; Nintoku</title>
-<meta name="description" content="Nintoku. The 16th emperor of Japan.">
-<meta name="keywords" content="nintoku, valera, rozuvan, valera rozuvan, blog, home">
+<title>1st test: Executable JavaScript in a post &#8211; Nintoku</title>
+<meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
+<meta name="keywords" content="test, javascript, post">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Latest Posts">
-<meta name="twitter:description" content="Nintoku. The 16th emperor of Japan.">
+<meta name="twitter:title" content="1st test: Executable JavaScript in a post">
+<meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Latest Posts">
-<meta property="og:description" content="Nintoku. The 16th emperor of Japan.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/index.html">
+<meta property="og:title" content="1st test: Executable JavaScript in a post">
+<meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/test/javascript/post/1st-test-executable-javascript-in-a-post">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/test/javascript/post/1st-test-executable-javascript-in-a-post">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/+ValeraRozuvan?rel=author">
 
@@ -67,7 +67,7 @@
 
 </head>
 
-<body id="page" itemscope itemtype="http://schema.org/WebPage">
+<body id="post" itemscope itemtype="http://schema.org/WebPage">
 
 <a class="fork-me" href="https://github.com/valera-rozuvan/nintoku">
   <img
@@ -130,40 +130,53 @@
 </header><!-- /.masthead -->
 
 
-<div id="main" role="main" itemprop="mainContentOfPage">
-  <article class="entry" itemscope>
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <h1 class="entry-title" itemprop="name">Latest Posts</h1>
+        <span class="entry-tags"><a href="http://valera-rozuvan.github.io/nintoku/tags#test" title="Pages tagged test" rel="tag">test</a>&nbsp;&bull;&nbsp;<a href="http://valera-rozuvan.github.io/nintoku/tags#javascript" title="Pages tagged javascript" rel="tag">javascript</a>&nbsp;&bull;&nbsp;<a href="http://valera-rozuvan.github.io/nintoku/tags#post" title="Pages tagged post" rel="tag">post</a></span>
+        
+          <h1 class="entry-title" itemprop="headline">1st test: Executable JavaScript in a post</h1>
+        
       </header>
+      <footer class="entry-meta">
+        <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
+        <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera.rozuvan.net/" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
+        <span class="entry-date date published"><time datetime="2015-07-24T02:00:17+00:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> July 24, 2015</time></span>
+        
+        
+        <span><a href="http://valera-rozuvan.github.io/nintoku/test/javascript/post/1st-test-executable-javascript-in-a-post" rel="bookmark" title="1st test: Executable JavaScript in a post" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="https://github.com/valera-rozuvan/nintoku/blob/master/site/_posts/2015-07-24-1st-test-executable-javascript-in-a-post.markdown">source of post</a></span>
+      </footer>
       <div class="entry-content" itemprop="description">
-        <ul class="post-list">
+        <p>I want to be able to interact with the user. I want my posts to be able to contain
+executable JavaScript. It would be perfect if some lengthy text explanation was
+reinforced with a JavaScript sample demo right on the page. So that the user could
+better understand what I am talking about.</p>
 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/test/javascript/post/1st-test-executable-javascript-in-a-post">1st test: Executable JavaScript in a post <span class="entry-date"><time datetime="2015-07-24T02:00:17+00:00">July 24, 2015</time></span></a></article></li>
+<p>I will introduce a mark-up element in my posts. It will contain a certain class and
+a data-* attribute. The class will tell my executable JavaScript engine that it should
+act up, and the data-* attribute will tell it how to act up. I.e. I will be specifying
+the necessary JavaScript file to load an execute via the the data-* attribute.</p>
 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/ideas/webgl/visuals/tile-o-drom/ideas-a-webgl-visual-tile-o-drom">Ideas: A WebGL visual Tile-o-Drom <span class="entry-date"><time datetime="2015-07-10T12:31:02+00:00">July 10, 2015</time></span></a></article></li>
+<p>So, here we go:</p>
 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/jquery/promises/jquery-broken-promises-illustrated">jQuery broken promises illustrated <span class="entry-date"><time datetime="2015-07-08T20:36:01+00:00">July 08, 2015</time></span></a></article></li>
+<div class="exec-me" data-js-source="module1/test1.js">
+  <a class="btn-run-js" href="#">Run</a>
+</div>
 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu">Adding Sublime Text to Debian menu <span class="entry-date"><time datetime="2015-03-15T00:00:00+00:00">March 15, 2015</time></span></a></article></li>
+<p>Click on the button “Run”, and see magic happen = )</p>
 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/scrobbling/last-fm/linux/scrobbling-to-lastfm-from-linux">Scrobbling to Last.fm from Linux <span class="entry-date"><time datetime="2014-06-15T22:57:24+00:00">June 15, 2014</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow">Smart Pomodoro Workflow <span class="entry-date"><time datetime="2014-05-23T13:31:18+00:00">May 23, 2014</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/management/development/software/systems/managing-the-development-of-large-software-systems">Managing the Development of Large Software Systems <span class="entry-date"><time datetime="2014-05-23T11:07:32+00:00">May 23, 2014</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/parsing/url/javascript/parsing-urls-with-javascript">Parsing URLs with JavaScript <span class="entry-date"><time datetime="2014-04-28T20:41:50+00:00">April 28, 2014</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/release/photoblog/release-of-a-photoblog">Release of a photoblog <span class="entry-date"><time datetime="2014-04-24T07:18:40+00:00">April 24, 2014</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/updates/javascript/concurrency/new-age/update-the-new-age-of-javascript-concurrency">UPDATE: The New Age of JavaScript: Concurrency <span class="entry-date"><time datetime="2014-04-18T09:27:27+00:00">April 18, 2014</time></span></a></article></li>
-
-</ul>
-
+        
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://valera-rozuvan.github.io/nintoku/ideas/webgl/visuals/tile-o-drom/ideas-a-webgl-visual-tile-o-drom" class="btn" title="Ideas: A WebGL visual Tile-o-Drom">Previous article</a>
+      
+      
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
