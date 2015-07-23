@@ -65,6 +65,8 @@ audio_output {
 }
 {% endhighlight %}
 
+<p></p>
+
 {% highlight text linenos=table %}
 $ cat ~/.mpdscribble/mpdscribble.conf
 url = http://post.audioscrobbler.com
