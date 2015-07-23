@@ -156,7 +156,16 @@ the latest and greatest
 = ) So, without any other words, I present to you the complete guide of how to install
 Emacs 24.3.1 on Debian 7 wheezy.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-bash" data-lang="bash"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</code></pre></div></td><td class="code"><div class="highlight"><pre>sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev autoconf automake texinfo
 sudo apt-get build-dep emacs
 git clone git://git.savannah.gnu.org/emacs.git
 <span class="nb">cd </span>emacs/
@@ -165,11 +174,15 @@ git checkout -b custom_branch
 ./autogen.sh
 ./configure --prefix<span class="o">=</span>/opt/emacs24
 make --jobs<span class="o">=</span>2
-sudo make install</code></pre></div>
+sudo make install
+</pre></div>
+</td></tr></table>
 
 <p>The above steps will install Emacs to <code>/opt/emacs24</code>. To run Emacs, you can launch it by:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">/opt/emacs24/bin/emacs</code></pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-bash" data-lang="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre>/opt/emacs24/bin/emacs
+</pre></div>
+</td></tr></table>
 
 <p>It is important to add the directory, where Emacs binary is found, to the system <code>PATH</code>
 variable. The directory contains several other important Emacs related binaries:</p>
@@ -186,11 +199,15 @@ variable. The directory contains several other important Emacs related binaries:
 
 <p>Place the following line at the bottom of your <code>~/.bashrc</code> file:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/emacs24/bin</code></pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-bash" data-lang="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/emacs24/bin
+</pre></div>
+</td></tr></table>
 
 <p>Now you can run Emacs with a simple command:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">emacs</code></pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-bash" data-lang="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre>emacs
+</pre></div>
+</td></tr></table>
 
 
         
