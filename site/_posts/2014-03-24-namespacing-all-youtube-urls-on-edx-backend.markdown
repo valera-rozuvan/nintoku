@@ -7,14 +7,14 @@ categories: namespacing youtube url edx backend
 
 Up to now, the backend defined 2 variables which stored YouTube related URLs:
 
-{% highlight python %}
+{% highlight python linenos=table %}
 # URL to test YouTube availability
 YOUTUBE_TEST_URL = 'https://gdata.youtube.com/feeds/api/videos/'
 {% endhighlight %}
 
 and
 
-{% highlight python %}
+{% highlight python linenos=table %}
 # Current youtube api for requesting transcripts.
 # for example: http://video.google.com/timedtext?lang=en&v=j_jEn79vS3g.
 YOUTUBE_API = {
@@ -29,7 +29,7 @@ I wanted to introduce a new URL which is responsible for YouTube API on
 the front-end. To do this, I have created a `YOUTUBE` namespace, and
 added a third URL to the back-end:
 
-{% highlight python %}
+{% highlight python linenos=table %}
 YOUTUBE = {
     # YouTube JavaScript API
     'API': 'www.youtube.com/iframe_api',

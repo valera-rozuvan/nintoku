@@ -131,7 +131,7 @@ function promiseTests() {
 
 The output of the above JavaScript program will be:
 
-{% highlight text %}
+{% highlight text linenos=table %}
 0.) myObject.state = null
 [THEN #1] Setting myObject.state to "X".
 1.) Setting myObject.state to "A".
@@ -146,7 +146,7 @@ Two things went wrong here. All of <code>THEN {#}</code> logs should be at the e
 
 If we use a real Promise/A+ implementation, we will get:
 
-{% highlight text %}
+{% highlight text linenos=table %}
 0.) myObject.state = null
 1.) Setting myObject.state to "A".
 2.) myObject.state = A

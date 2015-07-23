@@ -44,7 +44,7 @@ client which submits information about tracks being played to audioscrobbler.
 Below are the configuration files for **MPD** and **mpdscribble**. I am placing
 them here for the curious soul, and for my own reference.
 
-{% highlight text %}
+{% highlight text linenos=table %}
 $ cat ~/.mpd.d/mpd.conf
 follow_outside_symlinks "no"
 follow_inside_symlinks "no"
@@ -65,7 +65,7 @@ audio_output {
 }
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight text linenos=table %}
 $ cat ~/.mpdscribble/mpdscribble.conf
 url = http://post.audioscrobbler.com
 username = valerarozuvan
@@ -77,14 +77,14 @@ pidfile = /home/valera/.mpdscribble/pid
 Update your `init.d` script for **MPD** to point to your configuration file.
 In my case I have a line in the file `/etc/init.d/mpd`:
 
-{% highlight bash %}
+{% highlight bash linenos=table %}
 MPDCONF=/home/valera/.mpd.d/mpd.conf
 {% endhighlight %}
 
 Also, update the configuration file `/etc/default/mpdscribble` for
 **mpdscribble** so it has the following lines:
 
-{% highlight bash %}
+{% highlight bash linenos=table %}
 MPD_SYSTEMWIDE=1
 DAEMON_OPTS="--conf /home/valera/.mpdscribble/mpdscribble.conf"
 USER=valera

@@ -11,7 +11,7 @@ that define the rules for highlighting for many, many languages.
 
 To use it, you surround your code block like so
 
-{% highlight c %}
+{% highlight c linenos=table %}
 {% raw %}
     {% highlight lexer_name %}
 

@@ -13,7 +13,7 @@ what if you wanted to use Emacs for all text editing?
 Luckily, the Debian provides a really easy way to specify alternatives to just about any application.
 Try running
 
-{% highlight bash %}
+{% highlight bash linenos=table %}
 sudo update-alternatives --config editor
 {% endhighlight %}
 
@@ -30,7 +30,7 @@ the `editor` from the alternatives panel. Then you can add a new alternative poi
 Next create a new file `/home/user_name/bin/editor`, make sure that it is executable, and add the
 following contents to it:
 
-{% highlight bash %}
+{% highlight bash linenos=table %}
 #!/bin/bash
 
 num_emacs_servers=`ps aux | grep -i "[e]macs24-x" | wc -l`
@@ -59,7 +59,7 @@ Now, whenever you run emacs, or some other command runs the text editor, you wil
 
 You must make sure that upon start, Emacs runs the following LISP command:
 
-{% highlight lisp %}
+{% highlight lisp linenos=table %}
 (server-start)
 {% endhighlight %}
 

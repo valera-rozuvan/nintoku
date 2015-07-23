@@ -11,7 +11,7 @@ to another number, but not necessarily equal to it.
 matcher [toBeCloseTo()](https://github.com/pivotal/jasmine/blob/master/src/core/matchers/toBeCloseTo.js)
 just for this case. See the code below.
 
-{% highlight js %}
+{% highlight js linenos=table %}
 getJasmineRequireObj().toBeCloseTo = function() {
 
     function toBeCloseTo() {

@@ -24,7 +24,7 @@ one after the other, in the order of `window.setInterval` invocation?
 
 So, to be more precise, if we have the following code:
 
-{% highlight javascript %}
+{% highlight javascript linenos=table %}
 var timeout1 = window.setInterval(timeoutFunc1, 50),
     timeout2 = window.setInterval(timeoutFunc2, 50);
 
@@ -41,7 +41,7 @@ function timeoutFunc2() {
 
 will we see on the page:
 
-{% highlight text %}
+{% highlight text linenos=table %}
 1
 2
 1
@@ -62,7 +62,7 @@ the periodically invoked functions did something else besides outputting
 a number to the page. What if it took a long time to run, i.e. it would
 execute 5 to 10 times longer? Would we then see something like this:
 
-{% highlight text %}
+{% highlight text linenos=table %}
 2
 2
 2
