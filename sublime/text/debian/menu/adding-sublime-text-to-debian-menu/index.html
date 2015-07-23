@@ -160,20 +160,32 @@ So is the case with Sublime Text 3 editor.</p>
 
 <p>To add a menu launcher for Sublime, create a file:</p>
 
-<pre><code>~/.menu/subl
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text">1</code></pre></div></td><td class="code"><div class="highlight"><pre>~/.menu/subl
+</pre></div>
+</td></tr></table>
 
 <p>with the following contents:</p>
 
-<pre><code>?package(sublime-text):needs="X11" section="Applications/Editors" hints="Text editor"\
-longtitle="Sublime Text 3"\
-title="Sublime" command="/usr/bin/subl"
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text">1
+2
+3
+4
+5
+6</code></pre></div></td><td class="code"><div class="highlight"><pre>?package(sublime-text):needs=&quot;X11&quot;\
+  section=&quot;Applications/Editors&quot;\
+  hints=&quot;Text editor&quot;\
+  longtitle=&quot;Sublime Text 3&quot;\
+  title=&quot;Sublime&quot;\
+  command=&quot;/usr/bin/subl&quot;
+</pre></div>
+</td></tr></table>
 
 <p>Then update the Debian menu with the following command:</p>
 
-<pre><code>sudo update-menus -v --menufilesdir=~/.menu
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-bash" data-lang="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre>sudo update-menus -v --menufilesdir<span class="o">=</span>~/.menu
+</pre></div>
+</td></tr></table>
+
 
         
       </div><!-- /.entry-content -->
