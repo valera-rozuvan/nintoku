@@ -7,6 +7,7 @@
       jQuery: 'vendor/jquery-1.9.1.min',
       scripts: 'scripts.min',
       'google-analytics': 'google-analytics',
+      mathjax: 'mathjax',
       'module1-test1': 'exec-me/module1/test1'
     },
     shim: {
@@ -32,6 +33,7 @@
 
     function onScriptsLoaded() {
       require(['google-analytics'], onGoogleAnalyticsLoaded);
+      require(['mathjax'], onMathjaxLoaded);
 
       $('.exec-me').each(function (index, el) {
         var jsSource = $(el).data('js-source');
@@ -43,6 +45,10 @@
     }
 
     function onGoogleAnalyticsLoaded(module) {
+      module.init();
+    }
+
+    function onMathjaxLoaded(module) {
       module.init();
     }
   });
