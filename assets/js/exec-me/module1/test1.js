@@ -24,7 +24,7 @@
       cEl = $('<canvas id="output-canvas-1" width="800" height="600"></canvas>');
 
       cEl.css({
-        width: '98%',
+        width: '96%',
         height: 'auto',
         display: 'inline-block',
         'background-color': '#ffffff',
