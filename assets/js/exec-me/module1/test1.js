@@ -22,7 +22,7 @@ define('module1-test1', ['jQuery'], function ($) {
     cEl = $('<canvas id="output-canvas-1"></canvas>');
 
     cEl.css({
-      width: '80%',
+      width: '500px',
       height: '200px',
       display: 'inline-block',
       'background-color': '#ffffff',
