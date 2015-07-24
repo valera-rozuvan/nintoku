@@ -21,7 +21,7 @@
     }
 
     function createCanvas() {
-      cEl = $('<canvas id="output-canvas-1" width="800" height="600"></canvas>');
+      cEl = $('<canvas id="output-canvas-1" width="800" height="400"></canvas>');
 
       cEl.css({
         width: '96%',
