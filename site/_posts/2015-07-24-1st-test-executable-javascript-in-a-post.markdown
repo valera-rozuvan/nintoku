@@ -16,8 +16,8 @@ better understand what I am talking about.
 
 I will introduce a mark-up element in my posts. It will contain a certain **class** and
 a `data-*` attribute. The **class** will tell my executable JavaScript engine that it should
-act up, and the `data-*` attribute will tell it how to act up. I.e. I will be specifying
-the necessary JavaScript file to load an execute via the the `data-*` attribute.
+act up, and the `data-*` attribute will tell it how to act up. I.e. - I will be specifying
+the necessary JavaScript file to load and execute via the `data-*` attribute.
 
 So, here we go:
 
