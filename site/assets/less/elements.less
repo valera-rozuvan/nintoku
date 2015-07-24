@@ -81,6 +81,23 @@ svg:not(:root) {
   }
 }
 
+.btn-run-js {
+  display: inline-block;
+  margin: 2%;
+  padding: 8px 20px;
+  .font-rem(14);
+  background-color: @green;
+  color: @dark-green;
+  border: 2px solid @dark-green !important;
+  &:visited {
+    color: @dark-green;
+  }
+  &:hover {
+    background-color: @white;
+    color: @black;
+  }
+}
+
 // Well
 // --------------------------------------------------
 .well {
@@ -434,4 +451,19 @@ svg:not(:root) {
   -moz-animation-name: drop;
   -o-animation-name: drop;
   animation-name: drop;
+}
+
+// JavaScript executor
+// --------------------------------------------------
+div.exec-me {
+  display: block;
+  text-align: center;
+  width: 100%;
+  clear: both;
+
+  position: relative;
+
+  background-color: #81BEF7;
+
+  min-height: 200px;
 }

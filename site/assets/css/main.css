@@ -1167,6 +1167,23 @@ svg:not(:root) {
   background-color: #ffffff;
   color: #000000;
 }
+.btn-run-js {
+  display: inline-block;
+  margin: 2%;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  background-color: #00ff00;
+  color: #0b610b;
+  border: 2px solid #0b610b !important;
+}
+.btn-run-js:visited {
+  color: #0b610b;
+}
+.btn-run-js:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
 .well {
   padding: 20px;
   border: 1px solid #343434;
@@ -1500,6 +1517,15 @@ svg:not(:root) {
   -moz-animation-name: drop;
   -o-animation-name: drop;
   animation-name: drop;
+}
+div.exec-me {
+  display: block;
+  text-align: center;
+  width: 100%;
+  clear: both;
+  position: relative;
+  background-color: #81BEF7;
+  min-height: 200px;
 }
 /*
  *  Font Awesome 3.2.0

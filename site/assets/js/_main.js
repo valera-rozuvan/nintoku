@@ -30,4 +30,8 @@
   $(function() {
     $("article").fitVids();
   });
+
+  window['_main_loaded_'] = {
+    loaded: true
+  };
 }());

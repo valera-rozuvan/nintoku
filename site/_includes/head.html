@@ -42,10 +42,17 @@
 <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
 
 <!-- Load Modernizr -->
-<script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+<!-- <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script> -->
 
 <!-- Load MathJax -->
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Load RequireJS -->
+<script
+  type="text/javascript"
+  data-main="{{ site.url }}/assets/js/main-r"
+  src="{{ site.url }}/assets/js/vendor/requirejs-2.1.19.min.js"
+></script>
 
 <!-- Icons -->
 <!-- 16x16 -->
