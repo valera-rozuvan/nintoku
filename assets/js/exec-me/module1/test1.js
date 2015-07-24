@@ -19,12 +19,13 @@ define('module1-test1', ['jQuery'], function ($) {
   }
 
   function createCanvas() {
-    cEl = $('<canvas>');
+    cEl = $('<canvas id="output-canvas-1"></canvas>');
 
     cEl.css({
       width: '80%',
       height: '160px',
-      display: 'inline-block'
+      display: 'inline-block',
+      clear: 'both'
     });
 
     $(el).append(cEl);
