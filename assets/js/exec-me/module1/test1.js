@@ -23,10 +23,10 @@ define('module1-test1', ['jQuery'], function ($) {
 
     cEl.css({
       width: '80%',
-      height: '140px',
+      height: '200px',
       display: 'inline-block',
       clear: 'both',
-      float: 'left',
+      float: 'right',
       'background-color': '#ffffff'
     });
 
