@@ -18,7 +18,10 @@
       <header class="entry-header">
         <h1 class="entry-title" itemprop="name">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}</h1>{% endif %}
       </header>
-      <div class="entry-content" itemprop="description">
+
+      {% include no-js-script.html %}
+
+      <div class="entry-content" id="entry-content-main" itemprop="description">
         {{ content }}
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
