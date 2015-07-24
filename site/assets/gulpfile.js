@@ -1,6 +1,9 @@
 var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
+  jscs = require('gulp-jscs'),
+  jshint = require('gulp-jshint'),
+  print = require('gulp-print'),
 
   projectJsFiles = [
     './js/plugins/jquery.fitvids.js',
@@ -25,4 +28,28 @@ gulp.task('compress', function() {
   return gulp.src(JS_OUT_DIR + '/' + CONCAT_JS)
     .pipe(uglify())
     .pipe(gulp.dest(JS_OUT_DIR));
+});
+
+gulp.task('style', function () {
+  return gulp.src([
+    './js/**/*.js',
+    '!./js/vendor/*.js',
+    '!./js/plugins/*.js',
+    '!./js/**/*.min.js'
+  ])
+  .pipe(jscs({
+    fix: false,
+    verbose: true
+  }));
+});
+
+gulp.task('hint', function () {
+  return gulp.src([
+    './js/**/*.js',
+    '!./js/vendor/*.js',
+    '!./js/plugins/*.js',
+    '!./js/**/*.min.js'
+  ])
+  .pipe(jshint())
+  .pipe(jshint.reporter('default'));
 });

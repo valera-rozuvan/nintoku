@@ -1,4 +1,4 @@
-(function () {
+(function ($, responsiveNav, undefined) {
   'use strict';
 
   /*! Plugin options and other jQuery stuff */
@@ -34,4 +34,4 @@
   window['_main_loaded_'] = {
     loaded: true
   };
-}());
+}(window.jQuery, window.responsiveNav));
