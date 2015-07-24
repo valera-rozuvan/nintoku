@@ -6,7 +6,7 @@
       Modernizr: 'vendor/modernizr-2.8.3.custom.min',
       jQuery: 'vendor/jquery-1.9.1.min',
       scripts: 'scripts.min',
-      'google-analytics': 'google-analytics.js',
+      'google-analytics': 'google-analytics',
       'module1-test1': 'exec-me/module1/test1'
     },
     shim: {
