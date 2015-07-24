@@ -23,9 +23,10 @@ define('module1-test1', ['jQuery'], function ($) {
 
     cEl.css({
       width: '80%',
-      height: '160px',
+      height: '140px',
       display: 'inline-block',
-      clear: 'both'
+      clear: 'both',
+      float: 'left'
     });
 
     $(el).append(cEl);
