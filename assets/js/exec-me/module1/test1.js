@@ -26,7 +26,8 @@ define('module1-test1', ['jQuery'], function ($) {
       height: '140px',
       display: 'inline-block',
       clear: 'both',
-      float: 'left'
+      float: 'left',
+      'background-color': '#ffffff'
     });
 
     $(el).append(cEl);
