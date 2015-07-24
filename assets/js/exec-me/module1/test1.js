@@ -1,5 +1,5 @@
 define('module1-test1', ['jQuery'], function ($) {
-  var el, cEl;
+  var el, cEl, hasRun = false;
 
   console.log('[DEBUG]: We are in define("module1-test1") function.');
 
@@ -14,7 +14,10 @@ define('module1-test1', ['jQuery'], function ($) {
       event.preventDefault();
       event.stopPropagation();
 
-      run();
+      if (hasRun === false) {
+        hasRun = true;
+        run();
+      }
     });
   }
 
@@ -33,7 +36,15 @@ define('module1-test1', ['jQuery'], function ($) {
   }
 
   function run() {
+    var canvas, ctx;
+
     console.log('[DEBUG]: We are in run() function.');
+
+    canvas = cEl.get(0);
+    ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = 'black';
+    ctx.fillRect(10, 10, 20, 20);
   }
 
   return {
