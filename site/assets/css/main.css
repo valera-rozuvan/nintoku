@@ -3942,13 +3942,12 @@ span + .entry-title {
   background-color: #ffffff;
   color: #000000;
 }
-a.fork-me {
-  position: absolute;
-  right: 0px;
-}
-div.fork-me {
-  text-align: center;
-}
+/*
+ * Ideas taken from:
+ *   - https://codepo8.github.io/css-fork-on-github-ribbon/
+ *   - https://github.com/simonwhitaker/github-fork-ribbon-css
+ *   - https://github.com/codepo8/css-fork-on-github-ribbon
+ */
 #forkongithub {
   display: inline-block;
   float: right;
