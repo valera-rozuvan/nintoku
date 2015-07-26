@@ -1,9 +1,17 @@
 var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
+  rename = require('gulp-rename'),
+
   jscs = require('gulp-jscs'),
   jshint = require('gulp-jshint'),
-  print = require('gulp-print'),
+
+  // For debugging purposes.
+  // print = require('gulp-print'),
+
+  less = require('gulp-less'),
+  minifyCss = require('gulp-minify-css'),
+  path = require('path'),
 
   projectJsFiles = [
     './js/plugins/jquery.fitvids.js',
@@ -52,4 +60,19 @@ gulp.task('hint', function () {
   ])
   .pipe(jshint())
   .pipe(jshint.reporter('default'));
+});
+
+gulp.task('less', function () {
+  return gulp.src('./less/main.less')
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .pipe(gulp.dest('./css'));
+});
+
+gulp.task('minify-css', function() {
+  return gulp.src('./css/main.css')
+    .pipe(minifyCss())
+    .pipe(rename('main.min.css'))
+    .pipe(gulp.dest('./css'));
 });
