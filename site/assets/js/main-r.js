@@ -4,7 +4,7 @@
   require.config({
     paths: {
       Modernizr: 'vendor/modernizr-2.8.3.custom.min',
-      jQuery: 'vendor/jquery-1.9.1.min',
+      jQuery: 'vendor/jquery-1.11.3.min',
       scripts: 'scripts.min',
       'google-analytics': 'google-analytics',
       mathjax: 'mathjax',
