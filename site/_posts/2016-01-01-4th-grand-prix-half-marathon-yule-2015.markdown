@@ -19,12 +19,12 @@ It was held on the last Sunday of the 2015 year, in the small town of
     <figcaption>Sponsored by Red Bull. Start of 4th Grand Prix half marathon Yule 2015.</figcaption>
 </figure>
 
-There were 2 events once could participate in. The half marathon distance of 21.1km, and the double mini distance of
-8.4km. I competed in the double mini event, running for the first time in a competition!
+There were 2 events one could participate in. The half marathon distance of 21.1km, and the "double-mini" distance of
+8.4km. I competed in the "double-mini" event, running for the first time in a competition!
 
 <figure>
     <a href="{{ site.url }}/images/2016_01_01/02.jpg"><img src="{{ site.url }}/images/2016_01_01/02.jpg"></a>
-    <figcaption>15 seconds in to the start. You can see that dogs also competed = )</figcaption>
+    <figcaption>15 seconds into the start. You can see that dogs also competed = )</figcaption>
 </figure>
 
 <figure>
