@@ -88,7 +88,7 @@ The Internet connection
 -----------------------
 
 The RPi2 has an Ethernet port. So, you could plug it in directly to your router, or a switch. However, I decided to get
-a USB WiFi dongle for my RPi2. It will be a great asset if you need to have the RPi2 working on a device that it is
+a USB WiFi dongle for my RPi2. It will be a great asset if you need to have the RPi2 working on a device that is in
 motion (for example an autonomous robot).
 
 So, after you plugin the RPi2, and it boots up into a desktop environment, play around with it. Make sure that you are
