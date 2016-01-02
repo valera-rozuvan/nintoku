@@ -116,6 +116,10 @@ Internet connection for the update to be successful!
 5. Upgrade software packages to their latest version (retrieved in the last step). Use the command `sudo aptitude
 upgrade`.
 
+6. Configure the locales. Add extra necessary locales with the command `sudo dpkg-reconfigure locales`.
+
+7. Change the system's time zone with the command `sudo dpkg-reconfigure tzdata`.
+
 
 SSH and VNC access
 ------------------
