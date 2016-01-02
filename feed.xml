@@ -4,13 +4,159 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2016-01-01T14:25:30+00:00</updated>
+<updated>2016-01-02T18:53:00+00:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[How to setup and configure Raspberry Pi 2]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/howto/raspberry/pi/how-to-setup-and-configure-raspberry-pi-2</link>
+  <id>http://valera-rozuvan.github.io/nintoku/howto/raspberry/pi/how-to-setup-and-configure-raspberry-pi-2</id>
+  <published>2016-01-02T18:40:07+00:00</published>
+  <updated>2016-01-02T18:40:07+00:00</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Recently I got a chance to work with a &lt;a href=&quot;https://www.raspberrypi.org/&quot;&gt;Raspberry Pi&lt;/a&gt;. The long term goal is to write an
+application for the Pi that will perform some video processing on a real-time video feed. But that’s for another post.
+Right now I want to sketch out the basic things that I did to get the Raspberry Pi up to speed.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-plan&quot;&gt;The plan&lt;/h2&gt;
+
+&lt;p&gt;OK. So first thing first. We need to get our
+&lt;a href=&quot;https://www.raspberrypi.org/products/raspberry-pi-2-model-b/&quot;&gt;Raspberry Pi 2 Model B&lt;/a&gt; (hardware revision code: a21041)
+up and running. This means:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install a &lt;a href=&quot;http://distrowatch.com/&quot;&gt;flavor&lt;/a&gt; of &lt;a href=&quot;https://en.wikipedia.org/wiki/Linux&quot;&gt;Linux&lt;/a&gt; on to our RPi2 (here,
+and onward, “RPi2” will mean “Raspberry Pi 2 Model B”).&lt;/li&gt;
+  &lt;li&gt;Boot it up, get some feedback from it (mouse, keyboard, display).&lt;/li&gt;
+  &lt;li&gt;Get it connected to the Internet (via LAN or WAN).&lt;/li&gt;
+  &lt;li&gt;Preform bare-minimum administrative tasks.&lt;/li&gt;
+  &lt;li&gt;Configure it for &lt;a href=&quot;https://en.wikipedia.org/wiki/Secure_Shell&quot;&gt;SSH&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Virtual_Network_Computing&quot;&gt;VNC&lt;/a&gt; access.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;os-installation&quot;&gt;OS installation&lt;/h2&gt;
+
+&lt;p&gt;Luckily for us, there exists a specifically crafted distribution of Linux for the RPi2. It’s
+&lt;a href=&quot;https://www.raspbian.org/&quot;&gt;Raspbian&lt;/a&gt;, a free operating system based on Debian optimized for the Raspberry Pi hardware.
+I found that the easiest path to get this OS onto the RPi2, is to get a prepared image from the Raspberry Pi Foundation.
+They are located here: &lt;a href=&quot;https://www.raspberrypi.org/downloads/raspbian/&quot;&gt;Download Raspbian for Raspberry Pi&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I got myself RASPBIAN JESSIE, Release date: 2015-11-21 (SHA-1: ce1654f4b0492b3bcc93b233f431539b3df2f813). The exact file
+is &lt;a href=&quot;https://downloads.raspberrypi.org/raspbian/images/raspbian-2015-11-24/2015-11-21-raspbian-jessie.zip&quot;&gt;2015-11-21-raspbian-jessie.zip&lt;/a&gt;.
+The zip archive contains an image file. The image file needs to be put onto a MicroSD card. I suggest that a class 10
+64GB MicroSD card is used for this task. The actual process of writing the image is handled by
+&lt;a href=&quot;http://sourceforge.net/projects/win32diskimager/&quot;&gt;Win32DiskImager utility&lt;/a&gt; (in the case of Microsoft Windows). You can
+read up on a more detailed process of how to install operating system images onto the RPi2 over at the official
+documentation page &lt;a href=&quot;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&quot;&gt;Installing Operating System Images - Raspberry Pi Documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;first-boot--first-test-of-rpi2&quot;&gt;First boot &amp;amp; first test of RPi2&lt;/h2&gt;
+
+&lt;p&gt;Connect all of your peripherals to the RPi2, insert the MicroSD card, and finally turn on the power! The first time I
+did this, it was quite an exciting moment = )&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2016_01_02/raspberry_pi_2_model_b_2048.jpg&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2016_01_02/raspberry_pi_2_model_b_1024.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;My Raspberry Pi 2 Model B setup&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;My hardware setup involves the following components:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;RPi2&lt;/li&gt;
+  &lt;li&gt;small PC fan + small CPU radiator&lt;/li&gt;
+  &lt;li&gt;HDMI display&lt;/li&gt;
+  &lt;li&gt;USB Hub with external power&lt;/li&gt;
+  &lt;li&gt;mouse&lt;/li&gt;
+  &lt;li&gt;keyboard&lt;/li&gt;
+  &lt;li&gt;USB WiFi dongle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I want to point out two important things about RPi2.&lt;/p&gt;
+
+&lt;p&gt;First, it comes with no cooling whatsoever! This means that If you
+are doing anything very CPU expensive for a long period of time, the CPU (among other things) can become very hot. I
+have observed temperature reading up to 60° Celsius. Buying a small radiator and a small PC fan to cool the CPU of the
+RPi2 is absolutely a must! I have tested my setup doing various resource intensive things (large software project
+compilation, ray tracing, video processing), and so far the temperature reading didn’t raise above 34° Celsius.&lt;/p&gt;
+
+&lt;p&gt;Second, consider the USB ports. Even though the RPi2 does have 4 USB ports, don’t expect it to be able to power 4
+power-hungry devices! It just can’t provide that much current for the above-average needs. The way out of this problem
+is to buy a USB Hub with external power. Make sure that you buy a hub that doesn’t feed back power to the RPi2!&lt;/p&gt;
+
+&lt;h2 id=&quot;the-internet-connection&quot;&gt;The Internet connection&lt;/h2&gt;
+
+&lt;p&gt;The RPi2 has an Ethernet port. So, you could plug it in directly to your router, or a switch. However, I decided to get
+a USB WiFi dongle for my RPi2. It will be a great asset if you need to have the RPi2 working on a device that it is
+motion (for example an autonomous robot).&lt;/p&gt;
+
+&lt;p&gt;So, after you plugin the RPi2, and it boots up into a desktop environment, play around with it. Make sure that you are
+able to access the Internet (open up a browser, and navigate to http://google.com/ ).&lt;/p&gt;
+
+&lt;h2 id=&quot;bare-minimum-administrative-tasks&quot;&gt;Bare-minimum administrative tasks&lt;/h2&gt;
+
+&lt;p&gt;There are several things one needs to do after first boot of RPi2.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Change the default password of the &lt;code&gt;pi&lt;/code&gt; user. You can do that using the &lt;code&gt;passwd&lt;/code&gt; command.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enlarge the amount of available memory on the MicroSD card. When you initially put the Raspbian image onto your
+MicroSD card, the image only takes about 3GB of space. Also, the MicroSD card’s partition table is set to this size
+(3GB). Therefore, the OS will only see the 3GB of space available - even if your card is 64GB in size! To fix this,
+use the available command &lt;code&gt;sudo raspi-config&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Next you need to update the RPi2 firmware. Use the available command &lt;code&gt;sudo rpi-update&lt;/code&gt;. NOTE: you need an active
+Internet connection for the update to be successful!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Update the package manager’s package database with the latest available package information. Use the command
+&lt;code&gt;sudo aptitude update&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Upgrade software packages to their latest version (retrieved in the last step). Use the command &lt;code&gt;sudo aptitude
+upgrade&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;ssh-and-vnc-access&quot;&gt;SSH and VNC access&lt;/h2&gt;
+
+&lt;p&gt;The first part is easy! If you have your RPi2 on a LAN, and another PC on the same LAN as the RPi2, then you can easily
+SSH to the RPi2 from your other computer. All you need is to find out the IP address of the RPi2. One way to get the IP
+is to run the command &lt;code&gt;sudo ifconfig&lt;/code&gt; on the RPi2, and see the output. The IP address will either be found in the &lt;code&gt;eth0&lt;/code&gt;
+section, or the &lt;code&gt;wlan0&lt;/code&gt; section (depending on whether you connected the RPi2 via an Ethernet cable or via a USB WiFi
+dongle). Now, just open up a console on your other PC, and type &lt;code&gt;ssh pi@192.168.1.203&lt;/code&gt; (in my case, “192.168.1.203” is
+the IP of my RPi2). If you are on a Windows machine, you can use &lt;a href=&quot;https://winscp.net/&quot;&gt;WinSCP&lt;/a&gt; and
+&lt;a href=&quot;http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html&quot;&gt;PuTTY&lt;/a&gt; to get access of the RPi2 through SSH.&lt;/p&gt;
+
+&lt;p&gt;Now on to VNC. In order to access RPi2 via VNC, you need to install a VNC server on the RPi2. One option is to use
+&lt;code&gt;tightvncserver&lt;/code&gt;. First, install it with the command &lt;code&gt;sudo aptitude install tightvncserver&lt;/code&gt;. Then configure the password
+for the server with the command &lt;code&gt;tightvncserver&lt;/code&gt;. Now you can start up the server with
+&lt;code&gt;vncserver :0 -geometry 800x600 -depth 24&lt;/code&gt;. NOTE: you can configure any resolution that you desire, not just &lt;code&gt;800x600&lt;/code&gt;.
+If everything went right, you can try connecting via VNC from another machine. On Windows you can use
+&lt;a href=&quot;http://www.tightvnc.com/&quot;&gt;TightVNC client&lt;/a&gt;. On Linux there are many options. I use &lt;code&gt;gvncviewer&lt;/code&gt;. To connect to an RPi2
+machine, use the command &lt;code&gt;gvncviewer 192.168.1.203:0&lt;/code&gt; (replace “192.168.1.203” with the IP address of your RPi2).&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I wrote this post mainly for myself. It took me about 2 days to figure out all of this. I hope that at least in part
+it will be of any use to you, my gentle readers = )&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/howto/raspberry/pi/how-to-setup-and-configure-raspberry-pi-2&quot;&gt;How to setup and configure Raspberry Pi 2&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on January 02, 2016.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1574,39 +1720,6 @@ added a third URL to the back-end:&lt;/p&gt;
 &lt;p&gt;This PR opens up a possibility to mock the YouTube API in acceptance tests.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend&quot;&gt;Namespacing all YouTube URLs on edX backend&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 24, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Seeking inspiration]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration</link>
-  <id>http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration</id>
-  <published>2014-03-21T19:16:09+00:00</published>
-  <updated>2014-03-21T19:16:09+00:00</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;Sometimes you come to a realization that what you do does not move you anymore.
-This should in no way make you drop what you are doing and fall into a despair.
-Simply step back, take a deep breath. Now look at what you are doing. Consider
-what impact it has on the outside world. Step into the shoes of another person,
-whom you are impacting. Your work must have real world value. Not just “one man
-show in your backyard woodshed”. With that knowledge, return back into your
-shoes.&lt;/p&gt;
-
-&lt;p&gt;Another point is that it pays to have a hobby, even a minor. It is very rewarding
-to switch to something you love doing after long hours of work. It should be
-totally different from your 8 hours that you spend daily working. The human
-mind works in strange ways. It likes a change of thought direction, visual
-input, and stimuli.&lt;/p&gt;
-
-&lt;p&gt;Finally, everything you do must have inspiration backing it. Not just a reward!
-Reward is something you get. Inspiration is that godly feeling that makes you
-do stuff without any reward = )&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration&quot;&gt;Seeking inspiration&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 21, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
