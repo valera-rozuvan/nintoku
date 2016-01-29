@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Namespacing all YouTube URLs on edX backend &#8211; Nintoku</title>
+<title>Jasmine toBeCloseTo() matcher &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Namespacing all YouTube URLs on edX backend">
+<meta name="twitter:title" content="Jasmine toBeCloseTo() matcher">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Namespacing all YouTube URLs on edX backend">
+<meta property="og:title" content="Jasmine toBeCloseTo() matcher">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/jasmine/jasmine-tobecloseto-matcher">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/jasmine/jasmine-tobecloseto-matcher">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/+ValeraRozuvan?rel=author">
 
@@ -133,17 +133,17 @@
       <header class="entry-header">
         <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">Namespacing all YouTube URLs on edX backend</h1>
+          <h1 class="entry-title" itemprop="headline">Jasmine toBeCloseTo() matcher</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera.rozuvan.net/" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-03-24T19:20:27+00:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> March 24, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2013-12-16T17:50:56+00:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> December 16, 2013</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend" rel="bookmark" title="Namespacing all YouTube URLs on edX backend" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
-        <span><a href="https://github.com/valera-rozuvan/nintoku/blob/master/site/_posts/2014-03-24-namespacing-all-youtube-urls-on-edx-backend.markdown">source of post</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/jasmine/jasmine-tobecloseto-matcher" rel="bookmark" title="Jasmine toBeCloseTo() matcher" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="https://github.com/valera-rozuvan/nintoku/blob/master/site/_posts/2013-12-16-jasmine-tobecloseto-matcher.markdown">source of post</a></span>
       </footer>
 
       <noscript>
@@ -169,37 +169,13 @@
 
 
       <div class="entry-content" id="entry-content-main" itemprop="description">
-        <p>Up to now, the backend defined 2 variables which stored YouTube related URLs:</p>
+        <p>Today I was faced with a problem of checking that a number was really close
+to another number, but not necessarily equal to it.
+<a href="http://pivotal.github.com/jasmine/">Jasmine</a> has a really nifty
+matcher <a href="https://github.com/pivotal/jasmine/blob/master/src/core/matchers/toBeCloseTo.js">toBeCloseTo()</a>
+just for this case. See the code below.</p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-python" data-lang="python">1
-2</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># URL to test YouTube availability</span>
-<span class="n">YOUTUBE_TEST_URL</span> <span class="o">=</span> <span class="s">&#39;https://gdata.youtube.com/feeds/api/videos/&#39;</span>
-</pre></div>
-</td></tr></table>
-
-<p>and</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-python" data-lang="python">1
-2
-3
-4
-5
-6</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># Current youtube api for requesting transcripts.</span>
-<span class="c"># for example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.</span>
-<span class="n">YOUTUBE_API</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="s">&quot;http://video.google.com/timedtext&quot;</span><span class="p">,</span>
-    <span class="s">&#39;params&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;lang&#39;</span><span class="p">:</span> <span class="s">&#39;en&#39;</span><span class="p">,</span> <span class="s">&#39;v&#39;</span><span class="p">:</span> <span class="s">&#39;set_youtube_id_of_11_symbols_here&#39;</span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>This was done in <a href="https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py"><code>cms/envs/common.py</code></a> file (lines 428, 532).</p>
-
-<p>I wanted to introduce a new URL which is responsible for YouTube API on
-the front-end. To do this, I have created a <code>YOUTUBE</code> namespace, and
-added a third URL to the back-end:</p>
-
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-python" data-lang="python"> 1
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -215,39 +191,39 @@ added a third URL to the back-end:</p>
 14
 15
 16
-17</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">YOUTUBE</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="c"># YouTube JavaScript API</span>
-    <span class="s">&#39;API&#39;</span><span class="p">:</span> <span class="s">&#39;www.youtube.com/iframe_api&#39;</span><span class="p">,</span>
+17
+18<td class="code"><span class="nx">getJasmineRequireObj</span><span class="p">().</span><span class="nx">toBeCloseTo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="c"># URL to test YouTube availability</span>
-    <span class="s">&#39;TEST_URL&#39;</span><span class="p">:</span> <span class="s">&#39;gdata.youtube.com/feeds/api/videos/&#39;</span><span class="p">,</span>
+    <span class="kd">function</span> <span class="nx">toBeCloseTo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="nx">compare</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">actual</span><span class="p">,</span> <span class="nx">expected</span><span class="p">,</span> <span class="nx">precision</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">precision</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">precision</span> <span class="o">=</span> <span class="nx">precision</span> <span class="o">||</span> <span class="mi">2</span><span class="p">;</span>
+                <span class="p">}</span>
 
-    <span class="c"># Current youtube api for requesting transcripts.</span>
-    <span class="c"># For example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.</span>
-    <span class="s">&#39;TEXT_API&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="s">&#39;video.google.com/timedtext&#39;</span><span class="p">,</span>
-        <span class="s">&#39;params&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s">&#39;lang&#39;</span><span class="p">:</span> <span class="s">&#39;en&#39;</span><span class="p">,</span>
-            <span class="s">&#39;v&#39;</span><span class="p">:</span> <span class="s">&#39;set_youtube_id_of_11_symbols_here&#39;</span><span class="p">,</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
+                <span class="k">return</span> <span class="p">{</span>
+                    <span class="nx">pass</span><span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">expected</span> <span class="o">-</span> <span class="nx">actual</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="nx">precision</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+                <span class="p">};</span>
+            <span class="p">}</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
 
-<p>The <a href="https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9">pull request</a> has just been merged in to <a href="https://github.com/edx/edx-platform">edx-platform master</a>.</p>
+    <span class="k">return</span> <span class="nx">toBeCloseTo</span><span class="p">;</span>
+<span class="p">};</span>
 
-<p>This PR opens up a possibility to mock the YouTube API in acceptance tests.</p>
+</td></pre>
+
+</div></td></tr></table></code></pre></figure>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration" class="btn" title="Seeking inspiration">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/html5/jquery/requirejs/template/simple-html5-template-with-jquery-and-require-js" class="btn" title="Simple HTML5 template with jQuery, and Require JS">Previous article</a>
       
       
-        <a href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency" class="btn" title="The New Age of JavaScript: Concurrency">Next article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/jekyll/code/highlighting/blog/code-highlighting-in-a-jekyll-based-blog" class="btn" title="Code highlighting in a Jekyll-based blog">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

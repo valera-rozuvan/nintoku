@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2016-01-02T19:11:34+00:00</updated>
+<updated>2016-01-29T07:37:50+00:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -282,17 +282,19 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
 
 &lt;p&gt;The HTML code snippet to set up this executable JavaScript sample is as follows:&lt;/p&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
 2
-3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;exec-me&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-js-source=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;module1-test1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+3&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;exec-me&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-js-source=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;module1-test1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;btn-run-js&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Run&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;The actual executable JavaScript is:&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; 1
+
+The actual executable JavaScript is:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
  2
  3
  4
@@ -342,7 +344,7 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
 48
 49
 50
-51&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+51&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;s1&quot;&gt;&amp;#39;use strict&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
   &lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;module1-test1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;jQuery&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -393,10 +395,12 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
     &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;Oh, I am going to have a fun time from now on = )&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
+
+
+Oh, I am going to have a fun time from now on = )
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/test/javascript/post/1st-test-executable-javascript-in-a-post&quot;&gt;1st test: Executable JavaScript in a post&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on July 24, 2015.&lt;/p&gt;</content>
 </entry>
@@ -445,7 +449,7 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
 
 &lt;p&gt;A &lt;a href=&quot;https://en.wikipedia.org/wiki/Futures_and_promises&quot;&gt;promise&lt;/a&gt; is a way to reduce this&lt;/p&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; 1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
  2
  3
  4
@@ -454,7 +458,7 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
  7
  8
  9
-10&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;asyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+10&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nx&quot;&gt;asyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;anotherAsyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calllback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -464,12 +468,14 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
         &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;to this&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; 1
+
+to this
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
  2
  3
  4
@@ -484,7 +490,7 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
 13
 14
 15
-16&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;asyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+16&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nx&quot;&gt;asyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// do something...&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;anotherAsyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
@@ -500,28 +506,30 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
    &lt;span class=&quot;c1&quot;&gt;// handle any error resulting from any of the above calls&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;The above two JavaScript excerpts have been taken from &lt;a href=&quot;http://12devs.co.uk/articles/promises-an-alternative-way-to-approach-asynchronous-javascript/&quot;&gt;Promises – an alternative way to approach asynchronous JavaScript&lt;/a&gt;.&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;p&gt;Several promise specification for JavaScript exist, &lt;em&gt;Promises/A+&lt;/em&gt; being the most widely used.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Promises/A &lt;a href=&quot;http://wiki.commonjs.org/wiki/Promises/A&quot;&gt;http://wiki.commonjs.org/wiki/Promises/A&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Promises/A+ &lt;a href=&quot;https://promisesaplus.com/&quot;&gt;https://promisesaplus.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;ES6 Promise Objects &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects&quot;&gt;http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+The above two JavaScript excerpts have been taken from [Promises – an alternative way to approach asynchronous JavaScript](http://12devs.co.uk/articles/promises-an-alternative-way-to-approach-asynchronous-javascript/).
 
-&lt;h2 id=&quot;the-problem-with-jquerys-promises&quot;&gt;The problem with jQuery’s promises&lt;/h2&gt;
+Several promise specification for JavaScript exist, *Promises/A+* being the most widely used.
 
-&lt;p&gt;jQuery’s promise implementation is pretty broken. It does not adheer to the Promises/A+ specification used by the vast majority of other promise implementations. See the &lt;a href=&quot;https://promisesaplus.com/implementations&quot;&gt;list of Promises/A+ implementations&lt;/a&gt;.&lt;/p&gt;
+1. Promises/A [http://wiki.commonjs.org/wiki/Promises/A](http://wiki.commonjs.org/wiki/Promises/A)
+2. Promises/A+ [https://promisesaplus.com/](https://promisesaplus.com/)
+3. ES6 Promise Objects [http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects](http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects)
 
-&lt;h2 id=&quot;an-illustration&quot;&gt;An illustration&lt;/h2&gt;
+The problem with jQuery&#39;s promises
+----------------------------------
 
-&lt;p&gt;Using the latest of either jQuery 1.x or 2.x, let’s write the following JavaScript test program:&lt;/p&gt;
+jQuery&#39;s promise implementation is pretty broken. It does not adheer to the Promises/A+ specification used by the vast majority of other promise implementations. See the [list of Promises/A+ implementations](https://promisesaplus.com/implementations).
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt; 1
+An illustration
+---------------
+
+Using the latest of either jQuery 1.x or 2.x, let&#39;s write the following JavaScript test program:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
  2
  3
  4
@@ -574,7 +582,7 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
 51
 52
 53
-54&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;syncWorkFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;asyncWorkFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+54&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;syncWorkFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;asyncWorkFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;nx&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;promiseTests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
@@ -628,19 +636,21 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;3.)&amp;lt;br /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;The output of the above JavaScript program will be:&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1
+
+The output of the above JavaScript program will be:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
 2
 3
 4
 5
 6
 7
-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;0.) myObject.state = null
+8&lt;td class=&quot;code&quot;&gt;0.) myObject.state = null
 [THEN #1] Setting myObject.state to &amp;quot;X&amp;quot;.
 1.) Setting myObject.state to &amp;quot;A&amp;quot;.
 2.) myObject.state = A
@@ -648,21 +658,23 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
 [THEN #3] myObject.state = A
 [THEN #4] myObject.state = A
 3.)
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;Two things went wrong here. All of &lt;code&gt;THEN {#}&lt;/code&gt; logs should be at the end of the output. Also, and this is most important of all, in the end &lt;code&gt;myObject.state&lt;/code&gt; did not change to &lt;code&gt;&quot;X&quot;&lt;/code&gt;!&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;p&gt;If we use a real Promise/A+ implementation, we will get:&lt;/p&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1
+Two things went wrong here. All of &lt;code&gt;THEN {#}&lt;/code&gt; logs should be at the end of the output. Also, and this is most important of all, in the end &lt;code&gt;myObject.state&lt;/code&gt; did not change to &lt;code&gt;&quot;X&quot;&lt;/code&gt;!
+
+If we use a real Promise/A+ implementation, we will get:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
 2
 3
 4
 5
 6
 7
-8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;0.) myObject.state = null
+8&lt;td class=&quot;code&quot;&gt;0.) myObject.state = null
 1.) Setting myObject.state to &amp;quot;A&amp;quot;.
 2.) myObject.state = A
 3.)
@@ -670,28 +682,30 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
 [THEN #2] myObject.state = X
 [THEN #3] myObject.state = X
 [THEN #4] myObject.state = X
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;You can see these results for yourself. A JS Fiddle has been setup with jQuery 2.1.4 &lt;a href=&quot;https://jsfiddle.net/4988rggu/4/&quot;&gt;here&lt;/a&gt;. For valid Promise/A+ implementation I chose Angular JS. It’s promise system &lt;a href=&quot;https://docs.angularjs.org/api/ng/service/$q&quot;&gt;$q&lt;/a&gt; is based on &lt;a href=&quot;https://github.com/kriskowal/q&quot;&gt;Kris Kowal’s Q&lt;/a&gt;. A JS Fiddle has been setup with Angular JS 1.4.2 &lt;a href=&quot;https://jsfiddle.net/xfmetfoL/4/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;when-will-promises-be-fixed-in-jquery&quot;&gt;When will promises be fixed in jQuery?&lt;/h2&gt;
 
-&lt;p&gt;When jQuery 3.0 comes out. Refer to the blog post &lt;a href=&quot;http://blog.jquery.com/2014/10/29/jquery-3-0-the-next-generations/&quot;&gt;jQuery 3.0: The Next Generations&lt;/a&gt;, and also &lt;a href=&quot;https://github.com/jquery/jquery/pull/1996&quot;&gt;jQuery’s work on getting their promises to pass the Promises/A+ test suite&lt;/a&gt;.&lt;/p&gt;
+You can see these results for yourself. A JS Fiddle has been setup with jQuery 2.1.4 [here](https://jsfiddle.net/4988rggu/4/). For valid Promise/A+ implementation I chose Angular JS. It&#39;s promise system [$q](https://docs.angularjs.org/api/ng/service/$q) is based on [Kris Kowal&#39;s Q](https://github.com/kriskowal/q). A JS Fiddle has been setup with Angular JS 1.4.2 [here](https://jsfiddle.net/xfmetfoL/4/).
 
-&lt;h2 id=&quot;useful-links&quot;&gt;Useful links&lt;/h2&gt;
+When will promises be fixed in jQuery?
+--------------------------------------
 
-&lt;p&gt;The problem discussed in this post is a well known one. It has been discussed previously by other people on the Internet. Be sure to go over all of the following resources:&lt;/p&gt;
+When jQuery 3.0 comes out. Refer to the blog post [jQuery 3.0: The Next Generations](http://blog.jquery.com/2014/10/29/jquery-3-0-the-next-generations/), and also [jQuery&#39;s work on getting their promises to pass the Promises/A+ test suite](https://github.com/jquery/jquery/pull/1996).
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/domenic/3889970&quot;&gt;You’re Missing the Point of Promises&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/17617545/working-with-jquery-promises&quot;&gt;working with jQuery promises&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://thewayofcode.wordpress.com/2013/01/22/javascript-promises-and-why-jquery-implementation-is-broken/&quot;&gt;JAVASCRIPT PROMISES AND WHY JQUERY IMPLEMENTATION IS BROKEN&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://abdulapopoola.com/2014/12/12/the-differences-between-jquery-deferreds-and-the-promisesa-spec/&quot;&gt;The Differences between jQuery Deferreds and the Promises/A+ spec&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/23744612/problems-inherent-to-jquery-deferred&quot;&gt;Problems inherent to jQuery $.Deferred&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/kriskowal/q/wiki/Coming-from-jQuery&quot;&gt;Coming from jQuery&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jquery/jquery/pull/1996&quot;&gt;Deferred: Backwards-compatible standards interoperability&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+Useful links
+------------
+
+The problem discussed in this post is a well known one. It has been discussed previously by other people on the Internet. Be sure to go over all of the following resources:
+
+1. [You&#39;re Missing the Point of Promises](https://gist.github.com/domenic/3889970)
+2. [working with jQuery promises](http://stackoverflow.com/questions/17617545/working-with-jquery-promises)
+3. [JAVASCRIPT PROMISES AND WHY JQUERY IMPLEMENTATION IS BROKEN](https://thewayofcode.wordpress.com/2013/01/22/javascript-promises-and-why-jquery-implementation-is-broken/)
+4. [The Differences between jQuery Deferreds and the Promises/A+ spec](http://abdulapopoola.com/2014/12/12/the-differences-between-jquery-deferreds-and-the-promisesa-spec/)
+5. [Problems inherent to jQuery $.Deferred](http://stackoverflow.com/questions/23744612/problems-inherent-to-jquery-deferred)
+6. [Coming from jQuery](https://github.com/kriskowal/q/wiki/Coming-from-jQuery)
+7. [Deferred: Backwards-compatible standards interoperability](https://github.com/jquery/jquery/pull/1996)
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/jquery/promises/jquery-broken-promises-illustrated&quot;&gt;jQuery broken promises illustrated&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on July 08, 2015.&lt;/p&gt;</content>
 </entry>
@@ -719,32 +733,37 @@ So is the case with Sublime Text 3 editor.&lt;/p&gt;
 
 &lt;p&gt;To add a menu launcher for Sublime, create a file:&lt;/p&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;~/.menu/subl
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1&lt;td class=&quot;code&quot;&gt; ~/.menu/subl
 
-&lt;p&gt;with the following contents:&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1
+
+with the following contents:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
 2
 3
 4
 5
-6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;?package(sublime-text):needs=&amp;quot;X11&amp;quot;\
+6&lt;td class=&quot;code&quot;&gt;?package(sublime-text):needs=&amp;quot;X11&amp;quot;\
   section=&amp;quot;Applications/Editors&amp;quot;\
   hints=&amp;quot;Text editor&amp;quot;\
   longtitle=&amp;quot;Sublime Text 3&amp;quot;\
   title=&amp;quot;Sublime&amp;quot;\
   command=&amp;quot;/usr/bin/subl&amp;quot;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;Then update the Debian menu with the following command:&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;sudo update-menus -v --menufilesdir&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.menu
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
+Then update the Debian menu with the following command:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1&lt;td class=&quot;code&quot;&gt;sudo update-menus -v --menufilesdir&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.menu
+
+&lt;/td&gt;&lt;/pre&gt;
+
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu&quot;&gt;Adding Sublime Text to Debian menu&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 15, 2015.&lt;/p&gt;</content>
 </entry>
@@ -800,7 +819,7 @@ client which submits information about tracks being played to audioscrobbler.&lt
 &lt;p&gt;Below are the configuration files for &lt;strong&gt;MPD&lt;/strong&gt; and &lt;strong&gt;mpdscribble&lt;/strong&gt;. I am placing
 them here for the curious soul, and for my own reference.&lt;/p&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt; 1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
  2
  3
  4
@@ -817,7 +836,7 @@ them here for the curious soul, and for my own reference.&lt;/p&gt;
 15
 16
 17
-18&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;$ cat ~/.mpd.d/mpd.conf
+18&lt;td class=&quot;code&quot;&gt;$ cat ~/.mpd.d/mpd.conf
 follow_outside_symlinks &amp;quot;no&amp;quot;
 follow_inside_symlinks &amp;quot;no&amp;quot;
 db_file &amp;quot;/home/valera/.mpd.d/db&amp;quot;
@@ -835,47 +854,55 @@ audio_output {
     type &amp;quot;alsa&amp;quot;
     name &amp;quot;AlsaOut1&amp;quot;
 }
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;/td&gt;&lt;/pre&gt;
+
 
 &lt;p&gt;&lt;/p&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
 2
 3
 4
 5
-6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;$ cat ~/.mpdscribble/mpdscribble.conf
+6&lt;td class=&quot;code&quot;&gt;$ cat ~/.mpdscribble/mpdscribble.conf
 url = http://post.audioscrobbler.com
 username = valerarozuvan
 password = your_password
 
 pidfile = /home/valera/.mpdscribble/pid
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;Update your &lt;code&gt;init.d&lt;/code&gt; script for &lt;strong&gt;MPD&lt;/strong&gt; to point to your configuration file.
-In my case I have a line in the file &lt;code&gt;/etc/init.d/mpd&lt;/code&gt;:&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;MPDCONF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/valera/.mpd.d/mpd.conf
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;Also, update the configuration file &lt;code&gt;/etc/default/mpdscribble&lt;/code&gt; for
-&lt;strong&gt;mpdscribble&lt;/strong&gt; so it has the following lines:&lt;/p&gt;
+Update your `init.d` script for **MPD** to point to your configuration file.
+In my case I have a line in the file `/etc/init.d/mpd`:
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;1
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MPDCONF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/valera/.mpd.d/mpd.conf
+
+&lt;/td&gt;&lt;/pre&gt;
+
+
+Also, update the configuration file `/etc/default/mpdscribble` for
+**mpdscribble** so it has the following lines:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
 2
-3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;MPD_SYSTEMWIDE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+3&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MPD_SYSTEMWIDE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
 &lt;span class=&quot;nv&quot;&gt;DAEMON_OPTS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&amp;quot;&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;valera
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;PLEASE NOTE: In all of the above files, make sure to update the paths
-of files so that they contain your Linux user name!&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;p&gt;Enjoy!&lt;/p&gt;
+
+**PLEASE NOTE: In all of the above files, make sure to update the paths
+of files so that they contain your Linux user name!**
+
+Enjoy!
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scrobbling/last-fm/linux/scrobbling-to-lastfm-from-linux&quot;&gt;Scrobbling to Last.fm from Linux&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on June 15, 2014.&lt;/p&gt;</content>
 </entry>
@@ -1180,29 +1207,31 @@ second heavy function by setting &lt;code&gt;enableHeavyFunction&lt;/code&gt; to
 because of the heavy function’s random nature, in some cases half way
 through execution an error is raised&lt;/p&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
 2
-3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;Error: invalid arguments
+3&lt;td class=&quot;code&quot;&gt;Error: invalid arguments
 
 this.spectrum   = new Float32Array(bufferSize/2);
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;&lt;code&gt;bufferSize&lt;/code&gt; is to big, and Firefox JavaScript engine throws an error.
+&lt;/td&gt;&lt;/pre&gt;
+
+
+`bufferSize` is to big, and Firefox JavaScript engine throws an error.
 Because of this, the fact that the heavy function ran is not registered
 in the output. So it appears that for three or four small functions only
 one heavy function is run. This is not so. Both functions run one after
 the other. It is just that the heavy function sometimes errors, and no
-output for it is written.&lt;/p&gt;
+output for it is written.
 
-&lt;p&gt;In Chrome this behavior did not happen because either it allows arbitrary
-first argument to &lt;code&gt;Float32Array&lt;/code&gt; function, or it sets the first argument
-to some predefined maximum value.&lt;/p&gt;
+In Chrome this behavior did not happen because either it allows arbitrary
+first argument to `Float32Array` function, or it sets the first argument
+to some predefined maximum value.
 
-&lt;p&gt;In any case, I have updated &lt;a href=&quot;http://jsfiddle.net/k2h7Z/37&quot;&gt;the JSFiddle&lt;/a&gt;
+In any case, I have updated [the JSFiddle](http://jsfiddle.net/k2h7Z/37)
 to use a blocking function instead of the really large function. As can
 be seen, it clearly shows that JavaScript is single-threaded across all
-browsers.&lt;/p&gt;
+browsers.
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/updates/javascript/concurrency/new-age/update-the-new-age-of-javascript-concurrency&quot;&gt;UPDATE: The New Age of JavaScript: Concurrency&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
 </entry>
@@ -1500,7 +1529,7 @@ one after the other, in the order of &lt;code&gt;window.setInterval&lt;/code&gt;
 
 &lt;p&gt;So, to be more precise, if we have the following code:&lt;/p&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt; 1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
  2
  3
  4
@@ -1511,7 +1540,7 @@ one after the other, in the order of &lt;code&gt;window.setInterval&lt;/code&gt;
  9
 10
 11
-12&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeout1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+12&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeout1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;timeout2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -1523,12 +1552,14 @@ one after the other, in the order of &lt;code&gt;window.setInterval&lt;/code&gt;
 &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeoutFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;will we see on the page:&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt; 1
+
+will we see on the page:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
  2
  3
  4
@@ -1540,7 +1571,7 @@ one after the other, in the order of &lt;code&gt;window.setInterval&lt;/code&gt;
 10
 11
 12
-13&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;1
+13&lt;td class=&quot;code&quot;&gt;1
 2
 1
 2
@@ -1553,15 +1584,17 @@ one after the other, in the order of &lt;code&gt;window.setInterval&lt;/code&gt;
 1
 2
 ...
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;An interesting question. To further complicate things, what if one of
+&lt;/td&gt;&lt;/pre&gt;
+
+
+An interesting question. To further complicate things, what if one of
 the periodically invoked functions did something else besides outputting
 a number to the page. What if it took a long time to run, i.e. it would
-execute 5 to 10 times longer? Would we then see something like this:&lt;/p&gt;
+execute 5 to 10 times longer? Would we then see something like this:
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt; 1
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
  2
  3
  4
@@ -1573,7 +1606,7 @@ execute 5 to 10 times longer? Would we then see something like this:&lt;/p&gt;
 10
 11
 12
-13&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;2
+13&lt;td class=&quot;code&quot;&gt;2
 2
 2
 2
@@ -1586,42 +1619,39 @@ execute 5 to 10 times longer? Would we then see something like this:&lt;/p&gt;
 2
 2
 ...
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;I have done a lot of reading on the subject of JavaScript concurrency,
+&lt;/td&gt;&lt;/pre&gt;
+
+
+I have done a lot of reading on the subject of JavaScript concurrency,
 parallelism, etc. I have started to believe that in the second example
-above the two functions would still execute one after the other.&lt;/p&gt;
+above the two functions would still execute one after the other.
 
-&lt;p&gt;Then, today, I decided to write such a test, and see for myself what
+Then, today, I decided to write such a test, and see for myself what
 would actually happen. I have created a JSFiddle to
-&lt;a href=&quot;http://jsfiddle.net/k2h7Z/34&quot;&gt;test this out&lt;/a&gt;.
-The results were quite surprising for me.&lt;/p&gt;
+[test this out](http://jsfiddle.net/k2h7Z/34).
+The results were quite surprising for me.
 
-&lt;p&gt;I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
+I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
 In all browsers except Firefox the two function ran one after the other.
 In Firefox, though, the more CPU expensive function was running in parallel
 with the fast function. I drew this conclusion for the fact that the slow
 function managed to output once in the same time that the fast function
-outputted several times.&lt;/p&gt;
+outputted several times.
 
-&lt;blockquote&gt;
-  &lt;p&gt;In Firefox, though, the more CPU expensive function was running in parallel
-with the fast function.&lt;/p&gt;
-&lt;/blockquote&gt;
+&amp;gt; In Firefox, though, the more CPU expensive function was running in parallel
+with the fast function.
 
-&lt;p&gt;I have used the following versions of the browsers:&lt;/p&gt;
+I have used the following versions of the browsers:
 
-&lt;ul&gt;
-  &lt;li&gt;Internet Explorer 10.0.9200.16576&lt;/li&gt;
-  &lt;li&gt;Opera 20.0.1387.82&lt;/li&gt;
-  &lt;li&gt;Google Chrome 33.0.1750.154&lt;/li&gt;
-  &lt;li&gt;Firefox 28.0&lt;/li&gt;
-&lt;/ul&gt;
+- Internet Explorer 10.0.9200.16576
+- Opera 20.0.1387.82
+- Google Chrome 33.0.1750.154
+- Firefox 28.0
 
-&lt;p&gt;Tested on an Intel x86 quad core machine running Windows 7.&lt;/p&gt;
+Tested on an Intel x86 quad core machine running Windows 7.
 
-&lt;p&gt;Here are the screenshots of the results.&lt;/p&gt;
+Here are the screenshots of the results.
 
 &lt;figure&gt;
     &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png&quot; /&gt;&lt;/a&gt;
@@ -1639,6 +1669,7 @@ with the fast function.&lt;/p&gt;
     &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png&quot; /&gt;&lt;/a&gt;
     &lt;figcaption&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png&quot; title=&quot;Firefox&quot;&gt;Firefox&lt;/a&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency&quot;&gt;The New Age of JavaScript: Concurrency&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 02, 2014.&lt;/p&gt;</content>
 </entry>
@@ -1657,35 +1688,39 @@ with the fast function.&lt;/p&gt;
   </author>
   <content type="html">&lt;p&gt;Up to now, the backend defined 2 variables which stored YouTube related URLs:&lt;/p&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;1
-2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
+2&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;YOUTUBE_TEST_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;https://gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;and&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;1
+
+and
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
 2
 3
 4
 5
-6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
+6&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# for example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;YOUTUBE_API&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;s&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://video.google.com/timedtext&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;s&quot;&gt;&amp;#39;params&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;lang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;This was done in &lt;a href=&quot;https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py&quot;&gt;&lt;code&gt;cms/envs/common.py&lt;/code&gt;&lt;/a&gt; file (lines 428, 532).&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;p&gt;I wanted to introduce a new URL which is responsible for YouTube API on
-the front-end. To do this, I have created a &lt;code&gt;YOUTUBE&lt;/code&gt; namespace, and
-added a third URL to the back-end:&lt;/p&gt;
 
-&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt; 1
+This was done in [`cms/envs/common.py`](https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py) file (lines 428, 532).
+
+I wanted to introduce a new URL which is responsible for YouTube API on
+the front-end. To do this, I have created a `YOUTUBE` namespace, and
+added a third URL to the back-end:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
  2
  3
  4
@@ -1701,7 +1736,7 @@ added a third URL to the back-end:&lt;/p&gt;
 14
 15
 16
-17&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;YOUTUBE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+17&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;n&quot;&gt;YOUTUBE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;c&quot;&gt;# YouTube JavaScript API&lt;/span&gt;
     &lt;span class=&quot;s&quot;&gt;&amp;#39;API&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;www.youtube.com/iframe_api&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 
@@ -1718,12 +1753,14 @@ added a third URL to the back-end:&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;The &lt;a href=&quot;https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9&quot;&gt;pull request&lt;/a&gt; has just been merged in to &lt;a href=&quot;https://github.com/edx/edx-platform&quot;&gt;edx-platform master&lt;/a&gt;.&lt;/p&gt;
+&lt;/td&gt;&lt;/pre&gt;
 
-&lt;p&gt;This PR opens up a possibility to mock the YouTube API in acceptance tests.&lt;/p&gt;
+
+The [pull request](https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9) has just been merged in to [edx-platform master](https://github.com/edx/edx-platform).
+
+This PR opens up a possibility to mock the YouTube API in acceptance tests.
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend&quot;&gt;Namespacing all YouTube URLs on edX backend&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 24, 2014.&lt;/p&gt;</content>
 </entry>

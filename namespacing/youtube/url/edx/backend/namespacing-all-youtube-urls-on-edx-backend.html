@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Adding Sublime Text to Debian menu &#8211; Nintoku</title>
+<title>Namespacing all YouTube URLs on edX backend &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta name="keywords" content="sublime, text, debian, menu">
+<meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Adding Sublime Text to Debian menu">
+<meta name="twitter:title" content="Namespacing all YouTube URLs on edX backend">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Adding Sublime Text to Debian menu">
+<meta property="og:title" content="Namespacing all YouTube URLs on edX backend">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/+ValeraRozuvan?rel=author">
 
@@ -131,19 +131,19 @@
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <span class="entry-tags"><a href="http://valera-rozuvan.github.io/nintoku/tags#sublime" title="Pages tagged sublime" rel="tag">sublime</a>&nbsp;&bull;&nbsp;<a href="http://valera-rozuvan.github.io/nintoku/tags#text" title="Pages tagged text" rel="tag">text</a>&nbsp;&bull;&nbsp;<a href="http://valera-rozuvan.github.io/nintoku/tags#debian" title="Pages tagged debian" rel="tag">debian</a>&nbsp;&bull;&nbsp;<a href="http://valera-rozuvan.github.io/nintoku/tags#menu" title="Pages tagged menu" rel="tag">menu</a></span>
+        <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">Adding Sublime Text to Debian menu</h1>
+          <h1 class="entry-title" itemprop="headline">Namespacing all YouTube URLs on edX backend</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera.rozuvan.net/" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2015-03-15T00:00:00+00:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> March 15, 2015</time></span>
+        <span class="entry-date date published"><time datetime="2014-03-24T19:20:27+00:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> March 24, 2014</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu" rel="bookmark" title="Adding Sublime Text to Debian menu" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
-        <span><a href="https://github.com/valera-rozuvan/nintoku/blob/master/site/_posts/2015-03-15-adding-sublime-text-to-debian-menu.markdown">source of post</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend" rel="bookmark" title="Namespacing all YouTube URLs on edX backend" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="https://github.com/valera-rozuvan/nintoku/blob/master/site/_posts/2014-03-24-namespacing-all-youtube-urls-on-edx-backend.markdown">source of post</a></span>
       </footer>
 
       <noscript>
@@ -169,53 +169,91 @@
 
 
       <div class="entry-content" id="entry-content-main" itemprop="description">
-        <p>I am currently using Debian 7 Wheezy. When installing the system, I didn’t
-go with Gnome, and opted for a much simpler Blackbox window manager. Blackbox
-out of the bocks integrates the Debian menu into it’s context menu (right
-click anywhere on the desktop to get the context drop-down). Most of the
-applications you install using the dpkg system come pre-configured to add
-friendly launch entries into the Debian menu. However, sometimes after you
-install an application you find that you can only launch it from the terminal.
-So is the case with Sublime Text 3 editor.</p>
+        <p>Up to now, the backend defined 2 variables which stored YouTube related URLs:</p>
 
-<p>To add a menu launcher for Sublime, create a file:</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2<td class="code"><span class="c"># URL to test YouTube availability</span>
+<span class="n">YOUTUBE_TEST_URL</span> <span class="o">=</span> <span class="s">&#39;https://gdata.youtube.com/feeds/api/videos/&#39;</span>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text">1</code></pre></div></td><td class="code"><div class="highlight"><pre>~/.menu/subl
-</pre></div>
-</td></tr></table>
+</td></pre>
 
-<p>with the following contents:</p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text">1
+and
+
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
 5
-6</code></pre></div></td><td class="code"><div class="highlight"><pre>?package(sublime-text):needs=&quot;X11&quot;\
-  section=&quot;Applications/Editors&quot;\
-  hints=&quot;Text editor&quot;\
-  longtitle=&quot;Sublime Text 3&quot;\
-  title=&quot;Sublime&quot;\
-  command=&quot;/usr/bin/subl&quot;
-</pre></div>
-</td></tr></table>
+6<td class="code"><span class="c"># Current youtube api for requesting transcripts.</span>
+<span class="c"># for example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.</span>
+<span class="n">YOUTUBE_API</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="s">&quot;http://video.google.com/timedtext&quot;</span><span class="p">,</span>
+    <span class="s">&#39;params&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;lang&#39;</span><span class="p">:</span> <span class="s">&#39;en&#39;</span><span class="p">,</span> <span class="s">&#39;v&#39;</span><span class="p">:</span> <span class="s">&#39;set_youtube_id_of_11_symbols_here&#39;</span><span class="p">}</span>
+<span class="p">}</span>
 
-<p>Then update the Debian menu with the following command:</p>
+</td></pre>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-bash" data-lang="bash">1</code></pre></div></td><td class="code"><div class="highlight"><pre>sudo update-menus -v --menufilesdir<span class="o">=</span>~/.menu
-</pre></div>
-</td></tr></table>
 
+This was done in [`cms/envs/common.py`](https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py) file (lines 428, 532).
+
+I wanted to introduce a new URL which is responsible for YouTube API on
+the front-end. To do this, I have created a `YOUTUBE` namespace, and
+added a third URL to the back-end:
+
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17<td class="code"><span class="n">YOUTUBE</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c"># YouTube JavaScript API</span>
+    <span class="s">&#39;API&#39;</span><span class="p">:</span> <span class="s">&#39;www.youtube.com/iframe_api&#39;</span><span class="p">,</span>
+
+    <span class="c"># URL to test YouTube availability</span>
+    <span class="s">&#39;TEST_URL&#39;</span><span class="p">:</span> <span class="s">&#39;gdata.youtube.com/feeds/api/videos/&#39;</span><span class="p">,</span>
+
+    <span class="c"># Current youtube api for requesting transcripts.</span>
+    <span class="c"># For example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.</span>
+    <span class="s">&#39;TEXT_API&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="s">&#39;video.google.com/timedtext&#39;</span><span class="p">,</span>
+        <span class="s">&#39;params&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">&#39;lang&#39;</span><span class="p">:</span> <span class="s">&#39;en&#39;</span><span class="p">,</span>
+            <span class="s">&#39;v&#39;</span><span class="p">:</span> <span class="s">&#39;set_youtube_id_of_11_symbols_here&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+
+</td></pre>
+
+
+The [pull request](https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9) has just been merged in to [edx-platform master](https://github.com/edx/edx-platform).
+
+This PR opens up a possibility to mock the YouTube API in acceptance tests.
+</div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/scrobbling/last-fm/linux/scrobbling-to-lastfm-from-linux" class="btn" title="Scrobbling to Last.fm from Linux">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/seeking/inspiration/seeking-inspiration" class="btn" title="Seeking inspiration">Previous article</a>
       
       
-        <a href="http://valera-rozuvan.github.io/nintoku/jquery/promises/jquery-broken-promises-illustrated" class="btn" title="jQuery broken promises illustrated">Next article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency" class="btn" title="The New Age of JavaScript: Concurrency">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

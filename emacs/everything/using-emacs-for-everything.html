@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>The New Age of JavaScript: Concurrency &#8211; Nintoku</title>
+<title>Using Emacs for everything &#8211; Nintoku</title>
 <meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="The New Age of JavaScript: Concurrency">
+<meta name="twitter:title" content="Using Emacs for everything">
 <meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The New Age of JavaScript: Concurrency">
+<meta property="og:title" content="Using Emacs for everything">
 <meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/+ValeraRozuvan?rel=author">
 
@@ -133,17 +133,17 @@
       <header class="entry-header">
         <span class="entry-tags"></span>
         
-          <h1 class="entry-title" itemprop="headline">The New Age of JavaScript: Concurrency</h1>
+          <h1 class="entry-title" itemprop="headline">Using Emacs for everything</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera.rozuvan.net/" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-04-02T03:43:14+00:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> April 02, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-03-17T18:54:59+00:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> March 17, 2014</time></span>
         
         
-        <span><a href="http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency" rel="bookmark" title="The New Age of JavaScript: Concurrency" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
-        <span><a href="https://github.com/valera-rozuvan/nintoku/blob/master/site/_posts/2014-04-02-the-new-age-of-javascript-concurrency.markdown">source of post</a></span>
+        <span><a href="http://valera-rozuvan.github.io/nintoku/emacs/everything/using-emacs-for-everything" rel="bookmark" title="Using Emacs for everything" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="https://github.com/valera-rozuvan/nintoku/blob/master/site/_posts/2014-03-17-using-emacs-for-everything.markdown">source of post</a></span>
       </footer>
 
       <noscript>
@@ -169,54 +169,34 @@
 
 
       <div class="entry-content" id="entry-content-main" itemprop="description">
-        <p><strong>UPDATE: This post is based on an error. <a href="http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency">See why.</a></strong></p>
+        <p>When you are working with some console application such as <a href="http://git-scm.com">git</a>, it is often
+the case that a text editor is launched by the console application for you to edit some text. By
+default in Debian you get <a href="http://www.nano-editor.org">nano</a>, which is an OK editor. However,
+what if you wanted to use Emacs for all text editing?</p>
 
-<p>It has long been known to me that the
-<a href="http://en.wikipedia.org/wiki/JavaScript">JavaScript language</a>
-(the browser variety) is single-threaded. I.e. at any one time there is
-a single thread running JavaScript code. This means that at one time
-only one function can be running. A more detailed explanation of this
-fact is discussed by <a href="http://ejohn.org/about">John Resig</a> in his
-<a href="http://ejohn.org/blog/how-javascript-timers-work">How JavaScript Timers Work</a>
-post.</p>
+<p>Luckily, the Debian provides a really easy way to specify alternatives to just about any application.
+Try running</p>
 
-<p>A natural question arises. If you use the
-<a href="https://developer.mozilla.org/en/docs/Web/API/window.setInterval">window.setInterval</a>
-method to get two functions to execute periodically at the same interval,
-will they always (and for all time, while the browser is open) execute
-one after the other, in the order of <code>window.setInterval</code> invocation?</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1<td class="code">sudo update-alternatives --config editor
 
-<p>So, to be more precise, if we have the following code:</p>
+</td></pre>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-javascript" data-lang="javascript"> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">timeout1</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc1</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
-    <span class="nx">timeout2</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc2</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">timeoutFunc1</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// It is given that window.output() is defined, and writes</span>
-    <span class="c1">// it&#39;s parameter to the page for the user to see.</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+You will get a list of all available choices, and a prompt to set the default editor. We will create
+our own little [Bash script](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) that will launch
+Emacs for us whenever the text editor is invoked. We will update the alternatives to set the default
+editor to point to our script.
 
-<span class="kd">function</span> <span class="nx">timeoutFunc2</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
+For easy manipulation of the Debian alternatives I suggest the use of
+[galternatives](https://packages.debian.org/wheezy/galternatives). Running this tool, you can select
+the `editor` from the alternatives panel. Then you can add a new alternative pointing to
+`/home/user_name/bin/editor`, and make sure it is selected.
 
-<p>will we see on the page:</p>
+Next create a new file `/home/user_name/bin/editor`, make sure that it is executable, and add the
+following contents to it:
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text"> 1
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -228,115 +208,58 @@ one after the other, in the order of <code>window.setInterval</code> invocation?
 10
 11
 12
-13</code></pre></div></td><td class="code"><div class="highlight"><pre>1
-2
-1
-2
-1
-2
-1
-2
-1
-2
-1
-2
-...
-</pre></div>
-</td></tr></table>
+13
+14
+15
+16
+17<td class="code"><span class="c">#!/bin/bash</span>
 
-<p>An interesting question. To further complicate things, what if one of
-the periodically invoked functions did something else besides outputting
-a number to the page. What if it took a long time to run, i.e. it would
-execute 5 to 10 times longer? Would we then see something like this:</p>
+<span class="nv">num_emacs_servers</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -i <span class="s2">&quot;[e]macs24-x&quot;</span> <span class="p">|</span> wc -l<span class="sb">`</span>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-text" data-lang="text"> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</code></pre></div></td><td class="code"><div class="highlight"><pre>2
-2
-2
-2
-1
-2
-2
-2
-1
-2
-2
-2
-...
-</pre></div>
-</td></tr></table>
+<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$num_emacs_servers&quot;</span> -eq <span class="s2">&quot;1&quot;</span> <span class="o">]]</span>
+<span class="k">then</span>
+    <span class="c"># Starting emacsclient</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Starting emacsclient&quot;</span>
+    <span class="nb">exec</span> /usr/bin/emacsclient <span class="nv">$@</span>
+<span class="k">else</span>
+    <span class="c"># Starting emacs server</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Starting emacs24-x&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;num_emacs_servers = ${num_emacs_servers}&quot;</span>
+    <span class="nb">exec</span> /usr/bin/emacs24-x <span class="nv">$@</span>
+<span class="k">fi</span>
 
-<p>I have done a lot of reading on the subject of JavaScript concurrency,
-parallelism, etc. I have started to believe that in the second example
-above the two functions would still execute one after the other.</p>
+<span class="nb">exit </span>0
 
-<p>Then, today, I decided to write such a test, and see for myself what
-would actually happen. I have created a JSFiddle to
-<a href="http://jsfiddle.net/k2h7Z/34">test this out</a>.
-The results were quite surprising for me.</p>
+</td></pre>
 
-<p>I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
-In all browsers except Firefox the two function ran one after the other.
-In Firefox, though, the more CPU expensive function was running in parallel
-with the fast function. I drew this conclusion for the fact that the slow
-function managed to output once in the same time that the fast function
-outputted several times.</p>
 
-<blockquote>
-  <p>In Firefox, though, the more CPU expensive function was running in parallel
-with the fast function.</p>
-</blockquote>
+Also, update the alternatives for `emacs`, setting it to `/home/user_name/bin/editor`.
 
-<p>I have used the following versions of the browsers:</p>
+Now, whenever you run emacs, or some other command runs the text editor, you will:
 
-<ul>
-  <li>Internet Explorer 10.0.9200.16576</li>
-  <li>Opera 20.0.1387.82</li>
-  <li>Google Chrome 33.0.1750.154</li>
-  <li>Firefox 28.0</li>
-</ul>
+- Get a new Emacs started, if no Emacs is running.
+- Get a new frame withing an already running Emacs.
 
-<p>Tested on an Intel x86 quad core machine running Windows 7.</p>
+You must make sure that upon start, Emacs runs the following LISP command:
 
-<p>Here are the screenshots of the results.</p>
 
-<figure>
-    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png" /></a>
-    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png" title="Internet Explorer">Internet Explorer</a>.</figcaption>
-</figure>
-<figure>
-    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png" /></a>
-    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png" title="Opera">Opera</a>.</figcaption>
-</figure>
-<figure>
-    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png" /></a>
-    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png" title="Google Chrome">Google Chrome</a>.</figcaption>
-</figure>
-<figure>
-    <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png" /></a>
-    <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png" title="Firefox">Firefox</a>.</figcaption>
-</figure>
+<figure class="highlight"><pre><code class="language-lisp" data-lang="lisp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1<td class="code"><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span>
+
+</td></pre>
+
+
+This will start an Emacs server daemon that will process any client requests.
+</div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend" class="btn" title="Namespacing all YouTube URLs on edX backend">Previous article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/theming/emacs/theming-emacs" class="btn" title="Theming Emacs">Previous article</a>
       
       
-        <a href="http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers" class="btn" title="Tiling window managers">Next article</a>
+        <a href="http://valera-rozuvan.github.io/nintoku/installing/emacs/debian/wheezy/installing-emacs-on-debian-wheezy" class="btn" title="Installing Emacs on Debian wheezy">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>
