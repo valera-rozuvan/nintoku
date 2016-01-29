@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2016-01-29T07:37:50+00:00</updated>
+<updated>2016-01-29T12:43:16+00:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
@@ -110,31 +110,31 @@ able to access the Internet (open up a browser, and navigate to http://google.co
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Change the default password of the &lt;code&gt;pi&lt;/code&gt; user. You can do that using the &lt;code&gt;passwd&lt;/code&gt; command.&lt;/p&gt;
+    &lt;p&gt;Change the default password of the &lt;code class=&quot;highlighter-rouge&quot;&gt;pi&lt;/code&gt; user. You can do that using the &lt;code class=&quot;highlighter-rouge&quot;&gt;passwd&lt;/code&gt; command.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Enlarge the amount of available memory on the MicroSD card. When you initially put the Raspbian image onto your
 MicroSD card, the image only takes about 3GB of space. Also, the MicroSD card’s partition table is set to this size
 (3GB). Therefore, the OS will only see the 3GB of space available - even if your card is 64GB in size! To fix this,
-use the available command &lt;code&gt;sudo raspi-config&lt;/code&gt;.&lt;/p&gt;
+use the available command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo raspi-config&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Next you need to update the RPi2 firmware. Use the available command &lt;code&gt;sudo rpi-update&lt;/code&gt;. NOTE: you need an active
+    &lt;p&gt;Next you need to update the RPi2 firmware. Use the available command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo rpi-update&lt;/code&gt;. NOTE: you need an active
 Internet connection for the update to be successful!&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Update the package manager’s package database with the latest available package information. Use the command
-&lt;code&gt;sudo aptitude update&lt;/code&gt;.&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo aptitude update&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Upgrade software packages to their latest version (retrieved in the last step). Use the command &lt;code&gt;sudo aptitude
+    &lt;p&gt;Upgrade software packages to their latest version (retrieved in the last step). Use the command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo aptitude
 upgrade&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Configure the locales. Add extra necessary locales with the command &lt;code&gt;sudo dpkg-reconfigure locales&lt;/code&gt;.&lt;/p&gt;
+    &lt;p&gt;Configure the locales. Add extra necessary locales with the command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo dpkg-reconfigure locales&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Change the system’s time zone with the command &lt;code&gt;sudo dpkg-reconfigure tzdata&lt;/code&gt;.&lt;/p&gt;
+    &lt;p&gt;Change the system’s time zone with the command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo dpkg-reconfigure tzdata&lt;/code&gt;.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -142,19 +142,19 @@ upgrade&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;The first part is easy! If you have your RPi2 on a LAN, and another PC on the same LAN as the RPi2, then you can easily
 SSH to the RPi2 from your other computer. All you need is to find out the IP address of the RPi2. One way to get the IP
-is to run the command &lt;code&gt;sudo ifconfig&lt;/code&gt; on the RPi2, and see the output. The IP address will either be found in the &lt;code&gt;eth0&lt;/code&gt;
-section, or the &lt;code&gt;wlan0&lt;/code&gt; section (depending on whether you connected the RPi2 via an Ethernet cable or via a USB WiFi
-dongle). Now, just open up a console on your other PC, and type &lt;code&gt;ssh pi@192.168.1.203&lt;/code&gt; (in my case, “192.168.1.203” is
+is to run the command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo ifconfig&lt;/code&gt; on the RPi2, and see the output. The IP address will either be found in the &lt;code class=&quot;highlighter-rouge&quot;&gt;eth0&lt;/code&gt;
+section, or the &lt;code class=&quot;highlighter-rouge&quot;&gt;wlan0&lt;/code&gt; section (depending on whether you connected the RPi2 via an Ethernet cable or via a USB WiFi
+dongle). Now, just open up a console on your other PC, and type &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh pi@192.168.1.203&lt;/code&gt; (in my case, “192.168.1.203” is
 the IP of my RPi2). If you are on a Windows machine, you can use &lt;a href=&quot;https://winscp.net/&quot;&gt;WinSCP&lt;/a&gt; and
 &lt;a href=&quot;http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html&quot;&gt;PuTTY&lt;/a&gt; to get access of the RPi2 through SSH.&lt;/p&gt;
 
 &lt;p&gt;Now on to VNC. In order to access RPi2 via VNC, you need to install a VNC server on the RPi2. One option is to use
-&lt;code&gt;tightvncserver&lt;/code&gt;. First, install it with the command &lt;code&gt;sudo aptitude install tightvncserver&lt;/code&gt;. Then configure the password
-for the server with the command &lt;code&gt;tightvncserver&lt;/code&gt;. Now you can start up the server with
-&lt;code&gt;vncserver :0 -geometry 800x600 -depth 24&lt;/code&gt;. NOTE: you can configure any resolution that you desire, not just &lt;code&gt;800x600&lt;/code&gt;.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;tightvncserver&lt;/code&gt;. First, install it with the command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo aptitude install tightvncserver&lt;/code&gt;. Then configure the password
+for the server with the command &lt;code class=&quot;highlighter-rouge&quot;&gt;tightvncserver&lt;/code&gt;. Now you can start up the server with
+&lt;code class=&quot;highlighter-rouge&quot;&gt;vncserver :0 -geometry 800x600 -depth 24&lt;/code&gt;. NOTE: you can configure any resolution that you desire, not just &lt;code class=&quot;highlighter-rouge&quot;&gt;800x600&lt;/code&gt;.
 If everything went right, you can try connecting via VNC from another machine. On Windows you can use
-&lt;a href=&quot;http://www.tightvnc.com/&quot;&gt;TightVNC client&lt;/a&gt;. On Linux there are many options. I use &lt;code&gt;gvncviewer&lt;/code&gt;. To connect to an RPi2
-machine, use the command &lt;code&gt;gvncviewer 192.168.1.203:0&lt;/code&gt; (replace “192.168.1.203” with the IP address of your RPi2).&lt;/p&gt;
+&lt;a href=&quot;http://www.tightvnc.com/&quot;&gt;TightVNC client&lt;/a&gt;. On Linux there are many options. I use &lt;code class=&quot;highlighter-rouge&quot;&gt;gvncviewer&lt;/code&gt;. To connect to an RPi2
+machine, use the command &lt;code class=&quot;highlighter-rouge&quot;&gt;gvncviewer 192.168.1.203:0&lt;/code&gt; (replace “192.168.1.203” with the IP address of your RPi2).&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
@@ -268,9 +268,9 @@ reinforced with a JavaScript sample demo right on the page. So that the user cou
 better understand what I am talking about.&lt;/p&gt;
 
 &lt;p&gt;I will introduce a mark-up element in my posts. It will contain a certain &lt;strong&gt;class&lt;/strong&gt; and
-a &lt;code&gt;data-*&lt;/code&gt; attribute. The &lt;strong&gt;class&lt;/strong&gt; will tell my executable JavaScript engine that it should
-act up, and the &lt;code&gt;data-*&lt;/code&gt; attribute will tell it how to act up. I.e. - I will be specifying
-the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;/code&gt; attribute.&lt;/p&gt;
+a &lt;code class=&quot;highlighter-rouge&quot;&gt;data-*&lt;/code&gt; attribute. The &lt;strong&gt;class&lt;/strong&gt; will tell my executable JavaScript engine that it should
+act up, and the &lt;code class=&quot;highlighter-rouge&quot;&gt;data-*&lt;/code&gt; attribute will tell it how to act up. I.e. - I will be specifying
+the necessary JavaScript file to load and execute via the &lt;code class=&quot;highlighter-rouge&quot;&gt;data-*&lt;/code&gt; attribute.&lt;/p&gt;
 
 &lt;p&gt;So, here we go:&lt;/p&gt;
 
@@ -282,27 +282,24 @@ the necessary JavaScript file to load and execute via the &lt;code&gt;data-*&lt;
 
 &lt;p&gt;The HTML code snippet to set up this executable JavaScript sample is as follows:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
-3&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;exec-me&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-js-source=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;module1-test1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;btn-run-js&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Run&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;exec-me&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-js-source=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;module1-test1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn-run-js&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Run&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;The actual executable JavaScript is:&lt;/p&gt;
 
-
-The actual executable JavaScript is:
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
@@ -344,10 +341,10 @@ The actual executable JavaScript is:
 48
 49
 50
-51&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;s1&quot;&gt;&amp;#39;use strict&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+51&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;&#39;use strict&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-  &lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;module1-test1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;jQuery&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;module1-test1&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;jQuery&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hasRun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
     &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -355,7 +352,7 @@ The actual executable JavaScript is:
 
       &lt;span class=&quot;nx&quot;&gt;createCanvas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 
-      &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;a.btn-run-js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;a.btn-run-js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stopPropagation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 
@@ -367,14 +364,14 @@ The actual executable JavaScript is:
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
     &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createCanvas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;cEl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;canvas id=&amp;quot;output-canvas-1&amp;quot;&amp;gt;&amp;lt;/canvas&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;cEl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;&amp;lt;canvas id=&quot;output-canvas-1&quot;&amp;gt;&amp;lt;/canvas&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
       &lt;span class=&quot;nx&quot;&gt;cEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;400px&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;200px&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;inline-block&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;&amp;#39;background-color&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#ffffff&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;2%&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;400px&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;200px&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;inline-block&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&#39;background-color&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;#ffffff&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;2%&#39;&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 
       &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -384,23 +381,20 @@ The actual executable JavaScript is:
       &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
       &lt;span class=&quot;nx&quot;&gt;canvas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;ctx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;2d&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;ctx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;2d&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-      &lt;span class=&quot;nx&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fillStyle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;black&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fillStyle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;black&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
       &lt;span class=&quot;nx&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fillRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;init&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
-
-
-Oh, I am going to have a fun time from now on = )
-&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Oh, I am going to have a fun time from now on = )&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/test/javascript/post/1st-test-executable-javascript-in-a-post&quot;&gt;1st test: Executable JavaScript in a post&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on July 24, 2015.&lt;/p&gt;</content>
 </entry>
@@ -449,16 +443,16 @@ Oh, I am going to have a fun time from now on = )
 
 &lt;p&gt;A &lt;a href=&quot;https://en.wikipedia.org/wiki/Futures_and_promises&quot;&gt;promise&lt;/a&gt; is a way to reduce this&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nx&quot;&gt;asyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;asyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;anotherAsyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;calllback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -467,30 +461,27 @@ Oh, I am going to have a fun time from now on = )
             &lt;span class=&quot;c1&quot;&gt;// are we done yet?&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;to this&lt;/p&gt;
 
-
-to this
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
 13
 14
 15
-16&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nx&quot;&gt;asyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+16&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;asyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// do something...&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;anotherAsyncCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
@@ -505,39 +496,36 @@ to this
 &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
    &lt;span class=&quot;c1&quot;&gt;// handle any error resulting from any of the above calls&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;The above two JavaScript excerpts have been taken from &lt;a href=&quot;http://12devs.co.uk/articles/promises-an-alternative-way-to-approach-asynchronous-javascript/&quot;&gt;Promises – an alternative way to approach asynchronous JavaScript&lt;/a&gt;.&lt;/p&gt;
 
+&lt;p&gt;Several promise specification for JavaScript exist, &lt;em&gt;Promises/A+&lt;/em&gt; being the most widely used.&lt;/p&gt;
 
-The above two JavaScript excerpts have been taken from [Promises – an alternative way to approach asynchronous JavaScript](http://12devs.co.uk/articles/promises-an-alternative-way-to-approach-asynchronous-javascript/).
+&lt;ol&gt;
+  &lt;li&gt;Promises/A &lt;a href=&quot;http://wiki.commonjs.org/wiki/Promises/A&quot;&gt;http://wiki.commonjs.org/wiki/Promises/A&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Promises/A+ &lt;a href=&quot;https://promisesaplus.com/&quot;&gt;https://promisesaplus.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ES6 Promise Objects &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects&quot;&gt;http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-Several promise specification for JavaScript exist, *Promises/A+* being the most widely used.
+&lt;h2 id=&quot;the-problem-with-jquerys-promises&quot;&gt;The problem with jQuery’s promises&lt;/h2&gt;
 
-1. Promises/A [http://wiki.commonjs.org/wiki/Promises/A](http://wiki.commonjs.org/wiki/Promises/A)
-2. Promises/A+ [https://promisesaplus.com/](https://promisesaplus.com/)
-3. ES6 Promise Objects [http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects](http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects)
+&lt;p&gt;jQuery’s promise implementation is pretty broken. It does not adheer to the Promises/A+ specification used by the vast majority of other promise implementations. See the &lt;a href=&quot;https://promisesaplus.com/implementations&quot;&gt;list of Promises/A+ implementations&lt;/a&gt;.&lt;/p&gt;
 
-The problem with jQuery&#39;s promises
-----------------------------------
+&lt;h2 id=&quot;an-illustration&quot;&gt;An illustration&lt;/h2&gt;
 
-jQuery&#39;s promise implementation is pretty broken. It does not adheer to the Promises/A+ specification used by the vast majority of other promise implementations. See the [list of Promises/A+ implementations](https://promisesaplus.com/implementations).
+&lt;p&gt;Using the latest of either jQuery 1.x or 2.x, let’s write the following JavaScript test program:&lt;/p&gt;
 
-An illustration
----------------
-
-Using the latest of either jQuery 1.x or 2.x, let&#39;s write the following JavaScript test program:
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
@@ -582,20 +570,20 @@ Using the latest of either jQuery 1.x or 2.x, let&#39;s write the following Java
 51
 52
 53
-54&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;syncWorkFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;asyncWorkFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+54&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;syncWorkFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;asyncWorkFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;nx&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;promiseTests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;output&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;output&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
     &lt;span class=&quot;nx&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Deferred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 
     &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 
     &lt;span class=&quot;nx&quot;&gt;syncWorkFunc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -609,103 +597,94 @@ Using the latest of either jQuery 1.x or 2.x, let&#39;s write the following Java
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;promiseTests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;0.) myObject.state = &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;br /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;0.) myObject.state = &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;lt;br /&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
     &lt;span class=&quot;nx&quot;&gt;syncWorkFunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// asyncWorkFunc();&lt;/span&gt;
 
     &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;[THEN #1] Setting myObject.state to &amp;quot;X&amp;quot;.&amp;lt;br /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;X&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;[THEN #1] Setting myObject.state to &quot;X&quot;.&amp;lt;br /&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;X&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;1.) Setting myObject.state to &amp;quot;A&amp;quot;.&amp;lt;br /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;1.) Setting myObject.state to &quot;A&quot;.&amp;lt;br /&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;A&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
     &lt;span class=&quot;c1&quot;&gt;// syncWorkFunc();&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// asyncWorkFunc();&lt;/span&gt;
 
-    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;2.) myObject.state = &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;br /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;2.) myObject.state = &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;lt;br /&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;[THEN #2] myObject.state = &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;br /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;[THEN #2] myObject.state = &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;lt;br /&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;[THEN #3] myObject.state = &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;br /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;[THEN #3] myObject.state = &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;lt;br /&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;[THEN #4] myObject.state = &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;br /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;[THEN #4] myObject.state = &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;lt;br /&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;3.)&amp;lt;br /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;3.)&amp;lt;br /&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;The output of the above JavaScript program will be:&lt;/p&gt;
 
-
-The output of the above JavaScript program will be:
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
 5
 6
 7
-8&lt;td class=&quot;code&quot;&gt;0.) myObject.state = null
-[THEN #1] Setting myObject.state to &amp;quot;X&amp;quot;.
-1.) Setting myObject.state to &amp;quot;A&amp;quot;.
+8&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;0.) myObject.state = null
+[THEN #1] Setting myObject.state to &quot;X&quot;.
+1.) Setting myObject.state to &quot;A&quot;.
 2.) myObject.state = A
 [THEN #2] myObject.state = A
 [THEN #3] myObject.state = A
 [THEN #4] myObject.state = A
-3.)
+3.)&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;Two things went wrong here. All of &lt;code&gt;THEN {#}&lt;/code&gt; logs should be at the end of the output. Also, and this is most important of all, in the end &lt;code&gt;myObject.state&lt;/code&gt; did not change to &lt;code&gt;&quot;X&quot;&lt;/code&gt;!&lt;/p&gt;
 
+&lt;p&gt;If we use a real Promise/A+ implementation, we will get:&lt;/p&gt;
 
-Two things went wrong here. All of &lt;code&gt;THEN {#}&lt;/code&gt; logs should be at the end of the output. Also, and this is most important of all, in the end &lt;code&gt;myObject.state&lt;/code&gt; did not change to &lt;code&gt;&quot;X&quot;&lt;/code&gt;!
-
-If we use a real Promise/A+ implementation, we will get:
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
 5
 6
 7
-8&lt;td class=&quot;code&quot;&gt;0.) myObject.state = null
-1.) Setting myObject.state to &amp;quot;A&amp;quot;.
+8&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;0.) myObject.state = null
+1.) Setting myObject.state to &quot;A&quot;.
 2.) myObject.state = A
 3.)
-[THEN #1] Setting myObject.state to &amp;quot;X&amp;quot;.
+[THEN #1] Setting myObject.state to &quot;X&quot;.
 [THEN #2] myObject.state = X
 [THEN #3] myObject.state = X
-[THEN #4] myObject.state = X
+[THEN #4] myObject.state = X&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;You can see these results for yourself. A JS Fiddle has been setup with jQuery 2.1.4 &lt;a href=&quot;https://jsfiddle.net/4988rggu/4/&quot;&gt;here&lt;/a&gt;. For valid Promise/A+ implementation I chose Angular JS. It’s promise system &lt;a href=&quot;https://docs.angularjs.org/api/ng/service/$q&quot;&gt;$q&lt;/a&gt; is based on &lt;a href=&quot;https://github.com/kriskowal/q&quot;&gt;Kris Kowal’s Q&lt;/a&gt;. A JS Fiddle has been setup with Angular JS 1.4.2 &lt;a href=&quot;https://jsfiddle.net/xfmetfoL/4/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
+&lt;h2 id=&quot;when-will-promises-be-fixed-in-jquery&quot;&gt;When will promises be fixed in jQuery?&lt;/h2&gt;
 
-You can see these results for yourself. A JS Fiddle has been setup with jQuery 2.1.4 [here](https://jsfiddle.net/4988rggu/4/). For valid Promise/A+ implementation I chose Angular JS. It&#39;s promise system [$q](https://docs.angularjs.org/api/ng/service/$q) is based on [Kris Kowal&#39;s Q](https://github.com/kriskowal/q). A JS Fiddle has been setup with Angular JS 1.4.2 [here](https://jsfiddle.net/xfmetfoL/4/).
+&lt;p&gt;When jQuery 3.0 comes out. Refer to the blog post &lt;a href=&quot;http://blog.jquery.com/2014/10/29/jquery-3-0-the-next-generations/&quot;&gt;jQuery 3.0: The Next Generations&lt;/a&gt;, and also &lt;a href=&quot;https://github.com/jquery/jquery/pull/1996&quot;&gt;jQuery’s work on getting their promises to pass the Promises/A+ test suite&lt;/a&gt;.&lt;/p&gt;
 
-When will promises be fixed in jQuery?
---------------------------------------
+&lt;h2 id=&quot;useful-links&quot;&gt;Useful links&lt;/h2&gt;
 
-When jQuery 3.0 comes out. Refer to the blog post [jQuery 3.0: The Next Generations](http://blog.jquery.com/2014/10/29/jquery-3-0-the-next-generations/), and also [jQuery&#39;s work on getting their promises to pass the Promises/A+ test suite](https://github.com/jquery/jquery/pull/1996).
+&lt;p&gt;The problem discussed in this post is a well known one. It has been discussed previously by other people on the Internet. Be sure to go over all of the following resources:&lt;/p&gt;
 
-Useful links
-------------
-
-The problem discussed in this post is a well known one. It has been discussed previously by other people on the Internet. Be sure to go over all of the following resources:
-
-1. [You&#39;re Missing the Point of Promises](https://gist.github.com/domenic/3889970)
-2. [working with jQuery promises](http://stackoverflow.com/questions/17617545/working-with-jquery-promises)
-3. [JAVASCRIPT PROMISES AND WHY JQUERY IMPLEMENTATION IS BROKEN](https://thewayofcode.wordpress.com/2013/01/22/javascript-promises-and-why-jquery-implementation-is-broken/)
-4. [The Differences between jQuery Deferreds and the Promises/A+ spec](http://abdulapopoola.com/2014/12/12/the-differences-between-jquery-deferreds-and-the-promisesa-spec/)
-5. [Problems inherent to jQuery $.Deferred](http://stackoverflow.com/questions/23744612/problems-inherent-to-jquery-deferred)
-6. [Coming from jQuery](https://github.com/kriskowal/q/wiki/Coming-from-jQuery)
-7. [Deferred: Backwards-compatible standards interoperability](https://github.com/jquery/jquery/pull/1996)
-&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/domenic/3889970&quot;&gt;You’re Missing the Point of Promises&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/17617545/working-with-jquery-promises&quot;&gt;working with jQuery promises&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thewayofcode.wordpress.com/2013/01/22/javascript-promises-and-why-jquery-implementation-is-broken/&quot;&gt;JAVASCRIPT PROMISES AND WHY JQUERY IMPLEMENTATION IS BROKEN&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://abdulapopoola.com/2014/12/12/the-differences-between-jquery-deferreds-and-the-promisesa-spec/&quot;&gt;The Differences between jQuery Deferreds and the Promises/A+ spec&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/23744612/problems-inherent-to-jquery-deferred&quot;&gt;Problems inherent to jQuery $.Deferred&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/kriskowal/q/wiki/Coming-from-jQuery&quot;&gt;Coming from jQuery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jquery/jquery/pull/1996&quot;&gt;Deferred: Backwards-compatible standards interoperability&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/jquery/promises/jquery-broken-promises-illustrated&quot;&gt;jQuery broken promises illustrated&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on July 08, 2015.&lt;/p&gt;</content>
 </entry>
@@ -733,37 +712,29 @@ So is the case with Sublime Text 3 editor.&lt;/p&gt;
 
 &lt;p&gt;To add a menu launcher for Sublime, create a file:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1&lt;td class=&quot;code&quot;&gt; ~/.menu/subl
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt; ~/.menu/subl&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;with the following contents:&lt;/p&gt;
 
-
-with the following contents:
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
 5
-6&lt;td class=&quot;code&quot;&gt;?package(sublime-text):needs=&amp;quot;X11&amp;quot;\
-  section=&amp;quot;Applications/Editors&amp;quot;\
-  hints=&amp;quot;Text editor&amp;quot;\
-  longtitle=&amp;quot;Sublime Text 3&amp;quot;\
-  title=&amp;quot;Sublime&amp;quot;\
-  command=&amp;quot;/usr/bin/subl&amp;quot;
+6&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;?package(sublime-text):needs=&quot;X11&quot;\
+  section=&quot;Applications/Editors&quot;\
+  hints=&quot;Text editor&quot;\
+  longtitle=&quot;Sublime Text 3&quot;\
+  title=&quot;Sublime&quot;\
+  command=&quot;/usr/bin/subl&quot;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;Then update the Debian menu with the following command:&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;sudo update-menus -v --menufilesdir&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.menu&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-Then update the Debian menu with the following command:
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1&lt;td class=&quot;code&quot;&gt;sudo update-menus -v --menufilesdir&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.menu
-
-&lt;/td&gt;&lt;/pre&gt;
-
-&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu&quot;&gt;Adding Sublime Text to Debian menu&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 15, 2015.&lt;/p&gt;</content>
 </entry>
@@ -819,15 +790,15 @@ client which submits information about tracks being played to audioscrobbler.&lt
 &lt;p&gt;Below are the configuration files for &lt;strong&gt;MPD&lt;/strong&gt; and &lt;strong&gt;mpdscribble&lt;/strong&gt;. I am placing
 them here for the curious soul, and for my own reference.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
@@ -836,73 +807,61 @@ them here for the curious soul, and for my own reference.&lt;/p&gt;
 15
 16
 17
-18&lt;td class=&quot;code&quot;&gt;$ cat ~/.mpd.d/mpd.conf
-follow_outside_symlinks &amp;quot;no&amp;quot;
-follow_inside_symlinks &amp;quot;no&amp;quot;
-db_file &amp;quot;/home/valera/.mpd.d/db&amp;quot;
-sticker_file &amp;quot;/home/valera/.mpd.d/sticker&amp;quot;
-log_file &amp;quot;/home/valera/.mpd.d/log&amp;quot;
-music_directory &amp;quot;/home/valera/Music&amp;quot;
-playlist_directory &amp;quot;/home/valera/.mpd.d/playlists&amp;quot;
-pid_file &amp;quot;/home/valera/.mpd.d/pid&amp;quot;
-audio_output_format &amp;quot;44100:16:2&amp;quot;
-samplerate_converter &amp;quot;0&amp;quot;
-volume_normalization &amp;quot;yes&amp;quot;
-audio_buffer_size &amp;quot;4096&amp;quot;
-auto_update &amp;quot;yes&amp;quot;
+18&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;$ cat ~/.mpd.d/mpd.conf
+follow_outside_symlinks &quot;no&quot;
+follow_inside_symlinks &quot;no&quot;
+db_file &quot;/home/valera/.mpd.d/db&quot;
+sticker_file &quot;/home/valera/.mpd.d/sticker&quot;
+log_file &quot;/home/valera/.mpd.d/log&quot;
+music_directory &quot;/home/valera/Music&quot;
+playlist_directory &quot;/home/valera/.mpd.d/playlists&quot;
+pid_file &quot;/home/valera/.mpd.d/pid&quot;
+audio_output_format &quot;44100:16:2&quot;
+samplerate_converter &quot;0&quot;
+volume_normalization &quot;yes&quot;
+audio_buffer_size &quot;4096&quot;
+auto_update &quot;yes&quot;
 audio_output {
-    type &amp;quot;alsa&amp;quot;
-    name &amp;quot;AlsaOut1&amp;quot;
-}
-
-&lt;/td&gt;&lt;/pre&gt;
-
+    type &quot;alsa&quot;
+    name &quot;AlsaOut1&quot;
+}&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;/p&gt;
 
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
 5
-6&lt;td class=&quot;code&quot;&gt;$ cat ~/.mpdscribble/mpdscribble.conf
+6&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;$ cat ~/.mpdscribble/mpdscribble.conf
 url = http://post.audioscrobbler.com
 username = valerarozuvan
 password = your_password
 
-pidfile = /home/valera/.mpdscribble/pid
+pidfile = /home/valera/.mpdscribble/pid&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;Update your &lt;code class=&quot;highlighter-rouge&quot;&gt;init.d&lt;/code&gt; script for &lt;strong&gt;MPD&lt;/strong&gt; to point to your configuration file.
+In my case I have a line in the file &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/init.d/mpd&lt;/code&gt;:&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;MPDCONF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/valera/.mpd.d/mpd.conf&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-Update your `init.d` script for **MPD** to point to your configuration file.
-In my case I have a line in the file `/etc/init.d/mpd`:
+&lt;p&gt;Also, update the configuration file &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/default/mpdscribble&lt;/code&gt; for
+&lt;strong&gt;mpdscribble&lt;/strong&gt; so it has the following lines:&lt;/p&gt;
 
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MPDCONF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/valera/.mpd.d/mpd.conf
-
-&lt;/td&gt;&lt;/pre&gt;
-
-
-Also, update the configuration file `/etc/default/mpdscribble` for
-**mpdscribble** so it has the following lines:
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
-3&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;nv&quot;&gt;MPD_SYSTEMWIDE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
-&lt;span class=&quot;nv&quot;&gt;DAEMON_OPTS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;valera
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nv&quot;&gt;MPD_SYSTEMWIDE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;span class=&quot;nv&quot;&gt;DAEMON_OPTS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;--conf /home/valera/.mpdscribble/mpdscribble.conf&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;valera&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;PLEASE NOTE: In all of the above files, make sure to update the paths
+of files so that they contain your Linux user name!&lt;/strong&gt;&lt;/p&gt;
 
-
-**PLEASE NOTE: In all of the above files, make sure to update the paths
-of files so that they contain your Linux user name!**
-
-Enjoy!
-&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/scrobbling/last-fm/linux/scrobbling-to-lastfm-from-linux&quot;&gt;Scrobbling to Last.fm from Linux&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on June 15, 2014.&lt;/p&gt;</content>
 </entry>
@@ -1203,35 +1162,32 @@ that executed in Firefox.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/k2h7Z/34&quot;&gt;The JSFiddle&lt;/a&gt; that demonstrated the so
 called concurrency contains an error. When you enabled the
-second heavy function by setting &lt;code&gt;enableHeavyFunction&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt;, then,
+second heavy function by setting &lt;code class=&quot;highlighter-rouge&quot;&gt;enableHeavyFunction&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;, then,
 because of the heavy function’s random nature, in some cases half way
 through execution an error is raised&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
-3&lt;td class=&quot;code&quot;&gt;Error: invalid arguments
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;Error: invalid arguments
 
-this.spectrum   = new Float32Array(bufferSize/2);
+this.spectrum   = new Float32Array(bufferSize/2);&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
-
-
-`bufferSize` is to big, and Firefox JavaScript engine throws an error.
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bufferSize&lt;/code&gt; is to big, and Firefox JavaScript engine throws an error.
 Because of this, the fact that the heavy function ran is not registered
 in the output. So it appears that for three or four small functions only
 one heavy function is run. This is not so. Both functions run one after
 the other. It is just that the heavy function sometimes errors, and no
-output for it is written.
+output for it is written.&lt;/p&gt;
 
-In Chrome this behavior did not happen because either it allows arbitrary
-first argument to `Float32Array` function, or it sets the first argument
-to some predefined maximum value.
+&lt;p&gt;In Chrome this behavior did not happen because either it allows arbitrary
+first argument to &lt;code class=&quot;highlighter-rouge&quot;&gt;Float32Array&lt;/code&gt; function, or it sets the first argument
+to some predefined maximum value.&lt;/p&gt;
 
-In any case, I have updated [the JSFiddle](http://jsfiddle.net/k2h7Z/37)
+&lt;p&gt;In any case, I have updated &lt;a href=&quot;http://jsfiddle.net/k2h7Z/37&quot;&gt;the JSFiddle&lt;/a&gt;
 to use a blocking function instead of the really large function. As can
 be seen, it clearly shows that JavaScript is single-threaded across all
-browsers.
-&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+browsers.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/updates/javascript/concurrency/new-age/update-the-new-age-of-javascript-concurrency&quot;&gt;UPDATE: The New Age of JavaScript: Concurrency&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
 </entry>
@@ -1251,14 +1207,14 @@ browsers.
   <content type="html">&lt;p&gt;There are several commands that I have come across yesterday that were helpful.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;code&gt;git config --global core.editor emacsclient&lt;/code&gt; - make git use &lt;code&gt;emacsclient&lt;/code&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git config --global core.editor emacsclient&lt;/code&gt; - make git use &lt;code class=&quot;highlighter-rouge&quot;&gt;emacsclient&lt;/code&gt;
 for editing commit messages.&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;git config --global core.pager &#39;&#39;&lt;/code&gt; - make git output everything to standard
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git config --global core.pager &#39;&#39;&lt;/code&gt; - make git output everything to standard
 output, rather than use a pager application.&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;git log HEAD~10..HEAD&lt;/code&gt; - make &lt;code&gt;git log&lt;/code&gt; show only last 10 commits.&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;git log --pretty=oneline | head -n 10&lt;/code&gt; - make &lt;code&gt;git log&lt;/code&gt; show last 10
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git log HEAD~10..HEAD&lt;/code&gt; - make &lt;code class=&quot;highlighter-rouge&quot;&gt;git log&lt;/code&gt; show only last 10 commits.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git log --pretty=oneline | head -n 10&lt;/code&gt; - make &lt;code class=&quot;highlighter-rouge&quot;&gt;git log&lt;/code&gt; show last 10
 commits, displaying one line per commit.&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;xrandr --output LVDS --brightness 1.0&lt;/code&gt; - make screen brightness 100%.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;xrandr --output LVDS --brightness 1.0&lt;/code&gt; - make screen brightness 100%.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;It is interesting to observe how well the
@@ -1361,15 +1317,15 @@ that is more flexible.&lt;/li&gt;
 
 &lt;p&gt;I have worked with JSlint for some time now. I grew frustrated with it because
 it is to rigid in the way it checks and enforces errors. There are numerous
-discussion happening on the Internet about what is &lt;code&gt;right&lt;/code&gt; JavaScript and
-what is &lt;code&gt;wrong&lt;/code&gt; JavaScript. Frankly though, I believe that when it comes down
+discussion happening on the Internet about what is &lt;code class=&quot;highlighter-rouge&quot;&gt;right&lt;/code&gt; JavaScript and
+what is &lt;code class=&quot;highlighter-rouge&quot;&gt;wrong&lt;/code&gt; JavaScript. Frankly though, I believe that when it comes down
 to introducing changes to a JavaScript file, you should only care for:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Adding/updating code so that it does not raise errors in the browser.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;For example, a stray &lt;code&gt;{&lt;/code&gt; bracket left in the code by an unfortunate typo,
+&lt;p&gt;For example, a stray &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;/code&gt; bracket left in the code by an unfortunate typo,
 a forgotten global variable that really should be contained within the scope
 of a function, etc.&lt;/p&gt;
 
@@ -1378,7 +1334,7 @@ of a function, etc.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;JavaScript is a very flexible language. Before the introduction of the
-&lt;code&gt;&#39;use strict&#39;;&lt;/code&gt; feature in
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&#39;use strict&#39;;&lt;/code&gt; feature in
 &lt;a href=&quot;http://www.ecma-international.org/publications/standards/Ecma-262.htm&quot;&gt;ECMAScript 5’s&lt;/a&gt;
 strict mode, the web was a wild jungle. Developers could write crazy code
 that worked, but was very hard to maintain and to read.&lt;/p&gt;
@@ -1399,13 +1355,13 @@ source file.&lt;/p&gt;
 &lt;p&gt;For using with &lt;a href=&quot;http://www.gnu.org/software/emacs&quot;&gt;Emacs&lt;/a&gt; you can get the
 excellent &lt;a href=&quot;https://github.com/daleharvey/jshint-mode&quot;&gt;jshint-mode&lt;/a&gt; by
 &lt;a href=&quot;https://twitter.com/daleharvey&quot;&gt;Dale Harvey&lt;/a&gt;. I &lt;strong&gt;strongly suggest&lt;/strong&gt; that
-you update the &lt;code&gt;jslint.js&lt;/code&gt; file that comes with this mode to the latest
+you update the &lt;code class=&quot;highlighter-rouge&quot;&gt;jslint.js&lt;/code&gt; file that comes with this mode to the latest
 version. The latest version can be found at the
 &lt;a href=&quot;http://www.jshint.com/install&quot;&gt;download and install&lt;/a&gt; section of the JSHint
 site.&lt;/p&gt;
 
 &lt;p&gt;Checkout my &lt;a href=&quot;https://github.com/valera-rozuvan/emacs_config&quot;&gt;Emacs config&lt;/a&gt; file
-for reference, if in doubt of how to install &lt;code&gt;jshint-mode&lt;/code&gt;.&lt;/p&gt;
+for reference, if in doubt of how to install &lt;code class=&quot;highlighter-rouge&quot;&gt;jshint-mode&lt;/code&gt;.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/preference/jshint/jslint/i-prefer-jshint-over-jslint&quot;&gt;I prefer JSHint over JSLint&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 09, 2014.&lt;/p&gt;</content>
 </entry>
@@ -1525,53 +1481,50 @@ post.&lt;/p&gt;
 &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/API/window.setInterval&quot;&gt;window.setInterval&lt;/a&gt;
 method to get two functions to execute periodically at the same interval,
 will they always (and for all time, while the browser is open) execute
-one after the other, in the order of &lt;code&gt;window.setInterval&lt;/code&gt; invocation?&lt;/p&gt;
+one after the other, in the order of &lt;code class=&quot;highlighter-rouge&quot;&gt;window.setInterval&lt;/code&gt; invocation?&lt;/p&gt;
 
 &lt;p&gt;So, to be more precise, if we have the following code:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
-12&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeout1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+12&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeout1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;timeout2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// It is given that window.output() is defined, and writes&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// it&amp;#39;s parameter to the page for the user to see.&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// it&#39;s parameter to the page for the user to see.&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;1&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeoutFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;2&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;will we see on the page:&lt;/p&gt;
 
-
-will we see on the page:
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
-13&lt;td class=&quot;code&quot;&gt;1
+13&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;1
 2
 1
 2
@@ -1583,30 +1536,27 @@ will we see on the page:
 2
 1
 2
-...
+...&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
-
-
-An interesting question. To further complicate things, what if one of
+&lt;p&gt;An interesting question. To further complicate things, what if one of
 the periodically invoked functions did something else besides outputting
 a number to the page. What if it took a long time to run, i.e. it would
-execute 5 to 10 times longer? Would we then see something like this:
+execute 5 to 10 times longer? Would we then see something like this:&lt;/p&gt;
 
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
-13&lt;td class=&quot;code&quot;&gt;2
+13&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;2
 2
 2
 2
@@ -1618,40 +1568,42 @@ execute 5 to 10 times longer? Would we then see something like this:
 2
 2
 2
-...
+...&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
-
-
-I have done a lot of reading on the subject of JavaScript concurrency,
+&lt;p&gt;I have done a lot of reading on the subject of JavaScript concurrency,
 parallelism, etc. I have started to believe that in the second example
-above the two functions would still execute one after the other.
+above the two functions would still execute one after the other.&lt;/p&gt;
 
-Then, today, I decided to write such a test, and see for myself what
+&lt;p&gt;Then, today, I decided to write such a test, and see for myself what
 would actually happen. I have created a JSFiddle to
-[test this out](http://jsfiddle.net/k2h7Z/34).
-The results were quite surprising for me.
+&lt;a href=&quot;http://jsfiddle.net/k2h7Z/34&quot;&gt;test this out&lt;/a&gt;.
+The results were quite surprising for me.&lt;/p&gt;
 
-I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
+&lt;p&gt;I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
 In all browsers except Firefox the two function ran one after the other.
 In Firefox, though, the more CPU expensive function was running in parallel
 with the fast function. I drew this conclusion for the fact that the slow
 function managed to output once in the same time that the fast function
-outputted several times.
+outputted several times.&lt;/p&gt;
 
-&amp;gt; In Firefox, though, the more CPU expensive function was running in parallel
-with the fast function.
+&lt;blockquote&gt;
+  &lt;p&gt;In Firefox, though, the more CPU expensive function was running in parallel
+with the fast function.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-I have used the following versions of the browsers:
+&lt;p&gt;I have used the following versions of the browsers:&lt;/p&gt;
 
-- Internet Explorer 10.0.9200.16576
-- Opera 20.0.1387.82
-- Google Chrome 33.0.1750.154
-- Firefox 28.0
+&lt;ul&gt;
+  &lt;li&gt;Internet Explorer 10.0.9200.16576&lt;/li&gt;
+  &lt;li&gt;Opera 20.0.1387.82&lt;/li&gt;
+  &lt;li&gt;Google Chrome 33.0.1750.154&lt;/li&gt;
+  &lt;li&gt;Firefox 28.0&lt;/li&gt;
+&lt;/ul&gt;
 
-Tested on an Intel x86 quad core machine running Windows 7.
+&lt;p&gt;Tested on an Intel x86 quad core machine running Windows 7.&lt;/p&gt;
 
-Here are the screenshots of the results.
+&lt;p&gt;Here are the screenshots of the results.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png&quot; /&gt;&lt;/a&gt;
@@ -1669,7 +1621,6 @@ Here are the screenshots of the results.
     &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png&quot; /&gt;&lt;/a&gt;
     &lt;figcaption&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png&quot; title=&quot;Firefox&quot;&gt;Firefox&lt;/a&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency&quot;&gt;The New Age of JavaScript: Concurrency&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 02, 2014.&lt;/p&gt;</content>
 </entry>
@@ -1688,47 +1639,41 @@ Here are the screenshots of the results.
   </author>
   <content type="html">&lt;p&gt;Up to now, the backend defined 2 variables which stored YouTube related URLs:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
-2&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;YOUTUBE_TEST_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;https://gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;YOUTUBE_TEST_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;https://gdata.youtube.com/feeds/api/videos/&#39;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;and&lt;/p&gt;
 
-
-and
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
 5
-6&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
+6&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# for example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;YOUTUBE_API&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://video.google.com/timedtext&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;#39;params&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;lang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&#39;url&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://video.google.com/timedtext&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&#39;params&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;lang&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;en&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;v&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;set_youtube_id_of_11_symbols_here&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;This was done in &lt;a href=&quot;https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cms/envs/common.py&lt;/code&gt;&lt;/a&gt; file (lines 428, 532).&lt;/p&gt;
 
+&lt;p&gt;I wanted to introduce a new URL which is responsible for YouTube API on
+the front-end. To do this, I have created a &lt;code class=&quot;highlighter-rouge&quot;&gt;YOUTUBE&lt;/code&gt; namespace, and
+added a third URL to the back-end:&lt;/p&gt;
 
-This was done in [`cms/envs/common.py`](https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py) file (lines 428, 532).
-
-I wanted to introduce a new URL which is responsible for YouTube API on
-the front-end. To do this, I have created a `YOUTUBE` namespace, and
-added a third URL to the back-end:
-
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;highlighttable&quot;&gt;&lt;tr&gt;&lt;td class=&quot;linenos&quot;&gt;&lt;div class=&quot;linenodiv&quot;&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
@@ -1736,31 +1681,28 @@ added a third URL to the back-end:
 14
 15
 16
-17&lt;td class=&quot;code&quot;&gt;&lt;span class=&quot;n&quot;&gt;YOUTUBE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+17&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;YOUTUBE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;c&quot;&gt;# YouTube JavaScript API&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;#39;API&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;www.youtube.com/iframe_api&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&#39;API&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;www.youtube.com/iframe_api&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 
     &lt;span class=&quot;c&quot;&gt;# URL to test YouTube availability&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;#39;TEST_URL&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;gdata.youtube.com/feeds/api/videos/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&#39;TEST_URL&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;gdata.youtube.com/feeds/api/videos/&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 
     &lt;span class=&quot;c&quot;&gt;# Current youtube api for requesting transcripts.&lt;/span&gt;
     &lt;span class=&quot;c&quot;&gt;# For example: http://video.google.com/timedtext?lang=en&amp;amp;v=j_jEn79vS3g.&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;#39;TEXT_API&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;video.google.com/timedtext&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&amp;#39;params&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&amp;#39;lang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;set_youtube_id_of_11_symbols_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&#39;TEXT_API&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&#39;url&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;video.google.com/timedtext&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&#39;params&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&#39;lang&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;en&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&#39;v&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;set_youtube_id_of_11_symbols_here&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;/td&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9&quot;&gt;pull request&lt;/a&gt; has just been merged in to &lt;a href=&quot;https://github.com/edx/edx-platform&quot;&gt;edx-platform master&lt;/a&gt;.&lt;/p&gt;
 
-
-The [pull request](https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9) has just been merged in to [edx-platform master](https://github.com/edx/edx-platform).
-
-This PR opens up a possibility to mock the YouTube API in acceptance tests.
-&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;This PR opens up a possibility to mock the YouTube API in acceptance tests.&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/namespacing/youtube/url/edx/backend/namespacing-all-youtube-urls-on-edx-backend&quot;&gt;Namespacing all YouTube URLs on edX backend&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 24, 2014.&lt;/p&gt;</content>
 </entry>

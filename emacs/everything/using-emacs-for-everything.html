@@ -177,34 +177,31 @@ what if you wanted to use Emacs for all text editing?</p>
 <p>Luckily, the Debian provides a really easy way to specify alternatives to just about any application.
 Try running</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1<td class="code">sudo update-alternatives --config editor
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>sudo update-alternatives --config editor<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
-
-
-You will get a list of all available choices, and a prompt to set the default editor. We will create
-our own little [Bash script](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) that will launch
+<p>You will get a list of all available choices, and a prompt to set the default editor. We will create
+our own little <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash script</a> that will launch
 Emacs for us whenever the text editor is invoked. We will update the alternatives to set the default
-editor to point to our script.
+editor to point to our script.</p>
 
-For easy manipulation of the Debian alternatives I suggest the use of
-[galternatives](https://packages.debian.org/wheezy/galternatives). Running this tool, you can select
-the `editor` from the alternatives panel. Then you can add a new alternative pointing to
-`/home/user_name/bin/editor`, and make sure it is selected.
+<p>For easy manipulation of the Debian alternatives I suggest the use of
+<a href="https://packages.debian.org/wheezy/galternatives">galternatives</a>. Running this tool, you can select
+the <code class="highlighter-rouge">editor</code> from the alternatives panel. Then you can add a new alternative pointing to
+<code class="highlighter-rouge">/home/user_name/bin/editor</code>, and make sure it is selected.</p>
 
-Next create a new file `/home/user_name/bin/editor`, make sure that it is executable, and add the
-following contents to it:
+<p>Next create a new file <code class="highlighter-rouge">/home/user_name/bin/editor</code>, make sure that it is executable, and add the
+following contents to it:</p>
 
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
@@ -212,44 +209,40 @@ following contents to it:
 14
 15
 16
-17<td class="code"><span class="c">#!/bin/bash</span>
+17</pre></td><td class="code"><pre><span class="c">#!/bin/bash</span>
 
-<span class="nv">num_emacs_servers</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep -i <span class="s2">&quot;[e]macs24-x&quot;</span> <span class="p">|</span> wc -l<span class="sb">`</span>
+<span class="nv">num_emacs_servers</span><span class="o">=</span><span class="sb">`</span>ps aux | grep -i <span class="s2">"[e]macs24-x"</span> | wc -l<span class="sb">`</span>
 
-<span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$num_emacs_servers&quot;</span> -eq <span class="s2">&quot;1&quot;</span> <span class="o">]]</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="s2">"</span><span class="nv">$num_emacs_servers</span><span class="s2">"</span> -eq <span class="s2">"1"</span> <span class="o">]]</span>
 <span class="k">then</span>
     <span class="c"># Starting emacsclient</span>
-    <span class="nb">echo</span> <span class="s2">&quot;Starting emacsclient&quot;</span>
+    <span class="nb">echo</span> <span class="s2">"Starting emacsclient"</span>
     <span class="nb">exec</span> /usr/bin/emacsclient <span class="nv">$@</span>
 <span class="k">else</span>
     <span class="c"># Starting emacs server</span>
-    <span class="nb">echo</span> <span class="s2">&quot;Starting emacs24-x&quot;</span>
-    <span class="nb">echo</span> <span class="s2">&quot;num_emacs_servers = ${num_emacs_servers}&quot;</span>
+    <span class="nb">echo</span> <span class="s2">"Starting emacs24-x"</span>
+    <span class="nb">echo</span> <span class="s2">"num_emacs_servers = </span><span class="k">${</span><span class="nv">num_emacs_servers</span><span class="k">}</span><span class="s2">"</span>
     <span class="nb">exec</span> /usr/bin/emacs24-x <span class="nv">$@</span>
-<span class="k">fi</span>
+<span class="k">fi
 
-<span class="nb">exit </span>0
+</span><span class="nb">exit </span>0<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>Also, update the alternatives for <code class="highlighter-rouge">emacs</code>, setting it to <code class="highlighter-rouge">/home/user_name/bin/editor</code>.</p>
 
+<p>Now, whenever you run emacs, or some other command runs the text editor, you will:</p>
 
-Also, update the alternatives for `emacs`, setting it to `/home/user_name/bin/editor`.
+<ul>
+  <li>Get a new Emacs started, if no Emacs is running.</li>
+  <li>Get a new frame withing an already running Emacs.</li>
+</ul>
 
-Now, whenever you run emacs, or some other command runs the text editor, you will:
+<p>You must make sure that upon start, Emacs runs the following LISP command:</p>
 
-- Get a new Emacs started, if no Emacs is running.
-- Get a new frame withing an already running Emacs.
+<figure class="highlight"><pre><code class="language-lisp" data-lang="lisp"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>(server-start)<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-You must make sure that upon start, Emacs runs the following LISP command:
-
-
-<figure class="highlight"><pre><code class="language-lisp" data-lang="lisp"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1<td class="code"><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span>
-
-</td></pre>
-
-
-This will start an Emacs server daemon that will process any client requests.
-</div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure>
+<p>This will start an Emacs server daemon that will process any client requests.</p>
 
         
       </div><!-- /.entry-content -->

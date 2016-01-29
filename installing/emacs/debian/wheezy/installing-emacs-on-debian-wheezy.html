@@ -176,18 +176,18 @@ the latest and greatest
 = ) So, without any other words, I present to you the complete guide of how to install
 Emacs 24.3.1 on Debian 7 wheezy.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
-12<td class="code">sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev<span class="se">\</span>
+12</pre></td><td class="code"><pre>sudo aptitude install git-core libxaw7-dev libxpm-dev libpng12-dev<span class="se">\</span>
   libtiff5-dev libgif-dev libjpeg8-dev libgtk2.0-dev libncurses5-dev<span class="se">\</span>
   autoconf automake texinfo
 sudo apt-get build-dep emacs
@@ -198,46 +198,37 @@ git checkout -b custom_branch
 ./autogen.sh
 ./configure --prefix<span class="o">=</span>/opt/emacs24
 make --jobs<span class="o">=</span>2
-sudo make install
+sudo make install<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>The above steps will install Emacs to <code class="highlighter-rouge">/opt/emacs24</code>. To run Emacs, you can launch it by:</p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>/opt/emacs24/bin/emacs<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-The above steps will install Emacs to `/opt/emacs24`. To run Emacs, you can launch it by:
+<p>It is important to add the directory, where Emacs binary is found, to the system <code class="highlighter-rouge">PATH</code>
+variable. The directory contains several other important Emacs related binaries:</p>
 
+<ul>
+  <li><a href="http://www.emacswiki.org/emacs/BuildTags">ctags</a></li>
+  <li><a href="https://www.gnu.org/software/emacs/manual/ebrowse.html">ebrowse</a></li>
+  <li><a href="https://www.gnu.org/software/emacs">emacs</a> -&gt; emacs-24.3</li>
+  <li>emacs-24.3</li>
+  <li><a href="http://www.emacswiki.org/emacs/EmacsClient">emacsclient</a></li>
+  <li><a href="http://www.gnu.org/software/emacs/manual/html_node/eintr/etags.html">etags</a></li>
+  <li><a href="http://manned.org/grep-changelog/196b04a3">grep-changelog</a></li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1<td class="code">/opt/emacs24/bin/emacs
+<p>Place the following line at the bottom of your <code class="highlighter-rouge">~/.bashrc</code> file:</p>
 
-</td></pre>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/emacs24/bin<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
+<p>Now you can run Emacs with a simple command:</p>
 
-It is important to add the directory, where Emacs binary is found, to the system `PATH`
-variable. The directory contains several other important Emacs related binaries:
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>emacs<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-- [ctags](http://www.emacswiki.org/emacs/BuildTags)
-- [ebrowse](https://www.gnu.org/software/emacs/manual/ebrowse.html)
-- [emacs](https://www.gnu.org/software/emacs) -&gt; emacs-24.3
-- emacs-24.3
-- [emacsclient](http://www.emacswiki.org/emacs/EmacsClient)
-- [etags](http://www.gnu.org/software/emacs/manual/html_node/eintr/etags.html)
-- [grep-changelog](http://manned.org/grep-changelog/196b04a3)
-
-Place the following line at the bottom of your `~/.bashrc` file:
-
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1<td class="code"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/opt/emacs24/bin
-
-</td></pre>
-
-
-Now you can run Emacs with a simple command:
-
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1<td class="code">emacs
-
-</td></pre>
-
-</div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure>
 
         
       </div><!-- /.entry-content -->

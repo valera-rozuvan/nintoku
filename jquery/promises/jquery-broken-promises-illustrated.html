@@ -179,16 +179,16 @@
 
 <p>A <a href="https://en.wikipedia.org/wiki/Futures_and_promises">promise</a> is a way to reduce this</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10<td class="code"><span class="nx">asyncCall</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data1</span><span class="p">){</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre></td><td class="code"><pre><span class="nx">asyncCall</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data1</span><span class="p">){</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
     <span class="nx">anotherAsyncCall</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err2</span><span class="p">,</span> <span class="nx">data2</span><span class="p">){</span>
         <span class="k">if</span><span class="p">(</span><span class="nx">err2</span><span class="p">)</span> <span class="k">return</span> <span class="nx">calllback</span><span class="p">(</span><span class="nx">err2</span><span class="p">);</span>
@@ -197,30 +197,27 @@
             <span class="c1">// are we done yet?</span>
         <span class="p">});</span>
     <span class="p">});</span>
-<span class="p">});</span>
+<span class="p">});</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>to this</p>
 
-
-to this
-
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
 13
 14
 15
-16<td class="code"><span class="nx">asyncCall</span><span class="p">()</span>
+16</pre></td><td class="code"><pre><span class="nx">asyncCall</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data1</span><span class="p">){</span>
     <span class="c1">// do something...</span>
     <span class="k">return</span> <span class="nx">anotherAsyncCall</span><span class="p">();</span>
@@ -235,39 +232,36 @@ to this
 <span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
    <span class="c1">// handle any error resulting from any of the above calls</span>
 <span class="p">})</span>
-<span class="p">.</span><span class="nx">done</span><span class="p">();</span>
+<span class="p">.</span><span class="nx">done</span><span class="p">();</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>The above two JavaScript excerpts have been taken from <a href="http://12devs.co.uk/articles/promises-an-alternative-way-to-approach-asynchronous-javascript/">Promises – an alternative way to approach asynchronous JavaScript</a>.</p>
 
+<p>Several promise specification for JavaScript exist, <em>Promises/A+</em> being the most widely used.</p>
 
-The above two JavaScript excerpts have been taken from [Promises – an alternative way to approach asynchronous JavaScript](http://12devs.co.uk/articles/promises-an-alternative-way-to-approach-asynchronous-javascript/).
+<ol>
+  <li>Promises/A <a href="http://wiki.commonjs.org/wiki/Promises/A">http://wiki.commonjs.org/wiki/Promises/A</a></li>
+  <li>Promises/A+ <a href="https://promisesaplus.com/">https://promisesaplus.com/</a></li>
+  <li>ES6 Promise Objects <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects">http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects</a></li>
+</ol>
 
-Several promise specification for JavaScript exist, *Promises/A+* being the most widely used.
+<h2 id="the-problem-with-jquerys-promises">The problem with jQuery’s promises</h2>
 
-1. Promises/A [http://wiki.commonjs.org/wiki/Promises/A](http://wiki.commonjs.org/wiki/Promises/A)
-2. Promises/A+ [https://promisesaplus.com/](https://promisesaplus.com/)
-3. ES6 Promise Objects [http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects](http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects)
+<p>jQuery’s promise implementation is pretty broken. It does not adheer to the Promises/A+ specification used by the vast majority of other promise implementations. See the <a href="https://promisesaplus.com/implementations">list of Promises/A+ implementations</a>.</p>
 
-The problem with jQuery's promises
-----------------------------------
+<h2 id="an-illustration">An illustration</h2>
 
-jQuery's promise implementation is pretty broken. It does not adheer to the Promises/A+ specification used by the vast majority of other promise implementations. See the [list of Promises/A+ implementations](https://promisesaplus.com/implementations).
+<p>Using the latest of either jQuery 1.x or 2.x, let’s write the following JavaScript test program:</p>
 
-An illustration
----------------
-
-Using the latest of either jQuery 1.x or 2.x, let's write the following JavaScript test program:
-
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
@@ -312,20 +306,20 @@ Using the latest of either jQuery 1.x or 2.x, let's write the following JavaScri
 51
 52
 53
-54<td class="code"><span class="kd">var</span> <span class="nx">$</span><span class="p">,</span> <span class="nx">output</span><span class="p">,</span> <span class="nx">def</span><span class="p">,</span> <span class="nx">promise</span><span class="p">,</span> <span class="nx">myObject</span><span class="p">,</span> <span class="nx">syncWorkFunc</span><span class="p">,</span> <span class="nx">asyncWorkFunc</span><span class="p">;</span>
+54</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">$</span><span class="p">,</span> <span class="nx">output</span><span class="p">,</span> <span class="nx">def</span><span class="p">,</span> <span class="nx">promise</span><span class="p">,</span> <span class="nx">myObject</span><span class="p">,</span> <span class="nx">syncWorkFunc</span><span class="p">,</span> <span class="nx">asyncWorkFunc</span><span class="p">;</span>
 
 <span class="nx">setup</span><span class="p">();</span>
 <span class="nx">promiseTests</span><span class="p">();</span>
 
 <span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">$</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">;</span>
-    <span class="nx">output</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;output&#39;</span><span class="p">);</span>
+    <span class="nx">output</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'output'</span><span class="p">);</span>
 
     <span class="nx">def</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">Deferred</span><span class="p">();</span>
     <span class="nx">promise</span> <span class="o">=</span> <span class="nx">def</span><span class="p">.</span><span class="nx">promise</span><span class="p">();</span>
 
     <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="nx">state</span><span class="o">:</span> <span class="kc">null</span>
+        <span class="na">state</span><span class="p">:</span> <span class="kc">null</span>
     <span class="p">};</span>
 
     <span class="nx">syncWorkFunc</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
@@ -339,103 +333,94 @@ Using the latest of either jQuery 1.x or 2.x, let's write the following JavaScri
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">promiseTests</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;0.) myObject.state = &#39;</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'0.) myObject.state = '</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">'&lt;br /&gt;'</span><span class="p">);</span>
 
     <span class="nx">syncWorkFunc</span><span class="p">();</span>
     <span class="c1">// asyncWorkFunc();</span>
 
     <span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;[THEN #1] Setting myObject.state to &quot;X&quot;.&lt;br /&gt;&#39;</span><span class="p">);</span>
-        <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="s2">&quot;X&quot;</span><span class="p">;</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'[THEN #1] Setting myObject.state to "X".&lt;br /&gt;'</span><span class="p">);</span>
+        <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="s2">"X"</span><span class="p">;</span>
     <span class="p">});</span>
-    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;1.) Setting myObject.state to &quot;A&quot;.&lt;br /&gt;&#39;</span><span class="p">);</span>
-    <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span><span class="p">;</span>
+    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'1.) Setting myObject.state to "A".&lt;br /&gt;'</span><span class="p">);</span>
+    <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="s2">"A"</span><span class="p">;</span>
 
     <span class="c1">// syncWorkFunc();</span>
     <span class="c1">// asyncWorkFunc();</span>
 
-    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;2.) myObject.state = &#39;</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'2.) myObject.state = '</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">'&lt;br /&gt;'</span><span class="p">);</span>
     <span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;[THEN #2] myObject.state = &#39;</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'[THEN #2] myObject.state = '</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">'&lt;br /&gt;'</span><span class="p">);</span>
     <span class="p">});</span>
     <span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;[THEN #3] myObject.state = &#39;</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'[THEN #3] myObject.state = '</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">'&lt;br /&gt;'</span><span class="p">);</span>
     <span class="p">});</span>
     <span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;[THEN #4] myObject.state = &#39;</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'[THEN #4] myObject.state = '</span> <span class="o">+</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s1">'&lt;br /&gt;'</span><span class="p">);</span>
     <span class="p">});</span>
-    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;3.)&lt;br /&gt;&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+    <span class="nx">$</span><span class="p">(</span><span class="nx">output</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'3.)&lt;br /&gt;'</span><span class="p">);</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>The output of the above JavaScript program will be:</p>
 
-
-The output of the above JavaScript program will be:
-
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<figure class="highlight"><pre><code class="language-text" data-lang="text"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8<td class="code">0.) myObject.state = null
-[THEN #1] Setting myObject.state to &quot;X&quot;.
-1.) Setting myObject.state to &quot;A&quot;.
+8</pre></td><td class="code"><pre>0.) myObject.state = null
+[THEN #1] Setting myObject.state to "X".
+1.) Setting myObject.state to "A".
 2.) myObject.state = A
 [THEN #2] myObject.state = A
 [THEN #3] myObject.state = A
 [THEN #4] myObject.state = A
-3.)
+3.)<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>Two things went wrong here. All of <code>THEN {#}</code> logs should be at the end of the output. Also, and this is most important of all, in the end <code>myObject.state</code> did not change to <code>"X"</code>!</p>
 
+<p>If we use a real Promise/A+ implementation, we will get:</p>
 
-Two things went wrong here. All of <code>THEN {#}</code> logs should be at the end of the output. Also, and this is most important of all, in the end <code>myObject.state</code> did not change to <code>"X"</code>!
-
-If we use a real Promise/A+ implementation, we will get:
-
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<figure class="highlight"><pre><code class="language-text" data-lang="text"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8<td class="code">0.) myObject.state = null
-1.) Setting myObject.state to &quot;A&quot;.
+8</pre></td><td class="code"><pre>0.) myObject.state = null
+1.) Setting myObject.state to "A".
 2.) myObject.state = A
 3.)
-[THEN #1] Setting myObject.state to &quot;X&quot;.
+[THEN #1] Setting myObject.state to "X".
 [THEN #2] myObject.state = X
 [THEN #3] myObject.state = X
-[THEN #4] myObject.state = X
+[THEN #4] myObject.state = X<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>You can see these results for yourself. A JS Fiddle has been setup with jQuery 2.1.4 <a href="https://jsfiddle.net/4988rggu/4/">here</a>. For valid Promise/A+ implementation I chose Angular JS. It’s promise system <a href="https://docs.angularjs.org/api/ng/service/$q">$q</a> is based on <a href="https://github.com/kriskowal/q">Kris Kowal’s Q</a>. A JS Fiddle has been setup with Angular JS 1.4.2 <a href="https://jsfiddle.net/xfmetfoL/4/">here</a>.</p>
 
+<h2 id="when-will-promises-be-fixed-in-jquery">When will promises be fixed in jQuery?</h2>
 
-You can see these results for yourself. A JS Fiddle has been setup with jQuery 2.1.4 [here](https://jsfiddle.net/4988rggu/4/). For valid Promise/A+ implementation I chose Angular JS. It's promise system [$q](https://docs.angularjs.org/api/ng/service/$q) is based on [Kris Kowal's Q](https://github.com/kriskowal/q). A JS Fiddle has been setup with Angular JS 1.4.2 [here](https://jsfiddle.net/xfmetfoL/4/).
+<p>When jQuery 3.0 comes out. Refer to the blog post <a href="http://blog.jquery.com/2014/10/29/jquery-3-0-the-next-generations/">jQuery 3.0: The Next Generations</a>, and also <a href="https://github.com/jquery/jquery/pull/1996">jQuery’s work on getting their promises to pass the Promises/A+ test suite</a>.</p>
 
-When will promises be fixed in jQuery?
---------------------------------------
+<h2 id="useful-links">Useful links</h2>
 
-When jQuery 3.0 comes out. Refer to the blog post [jQuery 3.0: The Next Generations](http://blog.jquery.com/2014/10/29/jquery-3-0-the-next-generations/), and also [jQuery's work on getting their promises to pass the Promises/A+ test suite](https://github.com/jquery/jquery/pull/1996).
+<p>The problem discussed in this post is a well known one. It has been discussed previously by other people on the Internet. Be sure to go over all of the following resources:</p>
 
-Useful links
-------------
-
-The problem discussed in this post is a well known one. It has been discussed previously by other people on the Internet. Be sure to go over all of the following resources:
-
-1. [You're Missing the Point of Promises](https://gist.github.com/domenic/3889970)
-2. [working with jQuery promises](http://stackoverflow.com/questions/17617545/working-with-jquery-promises)
-3. [JAVASCRIPT PROMISES AND WHY JQUERY IMPLEMENTATION IS BROKEN](https://thewayofcode.wordpress.com/2013/01/22/javascript-promises-and-why-jquery-implementation-is-broken/)
-4. [The Differences between jQuery Deferreds and the Promises/A+ spec](http://abdulapopoola.com/2014/12/12/the-differences-between-jquery-deferreds-and-the-promisesa-spec/)
-5. [Problems inherent to jQuery $.Deferred](http://stackoverflow.com/questions/23744612/problems-inherent-to-jquery-deferred)
-6. [Coming from jQuery](https://github.com/kriskowal/q/wiki/Coming-from-jQuery)
-7. [Deferred: Backwards-compatible standards interoperability](https://github.com/jquery/jquery/pull/1996)
-</div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure>
+<ol>
+  <li><a href="https://gist.github.com/domenic/3889970">You’re Missing the Point of Promises</a></li>
+  <li><a href="http://stackoverflow.com/questions/17617545/working-with-jquery-promises">working with jQuery promises</a></li>
+  <li><a href="https://thewayofcode.wordpress.com/2013/01/22/javascript-promises-and-why-jquery-implementation-is-broken/">JAVASCRIPT PROMISES AND WHY JQUERY IMPLEMENTATION IS BROKEN</a></li>
+  <li><a href="http://abdulapopoola.com/2014/12/12/the-differences-between-jquery-deferreds-and-the-promisesa-spec/">The Differences between jQuery Deferreds and the Promises/A+ spec</a></li>
+  <li><a href="http://stackoverflow.com/questions/23744612/problems-inherent-to-jquery-deferred">Problems inherent to jQuery $.Deferred</a></li>
+  <li><a href="https://github.com/kriskowal/q/wiki/Coming-from-jQuery">Coming from jQuery</a></li>
+  <li><a href="https://github.com/jquery/jquery/pull/1996">Deferred: Backwards-compatible standards interoperability</a></li>
+</ol>
 
         
       </div><!-- /.entry-content -->

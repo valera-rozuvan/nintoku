@@ -184,53 +184,50 @@ post.</p>
 <a href="https://developer.mozilla.org/en/docs/Web/API/window.setInterval">window.setInterval</a>
 method to get two functions to execute periodically at the same interval,
 will they always (and for all time, while the browser is open) execute
-one after the other, in the order of <code>window.setInterval</code> invocation?</p>
+one after the other, in the order of <code class="highlighter-rouge">window.setInterval</code> invocation?</p>
 
 <p>So, to be more precise, if we have the following code:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
-12<td class="code"><span class="kd">var</span> <span class="nx">timeout1</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc1</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+12</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">timeout1</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc1</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
     <span class="nx">timeout2</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">timeoutFunc2</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
 
 <span class="kd">function</span> <span class="nx">timeoutFunc1</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// It is given that window.output() is defined, and writes</span>
-    <span class="c1">// it&#39;s parameter to the page for the user to see.</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">);</span>
+    <span class="c1">// it's parameter to the page for the user to see.</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">'1'</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">timeoutFunc2</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">output</span><span class="p">(</span><span class="s1">'2'</span><span class="p">);</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>will we see on the page:</p>
 
-
-will we see on the page:
-
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+<figure class="highlight"><pre><code class="language-text" data-lang="text"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
-13<td class="code">1
+13</pre></td><td class="code"><pre>1
 2
 1
 2
@@ -242,30 +239,27 @@ will we see on the page:
 2
 1
 2
-...
+...<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
-
-
-An interesting question. To further complicate things, what if one of
+<p>An interesting question. To further complicate things, what if one of
 the periodically invoked functions did something else besides outputting
 a number to the page. What if it took a long time to run, i.e. it would
-execute 5 to 10 times longer? Would we then see something like this:
+execute 5 to 10 times longer? Would we then see something like this:</p>
 
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+<figure class="highlight"><pre><code class="language-text" data-lang="text"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
-13<td class="code">2
+13</pre></td><td class="code"><pre>2
 2
 2
 2
@@ -277,40 +271,42 @@ execute 5 to 10 times longer? Would we then see something like this:
 2
 2
 2
-...
+...<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
-
-
-I have done a lot of reading on the subject of JavaScript concurrency,
+<p>I have done a lot of reading on the subject of JavaScript concurrency,
 parallelism, etc. I have started to believe that in the second example
-above the two functions would still execute one after the other.
+above the two functions would still execute one after the other.</p>
 
-Then, today, I decided to write such a test, and see for myself what
+<p>Then, today, I decided to write such a test, and see for myself what
 would actually happen. I have created a JSFiddle to
-[test this out](http://jsfiddle.net/k2h7Z/34).
-The results were quite surprising for me.
+<a href="http://jsfiddle.net/k2h7Z/34">test this out</a>.
+The results were quite surprising for me.</p>
 
-I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
+<p>I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
 In all browsers except Firefox the two function ran one after the other.
 In Firefox, though, the more CPU expensive function was running in parallel
 with the fast function. I drew this conclusion for the fact that the slow
 function managed to output once in the same time that the fast function
-outputted several times.
+outputted several times.</p>
 
-&gt; In Firefox, though, the more CPU expensive function was running in parallel
-with the fast function.
+<blockquote>
+  <p>In Firefox, though, the more CPU expensive function was running in parallel
+with the fast function.</p>
+</blockquote>
 
-I have used the following versions of the browsers:
+<p>I have used the following versions of the browsers:</p>
 
-- Internet Explorer 10.0.9200.16576
-- Opera 20.0.1387.82
-- Google Chrome 33.0.1750.154
-- Firefox 28.0
+<ul>
+  <li>Internet Explorer 10.0.9200.16576</li>
+  <li>Opera 20.0.1387.82</li>
+  <li>Google Chrome 33.0.1750.154</li>
+  <li>Firefox 28.0</li>
+</ul>
 
-Tested on an Intel x86 quad core machine running Windows 7.
+<p>Tested on an Intel x86 quad core machine running Windows 7.</p>
 
-Here are the screenshots of the results.
+<p>Here are the screenshots of the results.</p>
 
 <figure>
     <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png" /></a>
@@ -328,7 +324,6 @@ Here are the screenshots of the results.
     <a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png"><img src="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png" /></a>
     <figcaption><a href="http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png" title="Firefox">Firefox</a>.</figcaption>
 </figure>
-</div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure>
 
         
       </div><!-- /.entry-content -->

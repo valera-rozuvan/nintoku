@@ -175,9 +175,9 @@ reinforced with a JavaScript sample demo right on the page. So that the user cou
 better understand what I am talking about.</p>
 
 <p>I will introduce a mark-up element in my posts. It will contain a certain <strong>class</strong> and
-a <code>data-*</code> attribute. The <strong>class</strong> will tell my executable JavaScript engine that it should
-act up, and the <code>data-*</code> attribute will tell it how to act up. I.e. - I will be specifying
-the necessary JavaScript file to load and execute via the <code>data-*</code> attribute.</p>
+a <code class="highlighter-rouge">data-*</code> attribute. The <strong>class</strong> will tell my executable JavaScript engine that it should
+act up, and the <code class="highlighter-rouge">data-*</code> attribute will tell it how to act up. I.e. - I will be specifying
+the necessary JavaScript file to load and execute via the <code class="highlighter-rouge">data-*</code> attribute.</p>
 
 <p>So, here we go:</p>
 
@@ -189,27 +189,24 @@ the necessary JavaScript file to load and execute via the <code>data-*</code> at
 
 <p>The HTML code snippet to set up this executable JavaScript sample is as follows:</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3<td class="code"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;exec-me&quot;</span> <span class="na">data-js-source=</span><span class="s">&quot;module1-test1&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn-run-js&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Run<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+3</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"exec-me"</span> <span class="na">data-js-source=</span><span class="s">"module1-test1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn-run-js"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Run<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>The actual executable JavaScript is:</p>
 
-
-The actual executable JavaScript is:
-
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
@@ -251,10 +248,10 @@ The actual executable JavaScript is:
 48
 49
 50
-51<td class="code"><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">define</span><span class="p">,</span> <span class="nx">require</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
-  <span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+51</pre></td><td class="code"><pre><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">define</span><span class="p">,</span> <span class="nx">require</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+  <span class="s1">'use strict'</span><span class="p">;</span>
 
-  <span class="nx">define</span><span class="p">(</span><span class="s1">&#39;module1-test1&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;jQuery&#39;</span><span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">define</span><span class="p">(</span><span class="s1">'module1-test1'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'jQuery'</span><span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">el</span><span class="p">,</span> <span class="nx">cEl</span><span class="p">,</span> <span class="nx">hasRun</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 
     <span class="kd">function</span> <span class="nx">init</span><span class="p">(</span><span class="nx">_el</span><span class="p">)</span> <span class="p">{</span>
@@ -262,7 +259,7 @@ The actual executable JavaScript is:
 
       <span class="nx">createCanvas</span><span class="p">();</span>
 
-      <span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;a.btn-run-js&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'a.btn-run-js'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
         <span class="nx">event</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
 
@@ -274,14 +271,14 @@ The actual executable JavaScript is:
     <span class="p">}</span>
 
     <span class="kd">function</span> <span class="nx">createCanvas</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">cEl</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;canvas id=&quot;output-canvas-1&quot;&gt;&lt;/canvas&gt;&#39;</span><span class="p">);</span>
+      <span class="nx">cEl</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;canvas id="output-canvas-1"&gt;&lt;/canvas&gt;'</span><span class="p">);</span>
 
       <span class="nx">cEl</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
-        <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;400px&#39;</span><span class="p">,</span>
-        <span class="nx">height</span><span class="o">:</span> <span class="s1">&#39;200px&#39;</span><span class="p">,</span>
-        <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;background-color&#39;</span><span class="o">:</span> <span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>
-        <span class="nx">margin</span><span class="o">:</span> <span class="s1">&#39;2%&#39;</span>
+        <span class="na">width</span><span class="p">:</span> <span class="s1">'400px'</span><span class="p">,</span>
+        <span class="na">height</span><span class="p">:</span> <span class="s1">'200px'</span><span class="p">,</span>
+        <span class="na">display</span><span class="p">:</span> <span class="s1">'inline-block'</span><span class="p">,</span>
+        <span class="s1">'background-color'</span><span class="p">:</span> <span class="s1">'#ffffff'</span><span class="p">,</span>
+        <span class="na">margin</span><span class="p">:</span> <span class="s1">'2%'</span>
       <span class="p">});</span>
 
       <span class="nx">$</span><span class="p">(</span><span class="nx">el</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">cEl</span><span class="p">);</span>
@@ -291,23 +288,20 @@ The actual executable JavaScript is:
       <span class="kd">var</span> <span class="nx">canvas</span><span class="p">,</span> <span class="nx">ctx</span><span class="p">;</span>
 
       <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">cEl</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-      <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">&#39;2d&#39;</span><span class="p">);</span>
+      <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">'2d'</span><span class="p">);</span>
 
-      <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">;</span>
+      <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="s1">'black'</span><span class="p">;</span>
       <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillRect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">init</span><span class="o">:</span> <span class="nx">init</span>
+      <span class="na">init</span><span class="p">:</span> <span class="nx">init</span>
     <span class="p">};</span>
   <span class="p">});</span>
-<span class="p">}(</span><span class="nb">window</span><span class="p">.</span><span class="nx">define</span><span class="p">,</span> <span class="nb">window</span><span class="p">.</span><span class="nx">require</span><span class="p">));</span>
+<span class="p">}(</span><span class="nb">window</span><span class="p">.</span><span class="nx">define</span><span class="p">,</span> <span class="nb">window</span><span class="p">.</span><span class="nx">require</span><span class="p">));</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
-
-
-Oh, I am going to have a fun time from now on = )
-</div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure>
+<p>Oh, I am going to have a fun time from now on = )</p>
 
         
       </div><!-- /.entry-content -->

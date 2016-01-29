@@ -175,15 +175,15 @@ to another number, but not necessarily equal to it.
 matcher <a href="https://github.com/pivotal/jasmine/blob/master/src/core/matchers/toBeCloseTo.js">toBeCloseTo()</a>
 just for this case. See the code below.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
@@ -192,28 +192,26 @@ just for this case. See the code below.</p>
 15
 16
 17
-18<td class="code"><span class="nx">getJasmineRequireObj</span><span class="p">().</span><span class="nx">toBeCloseTo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+18</pre></td><td class="code"><pre><span class="nx">getJasmineRequireObj</span><span class="p">().</span><span class="nx">toBeCloseTo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="kd">function</span> <span class="nx">toBeCloseTo</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="p">{</span>
-            <span class="nx">compare</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">actual</span><span class="p">,</span> <span class="nx">expected</span><span class="p">,</span> <span class="nx">precision</span><span class="p">)</span> <span class="p">{</span>
+            <span class="na">compare</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">actual</span><span class="p">,</span> <span class="nx">expected</span><span class="p">,</span> <span class="nx">precision</span><span class="p">)</span> <span class="p">{</span>
                 <span class="k">if</span> <span class="p">(</span><span class="nx">precision</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
                     <span class="nx">precision</span> <span class="o">=</span> <span class="nx">precision</span> <span class="o">||</span> <span class="mi">2</span><span class="p">;</span>
                 <span class="p">}</span>
 
                 <span class="k">return</span> <span class="p">{</span>
-                    <span class="nx">pass</span><span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">expected</span> <span class="o">-</span> <span class="nx">actual</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="nx">precision</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+                    <span class="na">pass</span><span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">expected</span> <span class="o">-</span> <span class="nx">actual</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="nx">precision</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
                 <span class="p">};</span>
             <span class="p">}</span>
         <span class="p">};</span>
     <span class="p">}</span>
 
     <span class="k">return</span> <span class="nx">toBeCloseTo</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="p">};</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
-
-</div></td></tr></table></code></pre></figure>
 
         
       </div><!-- /.entry-content -->

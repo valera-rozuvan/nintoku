@@ -180,37 +180,29 @@ So is the case with Sublime Text 3 editor.</p>
 
 <p>To add a menu launcher for Sublime, create a file:</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1<td class="code"> ~/.menu/subl
+<figure class="highlight"><pre><code class="language-text" data-lang="text"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre> ~/.menu/subl<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>with the following contents:</p>
 
-
-with the following contents:
-
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<figure class="highlight"><pre><code class="language-text" data-lang="text"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
-6<td class="code">?package(sublime-text):needs=&quot;X11&quot;\
-  section=&quot;Applications/Editors&quot;\
-  hints=&quot;Text editor&quot;\
-  longtitle=&quot;Sublime Text 3&quot;\
-  title=&quot;Sublime&quot;\
-  command=&quot;/usr/bin/subl&quot;
+6</pre></td><td class="code"><pre>?package(sublime-text):needs="X11"\
+  section="Applications/Editors"\
+  hints="Text editor"\
+  longtitle="Sublime Text 3"\
+  title="Sublime"\
+  command="/usr/bin/subl"<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>Then update the Debian menu with the following command:</p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>sudo update-menus -v --menufilesdir<span class="o">=</span>~/.menu<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-Then update the Debian menu with the following command:
-
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1<td class="code">sudo update-menus -v --menufilesdir<span class="o">=</span>~/.menu
-
-</td></pre>
-
-</div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure>
 
         
       </div><!-- /.entry-content -->

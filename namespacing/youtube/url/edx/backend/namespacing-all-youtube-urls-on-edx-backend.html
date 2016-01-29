@@ -171,47 +171,41 @@
       <div class="entry-content" id="entry-content-main" itemprop="description">
         <p>Up to now, the backend defined 2 variables which stored YouTube related URLs:</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2<td class="code"><span class="c"># URL to test YouTube availability</span>
-<span class="n">YOUTUBE_TEST_URL</span> <span class="o">=</span> <span class="s">&#39;https://gdata.youtube.com/feeds/api/videos/&#39;</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="c"># URL to test YouTube availability</span>
+<span class="n">YOUTUBE_TEST_URL</span> <span class="o">=</span> <span class="s">'https://gdata.youtube.com/feeds/api/videos/'</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>and</p>
 
-
-and
-
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
-6<td class="code"><span class="c"># Current youtube api for requesting transcripts.</span>
+6</pre></td><td class="code"><pre><span class="c"># Current youtube api for requesting transcripts.</span>
 <span class="c"># for example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.</span>
 <span class="n">YOUTUBE_API</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="s">&quot;http://video.google.com/timedtext&quot;</span><span class="p">,</span>
-    <span class="s">&#39;params&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;lang&#39;</span><span class="p">:</span> <span class="s">&#39;en&#39;</span><span class="p">,</span> <span class="s">&#39;v&#39;</span><span class="p">:</span> <span class="s">&#39;set_youtube_id_of_11_symbols_here&#39;</span><span class="p">}</span>
-<span class="p">}</span>
+    <span class="s">'url'</span><span class="p">:</span> <span class="s">"http://video.google.com/timedtext"</span><span class="p">,</span>
+    <span class="s">'params'</span><span class="p">:</span> <span class="p">{</span><span class="s">'lang'</span><span class="p">:</span> <span class="s">'en'</span><span class="p">,</span> <span class="s">'v'</span><span class="p">:</span> <span class="s">'set_youtube_id_of_11_symbols_here'</span><span class="p">}</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>This was done in <a href="https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py"><code class="highlighter-rouge">cms/envs/common.py</code></a> file (lines 428, 532).</p>
 
+<p>I wanted to introduce a new URL which is responsible for YouTube API on
+the front-end. To do this, I have created a <code class="highlighter-rouge">YOUTUBE</code> namespace, and
+added a third URL to the back-end:</p>
 
-This was done in [`cms/envs/common.py`](https://github.com/edx/edx-platform/blob/156b5312933ff5d6849e577bbd6bf80fd48de234/cms/envs/common.py) file (lines 428, 532).
-
-I wanted to introduce a new URL which is responsible for YouTube API on
-the front-end. To do this, I have created a `YOUTUBE` namespace, and
-added a third URL to the back-end:
-
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
 10
 11
 12
@@ -219,31 +213,28 @@ added a third URL to the back-end:
 14
 15
 16
-17<td class="code"><span class="n">YOUTUBE</span> <span class="o">=</span> <span class="p">{</span>
+17</pre></td><td class="code"><pre><span class="n">YOUTUBE</span> <span class="o">=</span> <span class="p">{</span>
     <span class="c"># YouTube JavaScript API</span>
-    <span class="s">&#39;API&#39;</span><span class="p">:</span> <span class="s">&#39;www.youtube.com/iframe_api&#39;</span><span class="p">,</span>
+    <span class="s">'API'</span><span class="p">:</span> <span class="s">'www.youtube.com/iframe_api'</span><span class="p">,</span>
 
     <span class="c"># URL to test YouTube availability</span>
-    <span class="s">&#39;TEST_URL&#39;</span><span class="p">:</span> <span class="s">&#39;gdata.youtube.com/feeds/api/videos/&#39;</span><span class="p">,</span>
+    <span class="s">'TEST_URL'</span><span class="p">:</span> <span class="s">'gdata.youtube.com/feeds/api/videos/'</span><span class="p">,</span>
 
     <span class="c"># Current youtube api for requesting transcripts.</span>
     <span class="c"># For example: http://video.google.com/timedtext?lang=en&amp;v=j_jEn79vS3g.</span>
-    <span class="s">&#39;TEXT_API&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="s">&#39;video.google.com/timedtext&#39;</span><span class="p">,</span>
-        <span class="s">&#39;params&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s">&#39;lang&#39;</span><span class="p">:</span> <span class="s">&#39;en&#39;</span><span class="p">,</span>
-            <span class="s">&#39;v&#39;</span><span class="p">:</span> <span class="s">&#39;set_youtube_id_of_11_symbols_here&#39;</span><span class="p">,</span>
+    <span class="s">'TEXT_API'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'url'</span><span class="p">:</span> <span class="s">'video.google.com/timedtext'</span><span class="p">,</span>
+        <span class="s">'params'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">'lang'</span><span class="p">:</span> <span class="s">'en'</span><span class="p">,</span>
+            <span class="s">'v'</span><span class="p">:</span> <span class="s">'set_youtube_id_of_11_symbols_here'</span><span class="p">,</span>
         <span class="p">},</span>
     <span class="p">},</span>
-<span class="p">}</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p>The <a href="https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9">pull request</a> has just been merged in to <a href="https://github.com/edx/edx-platform">edx-platform master</a>.</p>
 
-
-The [pull request](https://github.com/edx/edx-platform/commit/1c8eed853ebc2788b187c231cd90ddaf05d5dbb9) has just been merged in to [edx-platform master](https://github.com/edx/edx-platform).
-
-This PR opens up a possibility to mock the YouTube API in acceptance tests.
-</div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure></div></td></tr></table></code></pre></figure>
+<p>This PR opens up a possibility to mock the YouTube API in acceptance tests.</p>
 
         
       </div><!-- /.entry-content -->

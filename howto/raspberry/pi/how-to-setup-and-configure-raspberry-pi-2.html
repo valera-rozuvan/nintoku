@@ -255,31 +255,31 @@ able to access the Internet (open up a browser, and navigate to http://google.co
 
 <ol>
   <li>
-    <p>Change the default password of the <code>pi</code> user. You can do that using the <code>passwd</code> command.</p>
+    <p>Change the default password of the <code class="highlighter-rouge">pi</code> user. You can do that using the <code class="highlighter-rouge">passwd</code> command.</p>
   </li>
   <li>
     <p>Enlarge the amount of available memory on the MicroSD card. When you initially put the Raspbian image onto your
 MicroSD card, the image only takes about 3GB of space. Also, the MicroSD card’s partition table is set to this size
 (3GB). Therefore, the OS will only see the 3GB of space available - even if your card is 64GB in size! To fix this,
-use the available command <code>sudo raspi-config</code>.</p>
+use the available command <code class="highlighter-rouge">sudo raspi-config</code>.</p>
   </li>
   <li>
-    <p>Next you need to update the RPi2 firmware. Use the available command <code>sudo rpi-update</code>. NOTE: you need an active
+    <p>Next you need to update the RPi2 firmware. Use the available command <code class="highlighter-rouge">sudo rpi-update</code>. NOTE: you need an active
 Internet connection for the update to be successful!</p>
   </li>
   <li>
     <p>Update the package manager’s package database with the latest available package information. Use the command
-<code>sudo aptitude update</code>.</p>
+<code class="highlighter-rouge">sudo aptitude update</code>.</p>
   </li>
   <li>
-    <p>Upgrade software packages to their latest version (retrieved in the last step). Use the command <code>sudo aptitude
+    <p>Upgrade software packages to their latest version (retrieved in the last step). Use the command <code class="highlighter-rouge">sudo aptitude
 upgrade</code>.</p>
   </li>
   <li>
-    <p>Configure the locales. Add extra necessary locales with the command <code>sudo dpkg-reconfigure locales</code>.</p>
+    <p>Configure the locales. Add extra necessary locales with the command <code class="highlighter-rouge">sudo dpkg-reconfigure locales</code>.</p>
   </li>
   <li>
-    <p>Change the system’s time zone with the command <code>sudo dpkg-reconfigure tzdata</code>.</p>
+    <p>Change the system’s time zone with the command <code class="highlighter-rouge">sudo dpkg-reconfigure tzdata</code>.</p>
   </li>
 </ol>
 
@@ -287,19 +287,19 @@ upgrade</code>.</p>
 
 <p>The first part is easy! If you have your RPi2 on a LAN, and another PC on the same LAN as the RPi2, then you can easily
 SSH to the RPi2 from your other computer. All you need is to find out the IP address of the RPi2. One way to get the IP
-is to run the command <code>sudo ifconfig</code> on the RPi2, and see the output. The IP address will either be found in the <code>eth0</code>
-section, or the <code>wlan0</code> section (depending on whether you connected the RPi2 via an Ethernet cable or via a USB WiFi
-dongle). Now, just open up a console on your other PC, and type <code>ssh pi@192.168.1.203</code> (in my case, “192.168.1.203” is
+is to run the command <code class="highlighter-rouge">sudo ifconfig</code> on the RPi2, and see the output. The IP address will either be found in the <code class="highlighter-rouge">eth0</code>
+section, or the <code class="highlighter-rouge">wlan0</code> section (depending on whether you connected the RPi2 via an Ethernet cable or via a USB WiFi
+dongle). Now, just open up a console on your other PC, and type <code class="highlighter-rouge">ssh pi@192.168.1.203</code> (in my case, “192.168.1.203” is
 the IP of my RPi2). If you are on a Windows machine, you can use <a href="https://winscp.net/">WinSCP</a> and
 <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a> to get access of the RPi2 through SSH.</p>
 
 <p>Now on to VNC. In order to access RPi2 via VNC, you need to install a VNC server on the RPi2. One option is to use
-<code>tightvncserver</code>. First, install it with the command <code>sudo aptitude install tightvncserver</code>. Then configure the password
-for the server with the command <code>tightvncserver</code>. Now you can start up the server with
-<code>vncserver :0 -geometry 800x600 -depth 24</code>. NOTE: you can configure any resolution that you desire, not just <code>800x600</code>.
+<code class="highlighter-rouge">tightvncserver</code>. First, install it with the command <code class="highlighter-rouge">sudo aptitude install tightvncserver</code>. Then configure the password
+for the server with the command <code class="highlighter-rouge">tightvncserver</code>. Now you can start up the server with
+<code class="highlighter-rouge">vncserver :0 -geometry 800x600 -depth 24</code>. NOTE: you can configure any resolution that you desire, not just <code class="highlighter-rouge">800x600</code>.
 If everything went right, you can try connecting via VNC from another machine. On Windows you can use
-<a href="http://www.tightvnc.com/">TightVNC client</a>. On Linux there are many options. I use <code>gvncviewer</code>. To connect to an RPi2
-machine, use the command <code>gvncviewer 192.168.1.203:0</code> (replace “192.168.1.203” with the IP address of your RPi2).</p>
+<a href="http://www.tightvnc.com/">TightVNC client</a>. On Linux there are many options. I use <code class="highlighter-rouge">gvncviewer</code>. To connect to an RPi2
+machine, use the command <code class="highlighter-rouge">gvncviewer 192.168.1.203:0</code> (replace “192.168.1.203” with the IP address of your RPi2).</p>
 
 <h2 id="conclusion">Conclusion</h2>
 

@@ -178,35 +178,32 @@ that executed in Firefox.</p>
 
 <p><a href="http://jsfiddle.net/k2h7Z/34">The JSFiddle</a> that demonstrated the so
 called concurrency contains an error. When you enabled the
-second heavy function by setting <code>enableHeavyFunction</code> to <code>true</code>, then,
+second heavy function by setting <code class="highlighter-rouge">enableHeavyFunction</code> to <code class="highlighter-rouge">true</code>, then,
 because of the heavy function’s random nature, in some cases half way
 through execution an error is raised</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<figure class="highlight"><pre><code class="language-text" data-lang="text"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
-3<td class="code">Error: invalid arguments
+3</pre></td><td class="code"><pre>Error: invalid arguments
 
-this.spectrum   = new Float32Array(bufferSize/2);
+this.spectrum   = new Float32Array(bufferSize/2);<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
-
-
-`bufferSize` is to big, and Firefox JavaScript engine throws an error.
+<p><code class="highlighter-rouge">bufferSize</code> is to big, and Firefox JavaScript engine throws an error.
 Because of this, the fact that the heavy function ran is not registered
 in the output. So it appears that for three or four small functions only
 one heavy function is run. This is not so. Both functions run one after
 the other. It is just that the heavy function sometimes errors, and no
-output for it is written.
+output for it is written.</p>
 
-In Chrome this behavior did not happen because either it allows arbitrary
-first argument to `Float32Array` function, or it sets the first argument
-to some predefined maximum value.
+<p>In Chrome this behavior did not happen because either it allows arbitrary
+first argument to <code class="highlighter-rouge">Float32Array</code> function, or it sets the first argument
+to some predefined maximum value.</p>
 
-In any case, I have updated [the JSFiddle](http://jsfiddle.net/k2h7Z/37)
+<p>In any case, I have updated <a href="http://jsfiddle.net/k2h7Z/37">the JSFiddle</a>
 to use a blocking function instead of the really large function. As can
 be seen, it clearly shows that JavaScript is single-threaded across all
-browsers.
-</div></td></tr></table></code></pre></figure>
+browsers.</p>
 
         
       </div><!-- /.entry-content -->

@@ -175,25 +175,22 @@ that define the rules for highlighting for many, many languages.</p>
 
 <p>To use it, you surround your code block like so</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
-5<td class="code">    <span class="p">{</span><span class="o">%</span> <span class="n">highlight</span> <span class="n">lexer_name</span> <span class="o">%</span><span class="p">}</span>
+5</pre></td><td class="code"><pre>    <span class="p">{</span><span class="o">%</span> <span class="n">highlight</span> <span class="n">lexer_name</span> <span class="o">%</span><span class="p">}</span>
 
         <span class="p">...</span> <span class="n">code</span> <span class="n">goes</span> <span class="n">here</span> <span class="p">...</span>
 
-    <span class="p">{</span><span class="o">%</span> <span class="n">endhighlight</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">endhighlight</span> <span class="o">%</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-</td></pre>
+<p><strong>lexer_name</strong> is a short name for a programming language.</p>
 
-
-**lexer_name** is a short name for a programming language.
-
-NOTE: To enable syntax highlighting, please set the *pygments* variable to
-*true* in the `_config.yml` configuration file (see
-[reference](http://jekyllrb.com/docs/templates/)).
-</div></td></tr></table></code></pre></figure>
+<p>NOTE: To enable syntax highlighting, please set the <em>pygments</em> variable to
+<em>true</em> in the <code class="highlighter-rouge">_config.yml</code> configuration file (see
+<a href="http://jekyllrb.com/docs/templates/">reference</a>).</p>
 
         
       </div><!-- /.entry-content -->
