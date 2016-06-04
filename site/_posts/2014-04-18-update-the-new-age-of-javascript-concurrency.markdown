@@ -11,7 +11,7 @@ tags:
 ---
 
 In a previous article entitled
-[The New Age of JavaScript: Concurrency](http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency)
+[The New Age of JavaScript: Concurrency]({{ site.url }}/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency)
 I went on to describe how I have discovered concurrency in JavaScript
 that executed in Firefox.
 

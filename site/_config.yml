@@ -6,7 +6,9 @@ description:      The 16th emperor of Japan. A place to procrastinate while at w
 logo:             site-logo.png
 disqus_shortname: Nintoku
 search:           false
-#Comment out url when working locally to resolve base urls correctly
+
+# Uncomment the below url when working locally to resolve base urls correctly.
+# url:              http://127.0.0.1:4000/nintoku
 url:              http://valera-rozuvan.github.io/nintoku
 
 # Owner/author information

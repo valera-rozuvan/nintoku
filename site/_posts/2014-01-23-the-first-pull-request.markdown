@@ -6,7 +6,7 @@ categories: first pull request
 ---
 
 Following up from
-[yesterday's post](http://valera-rozuvan.github.io/nintoku/simple/bus/time/schedule/application/simple-bus-time-schedule-application/)
+[yesterday's post]({{ site.url }}/simple/bus/time/schedule/application/simple-bus-time-schedule-application/)
 the first pull request for the project
 [bustime](https://github.com/innovecs-opensource/bustime)
 is in [the process of review](https://github.com/innovecs-opensource/bustime/pull/1).

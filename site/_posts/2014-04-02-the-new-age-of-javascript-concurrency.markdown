@@ -6,7 +6,7 @@ categories: new age javascript concurrency
 ---
 
 **UPDATE**
-This post is based on an error. [See why.](http://valera-rozuvan.github.io/nintoku/updates/javascript/concurrency/new-age/update-the-new-age-of-javascript-concurrency)
+This post is based on an error. [See why.]({{ site.url }}/updates/javascript/concurrency/new-age/update-the-new-age-of-javascript-concurrency)
 **End-of: UPDATE**
 
 It has long been known to me that the
