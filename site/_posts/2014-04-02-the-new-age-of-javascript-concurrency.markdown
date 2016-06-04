@@ -5,7 +5,9 @@ date:   2014-04-02 03:43:14
 categories: new age javascript concurrency
 ---
 
-**UPDATE: This post is based on an error. [See why.](http://valera-rozuvan.github.io/nintoku/update/update-the-new-age-of-javascript-concurrency)**
+**UPDATE**
+This post is based on an error. [See why.](http://valera-rozuvan.github.io/nintoku/updates/javascript/concurrency/new-age/update-the-new-age-of-javascript-concurrency)
+**End-of: UPDATE**
 
 It has long been known to me that the
 [JavaScript language](http://en.wikipedia.org/wiki/JavaScript)
