@@ -16,7 +16,7 @@ Format?
 
 A blog.
 
-So, without further ado, please redirect your browser to [{{ site.url }}]({{ site.url }}).
+So, without further ado, please redirect your browser to [http://valera-rozuvan.github.io/nintoku](http://valera-rozuvan.github.io/nintoku).
 
 Installing Jekyll and updating the blog
 ---------------------------------------
