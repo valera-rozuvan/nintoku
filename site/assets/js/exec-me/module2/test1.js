@@ -6,22 +6,50 @@
             hasRun = false,
             wWorkers = [],
             dateLastDraw = 0,
+            dateBegin = 0,
+            timeToCompleteFill = 0,
             canvasUpdateInProgress = false,
             numWWorkers,
             resolveDefStopAllWorkers = null,
-            resolveDefStartAllWorkers = null;
+            resolveDefStartAllWorkers = null,
+            numPixelsFilled = 0,
+            totalPixels = 400 * 800,
+            pixelArray = [];
+
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
 
         function init(_el) {
+            var c1, c2, tempArr;
+
             el = _el;
 
             if (window.Worker) {
                 numWWorkers = window.navigator.hardwareConcurrency;
+
+                if (isNumeric(numWWorkers) === false || numWWorkers <= 0) {
+                    numWWorkers = 1;
+                }
+
+                for (c1 = 0; c1 < 800; c1 += 1) {
+                    tempArr = [];
+
+                    for (c2 = 0; c2 < 400; c2 += 1) {
+                        tempArr.push(false);
+                    }
+
+                    pixelArray.push(tempArr);
+                }
 
                 createCanvas();
 
                 $(el).find('a.btn-run-js').click(function (event) {
                     event.preventDefault();
                     event.stopPropagation();
+
+                    $(this).hide();
+                    $(el).append('<div>Running ' + numWWorkers + ' Web Worker(s).<div/>');
 
                     if (hasRun === false) {
                         hasRun = true;
@@ -93,6 +121,7 @@
             }
 
             dateLastDraw = Date.now();
+            dateBegin = dateLastDraw;
         }
 
         function putPixel(x, y, r, g, b) {
@@ -100,6 +129,11 @@
 
             if (canvasUpdateInProgress === true) {
                 return;
+            }
+
+            if (pixelArray[x][y] === false) {
+                numPixelsFilled += 1;
+                pixelArray[x][y] = true;
             }
 
             pixelIndex = 4 * (x + y * 800);
@@ -114,7 +148,42 @@
                 canvasUpdateInProgress = true;
 
                 stopAllWorkers().then(function () {
+                    var currentPercent,
+                        secondsPassed,
+                        decimalPrec;
+
+                    if (numPixelsFilled < totalPixels) {
+                        currentPercent = 100.0 * (numPixelsFilled / totalPixels);
+                        secondsPassed = 0.001 * (dateNow - dateBegin);
+                    } else {
+                        if (timeToCompleteFill === 0) {
+                            timeToCompleteFill = 0.001 * (dateNow - dateBegin);
+                        }
+
+                        currentPercent = 100.0;
+                        secondsPassed = timeToCompleteFill;
+                    }
+
+                    if (currentPercent < 10.0) {
+                        decimalPrec = 1;
+                    } else if (currentPercent < 60.0) {
+                        decimalPrec = 2;
+                    } else if (currentPercent < 95.0) {
+                        decimalPrec = 3;
+                    } else if (currentPercent < 98.0) {
+                        decimalPrec = 4;
+                    } else if (currentPercent < 99.0) {
+                        decimalPrec = 5;
+                    } else if (currentPercent < 99.5) {
+                        decimalPrec = 6;
+                    } else {
+                        decimalPrec = 7;
+                    }
+
                     ctx.putImageData(imgData, 0, 0);
+
+                    drawStroked('Pixels filled: ' + currentPercent.toFixed(decimalPrec) + '%', 20, 120);
+                    drawStroked('Time taken: ' + secondsPassed.toFixed(2) + 's', 20, 200);
 
                     startAllWorkers().then(function () {
                         dateLastDraw = dateNow;
@@ -122,6 +191,15 @@
                     });
                 });
             }
+        }
+
+        function drawStroked(text, x, y) {
+            ctx.font = "40px Sans-serif"
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 5;
+            ctx.strokeText(text, x, y);
+            ctx.fillStyle = 'white';
+            ctx.fillText(text, x, y);
         }
 
         function startAllWorkers() {
