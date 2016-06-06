@@ -8,7 +8,8 @@
       scripts: 'scripts.min',
       'google-analytics': 'google-analytics',
       mathjax: 'mathjax',
-      'module1-test1': 'exec-me/module1/test1'
+      'module1-test1': 'exec-me/module1/test1',
+      'module2-test1': 'exec-me/module2/test1'
     },
     shim: {
       Modernizr: {

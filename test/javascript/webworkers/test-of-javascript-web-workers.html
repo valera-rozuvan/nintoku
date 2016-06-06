@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Latest Posts &#8211; Nintoku</title>
-<meta name="description" content="Nintoku. The 16th emperor of Japan.">
-<meta name="keywords" content="nintoku, valera, rozuvan, valera rozuvan, blog, home">
+<title>Test of JavaScript Web Workers &#8211; Nintoku</title>
+<meta name="description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
+<meta name="keywords" content="test, javascript, webworkers">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://valera-rozuvan.github.io/nintoku/images/site-logo.png">
-<meta name="twitter:title" content="Latest Posts">
-<meta name="twitter:description" content="Nintoku. The 16th emperor of Japan.">
+<meta name="twitter:title" content="Test of JavaScript Web Workers">
+<meta name="twitter:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
 <meta name="twitter:creator" content="@ValeraRozuvan">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Latest Posts">
-<meta property="og:description" content="Nintoku. The 16th emperor of Japan.">
-<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/">
+<meta property="og:title" content="Test of JavaScript Web Workers">
+<meta property="og:description" content="The 16th emperor of Japan. A place to procrastinate while at work.">
+<meta property="og:url" content="http://valera-rozuvan.github.io/nintoku/test/javascript/webworkers/test-of-javascript-web-workers">
 <meta property="og:site_name" content="Nintoku">
 
 
 
 
 
-<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/">
+<link rel="canonical" href="http://valera-rozuvan.github.io/nintoku/test/javascript/webworkers/test-of-javascript-web-workers">
 <link href="http://valera-rozuvan.github.io/nintoku/feed.xml" type="application/atom+xml" rel="alternate" title="Nintoku Feed">
 <link rel="author" href="https://plus.google.com/+ValeraRozuvan?rel=author">
 
@@ -68,7 +68,7 @@
 
 </head>
 
-<body id="page" itemscope itemtype="http://schema.org/WebPage">
+<body id="post" itemscope itemtype="http://schema.org/WebPage">
 
 <div class="navigation-wrapper">
   <nav role="navigation" id="site-nav" class="" itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -126,13 +126,25 @@
 </header><!-- /.masthead -->
 
 
-<div id="main" role="main" itemprop="mainContentOfPage">
-  <article class="entry" itemscope>
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <h1 class="entry-title" itemprop="name">Latest Posts</h1>
+        <span class="entry-tags"><a href="http://valera-rozuvan.github.io/nintoku/tags#test" title="Pages tagged test" rel="tag">test</a>&nbsp;&bull;&nbsp;<a href="http://valera-rozuvan.github.io/nintoku/tags#javascript" title="Pages tagged javascript" rel="tag">javascript</a>&nbsp;&bull;&nbsp;<a href="http://valera-rozuvan.github.io/nintoku/tags#webworkers" title="Pages tagged webworkers" rel="tag">webworkers</a></span>
+        
+          <h1 class="entry-title" itemprop="headline">Test of JavaScript Web Workers</h1>
+        
       </header>
+      <footer class="entry-meta">
+        <img src="http://valera-rozuvan.github.io/nintoku/images/your-photo.jpg" alt="Valera Rozuvan photo" class="author-photo">
+        <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="http://valera.rozuvan.net/" title="About Valera Rozuvan" itemprop="url">Valera Rozuvan</a></span></span>
+        <span class="entry-date date published"><time datetime="2016-06-05T03:21:05+00:00" itemprop="datePublished"><i class="icon-calendar-empty"></i> June 05, 2016</time></span>
+        
+        
+        <span><a href="http://valera-rozuvan.github.io/nintoku/test/javascript/webworkers/test-of-javascript-web-workers" rel="bookmark" title="Test of JavaScript Web Workers" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="https://github.com/valera-rozuvan/nintoku/blob/master/site/_posts/2016-06-05-test-of-javascript-web-workers.markdown">source of post</a></span>
+      </footer>
 
       <noscript>
   <div class="entry-content" id="entry-content-nojs" itemprop="description">
@@ -157,32 +169,27 @@
 
 
       <div class="entry-content" id="entry-content-main" itemprop="description">
-        <ul class="post-list">
+        <p>An experiment with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/">Web Workers</a>.
+The idea is to spawn as many Web Workers, as there are CPU cores on the current machine. Each worker
+will be responsible for generating random <strong>xy</strong> coordinates, along with a random RGB color value.
+The main thread will use these coordinates to draw on a
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">HTML5 Canvas</a>.</p>
 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/test/javascript/webworkers/test-of-javascript-web-workers">Test of JavaScript Web Workers <span class="entry-date"><time datetime="2016-06-05T03:21:05+00:00">June 05, 2016</time></span></a></article></li>
+<p>Click on the button <strong>Run</strong>, and see magic happen = )</p>
 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/howto/raspberry/pi/how-to-setup-and-configure-raspberry-pi-2">How to setup and configure Raspberry Pi 2 <span class="entry-date"><time datetime="2016-01-02T18:40:07+00:00">January 02, 2016</time></span></a></article></li>
+<div class="exec-me" data-js-source="module2-test1">
+  <a class="btn-run-js" href="#">Run</a>
+</div>
 
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/yule/marathon/4th-grand-prix-half-marathon-yule-2015">4th Grand Prix half marathon Yule 2015 <span class="entry-date"><time datetime="2016-01-01T15:57:28+00:00">January 01, 2016</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/gothendieck/life/peculiarities/some-peculiarities-of-grothendiecks-life">Some peculiarities of Grothendieck's life <span class="entry-date"><time datetime="2015-08-03T22:59:36+00:00">August 03, 2015</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/test/javascript/post/1st-test-executable-javascript-in-a-post">1st test: Executable JavaScript in a post <span class="entry-date"><time datetime="2015-07-24T02:00:17+00:00">July 24, 2015</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/ideas/webgl/visuals/tile-o-drom/ideas-a-webgl-visual-tile-o-drom">Ideas: A WebGL visual Tile-o-Drom <span class="entry-date"><time datetime="2015-07-10T12:31:02+00:00">July 10, 2015</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/jquery/promises/jquery-broken-promises-illustrated">jQuery broken promises illustrated <span class="entry-date"><time datetime="2015-07-08T20:36:01+00:00">July 08, 2015</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/sublime/text/debian/menu/adding-sublime-text-to-debian-menu">Adding Sublime Text to Debian menu <span class="entry-date"><time datetime="2015-03-15T00:00:00+00:00">March 15, 2015</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/scrobbling/last-fm/linux/scrobbling-to-lastfm-from-linux">Scrobbling to Last.fm from Linux <span class="entry-date"><time datetime="2014-06-15T22:57:24+00:00">June 15, 2014</time></span></a></article></li>
-
-  <li><article><a href="http://valera-rozuvan.github.io/nintoku/smart/pomodoro/workflow/smart-pomodoro-workflow">Smart Pomodoro Workflow <span class="entry-date"><time datetime="2014-05-23T13:31:18+00:00">May 23, 2014</time></span></a></article></li>
-
-</ul>
-
+        
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://valera-rozuvan.github.io/nintoku/howto/raspberry/pi/how-to-setup-and-configure-raspberry-pi-2" class="btn" title="How to setup and configure Raspberry Pi 2">Previous article</a>
+      
+      
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
