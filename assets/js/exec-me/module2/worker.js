@@ -184,46 +184,42 @@ function Mash() {
 
 var rnd = uheprng(),
     workerId = null,
-    stopWorker = false;
+    workerInterval;
+
+function workFunc() {
+    var x, y, r, g, b;
+
+    x = rnd(800);
+    y = rnd(400);
+
+    r = rnd(256);
+    g = rnd(256);
+    b = rnd(256);
+
+    postMessage([
+        workerId,
+        'generate',
+        x, y,
+        r, g, b
+    ]);
+}
 
 function startWork() {
-    var x, y, r, g, b;
+    workerInterval = setInterval(workFunc, 1);
 
     postMessage([
         workerId,
         'work_started'
     ]);
-
-    while (true) {
-        x = rnd(800);
-        y = rnd(400);
-
-        r = rnd(256);
-        g = rnd(256);
-        b = rnd(256);
-
-        postMessage([
-            workerId,
-            'generate',
-            x, y,
-            r, g, b
-        ]);
-
-        if (stopWorker === true) {
-            stopWorker = false;
-
-            postMessage([
-                workerId,
-                'work_stopped'
-            ]);
-
-            break;
-        }
-    }
 }
 
 function stopWork() {
-    stopWorker = true;
+    clearInterval(workerInterval);
+
+    postMessage([
+        workerId,
+        'work_stopped'
+    ]);
 }
 
 onmessage = function(e) {
@@ -245,7 +241,7 @@ onmessage = function(e) {
         ]);
     } else if (msgType === 'start') {
         startWork();
-    } else if (emsgType === 'stop') {
+    } else if (msgType === 'stop') {
         stopWork();
     }
 };

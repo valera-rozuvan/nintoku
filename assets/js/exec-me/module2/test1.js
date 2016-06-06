@@ -1,16 +1,22 @@
 (function (define, require, undefined) {
     'use strict';
 
-    define('module2-test1', ['jQuery'], function ($) {
+    define('module2-test1', ['jQuery', 'Q'], function ($, Q) {
         var el, cEl, canvas, ctx, imgData,
             hasRun = false,
             wWorkers = [],
-            dateLastDraw = 0;
+            dateLastDraw = 0,
+            canvasUpdateInProgress = false,
+            numWWorkers,
+            resolveDefStopAllWorkers = null,
+            resolveDefStartAllWorkers = null;
 
         function init(_el) {
             el = _el;
 
             if (window.Worker) {
+                numWWorkers = window.navigator.hardwareConcurrency;
+
                 createCanvas();
 
                 $(el).find('a.btn-run-js').click(function (event) {
@@ -58,8 +64,7 @@
         }
 
         function run() {
-            var numWWorkers = window.navigator.hardwareConcurrency,
-                c1, dateNow;
+            var c1, dateNow;
 
             canvas = cEl.get(0);
             ctx = canvas.getContext('2d');
@@ -76,9 +81,7 @@
 
                 dateNow = Date.now();
 
-                wWorkers[c1].onmessage = function (e) {
-                    processWorkerMessage(e);
-                };
+                wWorkers[c1].onmessage = processWorkerMessage;
                 wWorkers[c1].postMessage([
                     'worker_id',
                     c1
@@ -88,34 +91,129 @@
                     ((1.0 + Math.random() * dateNow) / (1.0 + dateNow)) * (100.0 + Math.random() * 1000.0)
                 ]);
             }
+
+            dateLastDraw = Date.now();
         }
 
         function putPixel(x, y, r, g, b) {
-            var pixelIndex = 4 * (x + y * 400),
-                dateNow = Date.now();
+            var pixelIndex, dateNow;
+
+            if (canvasUpdateInProgress === true) {
+                return;
+            }
+
+            pixelIndex = 4 * (x + y * 800);
+            dateNow = Date.now();
 
             imgData.data[pixelIndex    ] =   r;  // red   color
             imgData.data[pixelIndex + 1] =   g;  // green color
             imgData.data[pixelIndex + 2] =   b;  // blue  color
             imgData.data[pixelIndex + 3] = 255;  // alfa
 
-            if (dateNow - dateLastDraw >= 1000) {
-                dateLastDraw = dateNow;
+            if (dateNow - dateLastDraw >= 250) {
+                canvasUpdateInProgress = true;
 
-                ctx.putImageData(imgData, x, y);
+                stopAllWorkers().then(function () {
+                    ctx.putImageData(imgData, 0, 0);
+
+                    startAllWorkers().then(function () {
+                        dateLastDraw = dateNow;
+                        canvasUpdateInProgress = false;
+                    });
+                });
             }
+        }
+
+        function startAllWorkers() {
+            var deferred = Q.defer(),
+                workersStarted = [];
+
+            wWorkers.forEach(function (item, idx, arr) {
+                workersStarted.push({
+                    started: false
+                });
+            });
+
+            resolveDefStartAllWorkers = function (workerId) {
+                var numItems = workersStarted.length,
+                    numStartedItems = 0;
+
+                workersStarted[workerId].started = true;
+
+                workersStarted.forEach(function (item, idx, arr) {
+                    if (item.started === true) {
+                        numStartedItems += 1;
+                    }
+                });
+
+                if (numItems === numStartedItems) {
+                    deferred.resolve();
+                }
+            };
+
+            wWorkers.forEach(function (item, idx, arr) {
+                item.postMessage([
+                    'start'
+                ]);
+            });
+
+            return deferred.promise;
+        }
+
+        function stopAllWorkers() {
+            var deferred = Q.defer(),
+                workersStopped = [];
+
+            wWorkers.forEach(function (item, idx, arr) {
+                workersStopped.push({
+                    stopped: false
+                });
+            });
+
+            resolveDefStopAllWorkers = function (workerId) {
+                var numItems = workersStopped.length,
+                    numStoppedItems = 0;
+
+                workersStopped[workerId].stopped = true;
+
+                workersStopped.forEach(function (item, idx, arr) {
+                    if (item.stopped === true) {
+                        numStoppedItems += 1;
+                    }
+                });
+
+                if (numItems === numStoppedItems) {
+                    deferred.resolve();
+                }
+            };
+
+            wWorkers.forEach(function (item, idx, arr) {
+                item.postMessage([
+                    'stop'
+                ]);
+            });
+
+            return deferred.promise;
         }
 
         function processWorkerMessage(e) {
             var workerId = e.data[0],
                 msgType = e.data[1];
 
-            if (msgType === 'seed_received') {
+            if (msgType === 'worker_id_received') {
+
+            } else if (msgType === 'seed_received') {
                 wWorkers[workerId].postMessage([
                     'start'
                 ]);
             } else if (msgType === 'generate') {
                 putPixel(e.data[2], e.data[3], e.data[4], e.data[5], e.data[6]);
+            } else if (msgType === 'work_started') {
+                if (resolveDefStartAllWorkers !== null) {
+                    resolveDefStartAllWorkers(workerId);
+                }
+            } else if (msgType === 'work_stopped') {
+                resolveDefStopAllWorkers(workerId);
             }
         }
 
