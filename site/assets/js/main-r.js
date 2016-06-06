@@ -5,6 +5,7 @@
     paths: {
       Modernizr: 'vendor/modernizr-2.8.3.custom.min',
       jQuery: 'vendor/jquery-1.11.3.min',
+      Q: 'vendor/q-1.4.1.min',
       scripts: 'scripts.min',
       'google-analytics': 'google-analytics',
       mathjax: 'mathjax',
@@ -27,7 +28,7 @@
     }
   });
 
-  require(['Modernizr', 'jQuery'], function (Modernizr, $) {
+  require(['Modernizr', 'jQuery', 'Q'], function (Modernizr, $, Q) {
     $(document).ready(function () {
       require(['scripts'], onScriptsLoaded);
     });
