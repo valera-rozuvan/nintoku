@@ -243,7 +243,7 @@ a {
 }
 body {
   font-family: 'source-sans-pro', sans-serif;
-  color: #222222;
+  color: #222;
 }
 h1,
 h2,
@@ -255,7 +255,7 @@ h6 {
 }
 a {
   text-decoration: none;
-  color: #222222;
+  color: #222;
 }
 a:visited {
   color: #555555;
@@ -343,7 +343,7 @@ blockquote {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
   padding-left: 20px;
-  border-left: 8px solid #000000;
+  border-left: 8px solid #000;
 }
 .footnotes {
   font-size: 14px;
@@ -679,7 +679,7 @@ pre {
 }
 .linenos pre {
   background-color: #073642;
-  color: #8f908a;
+  color: #8F908A;
 }
 figure {
   margin: 0 0 22.85714286px 0;
@@ -715,7 +715,7 @@ table.highlighttable td.code pre {
 table.highlighttable td.linenos pre {
   text-align: right;
   border-right: 0;
-  color: #8f908a;
+  color: #8F908A;
 }
 .CodeRay {
   font-family: 'source-code-pro', monospace;
@@ -783,13 +783,13 @@ ol.CodeRay li {
   background: blue ! important;
 }
 .CodeRay .annotation {
-  color: #000077;
+  color: #007;
 }
 .CodeRay .attribute-name {
-  color: #ff0088;
+  color: #f08;
 }
 .CodeRay .attribute-value {
-  color: #770000;
+  color: #700;
 }
 .CodeRay .binary {
   color: #509;
@@ -800,13 +800,13 @@ ol.CodeRay li {
   font-style: italic;
 }
 .CodeRay .char {
-  color: #0044dd;
+  color: #04D;
 }
 .CodeRay .char .content {
-  color: #0044dd;
+  color: #04D;
 }
 .CodeRay .char .delimiter {
-  color: #003399;
+  color: #039;
 }
 .CodeRay .class {
   color: #458;
@@ -820,10 +820,10 @@ ol.CodeRay li {
   color: teal;
 }
 .CodeRay .color {
-  color: #00aa00;
+  color: #0A0;
 }
 .CodeRay .class-variable {
-  color: #336699;
+  color: #369;
 }
 .CodeRay .decorator {
   color: #B0B;
@@ -840,10 +840,10 @@ ol.CodeRay li {
   color: black;
 }
 .CodeRay .doc {
-  color: #997700;
+  color: #970;
 }
 .CodeRay .doctype {
-  color: #3344bb;
+  color: #34b;
 }
 .CodeRay .doc-string {
   color: #D42;
@@ -859,7 +859,7 @@ ol.CodeRay li {
 }
 .CodeRay .error {
   color: #F00;
-  background-color: #ffaaaa;
+  background-color: #FAA;
 }
 .CodeRay .exception {
   color: #C00;
@@ -891,10 +891,10 @@ ol.CodeRay li {
   color: black;
 }
 .CodeRay .inline .inline {
-  background: #cccccc;
+  background: #ccc;
 }
 .CodeRay .inline .inline .inline {
-  background: #bbbbbb;
+  background: #bbb;
 }
 .CodeRay .inline .inline-delimiter {
   color: #D14;
@@ -917,7 +917,7 @@ ol.CodeRay li {
   font-weight: bold;
 }
 .CodeRay .local-variable {
-  color: #996633;
+  color: #963;
 }
 .CodeRay .octal {
   color: #40E;
@@ -962,13 +962,13 @@ ol.CodeRay li {
   background-color: #fff0ff;
 }
 .CodeRay .regexp .content {
-  color: #880088;
+  color: #808;
 }
 .CodeRay .regexp .delimiter {
-  color: #440044;
+  color: #404;
 }
 .CodeRay .regexp .modifier {
-  color: #cc22cc;
+  color: #C2C;
 }
 .CodeRay .regexp .function {
   color: #404;
@@ -990,22 +990,22 @@ ol.CodeRay li {
   color: #D14;
 }
 .CodeRay .shell {
-  color: #dd1144;
+  color: #D14;
 }
 .CodeRay .shell .delimiter {
-  color: #dd1144;
+  color: #D14;
 }
 .CodeRay .symbol {
   color: #990073;
 }
 .CodeRay .symbol .content {
-  color: #aa6600;
+  color: #A60;
 }
 .CodeRay .symbol .delimiter {
-  color: #663300;
+  color: #630;
 }
 .CodeRay .tag {
-  color: #007700;
+  color: #070;
 }
 .CodeRay .tag-special {
   color: #D70;
@@ -1016,7 +1016,7 @@ ol.CodeRay li {
   font-weight: bold;
 }
 .CodeRay .variable {
-  color: #003366;
+  color: #036;
 }
 .CodeRay .insert {
   background: #afa;
@@ -1030,7 +1030,7 @@ ol.CodeRay li {
 }
 .CodeRay .head {
   color: #f8f;
-  background: #550055;
+  background: #505;
 }
 .CodeRay .insert .insert {
   color: #080;
@@ -1153,19 +1153,19 @@ svg:not(:root) {
   padding: 8px 20px;
   font-size: 14px;
   font-size: 0.875rem;
-  background-color: #000000;
-  color: #ffffff;
-  border: 2px solid #000000 !important;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000 !important;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
 }
 .btn:visited {
-  color: #ffffff;
+  color: #fff;
 }
 .btn:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
 }
 .btn-run-js {
   display: inline-block;
@@ -1173,16 +1173,16 @@ svg:not(:root) {
   padding: 8px 20px;
   font-size: 14px;
   font-size: 0.875rem;
-  background-color: #00ff00;
-  color: #0b610b;
-  border: 2px solid #0b610b !important;
+  background-color: #00FF00;
+  color: #0B610B;
+  border: 2px solid #0B610B !important;
 }
 .btn-run-js:visited {
-  color: #0b610b;
+  color: #0B610B;
 }
 .btn-run-js:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
 }
 .well {
   padding: 20px;
@@ -3012,7 +3012,7 @@ form legend {
   margin-bottom: 10px;
   *margin-left: -7px;
   padding: 0;
-  color: #222222;
+  color: #222;
   border: 0;
   border-bottom: 1px solid #cccccc;
   white-space: normal;
@@ -3050,7 +3050,7 @@ label {
   display: block;
   margin-bottom: 1.25px;
   font-weight: bold;
-  color: #222222;
+  color: #222;
   cursor: pointer;
 }
 label input,
@@ -3065,9 +3065,9 @@ select {
   width: 100%;
   padding: 4px;
   margin-bottom: 1.25px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #cccccc;
-  color: #222222;
+  color: #222;
 }
 input:hover,
 textarea:hover,
@@ -3136,7 +3136,7 @@ input[type="file"] {
 }
 select {
   width: auto;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 select[multiple],
 select[size] {
@@ -3185,7 +3185,7 @@ textarea[readonly] {
 }
 input:focus,
 textarea:focus {
-  border-color: #000000;
+  border-color: #000;
   outline: 0;
   outline: thin dotted \9;
 }
@@ -3237,15 +3237,15 @@ select:focus {
   padding: 6px 10px;
   cursor: pointer;
   display: block;
-  color: #ffffff;
+  color: #fff;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
 .dosearch:hover {
-  -webkit-box-shadow: inset 0 0 1px #ffffff;
-  -moz-box-shadow: inset 0 0 1px #ffffff;
-  box-shadow: inset 0 0 1px #ffffff;
+  -webkit-box-shadow: inset 0 0 1px #fff;
+  -moz-box-shadow: inset 0 0 1px #fff;
+  box-shadow: inset 0 0 1px #fff;
   background-color: #1a1a1a;
 }
 .search-form {
@@ -3260,7 +3260,7 @@ select:focus {
 .search-form .search-field {
   -webkit-appearance: none;
   width: 100%;
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-bottom: 1px solid #ffffff;
   background-color: transparent;
@@ -3292,7 +3292,7 @@ select:focus {
   right: 1rem;
   display: block;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   z-index: 1;
   cursor: pointer;
 }
@@ -3310,7 +3310,7 @@ select:focus {
 .search-form .post-list li,
 .search-form .post-list p,
 .search-form .post-list a {
-  color: #ffffff;
+  color: #fff;
 }
 .search-form .post-list li {
   border-bottom: 1px solid #ffffff;
@@ -3337,8 +3337,8 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #ffffff;
-  border-top: 5px solid #000000;
+  background-color: #fff;
+  border-top: 5px solid #000;
 }
 @media only screen and (min-width: 48em) {
   body {
@@ -3364,7 +3364,7 @@ body {
   vertical-align: top;
   margin: 0 0 50px;
   padding: 4px 20px;
-  background-color: #000000;
+  background-color: #000;
   -webkit-border-radius: 0 0 10px 10px;
   -moz-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
@@ -3387,17 +3387,17 @@ body {
   font-size: 14px;
   font-size: 0.875rem;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
 }
 .navigation-wrapper li a:hover {
-  -webkit-box-shadow: inset 0 0 1px #ffffff;
-  -moz-box-shadow: inset 0 0 1px #ffffff;
-  box-shadow: inset 0 0 1px #ffffff;
+  -webkit-box-shadow: inset 0 0 1px #fff;
+  -moz-box-shadow: inset 0 0 1px #fff;
+  box-shadow: inset 0 0 1px #fff;
 }
 .navigation-wrapper a {
   display: block;
   padding: 6px 10px;
-  color: #ffffff;
+  color: #fff;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -3443,7 +3443,7 @@ body {
   vertical-align: top;
   margin: 0;
   padding: 4px 20px;
-  background-color: #000000;
+  background-color: #000;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -3500,7 +3500,7 @@ body {
   -moz-animation-delay: .05s;
   -o-animation-delay: .05s;
   animation-delay: .05s;
-  border: 4px solid #ffffff;
+  border: 4px solid #fff;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
@@ -3535,7 +3535,7 @@ body {
   animation-delay: .75s;
 }
 .site-title a {
-  color: #000000;
+  color: #000;
 }
 .site-description {
   margin-top: 0;
@@ -3625,7 +3625,7 @@ body {
   font-weight: 600;
 }
 .entry-tags a {
-  color: #222222;
+  color: #222;
 }
 span + .entry-title {
   margin-top: 0;
@@ -3640,7 +3640,7 @@ span + .entry-title {
   letter-spacing: -3px;
 }
 .entry-title a {
-  color: #000000;
+  color: #000;
   text-decoration: underline;
 }
 @media only screen and (min-width: 48em) {
@@ -3697,7 +3697,7 @@ span + .entry-title {
   font-size: 0.875rem;
 }
 .entry-meta a {
-  color: #222222;
+  color: #222;
 }
 @media only screen and (min-width: 62.5em) {
   .entry-meta {
@@ -3907,7 +3907,7 @@ span + .entry-title {
   padding: 4px 8px;
 }
 .social-icons a:hover {
-  color: #000000;
+  color: #000;
 }
 .upgrade {
   padding: 10px;
@@ -3928,19 +3928,19 @@ span + .entry-title {
 #goog-wm-sb {
   display: inline-block;
   padding: 8px 20px;
-  background-color: #000000;
-  color: #ffffff;
-  border: 2px solid #000000 !important;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000 !important;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
 }
 #goog-wm-sb:visited {
-  color: #ffffff;
+  color: #fff;
 }
 #goog-wm-sb:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
 }
 /*
  * Ideas taken from:
