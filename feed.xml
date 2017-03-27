@@ -4,13 +4,66 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://valera-rozuvan.github.io/nintoku/feed.xml" />
 <link rel="alternate" type="text/html" href="http://valera-rozuvan.github.io/nintoku" />
-<updated>2017-03-27T11:50:33+00:00</updated>
+<updated>2017-03-27T11:59:51+00:00</updated>
 <id>http://valera-rozuvan.github.io/nintoku/</id>
 <author>
   <name>Valera Rozuvan</name>
   <uri>http://valera-rozuvan.github.io/nintoku/</uri>
   <email>valera.rozuvan@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[An update: Next steps for Nintoku blog]]></title>
+  <link>http://valera-rozuvan.github.io/nintoku/update/nintoku/blog/future/an-update-next-steps-for-nintoku-blog</link>
+  <id>http://valera-rozuvan.github.io/nintoku/update/nintoku/blog/future/an-update-next-steps-for-nintoku-blog</id>
+  <published>2017-03-26T14:49:03+00:00</published>
+  <updated>2017-03-26T14:49:03+00:00</updated>
+  <author>
+    <name>Valera Rozuvan</name>
+    <uri>http://valera-rozuvan.github.io/nintoku</uri>
+    <email>valera.rozuvan@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Some of you might have noticed that this place hasn’t been updated in a while. Mostly this is due to the fact that I
+ran out of free time when my daughter was born last year. Oh - what fun it is to raise a child - especially during
+the first year of his (or her) life. But enough of complaining. This post is about something totally different.&lt;/p&gt;
+
+&lt;p&gt;I decided to rewrite this blog. That is - the underlying static site generator engine. Right now I use
+&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, which in turns uses &lt;a href=&quot;https://www.ruby-lang.org/&quot;&gt;Ruby&lt;/a&gt;. Jekyll generates all
+of the pages of this blog, including the one you are reading right now. I find it somewhat of a pain to install
+Jekyll on each new system that I use at work (especially if I have to work inside Windows). So I plan to create
+a site generating engine for my needs using &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;. At least a simple one at first. Why
+Node.js? Because it is one of the tools that I use for my work. Also, because I love JavaScript :)&lt;/p&gt;
+
+&lt;p&gt;Now I know that there already exists several static site generators written in JavaScript (Node.js). In fact, here
+is a list of the top 12 JavaScript static site generators (this list is based on my own research):&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gatsbyjs/gatsby&quot;&gt;Gatsby&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/static-dev/spike&quot;&gt;Spike&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jescalan/roots&quot;&gt;Roots&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/assemble/assemble&quot;&gt;assemble&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/hexojs/hexo&quot;&gt;Hexo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/segmentio/metalsmith&quot;&gt;Metalsmith&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/kunruch/mmpilot&quot;&gt;MMPilot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/CabinJS/Cabin&quot;&gt;Cabin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sintaxi/harp&quot;&gt;Harp&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/laktek/punch&quot;&gt;Punch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/docpad/docpad&quot;&gt;DocPad&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Why I want to create a new one? I have considered this question, and really do have some answers :) First of all,
+I want to work on a simple coding project in my spare time. Secondly, I want to completely understand the inner
+workings of my blogging engine. Lastly, I want full ownership of the code that generates my blogging engine so that I
+can modify it to my heart’s content. So I really do want to create another static site generator!&lt;/p&gt;
+
+&lt;p&gt;So what does the future hold for me? As always, I decided to name my static site generator &lt;strong&gt;myuzu&lt;/strong&gt;. It’s code
+will live on GitHub at &lt;a href=&quot;https://github.com/myuzu-net&quot;&gt;https://github.com/myuzu-net&lt;/a&gt;. I really do wish for this project
+to happen, so I am off to coding.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/update/nintoku/blog/future/an-update-next-steps-for-nintoku-blog&quot;&gt;An update: Next steps for Nintoku blog&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on March 26, 2017.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -1493,179 +1546,6 @@ by simply issuing a rearrange command.&lt;/p&gt;
 &lt;p&gt;Over the next little while I hope to try some of these out!&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/tiling/window/manager/tiling-window-managers&quot;&gt;Tiling window managers&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 04, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[The New Age of JavaScript: Concurrency]]></title>
-  <link>http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency</link>
-  <id>http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency</id>
-  <published>2014-04-02T03:43:14+00:00</published>
-  <updated>2014-04-02T03:43:14+00:00</updated>
-  <author>
-    <name>Valera Rozuvan</name>
-    <uri>http://valera-rozuvan.github.io/nintoku</uri>
-    <email>valera.rozuvan@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;
-This post is based on an error. &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/updates/javascript/concurrency/new-age/update-the-new-age-of-javascript-concurrency&quot;&gt;See why.&lt;/a&gt;
-&lt;strong&gt;End-of: UPDATE&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;It has long been known to me that the
-&lt;a href=&quot;http://en.wikipedia.org/wiki/JavaScript&quot;&gt;JavaScript language&lt;/a&gt;
-(the browser variety) is single-threaded. I.e. at any one time there is
-a single thread running JavaScript code. This means that at one time
-only one function can be running. A more detailed explanation of this
-fact is discussed by &lt;a href=&quot;http://ejohn.org/about&quot;&gt;John Resig&lt;/a&gt; in his
-&lt;a href=&quot;http://ejohn.org/blog/how-javascript-timers-work&quot;&gt;How JavaScript Timers Work&lt;/a&gt;
-post.&lt;/p&gt;
-
-&lt;p&gt;A natural question arises. If you use the
-&lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/API/window.setInterval&quot;&gt;window.setInterval&lt;/a&gt;
-method to get two functions to execute periodically at the same interval,
-will they always (and for all time, while the browser is open) execute
-one after the other, in the order of &lt;code class=&quot;highlighter-rouge&quot;&gt;window.setInterval&lt;/code&gt; invocation?&lt;/p&gt;
-
-&lt;p&gt;So, to be more precise, if we have the following code:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeout1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;timeout2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeoutFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeoutFunc1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// It is given that window.output() is defined, and writes&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// it's parameter to the page for the user to see.&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timeoutFunc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;will we see on the page:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;1
-2
-1
-2
-1
-2
-1
-2
-1
-2
-1
-2
-...&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;An interesting question. To further complicate things, what if one of
-the periodically invoked functions did something else besides outputting
-a number to the page. What if it took a long time to run, i.e. it would
-execute 5 to 10 times longer? Would we then see something like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;2
-2
-2
-2
-1
-2
-2
-2
-1
-2
-2
-2
-...&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I have done a lot of reading on the subject of JavaScript concurrency,
-parallelism, etc. I have started to believe that in the second example
-above the two functions would still execute one after the other.&lt;/p&gt;
-
-&lt;p&gt;Then, today, I decided to write such a test, and see for myself what
-would actually happen. I have created a JSFiddle to
-&lt;a href=&quot;http://jsfiddle.net/k2h7Z/34&quot;&gt;test this out&lt;/a&gt;.
-The results were quite surprising for me.&lt;/p&gt;
-
-&lt;p&gt;I have tested in Internet Explorer, Opera, Google Chrome, and Firefox.
-In all browsers except Firefox the two function ran one after the other.
-In Firefox, though, the more CPU expensive function was running in parallel
-with the fast function. I drew this conclusion for the fact that the slow
-function managed to output once in the same time that the fast function
-outputted several times.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In Firefox, though, the more CPU expensive function was running in parallel
-with the fast function.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I have used the following versions of the browsers:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Internet Explorer 10.0.9200.16576&lt;/li&gt;
-  &lt;li&gt;Opera 20.0.1387.82&lt;/li&gt;
-  &lt;li&gt;Google Chrome 33.0.1750.154&lt;/li&gt;
-  &lt;li&gt;Firefox 28.0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Tested on an Intel x86 quad core machine running Windows 7.&lt;/p&gt;
-
-&lt;p&gt;Here are the screenshots of the results.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png&quot; /&gt;&lt;/a&gt;
-    &lt;figcaption&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/internet_explorer.png&quot; title=&quot;Internet Explorer&quot;&gt;Internet Explorer&lt;/a&gt;.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-    &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png&quot; /&gt;&lt;/a&gt;
-    &lt;figcaption&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/opera.png&quot; title=&quot;Opera&quot;&gt;Opera&lt;/a&gt;.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-    &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png&quot; /&gt;&lt;/a&gt;
-    &lt;figcaption&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/google_chrome.png&quot; title=&quot;Google Chrome&quot;&gt;Google Chrome&lt;/a&gt;.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-    &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png&quot;&gt;&lt;img src=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png&quot; /&gt;&lt;/a&gt;
-    &lt;figcaption&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/images/2014_04_02/firefox.png&quot; title=&quot;Firefox&quot;&gt;Firefox&lt;/a&gt;.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-  &lt;p&gt;&lt;a href=&quot;http://valera-rozuvan.github.io/nintoku/new/age/javascript/concurrency/the-new-age-of-javascript-concurrency&quot;&gt;The New Age of JavaScript: Concurrency&lt;/a&gt; was originally published by Valera Rozuvan at &lt;a href=&quot;http://valera-rozuvan.github.io/nintoku&quot;&gt;Nintoku&lt;/a&gt; on April 02, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
