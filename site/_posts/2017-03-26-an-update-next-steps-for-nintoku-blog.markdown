@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "An update: Next steps for Nintoku blog"
-date:   2017-03-27 14:49:03
+date:   2017-03-26 14:49:03
 categories: update nintoku blog future
 tags:
 - update
